@@ -6,7 +6,9 @@ infinity_test do
     clear :terminal
   end
 
-  notifications :lib_notify
+  notifications :lib_notify do
+    show_images :mode => :rubies
+  end
   
 end
 
