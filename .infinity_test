@@ -1,0 +1,12 @@
+infinity_test do
+  
+  use :test_framework => :rspec
+  
+  before_run do
+    clear :terminal
+  end
+
+  notifications :lib_notify
+  
+end
+
