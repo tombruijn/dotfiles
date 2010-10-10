@@ -1,0 +1,23 @@
+alias ale='gedit ~/.bash_aliases'
+alias alr='source ~/.bash_aliases'
+
+alias n='nautilus .'
+alias desk='cd ~/Desktop'
+alias home='cd ~/'
+
+alias red='redcar .'
+
+alias rs='rails s'
+alias rse='rails s production'
+alias rc='rails c'
+alias rce='rails c production'
+
+alias rg='rails g'
+
+alias dbm='rake db:migrate'
+alias dbmr='rake db:migrate:reset'
+alias dbs='rake db:seed'
+alias dbr='rake db:rollback'
+
+alias g='gitg .'
+
