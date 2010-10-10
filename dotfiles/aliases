@@ -1,6 +1,7 @@
-alias ale='gedit ~/.bash_aliases'
-alias alr='source ~/.bash_aliases'
+alias ale='gedit ~/Bash/dotfiles/aliases'
+alias alr='source ~/Bash/dotfiles/aliases'
 
+alias c='clear'
 alias n='nautilus .'
 alias desk='cd ~/Desktop'
 alias home='cd ~/'
