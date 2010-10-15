@@ -13,7 +13,7 @@ alias gi='gem install'
 
 # Rails
 alias rs='rails s'
-alias rse='rails s production'
+alias rse='rails s -e production'
 alias rc='rails c'
 alias rce='rails c production'
 
