@@ -37,6 +37,7 @@ alias g='gitg .'
 alias gs='git status'
 alias gb='git branch'
 alias gc='git commit -m'
+alias go='git checkout'
 alias gp='git push'
 alias gpl='git pull'
 
