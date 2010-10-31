@@ -33,7 +33,7 @@ alias dbs='rake db:seed'
 alias dbr='rake db:rollback'
 
 # Testing
-alias iftest='infinity_test'
+alias iftest='bundle exec infinity_test --rails --rspec'
 
 # Git
 alias g='gitg .'
