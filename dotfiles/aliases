@@ -1,6 +1,8 @@
 alias ale='gedit ~/Bash/dotfiles/aliases'
 alias alr='source ~/Bash/dotfiles/aliases'
 
+alias reload='source ~/.bashrc'
+
 alias c='clear'
 alias n='nautilus .'
 alias desk='cd ~/Desktop'
@@ -35,6 +37,7 @@ alias dbr='rake db:rollback'
 
 # Testing
 alias iftest='bundle exec infinity_test --rails --rspec'
+alias iftestotal='bundle exec infinity_test --rails --rspec --rubies=ree,1.9.2'
 
 # Git
 alias g='gitg .'
