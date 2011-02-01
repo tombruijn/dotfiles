@@ -6,7 +6,8 @@ alias n='nautilus .'
 alias desk='cd ~/Desktop'
 alias home='cd ~/'
 
-alias red='redcar .'
+# Run Redcar in Ruby 1.9.2
+alias red='rvm use 1.9.2 && redcar .'
 
 # Gem
 alias gi='gem install'
