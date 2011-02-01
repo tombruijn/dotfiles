@@ -30,7 +30,7 @@ task :install do
   
   # Backup the current ~/.profile if it exists
   if File.exist?("#{HOME}/.profile")
-    %x(mv #{HOME}/.bashrc #{HOME}/.bashrc.backup.#{Time.now.strftime("%Y-%m-%d-%H-%M-%S")})
+    %x(cp #{HOME}/.bashrc #{HOME}/.bashrc.backup.#{Time.now.strftime("%Y-%m-%d-%H-%M-%S")})
   end
   
   # Append the Bash source to the .profile in the $HOME directory
