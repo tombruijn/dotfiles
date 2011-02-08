@@ -35,6 +35,10 @@ alias dbmt='rake db:migrate:reset RAILS_ENV=test'
 alias dbs='rake db:seed'
 alias dbr='rake db:rollback'
 
+# MongoDB
+alias mongo='/home/tom/mongodb/bin/mongod'
+alias mongot='/home/tom/mongodb/bin/mongo'
+
 # Testing
 alias iftest='bundle exec infinity_test --rails --rspec'
 alias iftestotal='bundle exec infinity_test --rails --rspec --rubies=ree,1.9.2'
