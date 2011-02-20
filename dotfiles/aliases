@@ -54,3 +54,9 @@ alias gpl='git pull'
 
 # Webbynode (my hosting)
 alias wnp='webbynode push'
+
+# For my PHP related apps *shock*
+alias apa='cd /var/www/'
+alias apr='sudo /etc/init.d/apache2 restart'
+alias aps='sudo /etc/init.d/apache2 start'
+alias apd='sudo /etc/init.d/apache2 stop'
