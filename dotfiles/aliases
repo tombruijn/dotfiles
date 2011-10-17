@@ -9,8 +9,8 @@ alias desk='cd ~/Desktop'
 alias home='cd ~/'
 alias flushdns='sudo /etc/init.d/nscd restart'
 
-# Run Redcar in Ruby 1.9.2
-alias red='rvm use 1.9.2 && redcar .'
+# Run Redcar in Ruby 1.9.2 
+alias red='rvm use 1.9.2@redcar && redcar .'
 
 # Gem
 alias gi='gem install'
