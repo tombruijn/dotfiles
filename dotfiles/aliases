@@ -26,6 +26,9 @@ alias rce='rails c production'
 # Generator
 alias rg='rails g'
 
+# Guard gem
+alias gu='bundle exec guard'
+
 # Rake tasks
 
 # Routes
