@@ -18,9 +18,6 @@ task :install do
   # Copy Bashrc file
   %x(cp #{CURRENT_DIR}/bashrc #{BASH_DIR}/bashrc)
   
-  # Copy infinity_test file
-  %x(cp #{CURRENT_DIR}/.infinity_test #{HOME}/.infinity_test)
-  
   # Copy all dotfiles
   Dir.open("#{CURRENT_DIR}/dotfiles").each do |file|
     unless File.directory?("#{CURRENT_DIR}/dotfiles/#{file}")

@@ -1,6 +1,3 @@
-alias ale='gedit ~/Bash/dotfiles/aliases'
-alias alr='source ~/Bash/dotfiles/aliases'
-
 alias reload='source ~/.bashrc'
 
 alias c='clear'
@@ -11,9 +8,6 @@ alias flushdns='sudo /etc/init.d/nscd restart'
 
 # Run Redcar in Ruby 1.9.3 
 alias red='rvm use 1.9.3@redcar && redcar .'
-
-# Gem
-alias gi='gem install'
 
 # Rails
 alias ps='passenger start'
@@ -26,8 +20,12 @@ alias rce='rails c production'
 # Generator
 alias rg='rails g'
 
-# Guard gem
+# Bundle executes
+alias be='bundle exec'
 alias gu='bundle exec guard'
+alias wa='bundle exec watchr ./Watchrfile'
+alias thin='bundle exec thin start -p 3000'
+alias thinp='bundle exec thin start -p'
 
 # Rake tasks
 
@@ -45,21 +43,16 @@ alias dbr='rake db:rollback'
 alias mongo='/home/tom/mongodb/bin/mongod'
 alias mongot='/home/tom/mongodb/bin/mongo'
 
-# Testing
-alias iftest='bundle exec infinity_test --rails --rspec'
-alias iftestotal='bundle exec infinity_test --rails --rspec --rubies=ree,1.9.2'
-
 # Git
 alias g='gitg .'
+alias gr='git reset'
+alias grh='git reset --hard HEAD'
 alias gs='git status'
 alias gb='git branch'
 alias gc='git commit -m'
 alias go='git checkout'
 alias gp='git push'
 alias gpl='git pull'
-
-# Webbynode (my hosting)
-alias wnp='webbynode push'
 
 # For my PHP related apps *shock*
 alias apa='cd /var/www/'
