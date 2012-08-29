@@ -2,6 +2,7 @@ alias reload='source ~/.bashrc'
 
 alias c='clear'
 alias n='nautilus .'
+alias o='open .'
 alias desk='cd ~/Desktop'
 alias home='cd ~/'
 alias flushdns='sudo /etc/init.d/nscd restart'
@@ -44,7 +45,8 @@ alias mongo='/home/tom/mongodb/bin/mongod'
 alias mongot='/home/tom/mongodb/bin/mongo'
 
 # Git
-alias g='gitg .'
+alias g='open -a gitx .'
+alias gg='gitg .'
 alias gr='git reset'
 alias grh='git reset --hard HEAD'
 alias gs='git status'

@@ -31,8 +31,18 @@ task :install do
   end
   
   # Append the Bash source to the .profile in the $HOME directory
-  #File.open("#{HOME}/.bashrc", "w") { |file| file << 'source ~/Bash/bashrc' }
-  %x(echo '\n\nsource ~/Bash/bashrc' >> #{HOME}/.bashrc)
+  found = false
+  File.open("#{HOME}/.bashrc") do |file|
+    file.each_line do |line|
+      if not line =~ /source ~\/Bash\/bashrc/
+        found = true
+      end
+   end
+  end
+  
+  if not found
+    %x(echo '\n\nsource ~/Bash/bashrc' >> #{HOME}/.bashrc)
+  end
   
   # Tell user to reload the shell configuration
   puts "\n\nInstalled! Now run the following command to reload the configuration:"
