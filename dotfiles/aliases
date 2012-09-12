@@ -1,10 +1,13 @@
 alias reload='source ~/.bashrc'
 
+# Lazy me
 alias c='clear'
 alias n='nautilus .'
 alias o='open .'
+alias la='ls -la'
 alias desk='cd ~/Desktop'
 alias home='cd ~/'
+alias pro='cd ~/projects/'
 alias flushdns='sudo /etc/init.d/nscd restart'
 
 # Run Redcar in Ruby 1.9.3 
@@ -35,14 +38,11 @@ alias rr="rake routes"
 
 # Database
 alias dbm='rake db:migrate'
+alias dbd='rake db:drop'
 alias dbmr='rake db:migrate:reset'
 alias dbmt='rake db:migrate:reset RAILS_ENV=test'
 alias dbs='rake db:seed'
 alias dbr='rake db:rollback'
-
-# MongoDB
-alias mongo='/home/tom/mongodb/bin/mongod'
-alias mongot='/home/tom/mongodb/bin/mongo'
 
 # Git
 alias g='open -a gitx .'
