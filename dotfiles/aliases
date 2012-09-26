@@ -1,4 +1,4 @@
-alias reload='source ~/.bashrc'
+alias reload='source ~/.bash_login'
 
 # Lazy me
 alias c='clear'
@@ -9,6 +9,10 @@ alias desk='cd ~/Desktop'
 alias home='cd ~/'
 alias pro='cd ~/projects/'
 alias flushdns='sudo /etc/init.d/nscd restart'
+
+# Oh openssl on Mac..... There are no words
+alias sslhack='echo "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE" > config/initializers/opensslhack.rb'
+alias sslremove='unlink config/initializers/opensslhack.rb'
 
 # Run Redcar in Ruby 1.9.3 
 alias red='rvm use 1.9.3@redcar && redcar .'
