@@ -37,12 +37,12 @@ alias thinp='be thin start -p'
 alias rr="be rake routes"
 
 # Database
-alias dbm='rake db:migrate'
-alias dbd='rake db:drop'
-alias dbmr='rake db:migrate:reset'
-alias dbmt='rake db:migrate:reset RAILS_ENV=test'
-alias dbs='rake db:seed'
-alias dbr='rake db:rollback'
+alias dbm='bundle exec rake db:migrate'
+alias dbd='bundle exec rake db:drop'
+alias dbmr='bundle exec rake db:migrate:reset'
+alias dbmt='bundle exec rake db:migrate:reset RAILS_ENV=test'
+alias dbs='bundle exec rake db:seed'
+alias dbr='bundle exec rake db:rollback'
 
 # Git
 alias g='open -a gitx .'
