@@ -15,6 +15,7 @@ task :install do
 
   setup_bash_profile
   setup_git
+  setup_sublime
 
   # Tell user to reload the shell configuration
   puts "\nTom de Bruijn's dotfiles are installed!\n"
@@ -37,6 +38,7 @@ end
 def setup_git
   %x(git config --global user.email "tom@tomdebruijn.com")
   %x(git config --global user.name "Tom de Bruijn")
+  %x(git config --global color.diff always)
 
   %x(cp -f #{CURRENT_DIR}/.gitignore_global #{HOME}/.gitignore_global)
   %x(git config --global core.excludesfile #{HOME}/.gitignore_global)
@@ -54,4 +56,8 @@ def backup_bash_profile
   if File.exist?(BASH_TO)
     %x(cp #{BASH_TO} #{BASH_TO}.backup.#{Time.now.strftime("%Y-%m-%d-%H-%M-%S")})
   end
+end
+
+def setup_sublime
+  %x(cp -f #{CURRENT_DIR}/sublime/Preferences.sublime-settings #{HOME}/Library/Application\\ Support/Sublime\\ Text\\ 2/Packages/User/Preferences.sublime-settings)
 end
