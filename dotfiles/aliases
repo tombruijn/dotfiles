@@ -1,4 +1,4 @@
-alias reload='source ~/.bash_login'
+alias reload='source ~/.bash_profile'
 
 # Lazy me
 alias c='clear'

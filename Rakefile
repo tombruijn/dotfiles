@@ -4,7 +4,7 @@ require 'erb'
 HOME        = ENV['HOME']
 CURRENT_DIR = Dir.pwd
 DOT_DIR     = HOME + "/dotfiles"
-BASH_FILE   = ".bash_login"
+BASH_FILE   = ".bash_profile"
 
 desc "Installs my environment on this machine."
 task :install do
@@ -43,6 +43,9 @@ task :install do
   end
   
   # Tell user to reload the shell configuration
-  puts "\n\nInstalled! Now run the following command to reload the configuration:"
-  puts "source ~/#{BASH_FILE}\n\n"
+  puts "\nInstalled!\n"
+  puts "Now run the following command to reload the configuration:"
+  puts "  source ~/#{BASH_FILE}\n\n"
+  puts "or (if you're applying an update):"
+  puts "  reload\n"
 end
