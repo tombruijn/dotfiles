@@ -8,6 +8,7 @@ alias la='ls -la'
 alias desk='cd ~/Desktop'
 alias home='cd ~/'
 alias pro='cd ~/projects/'
+alias m='cd ~/machinery/'
 alias 8='cd ~/80beans/'
 alias flushdns='sudo /etc/init.d/nscd restart'
 
