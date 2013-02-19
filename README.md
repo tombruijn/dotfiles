@@ -51,3 +51,16 @@ brew install qt
 brew install imagemagick
 brew install apple-gcc42 # For installation of old Ruby versions
 ```
+
+### Sublime plugins
+
+- [Package Control](http://wbond.net/sublime_packages/package_control)
+- [RSpec](git clone git://github.com/SublimeText/RSpec.git)
+- [Sass](https://github.com/nathos/sass-textmate-bundle)
+- [CoffeeScript](https://github.com/Xavura/CoffeeScript-Sublime-Plugin)
+- [AngularJS (CoffeeScript)](https://github.com/EastPoint/Sublime-AngularJS-Coffee-Completions)
+- [eco](https://github.com/davidjrice/sublime-eco)
+- [GitGutter](https://github.com/jisaacks/GitGutter)
+- [Theme - Phoenix](https://github.com/netatoo/phoenix-theme) - Dark Blue
+    - Syntax highlighting: __Default/Twilight.tmTheme__
+
