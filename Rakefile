@@ -1,12 +1,12 @@
 require 'rake'
 require 'erb'
 
-HOME          = ENV['HOME']
+HOME          = "~/"
 CURRENT_DIR   = Dir.pwd
 TERMINAL_FROM = "terminal"
-TERMINAL_TO   = "#{HOME}/#{TERMINAL_FROM}"
+TERMINAL_TO   = "#{HOME}#{TERMINAL_FROM}"
 BASH_PROFILE  = ".bash_profile"
-BASH_TO       = "#{HOME}/#{BASH_PROFILE}"
+BASH_TO       = "#{HOME}#{BASH_PROFILE}"
 
 desc "Install Tom de Bruijn's environment on this machine"
 task :install do
@@ -40,16 +40,20 @@ def setup_git
   %x(git config --global user.name "Tom de Bruijn")
   %x(git config --global color.diff always)
 
-  %x(cp -f #{CURRENT_DIR}/.gitignore_global #{HOME}/.gitignore_global)
-  %x(git config --global core.excludesfile #{HOME}/.gitignore_global)
+  %x(cp -f #{CURRENT_DIR}/.gitignore_global #{HOME}.gitignore_global)
+  %x(git config --global core.excludesfile #{HOME}.gitignore_global)
 end
 
 def setup_bash_profile
-  # Append the source to the existing profile file
-  unless File.open(BASH_TO).read =~ /source ~\/#{TERMINAL_FROM}/
-    backup_bash_profile
-    %x(echo '\n\nsource ~/#{TERMINAL_FROM}/.bash' >> #{BASH_TO}\n)
-  end
+  profile_content = File.exists?(BASH_TO) ? File.open(BASH_TO).read : ""
+
+  login_missing = (profile_content =~ /source #{HOME}.bash_login/).nil?
+  bash_missing = (profile_content =~ /source #{HOME}#{TERMINAL_FROM}/).nil?
+
+  backup_bash_profile if login_missing || bash_missing
+
+  %x(echo '\n\nsource #{HOME}.bash_login' >> #{BASH_TO}\n) if login_missing
+  %x(echo '\n\nsource #{HOME}#{TERMINAL_FROM}/.bash' >> #{BASH_TO}\n) if bash_missing
 end
 
 def backup_bash_profile
