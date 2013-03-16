@@ -1,0 +1,31 @@
+alias reload="source ~/.zshrc"
+
+# Lazy me
+alias o='open .'
+alias la='ls -la'
+alias desk='cd ~/Desktop'
+alias home='cd ~/'
+alias pro='cd ~/projects/'
+alias m='cd ~/machinery/'
+alias 8='cd ~/80beans/'
+alias flushdns='sudo /etc/init.d/nscd restart'
+
+# Oh openssl on Mac..... There are no words
+alias sslhack='echo "OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE" > config/initializers/opensslhack.rb'
+alias sslremove='unlink config/initializers/opensslhack.rb'
+
+# Bundle executes
+alias ber='be rspec'
+alias fs='be foreman start'
+alias gu='be guard'
+alias wa='be watchr ./Watchrfile'
+alias thin='be thin start -p 3000'
+alias thinp='be thin start -p'
+
+# Rake tasks
+
+# Routes
+alias rr="be rake routes"
+
+# Git
+alias g='open -a gitx .'

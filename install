@@ -1,0 +1,24 @@
+#! /bin/bash
+
+# Set up symlinks
+ln -nfs "$(pwd)/gem/.gemrc"             "$HOME/.gemrc"
+ln -nfs "$(pwd)/bin"                    "$HOME/.bin"
+
+ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
+ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
+rm -rf  "$HOME/.oh-my-zsh/custom"
+ln -nfs "$(pwd)/zsh/.oh-my-zsh/custom"  "$HOME/.oh-my-zsh/custom"
+
+ln -nfs "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+
+ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
+ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
+ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
+ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
+
+ln -nfs "$(pwd)/.gitignore_global"      "$HOME/.gitignore_global"
+
+git config --global color.diff always
+git config --global user.email "tom@tomdebruijn.com"
+git config --global user.name "Tom de Bruijn"
+git config --global core.excludesfile "$HOME/.gitignore_global"

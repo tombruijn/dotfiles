@@ -1,31 +1,33 @@
 {
-  "color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "font_size": 12.0,
-  "git_gutter_live_mode": false,
-  "highlight_line": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "margin": 0,
-  "phoenix_color_blue": true,
-  "phoenix_dirty_bottom_bar": true,
-  "phoenix_dirty_bottom_bar_red": true,
-  "phoenix_highlight_current_tab": true,
-  "phoenix_solid_current_tab": true,
-  "rulers":
-  [
-    80,
-    115
-  ],
-  "shift_tab_unindent": true,
-  "tab_size": 2,
-  "theme": "Phoenix Dark.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
-  "show_tab_close_buttons": false,
-  "bold_folder_labels": true,
-  "scroll_past_end": true
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 12.0,
+	"git_gutter_live_mode": false,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"margin": 0,
+	"phoenix_color_blue": true,
+	"phoenix_dirty_bottom_bar": true,
+	"phoenix_dirty_bottom_bar_red": true,
+	"phoenix_highlight_current_tab": true,
+	"phoenix_solid_current_tab": true,
+	"rulers":
+	[
+		80,
+		110
+	],
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"show_tab_close_buttons": false,
+	"tab_size": 2,
+	"theme": "Phoenix Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+	"auto_complete_commit_on_tab": false,
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "build"]
 }

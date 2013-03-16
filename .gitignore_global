@@ -34,4 +34,9 @@
 .Spotlight-V100
 .Trashes
 Icon?
-ehthumbs.db
+ehthumbs.dba
+
+# Other
+######################
+.rbx
+config/initializers/opensslhack.rb
