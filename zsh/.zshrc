@@ -7,7 +7,7 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # General (OM)ZSH Environment Variables
 ZSH="$HOME/.oh-my-zsh"    # Path to my OMZSH installation
 ZSH_DIR="$HOME/.zsh"      # Path to my custom ZSH directory
-ZSH_THEME="miloshadzic"  # ZSH Theme ( from: $HOME/.oh-my-zsh/themes )
+ZSH_THEME="mynar"
 
 # Load OMZSH Plugins
 plugins=(git bundler rails3 rake ruby brew gem cap)
