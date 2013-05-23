@@ -29,3 +29,4 @@ alias rr="be rake routes"
 
 # Git
 alias g='open -a gitx .'
+alias gs='git status'
