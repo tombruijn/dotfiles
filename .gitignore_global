@@ -40,3 +40,4 @@ ehthumbs.dba
 ######################
 .rbx
 config/initializers/opensslhack.rb
+.yardoc
