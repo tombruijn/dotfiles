@@ -14,3 +14,4 @@ unalias po
 unalias md
 unalias rd
 unalias gst
+unalias gm
