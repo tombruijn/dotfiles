@@ -9,7 +9,9 @@ ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 rm -rf  "$HOME/.oh-my-zsh/custom"
 ln -nfs "$(pwd)/zsh/.oh-my-zsh/custom"  "$HOME/.oh-my-zsh/custom"
 
-ln -nfs "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
+ln -nfs "$(pwd)/sublime/Preferences.sublime-settings" "$SUBLIME_DIR/Preferences.sublime-settings"
+ln -nfs "$(pwd)/sublime/Default (OSX).sublime-keymap" "$SUBLIME_DIR/Default (OSX).sublime-keymap"
 
 ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
 ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"

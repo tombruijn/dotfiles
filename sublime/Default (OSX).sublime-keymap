@@ -1,0 +1,7 @@
+[
+  { "keys": ["super+shift+1"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["super+shift+2"], "command": "focus_group", "args": { "group": 1 } },
+  { "keys": ["super+shift+3"], "command": "focus_group", "args": { "group": 2 } },
+  { "keys": ["super+shift+4"], "command": "focus_group", "args": { "group": 3 } },
+  { "keys": ["ctrl+alt+f"], "command": "js_format"}
+]
