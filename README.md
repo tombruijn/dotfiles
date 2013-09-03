@@ -5,8 +5,9 @@ These dotfiles contain configuration and installation for:
 * XCode
 * Homebrew
 * ITerm2
-* ZSH (Oh-My-ZSH)
-* Dotfiles and Sublime
+* ZSH
+* Dotfiles
+* Sublime
 * VIM (and MacVIM)
 * RVM
 * Misc. Utilities
@@ -57,10 +58,6 @@ Get the latest version of Git.
 Install ZSH with the following command:
 
     brew install zsh
-
-Install Oh-My-ZSH with the following command:
-
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 ### Environment, ZSH, Sublime configuration
 

@@ -1,25 +1,24 @@
-# Add RVM to PATH for scripting
-export PATH="$HOME/.rvm/bin:$PATH"
-
-# General (OM)ZSH Environment Variables
-ZSH="$HOME/.oh-my-zsh"    # Path to my OMZSH installation
-ZSH_DIR="$HOME/.zsh"      # Path to my custom ZSH directory
-ZSH_THEME="mynar"
-
-# Load OMZSH Plugins
-plugins=(git bundler rails3 rake ruby brew gem cap)
-
-# Load OMZSH Core
-source "$ZSH/oh-my-zsh.sh"
-
-# Aliases
-source "$ZSH_DIR/aliases"
+ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 
 # Config
-source "$ZSH_DIR/oh-my-zsh-config"
+source "$ZSH_DIR/config.zsh"
+
+# Git functions
+source "$ZSH_DIR/git.zsh"
+
+# Theme
+source "$ZSH_DIR/appearance.zsh"
+source "$ZSH_DIR/theme.zsh"
+source "$ZSH_DIR/termsupport.zsh"
+
+# Aliases
+source "$ZSH_DIR/aliases.zsh"
+
+# Add RVM to PATH
+export PATH="$HOME/.rvm/bin:$PATH"
 
 # Base paths
-export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # Heroku Toolbelt bin path
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -6,8 +6,6 @@ ln -nfs "$(pwd)/bin"                    "$HOME/.bin"
 
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
-rm -rf  "$HOME/.oh-my-zsh/custom"
-ln -nfs "$(pwd)/zsh/.oh-my-zsh/custom"  "$HOME/.oh-my-zsh/custom"
 
 SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
 ln -nfs "$(pwd)/sublime/Preferences.sublime-settings" "$SUBLIME_DIR/Preferences.sublime-settings"
