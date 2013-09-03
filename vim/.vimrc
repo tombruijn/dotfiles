@@ -1,4 +1,4 @@
-set nocompatible                  " Must come first because it changes other options.
+set nocompatible                  " We're not running VI
 
 silent! call pathogen#runtime_append_all_bundles()
 

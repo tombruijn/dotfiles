@@ -1,9 +1,6 @@
 # Add RVM to PATH for scripting
 export PATH="$HOME/.rvm/bin:$PATH"
 
-# export LANGUAGE=en_US.UTF-8
-# export LC_ALL=en_US.UTF-8
-
 # General (OM)ZSH Environment Variables
 ZSH="$HOME/.oh-my-zsh"    # Path to my OMZSH installation
 ZSH_DIR="$HOME/.zsh"      # Path to my custom ZSH directory

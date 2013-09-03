@@ -11,4 +11,3 @@ set guioptions-=L
 set go+=c
 
 set guifont=Menlo:h14
-
