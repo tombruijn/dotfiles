@@ -16,6 +16,7 @@ alias flushdns="sudo /etc/init.d/nscd restart"
 # Git
 alias g="open -a gitx ."
 alias gs="git status"
+alias gb="git branch"
 
 # Bundle exec
 alias be="bundle exec"
