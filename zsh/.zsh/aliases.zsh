@@ -11,12 +11,26 @@ alias pro="cd $HOME/projects/"
 alias kep="cd $HOME/keplar/"
 alias m="cd $HOME/machinery/"
 alias 8="cd $HOME/80beans/"
-alias flushdns="sudo /etc/init.d/nscd restart"
+if [[ $(uname -s) == "Darwin" ]]; then
+  alias flushdns="dscacheutil -flushcache"
+else
+  alias flushdns="sudo /etc/init.d/nscd restart"
+fi;
+alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Git
 alias g="open -a gitx ."
 alias gs="git status"
 alias gb="git branch"
+alias gc="git checkout"
+alias gpu="git push"
+alias gpl="git pull"
+alias grv="git remote -v"
+alias gri="git rebase -i"
+alias gsl="git stash list"
+alias gsd="git stash drop"
+alias gsp="git stash pop"
+alias gsa="git stash --include-untracked"
 
 # Bundle exec
 alias be="bundle exec"
@@ -43,4 +57,4 @@ alias rds="bundle exec rake db:seed"
 
 # Oh openssl on Mac..... There are no words
 alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
-alias sslremove="unlink config/initializers/opensslhack.rb"
+alias sslremove="rm config/initializers/opensslhack.rb"
