@@ -16,7 +16,7 @@
 		".bundle",
 		"coverage"
 	],
-	"font_size": 12.0,
+	"font_size": 14.0,
 	"git_gutter_live_mode": false,
 	"highlight_line": true,
 	"ignored_packages":
