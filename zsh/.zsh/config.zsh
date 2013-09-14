@@ -1,8 +1,8 @@
 # Language
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-# man zshoptions
+# See: man zshoptions
 setopt auto_cd # cd prefix not necessary to open a dir
 setopt multios # Multiple output
 setopt cdable_vars
