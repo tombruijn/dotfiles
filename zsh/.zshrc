@@ -1,5 +1,7 @@
 ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 
+export EDITOR=vim
+
 # Config
 source "$ZSH_DIR/config.zsh"
 source "$ZSH_DIR/functions.zsh"
