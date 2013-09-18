@@ -19,4 +19,5 @@ autoload -U compinit
 compinit
 setopt AUTO_MENU
 
+source "$ZSH_DIR/key-bindings.zsh"
 source "$ZSH_DIR/history.zsh"
