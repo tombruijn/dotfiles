@@ -17,8 +17,9 @@ source "$ZSH_DIR/termsupport.zsh"
 # Aliases
 source "$ZSH_DIR/aliases.zsh"
 
-# Add RVM to PATH
-export PATH="$HOME/.rvm/bin:$PATH"
+# chruby
+source "/usr/local/share/chruby/chruby.sh"
+source "/usr/local/share/chruby/auto.sh"
 
 # Base paths
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
