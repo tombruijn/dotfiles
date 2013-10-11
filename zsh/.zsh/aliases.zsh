@@ -1,6 +1,7 @@
 alias reload="source $HOME/.zshrc"
 
 # Lazy me
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias sudo="nocorrect sudo"
 alias ..="cd .."
 alias o="open ."
@@ -26,6 +27,7 @@ alias gs="git status"
 alias gb="git branch"
 alias gc="git checkout"
 alias gpu="git push"
+alias gpo="git push origin"
 alias gpl="git pull"
 alias grv="git remote -v"
 alias gri="git rebase -i"
@@ -52,10 +54,12 @@ alias DEV="RAILS_ENV=development"
 
 alias rs="bundle exec rails server"
 alias rc="bundle exec rails console"
+alias rg="bundle exec rails generate"
 
 alias rdm="bundle exec rake db:migrate"
 alias rdr="bundle exec rake db:migrate:reset"
 alias rds="bundle exec rake db:seed"
+alias rdi="rdr && rds"
 
 # Oh openssl on Mac..... There are no words
 alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
