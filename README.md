@@ -25,6 +25,12 @@ Once done, open it.
 Now, go to `XCode > Preferences > Downloads` and download the
 `Command Line Tools`.
 
+### OSX defaults
+
+Set osx defaults.
+
+./.osx
+
 ### Homebrew
 
 Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
