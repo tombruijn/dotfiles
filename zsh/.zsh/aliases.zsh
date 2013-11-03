@@ -5,6 +5,7 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias sudo="nocorrect sudo"
 alias ..="cd .."
 alias o="open ."
+alias mou="open -a mou"
 alias la="ls -la"
 alias cr="chruby"
 alias desk="cd $HOME/Desktop"
@@ -60,6 +61,7 @@ alias rdm="bundle exec rake db:migrate"
 alias rdr="bundle exec rake db:migrate:reset"
 alias rds="bundle exec rake db:seed"
 alias rdi="rdr && rds"
+alias rdsd="rdr && SEED_DEMO=1 bundle exec rake db:seed"
 
 # Oh openssl on Mac..... There are no words
 alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
