@@ -12,7 +12,7 @@ These dotfiles contain configuration and installation for:
 * chruby and ruby-install
 * Misc. Utilities
 
-**This setup is intended for Mac OSX ~> 10.8**
+**This setup is intended for Mac OSX ~> 10.9**
 
 ## Installation
 
@@ -21,15 +21,16 @@ Here is a step-by-step installation.
 ### XCode
 
 Install XCode through the Mac App Store.
-Once done, open it.
-Now, go to `XCode > Preferences > Downloads` and download the
-`Command Line Tools`.
+
+Run:
+
+`xcode-select --install`
 
 ### OSX defaults
 
 Set osx defaults.
 
-./.osx
+`./.osx`
 
 ### Homebrew
 
@@ -111,7 +112,7 @@ Replace this installation with a recent version of VIM through Homebrew.
 
 Next, install MacVIM as well.
 
-    brew install macvim
+    brew install mercurial vim macvim
 
 ### chruby and ruby-build
 
