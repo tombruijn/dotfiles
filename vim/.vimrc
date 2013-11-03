@@ -1,17 +1,25 @@
-set nocompatible                  " We're not running VI
+set nocompatible
+filetype off
 
-silent! call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-syntax enable                     " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
+Bundle "gmarik/vundle"
+Bundle "scrooloose/nerdtree"
+Bundle "scrooloose/nerdcommenter"
+Bundle "kien/ctrlp.vim"
+Bundle "ervandew/supertab"
 
-runtime macros/matchit.vim        " Load the matchit plugin.
+syntax enable
+filetype plugin indent on
+
+
+set encoding=utf-8
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
-
 set hidden                        " Handle multiple buffers better.
 
 set wildmenu                      " Enhanced command line completion.
@@ -31,7 +39,6 @@ set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
-
 set visualbell                    " No beeping.
 
 set noswapfile                    " Disable .swp file creation.
@@ -46,39 +53,6 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs.
 
-set laststatus=2                  " Show the status line all the time.
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P " Useful status information at bottom of screen.
-
-set encoding=utf-8                " Default encoding: UTF-8.
-set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
-
-colorscheme jellybeans            " Default color scheme (for both Terminal and GUI VIM).
-
-" Custom mappings.
-vmap < <gv
-vmap > >gv
-
-" Open/Close the NERDTree using `Shift-T o` and `Shift-T c`.
-nmap <S-T>o :NERDTree<Enter>
-nmap <S-T>c :NERDTreeClose<Enter>
-nmap <Tab> <C-w>w
-
-" Flag the following files as Ruby:
-autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
-
-" Flag the following files as HTML:
-autocmd BufRead,BufNewFile {*.eco} set ft=html
-
-" Remove trailing whitespace before writing buffer to file.
-autocmd BufWritePre * :%s/\s\+$//e
-
-" Change the default leader key from \ to ,.
-let mapleader = ","
-
-" Tell ConqueTerm to read from buffer even if you're not in insert mode in
-" that VIM window.
-let g:ConqueTerm_ReadUnfocused = 1
-
 " Tell CtrlP to always use the base directory that VIM initialized with
 " as the starting point for finding files, rather than scoping it down to the
 " current buffer's directory level.
@@ -87,20 +61,8 @@ let g:ctrlp_working_path_mode = 0
 " Show hidden files in NERDtree
 let NERDTreeShowHidden=1
 
-" Custom functions.
-function IndentHash()
-  '<,'>Tabularize /:\zs
-endfunction
-function IndentRocket()
-  '<,'>Tabularize /^[^=>]*\zs=>/l1
-endfunction
-function IndentEquals()
-  '<,'>Tabularize /=
-endfunction
+" Flag the following files as Ruby:
+autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
-map <Leader>i= :call IndentEquals()<cr>
-map <Leader>ih :call IndentHash()<cr>
-map <Leader>ir :call IndentRocket()<cr>
-map <A-Tab> :tabNext<cr>
-
-set colorcolumn=100
+colorscheme jellybeans
+set colorcolumn=80
