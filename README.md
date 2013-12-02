@@ -114,7 +114,7 @@ Next, install MacVIM as well.
 
     brew install mercurial vim macvim
 
-### chruby and ruby-build
+### chruby and ruby-install
 
 Install chruby by following the instructions on the
 [project page](https://github.com/postmodern/chruby).
