@@ -114,6 +114,11 @@ Next, install MacVIM as well.
 
     brew install mercurial vim macvim
 
+Run vundle to install vim plugins.
+
+1. Start vim
+2. Run: `:BundleInstall`
+
 ### chruby and ruby-install
 
 Install chruby by following the instructions on the

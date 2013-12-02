@@ -13,7 +13,6 @@ Bundle "ervandew/supertab"
 syntax enable
 filetype plugin indent on
 
-
 set encoding=utf-8
 
 set showcmd                       " Display incomplete commands.
@@ -52,6 +51,17 @@ set wildignore=*.swp,*.swo,*.bak,*.class,*.lock
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs.
+
+set laststatus=2                  " Show the status line all the time.
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\%=%-16(\ %l,%c-%v\ %)%P " Useful status information at bottom of screen.
+
+set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
+
+" Open/Close the NERDTree using `Shift-T o` and `Shift-T c`.
+nmap <C-T> :NERDTree<Enter>
+nmap <C-Q> :NERDTreeClose<Enter>
+
+nmap <Tab> <C-w>w
 
 " Tell CtrlP to always use the base directory that VIM initialized with
 " as the starting point for finding files, rather than scoping it down to the
