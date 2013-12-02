@@ -2,9 +2,11 @@
 	"auto_complete_commit_on_tab": true,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"default_line_ending": "unix",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
+	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -40,5 +42,7 @@
 	"tab_size": 2,
 	"theme": "Phoenix Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": false,
+	"trim_trailing_white_space_on_save": true,
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?"
 }
