@@ -58,9 +58,8 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\%=%-16(\ %l,%c-%v\ %)%P " Useful status
 
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 
-" Open/Close the NERDTree using `Shift-T o` and `Shift-T c`.
-nmap <C-T> :NERDTree<Enter>
-nmap <C-Q> :NERDTreeClose<Enter>
+" Open/Close the NERDTree using `Ctrl + T` to toggle.
+nmap <C-T> :NERDTreeToggle<Enter>
 
 nmap <Tab> <C-w>w
 
