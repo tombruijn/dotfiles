@@ -61,18 +61,28 @@ set clipboard=unnamed             " Enable OS clipboard to properly paste in to 
 " Open/Close the NERDTree using `Ctrl + T` to toggle.
 nmap <C-T> :NERDTreeToggle<Enter>
 
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+" Ignore certain files in NERDTree
+let NERDTreeIgnore = ['\.git$', '\.DS_Store$']
+
+" Cycle through buffers with tab
 nmap <Tab> <C-w>w
 
+" CtrlP
 " Tell CtrlP to always use the base directory that VIM initialized with
 " as the starting point for finding files, rather than scoping it down to the
 " current buffer's directory level.
 let g:ctrlp_working_path_mode = 0
 
-" Show hidden files in NERDtree
-let NERDTreeShowHidden=1
+" List hidden files in CtrlP
+let g:ctrlp_show_hidden = 1
 
 " Flag the following files as Ruby:
 autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
+" Configure appearance
 colorscheme jellybeans
-set colorcolumn=80
+" Highlight column 80 and 115
+let &colorcolumn="80,120"
+
