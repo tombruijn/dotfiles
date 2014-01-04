@@ -10,6 +10,7 @@ Bundle "scrooloose/nerdcommenter"
 Bundle "kien/ctrlp.vim"
 Bundle "ervandew/supertab"
 Bundle "junegunn/goyo.vim"
+Bundle "kchmck/vim-coffee-script"
 
 syntax enable
 filetype plugin indent on
