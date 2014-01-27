@@ -40,9 +40,12 @@ alias gsa="git stash --include-untracked"
 
 # Bundle exec
 alias be="bundle exec"
+alias s="be spring"
 alias ber="be rake"
 alias bet="be rspec"
+alias bes="s rspec"
 alias cbet="COV=1 be rspec"
+alias cbes="COV=1 s rspec"
 alias fs="be foreman start -f Procfile.development"
 alias fsp="be foreman start"
 alias gu="be guard"
@@ -56,7 +59,9 @@ alias PROD="RAILS_ENV=production"
 alias TEST="RAILS_ENV=test"
 alias DEV="RAILS_ENV=development"
 
+alias srs="bundle exec rails server"
 alias rs="bundle exec rails server"
+alias src="bundle exec rails console"
 alias rc="bundle exec rails console"
 alias rg="bundle exec rails generate"
 
