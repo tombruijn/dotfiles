@@ -20,6 +20,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
 else
   alias flushdns="sudo /etc/init.d/nscd restart"
 fi;
+alias postg="postgres -D /usr/local/var/postgres"
 alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Git
