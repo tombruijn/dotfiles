@@ -54,9 +54,11 @@ Using color preset "Tango Dark" at the moment.
 
 Under "(Global) Keys" add the following maps *:
 
-- `alt + backspace` = `Send Hex Code: 17`
-- `alt + <-` = `Send Escape Sequence: b`
-- `alt + ->` = `Send Escape Sequence: f`
+- `alt` + `backspace` = `Send Hex Code: 17` => Delete full word
+- `alt` + `<-` = `Send Escape Sequence: b` => Skip to left word
+- `alt` + `->` = `Send Escape Sequence: f` => Skip to right word
+- `cmd` + `<-` = `Send Hex Codes: 0x01` => Beginning of line
+- `cmd` + `->` = `Send Hex Codes: 0x05` => End of line
 
 \* = Use the actual keys, not the text above.
 
