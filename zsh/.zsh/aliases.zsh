@@ -21,6 +21,7 @@ else
   alias flushdns="sudo /etc/init.d/nscd restart"
 fi;
 alias postg="postgres -D /usr/local/var/postgres"
+alias redis="redis-server /usr/local/etc/redis.conf"
 alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Git
