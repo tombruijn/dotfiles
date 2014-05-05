@@ -22,7 +22,7 @@ else
 fi;
 alias postg="postgres -D /usr/local/var/postgres"
 alias redis="redis-server /usr/local/etc/redis.conf"
-alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+alias sub="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Git
 alias g="open -a gitx ."
