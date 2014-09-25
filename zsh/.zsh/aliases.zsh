@@ -42,18 +42,14 @@ alias gsa="git stash --include-untracked"
 
 # Bundle exec
 alias be="bundle exec"
-alias s="be spring"
-alias ber="be rake"
-alias bet="be rspec"
-alias bes="s rspec"
-alias cbet="COV=1 be rspec"
-alias cbes="COV=1 s rspec"
-alias fs="be foreman start -f Procfile.development"
-alias fsp="be foreman start"
-alias gu="be guard"
+alias s="spring"
+alias br="be rspec"
+alias sr="s rspec"
+alias cbr="COV=1 be rspec"
+alias csr="COV=1 s rspec"
+alias fs="be foreman start"
 
 # Rake tasks
-alias rr="be rake routes"
 alias rake="noglob rake" # allows square brackts for rake task invocation
 
 # Rails
@@ -61,17 +57,20 @@ alias PROD="RAILS_ENV=production"
 alias TEST="RAILS_ENV=test"
 alias DEV="RAILS_ENV=development"
 
-alias srs="bundle exec rails server"
+alias srs="s rails server"
 alias rs="bundle exec rails server"
-alias src="bundle exec rails console"
+alias src="s rails console"
 alias rc="bundle exec rails console"
 alias rg="bundle exec rails generate"
 
+alias srr="s rake routes"
+alias rr="bundle exec rake routes"
 alias rdm="bundle exec rake db:migrate"
 alias rdr="bundle exec rake db:migrate:reset"
 alias rds="bundle exec rake db:seed"
 alias rdi="rdr && rds"
 alias rdsd="rdr && SEED_DEMO=1 bundle exec rake db:seed"
+alias sseed="s rake db:migrate:reset && SEED_DEMO=1 s rake db:seed"
 
 # Oh openssl on Mac..... There are no words
 alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
