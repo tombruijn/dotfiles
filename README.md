@@ -119,7 +119,7 @@ Next, install MacVIM as well.
 Run vundle to install vim plugins.
 
 1. Start vim
-2. Run: `:BundleInstall`
+2. Run: `:PluginInstall`
 
 ### chruby and ruby-install
 

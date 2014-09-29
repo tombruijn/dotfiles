@@ -2,15 +2,26 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle "gmarik/vundle"
-Bundle "scrooloose/nerdtree"
-Bundle "scrooloose/nerdcommenter"
-Bundle "kien/ctrlp.vim"
-Bundle "ervandew/supertab"
-Bundle "junegunn/goyo.vim"
-Bundle "kchmck/vim-coffee-script"
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'junegunn/goyo.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-haml'
+Plugin 'othree/html5.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'terryma/vim-multiple-cursors'
+
+call vundle#end()
 
 syntax enable
 filetype plugin indent on
@@ -37,7 +48,7 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
 set wrap                          " Turn on line wrapping.
-set scrolloff=3                   " Show 3 lines of context around the cursor.
+set scrolloff=5                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
 set visualbell                    " No beeping.
@@ -54,36 +65,27 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs.
 
-set laststatus=2                  " Show the status line all the time.
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\%=%-16(\ %l,%c-%v\ %)%P " Useful status information at bottom of screen.
-
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 
-" Open/Close the NERDTree using `Ctrl + T` to toggle.
-nmap <C-T> :NERDTreeToggle<Enter>
+colorscheme jellybeans            " Configure appearance
+let &colorcolumn="80,120"         " Highlight column 80 and 115
+let c_space_errors=1              " Highlight trailing spaces
 
-" Show hidden files in NERDTree
-let NERDTreeShowHidden=1
-" Ignore certain files in NERDTree
-let NERDTreeIgnore = ['\.git$', '\.DS_Store$']
+" Flag the following files as Ruby:
+autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
-" Cycle through buffers with tab
-nmap <Tab> <C-w>w
+let NERDTreeShowHidden=1 " Show hidden files in NERDTree
+let NERDTreeIgnore = ['\.git$', '\.DS_Store$'] " Ignore certain files in NERDTree
 
 " CtrlP
 " Tell CtrlP to always use the base directory that VIM initialized with
 " as the starting point for finding files, rather than scoping it down to the
 " current buffer's directory level.
 let g:ctrlp_working_path_mode = 0
-
 " List hidden files in CtrlP
 let g:ctrlp_show_hidden = 1
 
-" Flag the following files as Ruby:
-autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
+let g:airline#extensions#tabline#enabled = 1
 
-" Configure appearance
-colorscheme jellybeans
-" Highlight column 80 and 115
-let &colorcolumn="80,120"
-
+nmap <C-T> :NERDTreeToggle<Enter> " Open/Close the NERDTree using `Ctrl + T` to toggle.
+nmap <Tab> <C-w>w                 " Cycle through buffers with tab
