@@ -87,6 +87,8 @@ let g:ctrlp_show_hidden = 1
 
 let g:airline#extensions#tabline#enabled = 1
 
+let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
+
 nmap <C-T> :NERDTreeToggle<Enter> " Open/Close the NERDTree using `Ctrl + T` to toggle.
 nmap <Tab> <C-w>w                 " Cycle through buffers with tab
 nmap <silent> <esc> :noh<cr>      " Clear current search highlights on ESC
