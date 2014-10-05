@@ -4,4 +4,3 @@ js=.coffee
 html=.haml,.jst,.eco,.erb
 --type-add
 css=.sass,.scss
-
