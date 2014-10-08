@@ -41,6 +41,17 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
+# Disable smart quote replacement
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Increase key repeat speed
+defaults write NSGlobalDomain KeyRepeat -int 0
+
+# Require password _immediately_ after sleep or screensaver
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
 # Trackpad
 
 # Trackpad: enable tap to click for this user and for the login screen
@@ -156,4 +167,3 @@ for app in "Spotlight" "Dashboard" "Dock" "Finder" "SystemUIServer" "Messages" "
 done
 
 echo "Done. A restart maybe required for some settings."
-
