@@ -20,7 +20,8 @@ if [[ $(uname -s) == "Darwin" ]]; then
 else
   alias flushdns="sudo /etc/init.d/nscd restart"
 fi;
-alias postg="postgres -D /usr/local/var/postgres"
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias sub="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
@@ -71,6 +72,9 @@ alias rds="bundle exec rake db:seed"
 alias rdi="rdr && rds"
 alias rdsd="rdr && SEED_DEMO=1 bundle exec rake db:seed"
 alias sseed="s rake db:migrate:reset && SEED_DEMO=1 s rake db:seed"
+
+# Other
+alias cop="be rubocop"
 
 # Oh openssl on Mac..... There are no words
 alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
