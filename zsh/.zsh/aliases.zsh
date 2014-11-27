@@ -75,6 +75,7 @@ alias sseed="s rake db:migrate:reset && SEED_DEMO=1 s rake db:seed"
 
 # Other
 alias cop="be rubocop"
+alias cov="open coverage/index.html"
 
 # Oh openssl on Mac..... There are no words
 alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
