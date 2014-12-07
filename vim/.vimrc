@@ -76,6 +76,7 @@ autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set
 
 let NERDTreeShowHidden=1 " Show hidden files in NERDTree
 let NERDTreeIgnore = ['\.git$', '\.DS_Store$'] " Ignore certain files in NERDTree
+let g:NERDTreeHijackNetrw=0
 
 " CtrlP
 " Tell CtrlP to always use the base directory that VIM initialized with
