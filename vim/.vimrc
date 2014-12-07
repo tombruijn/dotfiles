@@ -96,3 +96,15 @@ nmap <silent> <esc> :noh<cr>      " Clear current search highlights on ESC
 nmap <A-/> <Leader>c " Toggle comments
 vmap <A-/> <Leader>c " Toggle comments
 
+" Highlight trailing whitespace as an error
+highlight ExtraWhitespace ctermbg=darkred guibg=#902020
+match ExtraWhitespace /\s\+$/
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
