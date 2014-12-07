@@ -93,6 +93,8 @@ let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
 nmap <C-T> :NERDTreeToggle<Enter> " Open/Close the NERDTree using `Ctrl + T` to toggle.
 nmap <Tab> <C-w>w                 " Cycle through buffers with tab
 nmap <silent> <esc> :noh<cr>      " Clear current search highlights on ESC
+nmap <A-/> <Leader>c " Toggle comments
+vmap <A-/> <Leader>c " Toggle comments
 
 " Line movement, source http://vimbits.com/bits/283
 nmap <D-j> mz:m+<cr>`z                " Move lines up in normal mode (CMD + j)
