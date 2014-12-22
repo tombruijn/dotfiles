@@ -25,6 +25,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
