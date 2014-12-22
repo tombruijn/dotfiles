@@ -48,7 +48,7 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
 set wrap                          " Turn on line wrapping.
-set scrolloff=5                   " Show 3 lines of context around the cursor.
+set scrolloff=999                 " 'Center' screen on current line by setting a big offset
 
 set title                         " Set the terminal's title
 set visualbell                    " No beeping.
@@ -77,6 +77,7 @@ autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set
 let NERDTreeShowHidden=1 " Show hidden files in NERDTree
 let NERDTreeIgnore = ['\.git$', '\.DS_Store$'] " Ignore certain files in NERDTree
 let g:NERDTreeHijackNetrw=0
+nmap <C-T> :NERDTreeToggle<Enter> " Open/Close the NERDTree using `Ctrl + T` to toggle.
 
 " CtrlP
 " Tell CtrlP to always use the base directory that VIM initialized with
@@ -85,20 +86,43 @@ let g:NERDTreeHijackNetrw=0
 let g:ctrlp_working_path_mode = 0
 " List hidden files in CtrlP
 let g:ctrlp_show_hidden = 1
+" Search on filename by default
+let g:ctrlp_by_filename = 1
+" Ignore directories and files
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git\|\.hg\|\.svn\|log\|.yarddoc\|doc\|tmp$',
+  \ 'file': '\v\.(DS_Store)$'
+  \ }
+" Open files in tabs by default
+" - Map default behavior to `Ctrl + T`
+" - Map open in tab behavior to `Enter`
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': ['<c-t>'],
+  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+  \ }
 
+let g:airline_theme='solarized'
+let g:airline_theme#background='dark' " Dark solarized theme
 let g:airline#extensions#tabline#enabled = 1
 
 let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
 
-nmap <C-T> :NERDTreeToggle<Enter> " Open/Close the NERDTree using `Ctrl + T` to toggle.
-nmap <Tab> <C-w>w                 " Cycle through buffers with tab
-nnoremap <silent> <esc> :noh<cr><esc> " Clear current search highlights on ESC
+nmap <Tab> <C-w>w " Cycle through buffers with tab
+
+" TODO: Doesn't work
 nmap <A-/> <Leader>c " Toggle comments
 vmap <A-/> <Leader>c " Toggle comments
 
 " Highlight trailing whitespace as an error
 highlight ExtraWhitespace ctermbg=darkred guibg=#902020
 match ExtraWhitespace /\s\+$/
+
+" Clear current search highlights on Enter
+nnoremap <CR> :noh<CR><CR>
+
+" Center search results
+nnoremap n nzz
+nnoremap N Nzz
 
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
