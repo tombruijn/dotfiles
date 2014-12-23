@@ -132,22 +132,22 @@ defaults write com.apple.dock showhidden -bool true
 
 # Spaces
 
-# Don’t automatically rearrange Spaces based on most recent use
+# Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
 # Dashboard
 
-# Don’t show Dashboard as a Space
+# Don't show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Messages
 
-# Disable smart quotes as it’s annoying for messages that contain code
+# Disable smart quotes as it's annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 # Twitter.app
 
-# Disable smart quotes as it’s annoying for code tweets
+# Disable smart quotes as it's annoying for code tweets
 defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
 
 # Hide menu icon
@@ -159,7 +159,7 @@ defaults write com.twitter.twitter-mac openLinksInBackground -bool true
 # Show full names rather than Twitter handles
 defaults write com.twitter.twitter-mac ShowFullNames -bool true
 
-# Hide the app in the background if it’s not the front-most window
+# Hide the app in the background if it's not the front-most window
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 for app in "Spotlight" "Dashboard" "Dock" "Finder" "SystemUIServer" "Messages" "Twitter"; do
