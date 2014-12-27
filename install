@@ -1,7 +1,8 @@
 #! /bin/bash
 
 # Set up symlinks
-ln -nfs "$(pwd)/gem/.gemrc"             "$HOME/.gemrc"
+ln -nfs "$(pwd)/ruby/.gemrc"             "$HOME/.gemrc"
+ln -nfs "$(pwd)/ruby/.irbrc"             "$HOME/.irbrc"
 ln -nfs "$(pwd)/bin"                    "$HOME/.bin"
 
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
