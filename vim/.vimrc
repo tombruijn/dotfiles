@@ -69,7 +69,7 @@ set expandtab                     " Use spaces instead of tabs.
 
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 
-colorscheme jellybeans            " Configure appearance
+colorscheme twilight              " Configure appearance
 let &colorcolumn="80,100"         " Highlight column 80 and 115
 let c_space_errors=1              " Highlight trailing spaces
 
