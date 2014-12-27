@@ -21,6 +21,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'sirver/ultisnips'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 
