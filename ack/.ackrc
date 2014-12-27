@@ -1,6 +1,23 @@
+# Supress errors
+-s
+
+--with-filename
+--nogroup
+--column
+--smart-case
+# Follow symlinks
+--follow
+
+# Add types
 --type-add
 js=.coffee
 --type-add
 html=.haml,.jst,.eco,.erb
 --type-add
 css=.sass,.scss
+
+# Ignores
+--ignore-dir=is:log
+--ignore-dir=is:tmp
+--ignore-dir=is:doc
+--ignore-dir=is:coverage

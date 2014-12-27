@@ -5,8 +5,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
@@ -14,12 +15,11 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-haml'
 Plugin 'othree/html5.vim'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 
@@ -68,67 +68,14 @@ set expandtab                     " Use spaces instead of tabs.
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 
 colorscheme jellybeans            " Configure appearance
-let &colorcolumn="80,120"         " Highlight column 80 and 115
+let &colorcolumn="80,100"         " Highlight column 80 and 115
 let c_space_errors=1              " Highlight trailing spaces
 
 " Flag the following files as Ruby:
 autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
-let NERDTreeShowHidden=1 " Show hidden files in NERDTree
-let NERDTreeIgnore = ['\.git$', '\.DS_Store$'] " Ignore certain files in NERDTree
-let g:NERDTreeHijackNetrw=0
-nmap <C-T> :NERDTreeToggle<Enter> " Open/Close the NERDTree using `Ctrl + T` to toggle.
-
-" CtrlP
-" Tell CtrlP to always use the base directory that VIM initialized with
-" as the starting point for finding files, rather than scoping it down to the
-" current buffer's directory level.
-let g:ctrlp_working_path_mode = 0
-" List hidden files in CtrlP
-let g:ctrlp_show_hidden = 1
-" Search on filename by default
-let g:ctrlp_by_filename = 1
-" Ignore directories and files
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git\|\.hg\|\.svn\|log\|.yarddoc\|doc\|tmp$',
-  \ 'file': '\v\.(DS_Store)$'
-  \ }
-" Open files in tabs by default
-" - Map default behavior to `Ctrl + T`
-" - Map open in tab behavior to `Enter`
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<c-t>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-  \ }
-
-let g:airline_theme='solarized'
-let g:airline_theme#background='dark' " Dark solarized theme
-let g:airline#extensions#tabline#enabled = 1
-
 let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
 
-nmap <Tab> <C-w>w " Cycle through buffers with tab
+let mapleader=","
 
-" TODO: Doesn't work
-nmap <A-/> <Leader>c " Toggle comments
-vmap <A-/> <Leader>c " Toggle comments
-
-" Highlight trailing whitespace as an error
-highlight ExtraWhitespace ctermbg=darkred guibg=#902020
-match ExtraWhitespace /\s\+$/
-
-" Clear current search highlights on Enter
-nnoremap <CR> :noh<CR><CR>
-
-" Center search results
-nnoremap n nzz
-nnoremap N Nzz
-
-fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
-
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+runtime! config/**/*.vim
