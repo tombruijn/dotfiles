@@ -12,7 +12,7 @@ These dotfiles contain configuration and installation for:
 * chruby and ruby-install
 * Misc. Utilities
 
-**This setup is intended for Mac OSX ~> 10.9**
+**This setup is intended for Mac OSX >= 10.9**
 
 ## Installation
 

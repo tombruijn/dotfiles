@@ -15,6 +15,10 @@ noremap <F6> :set spell! spell?<CR>
 " Lazy command open
 nnoremap ; :
 
+" Remove full line with <leader>d
+nmap <leader>d "_dd
+vmap <leader>d "_d
+
 " upper/lower word
 " Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L12-14
 nmap <leader>u mQviwU`Q

@@ -3,18 +3,22 @@ alias reload="source $HOME/.zshrc"
 # Lazy me
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias sudo="nocorrect sudo"
-alias ..="cd .."
 alias o="open ."
-alias mou="open -a mou"
 alias la="ls -lah"
+
+# Directory shortcuts
+alias ..="cd .."
 alias desk="cd $HOME/Desktop"
 alias home="cd $HOME/"
 alias tdb="cd $HOME/tombruijn/"
 alias pro="cd $HOME/projects/"
 alias dotfiles="cd $HOME/projects/dotfiles"
 alias kep="cd $HOME/keplar/"
+alias kepd="open $HOME/keplar/docs"
 alias m="cd $HOME/machinery/"
 alias 8="cd $HOME/80beans/"
+
+# Small utilities
 if [[ $(uname -s) == "Darwin" ]]; then
   alias flushdns="dscacheutil -flushcache"
 else
@@ -24,6 +28,7 @@ alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias sub="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+alias mou="open -a mou"
 
 # Git
 alias g="open -a gitx ."
