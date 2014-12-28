@@ -77,6 +77,10 @@ let c_space_errors=1              " Highlight trailing spaces
 " Flag the following files as Ruby:
 autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
+" Flag sass files as Sass
+autocmd BufRead,BufNewFile *.scss set ft=sass.css
+autocmd BufRead,BufNewFile *.scss set ft=scss.css
+
 let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
 
 let mapleader=","

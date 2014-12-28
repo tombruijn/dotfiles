@@ -1,0 +1,76 @@
+# HTML snippets
+
+priority -50
+
+snippet !! "HTML 5.0 setup" b
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+  </head>
+  <body>
+    $0
+  </body>
+</html>
+endsnippet
+
+snippet < "<element></element>"
+<${1:element}>$0</$1>
+endsnippet
+
+snippet h1 "<h1>" w
+<h1>$0</h1>
+endsnippet
+
+snippet h2 "<h2>" w
+<h2>$0</h2>
+endsnippet
+
+snippet h3 "<h3>" w
+<h3>$0</h3>
+endsnippet
+
+snippet h4 "<h4>" w
+<h4>$0</h4>
+endsnippet
+
+snippet p "<p>" w
+<p>$0</p>
+endsnippet
+
+snippet div "<div>" w
+<div>$0</div>
+endsnippet
+
+snippet span "<span>" w
+<span>$0</span>
+endsnippet
+
+snippet ul "<ul>" w
+<ul>
+  $0
+</ul>
+endsnippet
+
+snippet ol "<ol>" w
+<ol>
+  $0
+</ol>
+endsnippet
+
+snippet li "<li>" w
+<li>$0</li>
+endsnippet
+
+snippet a "<a>" w
+<a href="${1:http://www.url.com}"${2: target="_blank"}>${3:Anchor Text}</a>
+endsnippet
+
+snippet = "attribute" w
+${1:attribute}="${2:value}"$0
+endsnippet
+
+# vim:ft=snippets:

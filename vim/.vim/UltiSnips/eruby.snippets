@@ -1,0 +1,39 @@
+# eruby
+
+extends html
+
+snippet <% "<% {code} %>"
+<% ${1:code} %>$0
+endsnippet
+
+snippet <%= "<%= {code} %>"
+<%= ${1:code} %>$0
+endsnippet
+
+snippet if "<% if {condition} %>{code}<% end %>"
+<% if ${1:condition} %>
+  $0
+<% end %>
+endsnippet
+
+snippet else "<% else %>"
+<% else %>
+  $0
+endsnippet
+
+snippet elsif "<% elsif {condition} %>"
+<% elsif ${1:condition} %>
+  $0
+endsnippet
+
+snippet each "<% variable.each do |variable| %>"
+<% ${1:variable}.each do |${2:variable}| %>
+  $0
+<% end %>
+endsnippet
+
+snippet render "<%= render partial %>"
+<%= render "${1:partial}" %>$0
+endsnippet
+
+# vim:ft=snippets:

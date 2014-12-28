@@ -1,0 +1,156 @@
+# Rails snippets
+
+priority -50
+
+# Routes
+snippet res "resources"
+resources :${1:posts}${2: do
+  $3
+end}
+endsnippet
+
+snippet nam "namespace"
+namespace :${1:api} do
+  $0
+end
+endsnippet
+
+# Controller
+snippet flash "flash[...] (flash)"
+flash[:${1:notice}] = "${2:message}"$0
+endsnippet
+
+snippet redir "redirect_to (redir)"
+redirect_to ${1:location}
+endsnippet
+
+snippet redif "redirect_to ..., flash: message (redif)"
+redirect_to ${1:location}, ${2:notice}: "${3:message}"
+endsnippet
+
+snippet rn "render nothing (rn)"
+render nothing: ${1:true}
+endsnippet
+
+snippet controller "Create controller class (controller)"
+class ${1:Model}Controller < ${2:ApplicationController}
+  $0
+
+  private
+
+  def ${3}
+    @$3 = ${4:$1}.find(params[:id])
+  end
+end
+endsnippet
+
+# Model before callbacks
+snippet before_ "before_create"
+before_create $0
+endsnippet
+
+snippet before_ "before_destroy"
+before_destroy $0
+endsnippet
+
+snippet before_ "before_save"
+before_save $0
+endsnippet
+
+snippet before_ "before_update"
+before_update $0
+endsnippet
+
+snippet before_ "before_validation"
+before_validation $0
+endsnippet
+
+# Model relationships
+snippet bt "belongs_to (bt)"
+belongs_to :${1:object}
+endsnippet
+
+snippet hm "has_many (hm)"
+has_many :${1:object}s
+endsnippet
+
+snippet hmt "has_many through (hmt)"
+has_many :${1:objects}, through: :${2:join_association}
+endsnippet
+
+snippet ho "has_one (ho)"
+has_one :${1:object}
+endsnippet
+
+# Model other
+snippet scope "scope"
+scope :${1:name}, -> { ${2:conditions} }
+endsnippet
+
+# Migrations
+snippet column "Create column (column)"
+t.${1:type} :${2:name}
+$0
+endsnippet
+
+snippet t. "t.binary"
+t.binary :${1:name}${2:, limit: ${3:2}.megabytes}
+endsnippet
+
+snippet t. "t.boolean"
+t.boolean :${1:name}
+endsnippet
+
+snippet t. "t.date"
+t.date :${1:name}
+endsnippet
+
+snippet t. "t.datetime"
+t.datetime :${1:name}
+endsnippet
+
+snippet t. "t.decimal"
+t.decimal :${1:name}${2:${3:, precision: ${4:10}}${5:, scale: ${6:2}}}
+endsnippet
+
+snippet t. "t.float"
+t.float :${1:name}
+endsnippet
+
+snippet t. "t.index"
+t.index :${1:name}
+endsnippet
+
+snippet t. "t.integer"
+t.integer :${1:name}
+endsnippet
+
+snippet t. "t.references"
+t.references :${1:taggable}${2:, polymorphic: "${3:Photo}"
+endsnippet
+
+snippet t. "t.rename"
+t.rename :${1:old_column_name}, :${2:new_column_name}
+endsnippet
+
+snippet t. "t.string"
+t.string :${1:name}
+endsnippet
+
+snippet t. "t.text"
+t.text :${1:name}
+endsnippet
+
+snippet t. "t.time"
+t.time :${1:name}
+endsnippet
+
+snippet t. "t.timestamp"
+t.timestamp :${1:name}
+endsnippet
+
+snippet t. "t.timestamps"
+t.timestamps
+endsnippet
+
+# vim:ft=snippets:

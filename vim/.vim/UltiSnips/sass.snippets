@@ -1,0 +1,67 @@
+priority -50
+
+snippet imp "@import ...;" b
+@import "${1:file}";
+endsnippet
+
+snippet ext "@extend %placeholder;" b
+@extend %${1:%placeholder};
+endsnippet
+
+snippet mixin "@mixin (...) { ... }" b
+=mixin ${1:name}(${2})
+  ${VISUAL}$0
+endsnippet
+
+snippet func "@function (...) { ... }" b
+@function ${1:name}(${2})
+  ${VISUAL}$0
+endsnippet
+
+snippet if "@if (...) { ... }" b
+@if ${1:condition}
+  ${VISUAL}$0
+endsnippet
+
+snippet else "@else { ... }" b
+@else ${1:condition}
+  ${VISUAL}$0
+endsnippet
+
+snippet for "@for loop" b
+@for ${1:$i} from ${2:1} through ${3:3}
+  ${VISUAL}$0
+endsnippet
+
+snippet each "@each loop" b
+@each ${1:$item} in ${2:item, item, item}
+  ${VISUAL}$0
+endsnippet
+
+snippet while "@while loop" b
+@while ${1:$i} ${2:>} ${3:0}
+  ${VISUAL}$0
+endsnippet
+
+snippet before "&::before"
+&::before
+  content: ""
+  ${VISUAL}$0
+endsnippet
+
+snippet after "&::after"
+&::after
+  content: ""
+  ${VISUAL}$0
+endsnippet
+
+snippet fontt "font: nested"
+font:
+  ${VISUAL}$0
+endsnippet
+
+snippet rgba "color rgba"
+rgba(${1:255}, ${2:255}, ${3:255}, ${4:0.5})$0
+endsnippet
+
+# vim:ft=snippets:

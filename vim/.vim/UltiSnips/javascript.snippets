@@ -1,0 +1,87 @@
+priority -50
+
+snippet wrap "Immediately-Invoked Function Expression" b
+(function(${1:parameters}) {
+  ${VISUAL}$0
+}(${2:$1}));
+endsnippet
+
+snippet func "Function" b
+function ${1:name}(${2:parameters}) {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet :, "Object Value JS"
+${1:key}: ${0:value},
+endsnippet
+
+snippet if "if (...) {...}" b
+if (${1:condition}) {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet elseif "else if (...) {...}"
+else if (${1:condition}) {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet else "else (...) {...}"
+else {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet for "for (...) {...} (counting up)" b
+for (var ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet ford "for (...) {...} (counting down)" b
+for (var ${2:i} = ${1:length} - 1; $2 >= 0; $2--) {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet timeout "setTimeout function"
+setTimeout(function() {
+  ${VISUAL}$0
+}, ${1:10});
+endsnippet
+
+snippet cl "console.log" b
+console.log(${1:value});
+endsnippet
+
+snippet ce "console.error" b
+console.error(${1:value});
+endsnippet
+
+snippet cw "console.warn" b
+console.warn(${1:value});
+endsnippet
+
+snippet tstart "console.time" b
+console.time("${1:label}");
+${VISUAL}$0
+endsnippet
+
+snippet tend "console.timeEnd" b
+console.timeEnd("${1:label}");
+${VISUAL}$0
+endsnippet
+
+snippet que "document.querySelector(...)" b
+var ${1:variable} = document.querySelector(".${2:selector}");
+${VISUAL}$0
+endsnippet
+
+snippet query "document.querySelectorAll(...)" b
+var ${1:variable} = document.querySelectorAll(".${2:selector}");
+${VISUAL}$0
+endsnippet
+
+# vim:ft=snippets:
