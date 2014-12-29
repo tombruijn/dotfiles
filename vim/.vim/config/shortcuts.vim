@@ -1,6 +1,9 @@
 " Cycle through buffers with tab
 nmap <Tab> <C-w>w
 
+" Reload .vimrc
+nnoremap <LEADER>reload :source ~/.vimrc<CR>
+
 " Open Ack search on `Command + /`
 nnoremap <d-/> :Ack<Space>
 
