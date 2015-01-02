@@ -18,6 +18,12 @@ noremap <F6> :set spell! spell?<CR>
 " Lazy command open
 nnoremap ; :
 
+" Easier start/end of line navigation
+nnoremap H ^
+nnoremap L $
+vnoremap H ^
+vnoremap L $
+
 " Remove full line with <leader>d
 nmap <leader>d "_dd
 vmap <leader>d "_d
