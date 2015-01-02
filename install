@@ -3,7 +3,6 @@
 # Set up symlinks
 ln -nfs "$(pwd)/ruby/.gemrc"            "$HOME/.gemrc"
 ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
-ln -nfs "$(pwd)/bin"                    "$HOME/.bin"
 
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
