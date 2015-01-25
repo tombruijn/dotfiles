@@ -20,9 +20,9 @@ nnoremap ; :
 
 " Easier start/end of line navigation
 nnoremap H ^
-nnoremap L $
+nnoremap L g_
 vnoremap H ^
-vnoremap L $
+vnoremap L g_
 
 " Remove full line with <leader>d
 nmap <leader>d "_dd
