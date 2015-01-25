@@ -8,4 +8,5 @@ let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle', 'log', 'tmp', 'covera
 let g:NERDTreeHijackNetrw=0
 
 " Open/Close the NERDTree using `Ctrl + T` to toggle.
-nmap <C-T> :NERDTreeToggle<Enter>
+nmap <C-T> :NERDTreeToggle<CR>
+nmap <leader>ft :NERDTreeFind<CR>
