@@ -11,7 +11,7 @@ let g:ctrlp_by_filename = 1
 
 " Ignore directories and files
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git\|\.hg\|\.svn\|log\|.yarddoc\|doc\|tmp$',
+  \ 'dir':  '\.git\|\.hg\|\.svn\|log\|.yarddoc\|doc\|coverage\|tmp\|\.sass-cache$',
   \ 'file': '\v\.(DS_Store)$'
   \ }
 
