@@ -14,11 +14,3 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git\|\.hg\|\.svn\|log\|.yarddoc\|doc\|coverage\|tmp\|\.sass-cache$',
   \ 'file': '\v\.(DS_Store)$'
   \ }
-
-" Open files in tabs by default
-" - Map default behavior to `Ctrl + T`
-" - Map open in tab behavior to `Enter`
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<c-t>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>']
-  \ }
