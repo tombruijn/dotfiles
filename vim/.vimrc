@@ -77,12 +77,20 @@ colorscheme twilight              " Configure appearance
 let &colorcolumn="80,100"         " Highlight column 80 and 115
 let c_space_errors=1              " Highlight trailing spaces
 
-" Flag the following files as Ruby:
+" Flag filetypes
+" - Ruby
 autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
-" Flag sass files as Sass
-autocmd BufRead,BufNewFile *.scss set ft=sass.css
+" - Sass/Scss
+autocmd BufRead,BufNewFile *.sass set ft=sass.css
 autocmd BufRead,BufNewFile *.scss set ft=scss.css
+autocmd FileType css,sass set iskeyword+=-
+
+" Activate omnifunc on filetypes
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 
 let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
 
