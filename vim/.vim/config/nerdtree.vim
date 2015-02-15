@@ -2,7 +2,7 @@
 let NERDTreeShowHidden=1
 
 " Ignore certain files in NERDTree
-let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle', 'log', 'tmp', 'coverage']
+let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle', 'log', 'tmp', 'coverage', '\.sass-cache', '\.capistrano']
 
 " Don't open NERDTree if I open a directory with vim
 let g:NERDTreeHijackNetrw=0
