@@ -1,5 +1,6 @@
-" Show hidden files in NERDTree
-let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1 " Hide UI I don't use
+let NERDTreeAutoDeleteBuffer=1 " Delete buffers on move
+let NERDTreeShowHidden=1 " Show hidden files in NERDTree
 
 " Ignore certain files in NERDTree
 let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle', 'log', 'tmp', 'coverage', '\.sass-cache', '\.capistrano']
