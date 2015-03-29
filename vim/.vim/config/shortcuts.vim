@@ -1,5 +1,16 @@
-" Cycle through buffers with tab
+" Cycle through splits with tab
 nmap <Tab> <C-w>w
+
+" Easier direct split navigation with ctrl + homerow keys
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Maximize current split
+nnoremap <D-S-CR> <C-W>_<CR>
+" Equalize splits
+nnoremap <D-C-CR> <C-W>=<CR>
 
 " Reload .vimrc
 nnoremap <LEADER>reload :source ~/.vimrc<CR>

@@ -76,6 +76,8 @@ set clipboard=unnamed             " Enable OS clipboard to properly paste in to 
 colorscheme twilight              " Configure appearance
 let &colorcolumn="80,100"         " Highlight column 80 and 115
 let c_space_errors=1              " Highlight trailing spaces
+set splitbelow                    " Open vsplits to below
+set splitright                    " Open hsplits to the right
 
 " Flag filetypes
 " - Ruby
