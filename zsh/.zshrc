@@ -34,3 +34,5 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export GOPATH="$HOME/projects/go"
 export GOBIN="$GOPATH/bin"
 export GOROOT=$(go env GOROOT)
+
+export PGIT_URL=git@repositories.tomdebruijn.com
