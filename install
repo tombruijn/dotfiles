@@ -8,6 +8,8 @@ ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 
+ln -nfs "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" "$HOME/.bin/sub"
+
 SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
 ln -nfs "$(pwd)/sublime/Preferences.sublime-settings" "$SUBLIME_DIR/Preferences.sublime-settings"
 ln -nfs "$(pwd)/sublime/Default (OSX).sublime-keymap" "$SUBLIME_DIR/Default (OSX).sublime-keymap"
