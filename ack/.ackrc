@@ -18,6 +18,10 @@ css=.sass,.scss
 
 # Ignores
 --ignore-dir=is:log
+--ignore-dir=is:.sass-cache
+--ignore-dir=is:.yardoc
 --ignore-dir=is:tmp
 --ignore-dir=is:doc
 --ignore-dir=is:coverage
+--ignore-dir=is:build
+--ignore-dir=is:node_modules
