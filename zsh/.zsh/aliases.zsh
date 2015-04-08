@@ -21,7 +21,7 @@ alias 8="cd $HOME/80beans/"
 
 # Small utilities
 if [[ $(uname -s) == "Darwin" ]]; then
-  alias flushdns="dscacheutil -flushcache"
+  alias flushdns="sudo discoveryutil mdnsflushcache"
 else
   alias flushdns="sudo /etc/init.d/nscd restart"
 fi;
