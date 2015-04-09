@@ -7,7 +7,6 @@ alias o="open ."
 alias la="ls -lah"
 
 # Directory shortcuts
-alias ..="cd .."
 alias desk="cd $HOME/Desktop"
 alias home="cd $HOME/"
 alias tdb="cd $HOME/tombruijn/"
@@ -18,6 +17,7 @@ alias kep="cd $HOME/keplar/"
 alias kepd="open $HOME/keplar/docs"
 alias m="cd $HOME/machinery/"
 alias 8="cd $HOME/80beans/"
+alias exp="cd $HOME/projects/experiments"
 
 # Small utilities
 if [[ $(uname -s) == "Darwin" ]]; then
@@ -28,7 +28,7 @@ fi;
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias redis="redis-server /usr/local/etc/redis.conf"
-alias mou="open -a mou"
+alias md="open -a \"iA Writer Pro.app\""
 
 # Git
 alias g="open -a gitx ."
