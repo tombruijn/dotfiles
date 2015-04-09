@@ -94,8 +94,6 @@ autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 
-let g:vim_markdown_folding_disabled=1 " Disable folding for markdown
-
 let mapleader=","
 
 runtime! config/**/*.vim
