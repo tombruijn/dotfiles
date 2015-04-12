@@ -2,7 +2,7 @@
 
 priority -50
 
-snippet !! "HTML 5.0 setup" b
+snippet !!! "HTML 5.0 setup" b
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +19,14 @@ endsnippet
 
 snippet < "<element></element>"
 <${1:element}>$0</$1>
+endsnippet
+
+snippet !c "<!-- Comment -->"
+<!-- ${1:comment} -->$0
+endsnippet
+
+snippet !t "<!-- TODO: Comment -->"
+<!-- TODO: ${1:comment} -->$0
 endsnippet
 
 snippet h1 "<h1>" w
