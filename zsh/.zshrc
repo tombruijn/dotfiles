@@ -36,3 +36,7 @@ export GOBIN="$GOPATH/bin"
 export GOROOT=$(go env GOROOT)
 
 export PGIT_URL=git@repositories.tomdebruijn.com
+
+export DOCKER_HOST=tcp://192.168.99.100:2376
+export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/dev
+export DOCKER_TLS_VERIFY=1
