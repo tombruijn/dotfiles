@@ -21,8 +21,10 @@ ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
 
 ln -nfs "$(pwd)/git/.gitignore_global"  "$HOME/.gitignore_global"
 
-git config --global color.diff always
 git config --global user.email "tom@tomdebruijn.com"
 git config --global user.name "Tom de Bruijn"
 git config --global core.excludesfile "$HOME/.gitignore_global"
+git config --global color.diff always
 git config --global merge.ff only
+git config --global push.default simple
+git config --global pull.default simple
