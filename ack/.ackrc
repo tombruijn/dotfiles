@@ -25,3 +25,4 @@ css=.sass,.scss
 --ignore-dir=is:coverage
 --ignore-dir=is:build
 --ignore-dir=is:node_modules
+--ignore-dir=is:.kitchen
