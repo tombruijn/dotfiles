@@ -13,6 +13,10 @@ snippet gem "gem"
 gem "${1:name}"
 endsnippet
 
+snippet # "Wrap in #{code}" i
+#{${0:${VISUAL:code}}}
+endsnippet
+
 snippet pry "binding.pry"
 require "pry"; binding.pry
 endsnippet
@@ -33,13 +37,13 @@ endsnippet
 # Methods
 snippet "\b(de)?f" "def <name>..." r
 def ${1:method_name}
-  $0
+  ${0:${VISUAL:object}}
 end
 endsnippet
 
 snippet defi "def initialize ..."
 def initialize
-  $0
+  ${0:${VISUAL:object}}
 end
 endsnippet
 
@@ -48,11 +52,7 @@ alias :${1:new_name} :${2:old_name}
 endsnippet
 
 # Mapping
-snippet map( "map(&:sym_proc)"
-map(&:${1:id})
-endsnippet
-
-snippet "(\S+)\.Map" ".map { |<element>| <block> }" r
+snippet "(\S+)\.mapp" ".map { |<element>| <block> }" r
 `!p snip.rv=match.group(1)`.map { |${1:`!p
 element_name = match.group(1).lstrip('$@')
 ematch = re.search("([A-Za-z][A-Za-z0-9_]+?)s?[^A-Za-z0-9_]*?$", element_name)
@@ -118,13 +118,13 @@ endsnippet
 # Blocks
 snippet do "do |<key>| ... end" i
 do |${1:args}|
-  $0
+  ${0:${VISUAL:object}}
 end
 endsnippet
 
 snippet Do "do ... end" i
 do
-  $0
+  ${0:${VISUAL:object}}
 end
 endsnippet
 
@@ -177,60 +177,60 @@ endsnippet
 
 snippet des "RSpec describe block (des)"
 describe "${1:.method_name}" do
-  $0
+  ${0:${VISUAL:# assertions}}
 end
 endsnippet
 
 snippet con "RSpec context block (con)"
 context "${1:when in context}" do
-  $0
+  ${0:${VISUAL:# assertions}}
 end
 endsnippet
 
 snippet before "RSpec before block (before)"
 before do
-  $0
+  ${0:${VISUAL:# before spec}}
 end
 endsnippet
 
 snippet after "RSpec after block (after)"
 after do
-  $0
+  ${0:${VISUAL:# after spec}}
 end
 endsnippet
 
 snippet background "RSpec background block (background)"
 background do
-  $0
+  ${0:${VISUAL:# before feature spec}}
 end
 endsnippet
 
 snippet let "RSpec let block (let)"
-let(:${1:name}) { ${2:object} }
+let(:${1:name}) { ${0:${VISUAL:object}} }
 endsnippet
 
 snippet let! "RSpec let! block (let!)"
-let!(:${1:name}) { ${2:object} }
+let!(:${1:name}) { ${0:${VISUAL:object}} }
 endsnippet
 
 snippet subject "RSpec subject block (subject)"
-subject { ${1:object} }
+subject { ${0:${VISUAL:object}} }
 endsnippet
 
 snippet it "RSpec it block (it)"
 it "${1:does something}" do
-  $0
+  ${0:${VISUAL:object}}
 end
 endsnippet
 
 snippet scenario "RSpec scenario block (scenario)"
 scenario "${1:does something}" do
-  $0
+  ${0:${VISUAL:object}}
 end
 endsnippet
 
 snippet expect "RSpec expect block (expect)"
-expect(${1:subject}).to ${2:assertion}
+expect(${1:subject}).to ${0:${VISUAL:object}}
 endsnippet
 
 snippet saop "save_and_open_page"
