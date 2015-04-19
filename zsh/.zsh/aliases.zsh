@@ -29,6 +29,7 @@ alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias md="open -a \"iA Writer Pro.app\""
+alias mou="open -a \"Mou.app\""
 
 # Git
 alias g="open -a gitx ."
