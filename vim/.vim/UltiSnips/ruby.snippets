@@ -17,6 +17,28 @@ snippet # "Wrap in #{code}" i
 #{${0:${VISUAL:code}}}
 endsnippet
 
+snippet if "if-statement"
+if ${1:condition}
+  ${0:${VISUAL:code}}
+end
+endsnippet
+
+snippet else "else-statement"
+else
+  ${0:${VISUAL:code}}
+endsnippet
+
+snippet elsif "elsif-statement"
+elsif ${1:condition}
+  ${0:${VISUAL:code}}
+endsnippet
+
+snippet unless "unless-statement"
+unless ${1:condition}
+  ${0:${VISUAL:code}}
+end
+endsnippet
+
 snippet pry "binding.pry"
 require "pry"; binding.pry
 endsnippet
@@ -159,6 +181,14 @@ class ${1:ClassName}
 end
 endsnippet
 
+snippet model "class <ClassName> < ActiveRecord::Base ... end"
+class ${1:ClassName} < ActiveRecord::Base
+  scope :list, -> { order(id: :desc) }
+
+  $0
+end
+endsnippet
+
 # Modules
 snippet module "module"
 module ${1:ModuleName}
@@ -230,7 +260,7 @@ end
 endsnippet
 
 snippet expect "RSpec expect block (expect)"
-expect(${1:subject}).to ${0:${VISUAL:object}}
+expect(${1:subject}).to ${0:${VISUAL:assertion}}
 endsnippet
 
 snippet saop "save_and_open_page"

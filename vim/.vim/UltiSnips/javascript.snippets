@@ -6,8 +6,14 @@ snippet wrap "Immediately-Invoked Function Expression" b
 }(${2:$1}));
 endsnippet
 
-snippet func "Function" b
+snippet func "Function" i
 function ${1:name}(${2:parameters}) {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet funcc "Anonymous function" i
+function(${2:parameters}) {
   ${VISUAL}$0
 }
 endsnippet
@@ -23,13 +29,13 @@ if (${1:condition}) {
 endsnippet
 
 snippet elseif "else if (...) {...}"
-else if (${1:condition}) {
+} else if (${1:condition}) {
   ${VISUAL}$0
 }
 endsnippet
 
 snippet else "else (...) {...}"
-else {
+} else {
   ${VISUAL}$0
 }
 endsnippet
@@ -53,7 +59,7 @@ setTimeout(function() {
 endsnippet
 
 snippet cl "console.log" b
-console.log(${1:value});
+console.log(${0:${VISUAL:value}});
 endsnippet
 
 snippet ce "console.error" b
