@@ -87,6 +87,7 @@ autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set
 " - Sass/Scss
 autocmd BufRead,BufNewFile *.sass set ft=sass.css
 autocmd BufRead,BufNewFile *.scss set ft=scss.css
+autocmd BufRead,BufNewFile *.eco set ft=html
 autocmd FileType css,sass set iskeyword+=-
 
 " Activate omnifunc on filetypes
