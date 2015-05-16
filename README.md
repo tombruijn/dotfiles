@@ -154,4 +154,4 @@ ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 
 **Here are some misc. utilities.** (not necessarily required)
 
-    brew install ack tree ffmpeg imagemagick htop-osx watch qt phantomjs
+    brew install ag ack tree ffmpeg imagemagick htop-osx watch qt phantomjs
