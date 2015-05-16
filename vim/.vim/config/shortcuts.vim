@@ -8,12 +8,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Maximize current split
-nnoremap <D-S-CR> <C-W>_<CR>
+nnoremap <leader>- <C-W>_
 " Equalize splits
-nnoremap <D-C-CR> <C-W>=<CR>
+nnoremap <leader>= <C-W>=
 
 " Reload .vimrc
-nnoremap <LEADER>reload :source ~/.vimrc<CR>
+nnoremap <leader>reload :source ~/.vimrc<CR>
 
 " Open Ack search on `Command + /`
 nnoremap <d-/> :Ack<Space>
@@ -28,12 +28,17 @@ noremap <F6> :set spell! spell?<CR>
 
 " Lazy command open
 nnoremap ; :
+vnoremap ; :
 
 " Easier start/end of line navigation
 nnoremap H ^
 nnoremap L g_
 vnoremap H ^
 vnoremap L g_
+
+" Copy line as data
+nmap <leader>yl 0y$
+nmap <leader>cl 0d$"_dd
 
 " Remove full line with <leader>d
 nmap <leader>d "_dd
@@ -43,6 +48,16 @@ vmap <leader>d "_d
 " Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L12-14
 nmap <leader>u mQviwU`Q
 nmap <leader>l mQviwu`Q
+
+" Use F for formatting the current paragraph (or selection)
+" Source: http://nvie.com/posts/how-i-boosted-my-vim/
+vmap F gq
+nmap F gqap
+
+" Go to next editor row instead of wrapped line
+" Source: http://nvie.com/posts/how-i-boosted-my-vim/
+nnoremap j gj
+nnoremap k gk
 
 " Map D+[ and D+] to change indenting
 " Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L58-68

@@ -7,7 +7,7 @@ highlight ExtraWhitespace ctermbg=darkred guibg=#902020
 match ExtraWhitespace /\s\+$/
 
 " Remove trailing whitespace
-function! <SID>StripTrailingWhitespace() " {{{
+function! <SID>StripTrailingWhitespace()
   " Don't strip any spaces when the filetype is markdown
   if &ft =~ 'markdown'
     return
