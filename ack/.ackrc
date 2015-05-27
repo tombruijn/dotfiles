@@ -18,6 +18,7 @@ css=.sass,.scss
 
 # Ignores
 --ignore-file=is:examples.txt
+--ignore-file=is:tags
 --ignore-dir=is:log
 --ignore-dir=is:.sass-cache
 --ignore-dir=is:.yardoc

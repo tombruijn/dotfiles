@@ -16,6 +16,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sirver/ultisnips'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 Plugin 'junegunn/goyo.vim'
 Plugin 'rizzatti/dash.vim'
 

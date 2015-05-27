@@ -166,4 +166,4 @@ Install it as per the instructions on the website.
 
 **Here are some misc. utilities.** (not necessarily required)
 
-    brew install ag ack blueutil htop-osx imagemagick phantomjs tig tree qt
+    brew install ag ack blueutil ctags htop-osx imagemagick phantomjs tig tree qt
