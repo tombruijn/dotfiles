@@ -4,5 +4,6 @@ local alert = require "hs.alert"
 
 require "triggers"
 require "window_management"
+require "auto_muter"
 
 alert.show("Hammerspoon loaded!")
