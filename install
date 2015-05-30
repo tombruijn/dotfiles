@@ -18,6 +18,7 @@ ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
 ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
 ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
+ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 
 ln -nfs "$(pwd)/git/.gitignore_global"  "$HOME/.gitignore_global"
 
@@ -28,3 +29,4 @@ git config --global color.diff always
 git config --global merge.ff only
 git config --global push.default simple
 git config --global pull.default simple
+git config --global remote.origin.prune true # TODO: CHeck
