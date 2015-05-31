@@ -10,6 +10,7 @@ These dotfiles contain configuration and installation for:
 * Sublime Text
 * VIM (and MacVIM)
 * chruby and ruby-install
+* Hammerspoon
 * Misc. Utilities
 
 **This setup is intended for Mac OSX >= 10.9**
@@ -137,6 +138,12 @@ brew install chruby
 brew install ruby-install
 ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 ```
+
+### Hammerspoon
+
+I use [Hammerspoon](http://www.hammerspoon.org/) for shortcut and window management.
+
+Install it as per the instructions on the website.
 
 ### Misc. Utilities
 
