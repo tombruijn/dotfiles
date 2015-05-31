@@ -72,3 +72,6 @@ omap <D-[> <<
 
 imap <D-]> <Esc>>>i
 imap <D-[> <Esc><<i
+
+" Dash.app documentation
+nmap <silent> <leader>e <Plug>DashSearch

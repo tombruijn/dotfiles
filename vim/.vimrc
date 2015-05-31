@@ -17,6 +17,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sirver/ultisnips'
 Plugin 'junegunn/goyo.vim'
+Plugin 'rizzatti/dash.vim'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
