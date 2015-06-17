@@ -2,6 +2,7 @@ local application = require "hs.application"
 local window = require "hs.window"
 local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
+local wifi_control = require "wifi_control"
 
 hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
@@ -20,6 +21,10 @@ hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
 end)
 hotkey.bind({"cmd", "shift"}, "I", function()
   hs.itunes.displayCurrentTrack()
+end)
+-- Toggle WiFi on and off
+hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
+  wifi_control.toggle()
 end)
 
 hotkey.bind({"ctrl"}, "1", function()
