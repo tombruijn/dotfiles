@@ -52,6 +52,7 @@ hotkey.bind({"cmd", "alt"}, "]", function()
   f.w = max.w / 2
   f.h = max.h
   win:setFrame(f)
+  win:ensureIsInScreenBounds()
 end)
 
 -- Align window to top left of the screen
@@ -80,6 +81,7 @@ hotkey.bind({"cmd", "ctrl"}, "]", function()
   f.w = max.w / 2
   f.h = max.h / 2
   win:setFrame(f)
+  win:ensureIsInScreenBounds()
 end)
 
 -- Move window to the display on the left
