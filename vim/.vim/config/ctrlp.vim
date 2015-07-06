@@ -6,8 +6,8 @@ let g:ctrlp_working_path_mode=0
 " List hidden files in CtrlP
 let g:ctrlp_show_hidden=1
 
-" Search on filename by default
-let g:ctrlp_by_filename=1
+" Don't search on filename by default
+let g:ctrlp_by_filename=0
 
 " Use the_silver_searcher (ag) https://github.com/ggreer/the_silver_searcher
 " for fast search.
