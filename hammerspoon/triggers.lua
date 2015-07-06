@@ -7,7 +7,7 @@ local wifi_control = require "wifi_control"
 hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
-hotkey.bind({"cmd", "alt", "ctrl"}, "E", function()
+hotkey.bind({"cmd", "alt", "ctrl"}, "C", function()
   hs.openConsole()
 end)
 hotkey.bind({"cmd", "alt", "ctrl"}, "A", function()
