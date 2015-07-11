@@ -5,9 +5,17 @@ local alert = require "hs.alert"
 
 window.animationDuration = 0
 
+function alertCannotManipulateWindow()
+  alert.show("Can't move window")
+end
+
 -- Make window full screen
 hotkey.bind({"cmd", "alt"}, "F", function()
   local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   local screen = win:screen()
   local max = screen:frame()
 
@@ -20,6 +28,10 @@ hotkey.bind({"cmd", "alt"}, "C", function()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
 
   f.x = (max.w - f.w) / 2
   f.y = (max.h - f.h) / 2
@@ -29,6 +41,10 @@ end)
 -- Align window to left 50% of the screen
 hotkey.bind({"cmd", "alt"}, "[", function()
   local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -43,6 +59,10 @@ end)
 -- Align window to right 50% of the screen
 hotkey.bind({"cmd", "alt"}, "]", function()
   local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -58,6 +78,10 @@ end)
 -- Align window to top left of the screen
 hotkey.bind({"cmd", "ctrl"}, "[", function()
   local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -72,6 +96,10 @@ end)
 -- Align window to top right of the screen
 hotkey.bind({"cmd", "ctrl"}, "]", function()
   local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -87,11 +115,19 @@ end)
 -- Move window to the display on the left
 hotkey.bind({"cmd", "ctrl"}, "-", function()
   local win = hs.window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   win:moveOneScreenWest()
 end)
 
 -- Move window to the display on the right
 hotkey.bind({"cmd", "ctrl"}, "=", function()
   local win = hs.window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
   win:moveOneScreenEast()
 end)
