@@ -161,4 +161,4 @@ Install it as per the instructions on the website.
 
 **Here are some misc. utilities.** (not necessarily required)
 
-    brew install ag ack tree ffmpeg imagemagick htop-osx watch qt phantomjs
+    brew install ag ack blueutil htop-osx imagemagick phantomjs tree qt
