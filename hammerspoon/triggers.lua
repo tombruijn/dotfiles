@@ -3,6 +3,7 @@ local window = require "hs.window"
 local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
 local wifi_control = require "wifi_control"
+local bluetooth_control = require "bluetooth_control"
 
 hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
@@ -29,6 +30,10 @@ end)
 -- Toggle WiFi on and off
 hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
   wifi_control.toggle()
+end)
+-- Toggle Bluetooth on and off
+hotkey.bind({"cmd", "alt", "ctrl"}, "E", function()
+  bluetooth_control.toggle()
 end)
 
 hotkey.bind({"ctrl"}, "1", function()
