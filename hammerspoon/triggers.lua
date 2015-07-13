@@ -2,6 +2,7 @@ local application = require "hs.application"
 local window = require "hs.window"
 local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
+local battery = require "hs.battery"
 local wifi_control = require "wifi_control"
 local bluetooth_control = require "bluetooth_control"
 
@@ -26,6 +27,19 @@ hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
 end)
 hotkey.bind({"cmd", "shift"}, "I", function()
   hs.itunes.displayCurrentTrack()
+end)
+
+-- Show status
+hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
+  charging = battery.isCharging() or battery.isCharged()
+  timeRemaining = battery.timeRemaining()
+  alert.show(
+  "Wi-Fi: "..wifi_control.status()..
+  "\nBluetooth: "..bluetooth_control.status()..
+  "\nBattery: "..battery.percentage().."% - "..
+  (charging and "Charging" or "Not charging")..
+  "\nTime remaining: "..((timeRemaining == -1 or timeRemaining == -2) and "?" or timeRemaining).." minutes"
+  , 5)
 end)
 -- Toggle WiFi on and off
 hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
