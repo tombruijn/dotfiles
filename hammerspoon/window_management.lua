@@ -131,3 +131,58 @@ hotkey.bind({"cmd", "ctrl"}, "=", function()
   end
   win:moveOneScreenEast()
 end)
+
+-- Shrink window
+hotkey.bind({"ctrl", "alt"}, "-", function()
+  local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  if f.x + f.w >= (max.w - 5) then
+    -- Aligned to the right
+    f.w = f.w - 20
+    f.x = max.w - f.w
+  elseif (max.w - 10) <= (f.x * 2) + f.w then
+    -- Center window shrinking
+    f.w = f.w - 20
+    f.x = (max.w - f.w) / 2
+  else
+    f.w = f.w - 20
+  end
+
+  win:setFrame(f)
+  win:ensureIsInScreenBounds()
+end)
+
+-- Grow window
+hotkey.bind({"ctrl", "alt"}, "=", function()
+  local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  if f.x + f.w >= (max.w - 5) then
+    -- Aligned to the right
+    f.w = f.w + 20
+    f.x = max.w - f.w
+  elseif (max.w - 10) <= (f.x * 2) + f.w then
+    -- Center window growing
+    f.w = f.w + 20
+    f.x = (max.w - f.w) / 2
+  else
+    f.w = f.w + 20
+    f.x = f.x - 10
+  end
+
+  win:setFrame(f)
+  win:ensureIsInScreenBounds()
+end)
