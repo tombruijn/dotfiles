@@ -29,4 +29,4 @@ git config --global color.diff always
 git config --global merge.ff only
 git config --global push.default simple
 git config --global pull.default simple
-git config --global remote.origin.prune true # TODO: CHeck
+git config --global remote.origin.prune true
