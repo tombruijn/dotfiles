@@ -1,11 +1,16 @@
 # Haml snippets
 
 snippet pry "- binding.pry" w
-- binding.pry$0
+- require "pry"; binding.pry$0
 endsnippet
 
 snippet # "Wrap in #{code}" i
 #{${0:${VISUAL:code}}}
+endsnippet
+
+snippet each "each do |variable|" i
+each do |${1:variable}|
+  $0
 endsnippet
 
 # vim:ft=snippets:

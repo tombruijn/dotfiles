@@ -12,23 +12,23 @@ endsnippet
 
 snippet if "<% if {condition} %>{code}<% end %>"
 <% if ${1:condition} %>
-  $0
+  ${0:${VISUAL:code}}
 <% end %>
 endsnippet
 
 snippet else "<% else %>"
 <% else %>
-  $0
+  ${0:${VISUAL:code}}
 endsnippet
 
 snippet elsif "<% elsif {condition} %>"
 <% elsif ${1:condition} %>
-  $0
+  ${0:${VISUAL:code}}
 endsnippet
 
 snippet each "<% variable.each do |variable| %>"
 <% ${1:variable}.each do |${2:variable}| %>
-  $0
+  ${0:${VISUAL:code}}
 <% end %>
 endsnippet
 

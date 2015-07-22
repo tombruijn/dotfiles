@@ -185,14 +185,14 @@ snippet model "class <ClassName> < ActiveRecord::Base ... end"
 class ${1:ClassName} < ActiveRecord::Base
   scope :list, -> { order(id: :desc) }
 
-  $0
+  ${0:${VISUAL:# code}}
 end
 endsnippet
 
 # Modules
 snippet module "module"
 module ${1:ModuleName}
-  $0
+  ${0:${VISUAL:# code}}
 end
 endsnippet
 
@@ -201,7 +201,7 @@ snippet setup "RSpec setup (setup)"
 require "spec_helper"
 
 describe ${1:Model} do
-  ${0}
+  ${0:${VISUAL:# code}}
 end
 endsnippet
 
@@ -261,6 +261,12 @@ endsnippet
 
 snippet expect "RSpec expect block (expect)"
 expect(${1:subject}).to ${0:${VISUAL:assertion}}
+endsnippet
+
+snippet within "Capybara within block (within)"
+within "${1:selector}" do
+  ${0:${VISUAL:object}}
+end
 endsnippet
 
 snippet saop "save_and_open_page"
