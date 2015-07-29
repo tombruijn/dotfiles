@@ -17,6 +17,7 @@ html=.haml,.jst,.eco,.erb
 css=.sass,.scss
 
 # Ignores
+--ignore-file=is:examples.txt
 --ignore-dir=is:log
 --ignore-dir=is:.sass-cache
 --ignore-dir=is:.yardoc
