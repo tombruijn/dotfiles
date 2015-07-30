@@ -34,7 +34,7 @@ alias mou="open -a \"Mou.app\""
 # Git
 alias g="open -a gitx ."
 alias gs="git status -sb"
-alias gf="git commit --fixup"
+alias gf="git-fixup"
 alias gb="git branch"
 alias gc="git checkout"
 alias gm="git merge"
