@@ -79,7 +79,7 @@ hotkey.bind({"alt"}, "4", function()
 end)
 
 hotkey.bind({"alt"}, "6", function()
-  application.launchOrFocus("Adobe Photoshop CC 2014")
+  application.launchOrFocus("Adobe Photoshop CC 2015")
 end)
 
 hotkey.bind({"ctrl"}, "8", function()
