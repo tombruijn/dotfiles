@@ -6,6 +6,19 @@ local battery = require "hs.battery"
 local wifi_control = require "wifi_control"
 local bluetooth_control = require "bluetooth_control"
 
+function applicationRunning(name)
+  apps = application.runningApplications()
+  found = false
+  for i = 1, #apps do
+    app = apps[i]
+    if app:title() == name and (#app:allWindows() > 0 or app:mainWindow()) then
+      found = true
+    end
+  end
+
+  return found
+end
+
 hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
@@ -58,7 +71,12 @@ hotkey.bind({"alt"}, "1", function()
 end)
 
 hotkey.bind({"ctrl"}, "2", function()
-  application.launchOrFocus("MacVim")
+  if applicationRunning("MacVim") then
+    application.launchOrFocus("MacVim")
+  else
+    alert.show("MacVim not running")
+    application.launchOrFocus("iTerm")
+  end
 end)
 hotkey.bind({"alt"}, "2", function()
   application.launchOrFocus("Atom")
@@ -126,4 +144,13 @@ hotkey.bind({"alt"}, "§", function()
 end)
 hotkey.bind({"cmd", "shift"}, "§", function()
   application.launchOrFocus("Wunderlist")
+end)
+
+hotkey.bind({"ctrl"}, "tab", function()
+  if applicationRunning("GitX") then
+    application.launchOrFocus("GitX")
+  else
+    alert.show("GitX not running")
+    application.launchOrFocus("iTerm")
+  end
 end)
