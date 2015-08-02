@@ -11,7 +11,7 @@ source "$ZSH_DIR/git.zsh"
 
 # Theme
 source "$ZSH_DIR/appearance.zsh"
-source "$ZSH_DIR/theme.zsh"
+source "$ZSH_DIR/prompt.zsh"
 source "$ZSH_DIR/termsupport.zsh"
 
 # Aliases
