@@ -22,6 +22,8 @@ ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
 ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 
 ln -nfs "$(pwd)/git/.gitignore_global"  "$HOME/.gitignore_global"
+ln -nfs "$(pwd)/git/.tigrc"  "$HOME/.tigrc"
+
 
 git config --global user.email "tom@tomdebruijn.com"
 git config --global user.name "Tom de Bruijn"

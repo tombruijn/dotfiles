@@ -33,6 +33,8 @@ alias mou="open -a \"Mou.app\""
 
 # Git
 alias g="open -a gitx ."
+alias t="tig"
+alias ts="tig status"
 alias gs="git status -sb"
 alias gf="git-fixup"
 alias gb="git branch"
