@@ -76,7 +76,9 @@ set expandtab                     " Use spaces instead of tabs.
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 set pastetoggle=<F2>
 
-colorscheme twilight              " Configure appearance
+set background=dark
+colorscheme twilight
+
 let &colorcolumn="80,100"         " Highlight column 80 and 115
 let c_space_errors=1              " Highlight trailing spaces
 set splitbelow                    " Open vsplits to below

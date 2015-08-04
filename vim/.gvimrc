@@ -11,3 +11,6 @@ set guioptions-=L
 set go+=c
 
 set guifont=Menlo:h14
+
+set background=dark
+colorscheme twilight
