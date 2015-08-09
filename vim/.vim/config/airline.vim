@@ -5,6 +5,7 @@ set laststatus=2
 " Dark solarized theme
 let g:airline_theme='solarized'
 let g:airline_theme#background='dark'
+let g:airline_powerline_fonts=1
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0

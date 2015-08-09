@@ -25,6 +25,11 @@ ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 ln -nfs "$(pwd)/git/.gitignore_global"  "$HOME/.gitignore_global"
 ln -nfs "$(pwd)/git/.tigrc"  "$HOME/.tigrc"
 
+# Copy powerlines
+for file in ./powerline-fonts/Meslo/*.otf; do
+  cp -f "$file" "$HOME/Library/Fonts/"
+done
+
 # https://github.com/postmodern/chruby/issues/196#issuecomment-23826171
 [[ -e /etc/zshenv ]] && sudo mv /etc/zshenv /etc/zprofile
 

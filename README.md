@@ -46,23 +46,6 @@ following.
     sudo chown -R $(whoami) /usr/local
     brew update
 
-### ITerm2
-
-Download [ITerm2](http://iterm2.com), a Terminal replacement.
-Using color preset "Tango Dark" at the moment.
-
-#### Keyboard setup
-
-Under "(Global) Keys" add the following maps *:
-
-- `alt` + `backspace` = `Send Hex Code: 17` => Delete full word
-- `alt` + `<-` = `Send Escape Sequence: b` => Skip to left word
-- `alt` + `->` = `Send Escape Sequence: f` => Skip to right word
-- `cmd` + `<-` = `Send Hex Codes: 0x01` => Beginning of line
-- `cmd` + `->` = `Send Hex Codes: 0x05` => End of line
-
-\* = Use the actual keys, not the text above.
-
 ### Git
 
 Get the latest version of Git. Additional config will be done through the install script.
@@ -90,6 +73,28 @@ the submodules and finally hook everything up by running the `install` script.
 
 This should set up the symlinks from the dotfiles directory to your `$HOME`
 directory, do not remove the `dotfiles` directory.
+
+### ITerm2
+
+Download [ITerm2](http://iterm2.com), a Terminal replacement.
+Using color preset "Tango Dark" at the moment.
+
+#### Keyboard setup
+
+Under "(Global) Keys" add the following maps *:
+
+- `alt` + `backspace` = `Send Hex Code: 17` => Delete full word
+- `alt` + `<-` = `Send Escape Sequence: b` => Skip to left word
+- `alt` + `->` = `Send Escape Sequence: f` => Skip to right word
+- `cmd` + `<-` = `Send Hex Codes: 0x01` => Beginning of line
+- `cmd` + `->` = `Send Hex Codes: 0x05` => End of line
+
+\* = Use the actual keys, not the text above.
+
+#### Fonts
+
+- Under `Profiles` => `Text` => `Regular Font` set: `14pt Meslo LG M Regular for Powerline`
+- Under `Profiles` => `Text` => `Non-ASCII Font` set: `14pt Meslo LG M Regular for Powerline`
 
 ### Sublime plugins
 
