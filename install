@@ -25,6 +25,8 @@ ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 ln -nfs "$(pwd)/git/.gitignore_global"  "$HOME/.gitignore_global"
 ln -nfs "$(pwd)/git/.tigrc"  "$HOME/.tigrc"
 
+# https://github.com/postmodern/chruby/issues/196#issuecomment-23826171
+[[ -e /etc/zshenv ]] && sudo mv /etc/zshenv /etc/zprofile
 
 git config --global user.email "tom@tomdebruijn.com"
 git config --global user.name "Tom de Bruijn"
