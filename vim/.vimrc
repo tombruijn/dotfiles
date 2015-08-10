@@ -56,7 +56,9 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
 set wrap                          " Turn on line wrapping.
-set scrolloff=5                   " Line scroll offset from top and bottom
+set linebreak                     " Break lines.
+set nolist                        " `set list` disables linebreak.
+set scrolloff=5                   " Line scroll offset from top and bottom.
 
 set title                         " Set the terminal's title
 set visualbell                    " No beeping.
