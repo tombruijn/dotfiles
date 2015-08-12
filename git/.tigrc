@@ -49,7 +49,7 @@ bind refs ! ?git branch -D %(branch)
 
 # Normal commands
 ## Option manipulation
-bind generic o none # Disable
+bind generic o enter
 
 # Colors
 color cursor white color235 bold
