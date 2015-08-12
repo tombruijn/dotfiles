@@ -81,7 +81,7 @@ set pastetoggle=<F2>
 set background=dark
 colorscheme twilight
 
-let &colorcolumn="80,100"         " Highlight column 80 and 115
+let &colorcolumn="80,100"         " Highlight column 80 and 100
 let c_space_errors=1              " Highlight trailing spaces
 set splitbelow                    " Open vsplits to below
 set splitright                    " Open hsplits to the right
