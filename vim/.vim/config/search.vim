@@ -1,3 +1,5 @@
+let g:ackprg = 'ag --hidden --vimgrep'
+
 " Clear current search highlights on Enter
 nnoremap <CR> :noh<CR>
 

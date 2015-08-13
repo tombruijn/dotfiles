@@ -16,7 +16,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
   \ --ignore .git
   \ --ignore .svn
   \ --ignore .hg
-  \ --ignore .DS_Store
   \ --ignore log
   \ --ignore .yarddoc
   \ --ignore doc
@@ -24,7 +23,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
   \ --ignore tmp
   \ --ignore node_modules
   \ --ignore .sass-cache
-  \ --ignore build
   \ --ignore .kitchen
+  \ --ignore cookbooks
   \ --ignore public/uploads
   \ -g ""'
