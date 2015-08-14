@@ -14,17 +14,11 @@ alias pro="cd $HOME/projects/"
 alias pgo="cd $HOME/projects/go"
 alias dotfiles="cd $HOME/projects/dotfiles"
 alias kep="cd $HOME/keplar/"
-alias kepd="open $HOME/keplar/docs"
 alias m="cd $HOME/machinery/"
-alias 8="cd $HOME/80beans/"
 alias exp="cd $HOME/projects/experiments"
 
 # Small utilities
-if [[ $(uname -s) == "Darwin" ]]; then
-  alias flushdns="sudo discoveryutil mdnsflushcache"
-else
-  alias flushdns="sudo /etc/init.d/nscd restart"
-fi;
+alias flushdns="sudo discoveryutil mdnsflushcache"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias redis="redis-server /usr/local/etc/redis.conf"
@@ -79,15 +73,9 @@ alias srr="s rake routes"
 alias rr="bundle exec rake routes"
 alias rdm="bundle exec rake db:migrate"
 alias rdr="bundle exec rake db:migrate:reset"
-alias rds="bundle exec rake db:seed"
-alias rdi="rdr && rds"
 alias rdsd="rdr && SEED_DEMO=1 bundle exec rake db:seed"
 alias sseed="s rake db:migrate:reset && SEED_DEMO=1 s rake db:seed"
 
 # Other
 alias cop="be rubocop"
 alias cov="open coverage/index.html"
-
-# Oh openssl on Mac..... There are no words
-alias sslhack="echo \"OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE\" > config/initializers/opensslhack.rb"
-alias sslremove="rm config/initializers/opensslhack.rb"
