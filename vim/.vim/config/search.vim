@@ -1,7 +1,7 @@
-let g:ackprg = 'ag --hidden --vimgrep'
+let g:ackprg='ag --hidden --vimgrep'
 
-" Clear current search highlights on Enter
-nnoremap <CR> :noh<CR>
+" Clear current search highlights
+nnoremap <leader>m :noh<CR>
 
 " Center search results
 nnoremap n nzz
