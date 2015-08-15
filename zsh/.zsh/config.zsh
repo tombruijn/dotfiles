@@ -3,6 +3,11 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Tools to use
+export EDITOR="vim"
+export PAGER="less"
+export LESS="-R"
+
 # See: man zshoptions
 unsetopt menu_complete # do not autoselect the first completion entry
 unsetopt flowcontrol

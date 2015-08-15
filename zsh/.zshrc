@@ -1,7 +1,5 @@
 ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 
-export EDITOR=vim
-
 # Config
 source "$ZSH_DIR/config.zsh"
 source "$ZSH_DIR/functions.zsh"
@@ -16,10 +14,6 @@ source "$ZSH_DIR/termsupport.zsh"
 
 # Aliases
 source "$ZSH_DIR/aliases.zsh"
-
-# chruby
-source "/usr/local/share/chruby/chruby.sh"
-source "/usr/local/share/chruby/auto.sh"
 
 # Base paths
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin:$PATH"
@@ -42,3 +36,7 @@ export PGIT_URL=git@repositories.tomdebruijn.com
 export DOCKER_HOST=tcp://192.168.99.100:2376
 export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/dev
 export DOCKER_TLS_VERIFY=1
+
+# chruby
+source "/usr/local/share/chruby/chruby.sh"
+source "/usr/local/share/chruby/auto.sh"
