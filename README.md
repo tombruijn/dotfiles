@@ -77,24 +77,28 @@ directory, do not remove the `dotfiles` directory.
 ### ITerm2
 
 Download [ITerm2](http://iterm2.com), a Terminal replacement.
-Using color preset "Tango Dark" at the moment.
 
-#### Keyboard setup
+#### Theme
 
-Under "(Global) Keys" add the following maps *:
-
-- `alt` + `backspace` = `Send Hex Code: 17` => Delete full word
-- `alt` + `<-` = `Send Escape Sequence: b` => Skip to left word
-- `alt` + `->` = `Send Escape Sequence: f` => Skip to right word
-- `cmd` + `<-` = `Send Hex Codes: 0x01` => Beginning of line
-- `cmd` + `->` = `Send Hex Codes: 0x05` => End of line
-
-\* = Use the actual keys, not the text above.
+Import and use `iterm2/base16-suzume.itermcolors` as theme.
 
 #### Fonts
 
 - Under `Profiles` => `Text` => `Regular Font` set: `14pt Meslo LG M Regular for Powerline`
 - Under `Profiles` => `Text` => `Non-ASCII Font` set: `14pt Meslo LG M Regular for Powerline`
+
+#### Keys
+
+Under "(Global) Keys" add the following maps *:
+
+- `alt` + `backspace` = `Send Hex Code: 0x17` => Delete full word
+  - Also works as `Ctrl-W`
+- `cmd` + `<-` = `Send Hex Codes: 0x01` => Beginning of line
+  - Also works as `Ctrl-A`
+- `cmd` + `->` = `Send Hex Codes: 0x05` => End of line
+  - Also works as `Ctrl-E`
+
+\* = Use the actual keys, not the text above.
 
 ### Sublime plugins
 
