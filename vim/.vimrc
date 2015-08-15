@@ -20,6 +20,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'junegunn/goyo.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
