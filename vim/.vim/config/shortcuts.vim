@@ -73,8 +73,6 @@ omap <D-[> <<
 imap <D-]> <Esc>>>i
 imap <D-[> <Esc><<i
 
-" Toggle focus mode
-nnoremap <leader>F :Goyo<CR>
 
 " Dash.app documentation
 nmap <silent> <leader>e <Plug>DashSearch

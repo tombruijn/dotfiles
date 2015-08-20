@@ -107,5 +107,7 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 
 let mapleader=","
+let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
+let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim

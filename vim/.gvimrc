@@ -1,5 +1,5 @@
 " Font/Text settings.
-set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h14
+let &guifont=g:font_normal
 set linespace=1
 
 " Remove toolbar.
