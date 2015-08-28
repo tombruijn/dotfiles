@@ -27,6 +27,17 @@ Run:
 
 `xcode-select --install`
 
+### Environment, ZSH, Sublime configuration
+
+Next, clone this Git repository to your $HOME directory and initialize/update
+the submodules and finally hook everything up by running the `install` script.
+
+    mkdir $HOME/tombruijn
+    git clone git://github.com/tombruijn/dotfiles.git $HOME/tombruijn/dotfiles
+    cd $HOME/tombruijn/dotfiles && git submodule init && \
+      git submodule update --recursive
+    ./install
+
 ### OSX defaults
 
 Set osx defaults.
@@ -43,40 +54,21 @@ command.
 After installing Homebrew, ensure permissions are correct by running the
 following.
 
-    sudo chown -R $(whoami) /usr/local
+    sudo chown -R "$USER" /usr/local
     brew update
 
-### Git
-
-Get the latest version of Git. Additional config will be done through the install script.
-
-    brew install git
+    brew bundle Brewfile
 
 ### ZSH
-
-Install ZSH with the following command:
-
-    brew install zsh
 
 Set it as the default shell:
 
     chsh -s $(which zsh)
 
-### Environment, ZSH, Sublime configuration
-
-Next, clone this Git repository to your $HOME directory and initialize/update
-the submodules and finally hook everything up by running the `install` script.
-
-    git clone git://github.com/tombruijn/dotfiles.git $HOME/dotfiles
-    cd $HOME/dotfiles && git submodule init && \
-      git submodule update --recursive && ./install
-
 This should set up the symlinks from the dotfiles directory to your `$HOME`
 directory, do not remove the `dotfiles` directory.
 
-### ITerm2
-
-Download [ITerm2](http://iterm2.com), a Terminal replacement.
+### iTerm2
 
 #### Theme
 
@@ -116,58 +108,22 @@ it is installed.
 - [Theme - Phoenix](https://github.com/netatoo/phoenix-theme) - Dark Blue
   - Syntax highlighting: __Default/Twilight.tmTheme__
 
-### VIM
-
-Mac OSX comes installed with an old version of VIM.
-Replace this installation with a recent version of VIM through Homebrew.
-
-    brew install --with-features=huge --enable-interp=lua,ruby,perl,python \
-      https://raw.github.com/telemachus/homebrew/vim-mine/Library/Formula/vim.rb
-
-### MacVIM
-
-Next, install MacVIM as well.
-
-    brew install mercurial vim macvim
+### vim
 
 Run vundle to install vim plugins.
 
-1. Start vim
-2. Run: `:PluginInstall`
+```bash
+vim +:PluginInstall
+```
 
 ### chruby and ruby-install
 
-Install chruby by following the instructions on the
-[project page](https://github.com/postmodern/chruby).
-
-Or as lazy me would do it:
-
 ```bash
-brew install chruby
-brew install ruby-install
 ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 ```
 
-### Hammerspoon
-
-I use [Hammerspoon](http://www.hammerspoon.org/) for shortcut and window management.
-
-Install it as per the instructions on the website.
-
 ### Misc. Utilities
-
-**Node.js platform.**
-
-    brew install node
 
 **CoffeeScript language.**
 
     npm install coffee-script
-
-**Some datastores.**
-
-    brew install postgresql mongodb redis mysql sqlite memcached
-
-**Here are some misc. utilities.** (not necessarily required)
-
-    brew install ag ack blueutil ctags htop-osx imagemagick phantomjs tig tree qt
