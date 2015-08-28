@@ -34,7 +34,6 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
-  "/System/Library/CoreServices/Menu Extras/Airport.menu" \
   "/System/Library/CoreServices/Menu Extras/Volume.menu" \
   "/System/Library/CoreServices/Menu Extras/Displays.menu" \
   "/System/Library/CoreServices/Menu Extras/Battery.menu" \
