@@ -129,7 +129,7 @@ hotkey.bind({"alt"}, "=", function()
   application.launchOrFocus("LibreOffice")
 end)
 
-hotkey.bind({"ctrl"}, "E", function()
+hotkey.bind({"ctrl"}, "Tab", function()
   application.launchOrFocus("Finder")
 end)
 hotkey.bind({"cmd", "shift"}, "E", function()
@@ -144,13 +144,4 @@ hotkey.bind({"alt"}, "§", function()
 end)
 hotkey.bind({"cmd", "shift"}, "§", function()
   application.launchOrFocus("Wunderlist")
-end)
-
-hotkey.bind({"ctrl"}, "tab", function()
-  if applicationRunning("GitX") then
-    application.launchOrFocus("GitX")
-  else
-    alert.show("GitX not running")
-    application.launchOrFocus("iTerm")
-  end
 end)

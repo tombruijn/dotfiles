@@ -76,7 +76,7 @@ hotkey.bind({"cmd", "alt"}, "]", function()
 end)
 
 -- Align window to top left of the screen
-hotkey.bind({"cmd", "ctrl"}, "[", function()
+hotkey.bind({"ctrl", "alt"}, "[", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -94,7 +94,7 @@ hotkey.bind({"cmd", "ctrl"}, "[", function()
 end)
 
 -- Align window to top right of the screen
-hotkey.bind({"cmd", "ctrl"}, "]", function()
+hotkey.bind({"ctrl", "alt"}, "]", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
