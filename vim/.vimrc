@@ -41,7 +41,7 @@ filetype plugin indent on
 set encoding=utf-8
 
 set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
+set noshowmode                    " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 set hidden                        " Handle multiple buffers better.

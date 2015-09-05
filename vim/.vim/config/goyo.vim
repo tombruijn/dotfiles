@@ -3,14 +3,12 @@ let g:goyo_height=90
 let g:goyo_linenr=0
 
 function! s:goyo_enter()
-  set noshowmode
   set noshowcmd
   set scrolloff=999
   let &guifont=g:font_focus
 endfunction
 
 function! s:goyo_leave()
-  set showmode
   set showcmd
   set scrolloff=5
   let &guifont=g:font_normal
