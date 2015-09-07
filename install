@@ -8,6 +8,7 @@ ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 
+mkdir "$HOME/.bin"
 ln -nfs "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" "$HOME/.bin/sub"
 ln -nfs "$(pwd)/bin/git-fixup" "$HOME/.bin/git-fixup"
 ln -nfs "$(pwd)/bin/e" "$HOME/.bin/e"
