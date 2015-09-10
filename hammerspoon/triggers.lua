@@ -123,7 +123,7 @@ hotkey.bind({"ctrl"}, "-", function()
 end)
 
 hotkey.bind({"ctrl"}, "=", function()
-  application.launchOrFocus("iA Writer Pro")
+  application.launchOrFocus("iA Writer")
 end)
 hotkey.bind({"alt"}, "=", function()
   application.launchOrFocus("LibreOffice")
