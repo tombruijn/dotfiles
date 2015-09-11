@@ -27,7 +27,7 @@ brew "qt"
 brew "blueutil"
 
 brew "vim", args: ["--with-features=huge", "--with-lua"]
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "macvim"
 
 brew "chruby"
@@ -60,3 +60,4 @@ cask "libreoffice"
 cask "mou"
 cask "vlc"
 cask "seil"
+cask "toggldesktop"
