@@ -185,8 +185,6 @@ hi IndentGuidesOdd  ctermbg=234
 
 " Color Spelling Errors a little better
 hi clear SpellBad
-hi SpellBad cterm=underline ctermbg=NONE ctermfg=124
+hi SpellBad cterm=underline ctermbg=NONE ctermfg=124 guifg=#ba0000 guibg=NONE gui=underline
 hi SpellCap ctermbg=235 ctermfg=NONE
 hi SpellRare ctermbg=235 ctermfg=NONE
-
-hi Search ctermbg=237
