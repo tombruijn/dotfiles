@@ -16,7 +16,7 @@ source "$ZSH_DIR/termsupport.zsh"
 source "$ZSH_DIR/aliases.zsh"
 
 # Base paths
-export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin:$PATH"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:./bin:$PATH"
 
 # Heroku Toolbelt bin path
 export PATH="/usr/local/heroku/bin:$PATH"
