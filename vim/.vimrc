@@ -59,6 +59,10 @@ set cursorline                    " Highlight the line of the cursor.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
+set spelllang=en
+set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
+set complete+=kspell
+
 set wrap                          " Turn on line wrapping.
 set linebreak                     " Break lines.
 set nolist                        " `set list` disables linebreak.
@@ -105,6 +109,9 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+
+" Markdown
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 let mapleader=","
 let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
