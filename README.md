@@ -70,27 +70,10 @@ directory, do not remove the `dotfiles` directory.
 
 ### iTerm2
 
-#### Theme
-
-Import and use `iterm2/base16-suzume.itermcolors` as theme.
-
-#### Fonts
-
-- Under `Profiles` => `Text` => `Regular Font` set: `14pt Meslo LG M Regular for Powerline`
-- Under `Profiles` => `Text` => `Non-ASCII Font` set: `14pt Meslo LG M Regular for Powerline`
-
-#### Keys
-
-Under "(Global) Keys" add the following maps *:
-
-- `alt` + `backspace` = `Send Hex Code: 0x17` => Delete full word
-  - Also works as `Ctrl-W`
-- `cmd` + `<-` = `Send Hex Codes: 0x01` => Beginning of line
-  - Also works as `Ctrl-A`
-- `cmd` + `->` = `Send Hex Codes: 0x05` => End of line
-  - Also works as `Ctrl-E`
-
-\* = Use the actual keys, not the text above.
+- Set up `Load preferences from a custom folder or URL:` in the `General` section of `Preferences`.
+- Select the directory `$DOTFILES/iterm2/`.
+- Run `defaults read com.googlecode.iterm2`.
+- Restart iTerm.
 
 ### Sublime plugins
 
