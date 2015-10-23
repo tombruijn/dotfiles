@@ -25,15 +25,20 @@ end)
 -- Align window to center of the screen
 hotkey.bind({"cmd", "alt"}, "C", function()
   local win = window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
   if not win then
     alertCannotManipulateWindow()
     return
   end
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
 
-  f.x = (max.w - f.w) / 2
+  if max.x < 0 then
+    -- If on screen on the left of the main display
+    f.x = max.x + f.w / 2
+  else
+    f.x = (max.w - f.w) / 2
+  end
   f.y = (max.h - f.h) / 2
   win:setFrame(f)
 end)
@@ -49,8 +54,8 @@ hotkey.bind({"cmd", "alt"}, "[", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = 0
-  f.y = 0
+  f.x = max.x
+  f.y = max.y
   f.w = max.w / 2
   f.h = max.h
   win:setFrame(f)
@@ -67,7 +72,12 @@ hotkey.bind({"cmd", "alt"}, "]", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.w / 2
+  if max.x < 0 then
+    -- If on screen on the left of the main display
+    f.x = max.x + max.w / 2
+  else
+    f.x = max.x2 / 2
+  end
   f.y = max.y
   f.x2 = max.x2
   f.y2 = max.y2
@@ -85,8 +95,8 @@ hotkey.bind({"ctrl", "alt"}, "[", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = 0
-  f.y = 0
+  f.x = max.x
+  f.y = max.y
   f.w = max.w / 2
   f.h = max.h / 2
   win:setFrame(f)
@@ -103,8 +113,13 @@ hotkey.bind({"ctrl", "alt"}, "]", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.w / 2
-  f.y = 0
+  if max.x < 0 then
+    -- If on screen on the left of the main display
+    f.x = max.x + max.w / 2
+  else
+    f.x = max.x2 / 2
+  end
+  f.y = max.y
   f.x2 = max.x2
   f.h = max.h / 2
   win:setFrame(f)
