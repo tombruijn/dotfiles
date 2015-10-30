@@ -42,6 +42,10 @@ hotkey.bind({"cmd", "shift"}, "I", function()
   hs.itunes.displayCurrentTrack()
 end)
 
+hotkey.bind({"cmd", "shift"}, "H", function()
+  application.launchOrFocus("Helium")
+end)
+
 -- Show status
 hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
   charging = battery.isCharging() or battery.isCharged()
