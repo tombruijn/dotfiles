@@ -1,4 +1,5 @@
 tap "caskroom/cask"
+tap "homebrew/dupes"
 tap "neovim/neovim"
 tap "universal-ctags/universal-ctags"
 
