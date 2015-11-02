@@ -56,6 +56,7 @@ following.
 
     sudo chown -R "$USER" /usr/local
     brew update
+    brew tap Homebrew/bundle
 
     brew bundle Brewfile
 
