@@ -7,12 +7,12 @@ let NERDTreeIgnore=[
   \ '\.git$',
   \ '\.DS_Store$',
   \ '\.bundle',
-  \ 'tmp',
+  \ 'tmp/',
   \ 'coverage',
   \ '\.sass-cache',
   \ '\.capistrano',
   \ '\.yardoc',
-  \ 'build'
+  \ 'build/'
 \ ]
 
 " Don't open NERDTree if I open a directory with vim
