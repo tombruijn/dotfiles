@@ -26,5 +26,7 @@ function! <SID>StripTrailingWhitespace()
   call cursor(l, c)
 endfunction
 
-" Remove trailing whitespace automatically on save
-autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
+augroup trimwhitespace
+  " Remove trailing whitespace automatically on save
+  autocmd BufWritePre * :call <SID>StripTrailingWhitespace()
+augroup END

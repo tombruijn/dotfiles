@@ -14,8 +14,12 @@ function! s:goyo_leave()
   let &guifont=g:font_normal
 endfunction
 
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
+augroup goyo
+  autocmd!
+
+  autocmd User GoyoEnter nested call <SID>goyo_enter()
+  autocmd User GoyoLeave nested call <SID>goyo_leave()
+augroup END
 
 " Toggle focus mode
 nnoremap <leader>F :Goyo<CR>

@@ -132,8 +132,11 @@ hi gitCommitSelectedArrow       ctermfg=107  ctermbg=NONE cterm=NONE         gui
 hi gitCommitSelectedType        ctermfg=107  ctermbg=NONE cterm=NONE         guifg=#8f9d6a guibg=NONE    gui=NONE
 
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=234
+augroup theme
+  autocmd!
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=234
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=234
+augroup END
 
 if ! has('gui_running')
     hi String ctermfg=2

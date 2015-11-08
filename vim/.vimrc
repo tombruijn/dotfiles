@@ -95,26 +95,32 @@ set splitbelow                    " Open vsplits to below
 set splitright                    " Open hsplits to the right
 
 " Flag filetypes
-" - Ruby
-autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
+augroup filetypes
+  " Clear this group's autocmds if previously set
+  autocmd!
 
-" - Sass/Scss
-autocmd BufRead,BufNewFile *.sass set ft=sass.css
-autocmd BufRead,BufNewFile *.scss set ft=scss.css
-autocmd BufRead,BufNewFile *.eco set ft=html
-autocmd FileType css,sass set iskeyword+=-
+  " Ruby
+  autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
 
-" Activate omnifunc on filetypes
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  " Sass/Scss
+  autocmd BufRead,BufNewFile *.sass set ft=sass.css
+  autocmd BufRead,BufNewFile *.scss set ft=scss.css
+  autocmd BufRead,BufNewFile *.eco set ft=html
+  autocmd FileType css,sass set iskeyword+=-
 
-" Markdown
-autocmd BufRead,BufNewFile *.md setlocal spell
+  " Activate omnifunc on filetypes
+  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+  autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+
+  " Markdown
+  autocmd BufRead,BufNewFile *.md setlocal spell
+augroup END
 
 let mapleader=","
 let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
 let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim
+nmap <Leader>c :Neomake rubocop<CR> :lopen<CR>
