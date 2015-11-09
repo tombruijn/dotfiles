@@ -14,7 +14,7 @@ function! s:goyo_leave()
   let &guifont=g:font_normal
 endfunction
 
-augroup goyo
+augroup mygoyo
   autocmd!
 
   autocmd User GoyoEnter nested call <SID>goyo_enter()
