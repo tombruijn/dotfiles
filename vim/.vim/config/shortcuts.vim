@@ -73,6 +73,8 @@ omap <D-[> <<
 imap <D-]> <Esc>>>i
 imap <D-[> <Esc><<i
 
+" Open previous edited file
+nnoremap <leader><leader> :e #<CR>
 
 " Dash.app documentation
 nmap <silent> <leader>e <Plug>DashSearch
