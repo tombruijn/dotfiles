@@ -1,42 +1,36 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Raimondi/delimitMate'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'sirver/ultisnips'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'junegunn/goyo.vim'
-Plugin 'rizzatti/dash.vim'
-Plugin 'AndrewRadev/splitjoin.vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'airblade/vim-gitgutter'
+Plug 'Raimondi/delimitMate'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'sirver/ultisnips'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'junegunn/goyo.vim'
+Plug 'rizzatti/dash.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'othree/html5.vim'
-Plugin 'tpope/vim-haml'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'fatih/vim-go'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'thoughtbot/vim-rspec'
+Plug 'othree/html5.vim'
+Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'plasticboy/vim-markdown'
+Plug 'fatih/vim-go'
 
-call vundle#end()
-
-syntax enable
-filetype plugin indent on
+call plug#end()
 
 set encoding=utf-8
 
