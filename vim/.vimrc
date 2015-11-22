@@ -2,8 +2,8 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'mileszs/ack.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'ervandew/supertab'
@@ -20,15 +20,16 @@ Plug 'junegunn/goyo.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
-Plug 'othree/html5.vim'
-Plug 'tpope/vim-haml'
-Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
-Plug 'plasticboy/vim-markdown'
-Plug 'fatih/vim-go'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
+
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'tpope/vim-haml', { 'for': 'haml' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 call plug#end()
 
