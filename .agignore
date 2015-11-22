@@ -1,0 +1,15 @@
+.git
+.svn
+.hg
+/tags
+/log
+/doc
+.yarddoc
+coverage
+tmp
+.sass-cache
+*.ttf
+*.eot
+*.woff
+*.woff2
+!.env
