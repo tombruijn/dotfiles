@@ -27,7 +27,7 @@ brew "htop-osx"
 brew "qt"
 brew "blueutil"
 
-brew "vim", args: ["--with-features=huge", "--with-lua"]
+brew "vim", args: ["with-lua"]
 brew "neovim", args: ["HEAD"]
 brew "macvim"
 
