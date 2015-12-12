@@ -94,10 +94,10 @@ it is installed.
 
 ### vim
 
-Run vundle to install vim plugins.
+Use [vim-plug](https://github.com/junegunn/vim-plug/) to install vim plugins.
 
 ```bash
-vim +:PluginInstall
+vim +:PlugInstall
 ```
 
 ### chruby and ruby-install
