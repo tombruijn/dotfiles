@@ -7,7 +7,6 @@ These dotfiles contain configuration and installation for:
 * ITerm2
 * ZSH
 * Dotfiles
-* Sublime Text
 * VIM (and MacVIM)
 * chruby and ruby-install
 * Hammerspoon
@@ -23,11 +22,11 @@ Here is a step-by-step installation.
 
 Install XCode through the Mac App Store.
 
-Run:
+Then run:
 
 `xcode-select --install`
 
-### Environment, ZSH, Sublime configuration
+### Dotfiles installation
 
 Next, clone this Git repository to your $HOME directory and initialize/update
 the submodules and finally hook everything up by running the `install` script.
@@ -75,22 +74,6 @@ directory, do not remove the `dotfiles` directory.
 - Select the directory `$DOTFILES/iterm2/`.
 - Run `defaults read com.googlecode.iterm2`.
 - Restart iTerm.
-
-### Sublime plugins
-
-Install the following Sublime plugins through Sublime package control once
-it is installed.
-
-- [Package Control](http://wbond.net/sublime_packages/package_control)
-- [RSpec](https://github.com/SublimeText/RSpec)
-- [Sass](https://github.com/nathos/sass-textmate-bundle)
-- [CoffeeScript](https://github.com/Xavura/CoffeeScript-Sublime-Plugin)
-- [AngularJS (CoffeeScript)](https://github.com/EastPoint/Sublime-AngularJS-Coffee-Completions)
-- [eco](https://github.com/davidjrice/sublime-eco)
-- [GitGutter](https://github.com/jisaacks/GitGutter)
-- [JsFormat](https://github.com/jdc0589/JsFormat)
-- [Theme - Phoenix](https://github.com/netatoo/phoenix-theme) - Dark Blue
-  - Syntax highlighting: __Default/Twilight.tmTheme__
 
 ### vim
 
