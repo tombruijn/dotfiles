@@ -24,8 +24,8 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 
-Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'tpope/vim-haml', { 'for': 'haml' }
+Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
+Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -57,6 +57,7 @@ set hlsearch                      " Highlight matches.
 set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 set complete+=kspell
+set completeopt=longest,menu,preview
 
 set wrap                          " Turn on line wrapping.
 set linebreak                     " Break lines.
@@ -95,13 +96,16 @@ augroup filetypes
   autocmd!
 
   " Ruby
-  autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
+  autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile}
+        \ let g:SuperTabDefaultCompletionType="context" |
+        \ set ft=ruby
 
   " Sass/Scss
   autocmd BufRead,BufNewFile *.sass set ft=sass.css
   autocmd BufRead,BufNewFile *.scss set ft=scss.css
-  autocmd BufRead,BufNewFile *.eco set ft=html
-  autocmd FileType css,sass set iskeyword+=-
+  autocmd FileType css,sass
+        \ let b:SuperTabDefaultCompletionType="<c-x><c-o>" |
+        \ setlocal iskeyword+=-
 
   " Activate omnifunc on filetypes
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
