@@ -19,6 +19,7 @@ function applicationRunning(name)
   return found
 end
 
+-- System management
 hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
@@ -58,13 +59,7 @@ hotkey.bind({"cmd", "alt", "ctrl"}, "E", function()
   bluetooth_control.toggle()
 end)
 
-hotkey.bind({"ctrl"}, "1", function()
-  application.launchOrFocus("iTerm")
-end)
-hotkey.bind({"alt"}, "1", function()
-  application.launchOrFocus("iTunes")
-end)
-
+-- MacVim - Start only from terminal
 hotkey.bind({"ctrl"}, "2", function()
   if applicationRunning("MacVim") then
     application.launchOrFocus("MacVim")
@@ -74,63 +69,34 @@ hotkey.bind({"ctrl"}, "2", function()
   end
 end)
 
-hotkey.bind({"ctrl"}, "3", function()
-  application.launchOrFocus("Google Chrome")
-end)
+-- Simple triggers
+triggers = {
+  {{"ctrl"}, "1", "iTerm"},
+  {{"alt"}, "1", "iTunes"},
+  {{"ctrl"}, "3", "Google Chrome"},
+  {{"ctrl"}, "4", "Opera"},
+  {{"alt"}, "4", "Safari"},
+  {{"alt"}, "6", "Sketch"},
+  {{"ctrl"}, "8", "Tweetbot"},
+  {{"alt"}, "8", "Telegram"},
+  {{"alt"}, "9", "Skype"},
+  {{"ctrl"}, "0", "Airmail 2"},
+  {{"alt"}, "0", "Slack"},
+  {{"ctrl"}, "-", "Calendar"},
+  {{"ctrl"}, "=", "iA Writer"},
+  {{"alt"}, "=", "LibreOffice"},
+  {{"ctrl"}, "Tab", "Finder"},
+  {{"ctrl"}, "§", "1Password 5"},
+  {{"alt"}, "§", "TogglDesktop"},
+  {{"cmd", "shift"}, "§", "Wunderlist"},
+  {{"cmd", "shift"}, "E", "Dash"}
+}
+for _, trigger in ipairs(triggers) do
+  local mods = trigger[1]
+  local key = trigger[2]
+  local applicationName = trigger[3]
 
-hotkey.bind({"ctrl"}, "4", function()
-  application.launchOrFocus("Opera")
-end)
-hotkey.bind({"alt"}, "4", function()
-  application.launchOrFocus("Safari")
-end)
-
-hotkey.bind({"alt"}, "6", function()
-  application.launchOrFocus("Sketch")
-end)
-
-hotkey.bind({"ctrl"}, "8", function()
-  application.launchOrFocus("Tweetbot")
-end)
-hotkey.bind({"alt"}, "8", function()
-  application.launchOrFocus("Telegram")
-end)
-
-hotkey.bind({"alt"}, "9", function()
-  application.launchOrFocus("Skype")
-end)
-
-hotkey.bind({"ctrl"}, "0", function()
-  application.launchOrFocus("Airmail 2")
-end)
-hotkey.bind({"alt"}, "0", function()
-  application.launchOrFocus("Slack")
-end)
-
-hotkey.bind({"ctrl"}, "-", function()
-  application.launchOrFocus("Calendar")
-end)
-
-hotkey.bind({"ctrl"}, "=", function()
-  application.launchOrFocus("iA Writer")
-end)
-hotkey.bind({"alt"}, "=", function()
-  application.launchOrFocus("LibreOffice")
-end)
-
-hotkey.bind({"ctrl"}, "Tab", function()
-  application.launchOrFocus("Finder")
-end)
-hotkey.bind({"cmd", "shift"}, "E", function()
-  application.launchOrFocus("Dash")
-end)
-
-hotkey.bind({"ctrl"}, "§", function()
-  application.launchOrFocus("1Password 5")
-end)
-hotkey.bind({"alt"}, "§", function()
-  application.launchOrFocus("TogglDesktop")
-end)
-hotkey.bind({"cmd", "shift"}, "§", function()
-  application.launchOrFocus("Wunderlist")
-end)
+  hotkey.bind(mods, key, function()
+    application.launchOrFocus(applicationName)
+  end)
+end
