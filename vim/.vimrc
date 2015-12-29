@@ -109,8 +109,15 @@ augroup filetypes
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 
+  " git commit
+  autocmd Filetype gitcommit
+        \ let &l:colorcolumn="50,72" |
+        \ setlocal spell textwidth=72
+
   " Markdown
-  autocmd BufRead,BufNewFile *.md setlocal spell
+  autocmd BufRead,BufNewFile *.md
+        \ let &l:colorcolumn="80" |
+        \ setlocal spell
 augroup END
 
 let mapleader=","
