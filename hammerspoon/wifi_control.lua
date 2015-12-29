@@ -1,4 +1,3 @@
-local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
 
 WiFiControl = {}
