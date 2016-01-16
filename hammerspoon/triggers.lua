@@ -86,7 +86,7 @@ triggers = {
   {{"ctrl"}, "=", "iA Writer"},
   {{"alt"}, "=", "LibreOffice"},
   {{"ctrl"}, "Tab", "Finder"},
-  {{"ctrl"}, "§", "1Password 5"},
+  {{"ctrl"}, "§", "1Password 6"},
   {{"alt"}, "§", "TogglDesktop"},
   {{"cmd", "shift"}, "§", "Wunderlist"},
   {{"cmd", "shift"}, "E", "Dash"}
