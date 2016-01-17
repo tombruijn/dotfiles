@@ -55,7 +55,7 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
 set spelllang=en
-set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
+set spellfile=$HOME/.vim/spell/en.utf-8.add
 set complete+=kspell
 
 set wrap                          " Turn on line wrapping.
