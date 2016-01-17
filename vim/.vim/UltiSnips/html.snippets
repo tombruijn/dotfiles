@@ -73,8 +73,36 @@ snippet li "<li>" w
 <li>$0</li>
 endsnippet
 
+snippet table "<table>" w
+<table>
+  <thead>
+    <th>$0</th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+endsnippet
+
+snippet tr "<tr>" w
+<tr>
+  $0
+</tr>
+endsnippet
+
+snippet th "<th>" w
+<th>
+  $0
+</th>
+endsnippet
+
+snippet td "<td>" w
+<td>
+  $0
+</td>
+endsnippet
+
 snippet a "<a>" w
-<a href="${1:http://www.url.com}"${2: target="_blank"}>${3:Anchor Text}</a>
+<a href="${1:http://www.url.com}"${2: target="_blank"}>${0:${VISUAL:Anchor Text}}</a>
 endsnippet
 
 snippet = "attribute" w
