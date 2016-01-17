@@ -12,7 +12,10 @@ let NERDTreeIgnore=[
   \ '\.sass-cache',
   \ '\.capistrano',
   \ '\.yardoc',
-  \ 'build/'
+  \ '^_build$',
+  \ '^build$',
+  \ '^node_modules$',
+  \ '^tags$[[file]]'
 \ ]
 
 " Don't open NERDTree if I open a directory with vim
