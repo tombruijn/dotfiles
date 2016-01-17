@@ -19,6 +19,7 @@ Plug 'xolox/vim-easytags'
 Plug 'junegunn/goyo.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'tpope/vim-fugitive'
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
