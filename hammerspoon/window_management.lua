@@ -2,6 +2,7 @@ local hotkey = require "hs.hotkey"
 local window = require "hs.window"
 local screen = require "hs.screen"
 local alert = require "hs.alert"
+local keys = require "keys"
 
 window.animationDuration = 0
 
@@ -9,8 +10,7 @@ function alertCannotManipulateWindow()
   alert.show("Can't move window")
 end
 
--- Make window full screen
-hotkey.bind({"cmd", "alt"}, "F", function()
+keys.bindKeyFor("Fullscreen window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -22,8 +22,7 @@ hotkey.bind({"cmd", "alt"}, "F", function()
   win:setFrame(max)
 end)
 
--- Align window to center of the screen
-hotkey.bind({"cmd", "alt"}, "C", function()
+keys.bindKeyFor("Center window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -43,8 +42,7 @@ hotkey.bind({"cmd", "alt"}, "C", function()
   win:setFrame(f)
 end)
 
--- Align window to left 50% of the screen
-hotkey.bind({"cmd", "alt"}, "[", function()
+keys.bindKeyFor("Left 50% window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -61,8 +59,7 @@ hotkey.bind({"cmd", "alt"}, "[", function()
   win:setFrame(f)
 end)
 
--- Align window to right 50% of the screen
-hotkey.bind({"cmd", "alt"}, "]", function()
+keys.bindKeyFor("Right 50% window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -84,8 +81,7 @@ hotkey.bind({"cmd", "alt"}, "]", function()
   win:setFrame(f)
 end)
 
--- Align window to top left of the screen
-hotkey.bind({"ctrl", "alt"}, "[", function()
+keys.bindKeyFor("Top left 25% window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -102,8 +98,7 @@ hotkey.bind({"ctrl", "alt"}, "[", function()
   win:setFrame(f)
 end)
 
--- Align window to top right of the screen
-hotkey.bind({"ctrl", "alt"}, "]", function()
+keys.bindKeyFor("Top right 25% window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -125,8 +120,7 @@ hotkey.bind({"ctrl", "alt"}, "]", function()
   win:setFrame(f)
 end)
 
--- Move window to the display on the left
-hotkey.bind({"cmd", "ctrl"}, "-", function()
+keys.bindKeyFor("Move window display left", function()
   local win = hs.window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -135,8 +129,7 @@ hotkey.bind({"cmd", "ctrl"}, "-", function()
   win:moveOneScreenWest()
 end)
 
--- Move window to the display on the right
-hotkey.bind({"cmd", "ctrl"}, "=", function()
+keys.bindKeyFor("Move window display right", function()
   local win = hs.window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -145,8 +138,7 @@ hotkey.bind({"cmd", "ctrl"}, "=", function()
   win:moveOneScreenEast()
 end)
 
--- Shrink window
-hotkey.bind({"ctrl", "alt"}, "-", function()
+keys.bindKeyFor("Shrink window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
@@ -171,8 +163,7 @@ hotkey.bind({"ctrl", "alt"}, "-", function()
   win:setFrame(f)
 end)
 
--- Grow window
-hotkey.bind({"ctrl", "alt"}, "=", function()
+keys.bindKeyFor("Grow window", function()
   local win = window.focusedWindow()
   if not win then
     alertCannotManipulateWindow()
