@@ -130,4 +130,3 @@ let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
 let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim
-nmap <Leader>c :Neomake rubocop<CR> :lopen<CR>
