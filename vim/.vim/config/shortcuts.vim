@@ -78,3 +78,10 @@ nnoremap <leader><leader> :e #<CR>
 
 " Dash.app documentation
 nmap <silent> <leader>e <Plug>DashSearch
+
+" Run rubocop for file
+nmap <silent> <leader>g :Dispatch bundle exec rubocop %<CR>
+
+" Quickfix window open and close
+nmap <silent> <leader>sd :cclose<CR>
+nmap <silent> <leader>sf :copen<CR>
