@@ -83,5 +83,5 @@ nmap <silent> <leader>e <Plug>DashSearch
 nmap <silent> <leader>g :Dispatch bundle exec rubocop %<CR>
 
 " Quickfix window open and close
-nmap <silent> <leader>sd :cclose<CR>
-nmap <silent> <leader>sf :copen<CR>
+nmap <silent> <leader>fs :cclose<CR>
+nmap <silent> <leader>fd :copen<CR>
