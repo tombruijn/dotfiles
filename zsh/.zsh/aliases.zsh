@@ -65,7 +65,7 @@ alias TEST="RAILS_ENV=test"
 alias DEV="RAILS_ENV=development"
 
 alias srs="s rails server"
-alias rs="bundle exec rails server"
+alias rs="bundle exec rails server -b 0.0.0.0"
 alias src="s rails console"
 alias rc="bundle exec rails console"
 alias rg="bundle exec rails generate"
