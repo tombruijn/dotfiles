@@ -23,6 +23,7 @@ ln -nfs "$(pwd)/.agignore" "$HOME/.agignore"
 ln -nfs "$(pwd)/git/.gitignore_global" "$HOME/.gitignore_global"
 ln -nfs "$(pwd)/git/.tigrc" "$HOME/.tigrc"
 ln -nfs "$HOME/Dropbox/vim/spell" "$HOME/.vim/spell"
+mkdir -p "$HOME/.VIM_UNDO_FILES"
 
 # Copy powerlines
 for file in ./powerline-fonts/Meslo/*.otf; do
