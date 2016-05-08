@@ -25,9 +25,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Go-lang paths
-export GOPATH="$HOME/projects/go"
-export GOBIN="$GOPATH/bin"
-export GOROOT=$(go env GOROOT)
+if type "go" > /dev/null; then
+  export GOPATH="$HOME/projects/go"
+  export GOBIN="$GOPATH/bin"
+  export GOROOT=$(go env GOROOT)
+fi
 
 # pgit tool
 export PGIT_URL=git@repositories.tomdebruijn.com
