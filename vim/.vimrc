@@ -3,23 +3,23 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'bling/vim-airline'
-Plug 'kien/ctrlp.vim'
-Plug 'ervandew/supertab'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-repeat'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '15445be' }
+Plug 'bling/vim-airline', { 'commit': '14d14cf' }
+Plug 'kien/ctrlp.vim', { 'commit': 'b5d3fe6' }
+Plug 'ervandew/supertab', { 'commit': '9f7da6d' }
+Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
+Plug 'tpope/vim-surround', { 'commit': '2d05440' }
+Plug 'tpope/vim-unimpaired', { 'commit': '23f471a' }
+Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-dispatch'
-Plug 'airblade/vim-gitgutter'
-Plug 'Raimondi/delimitMate'
-Plug 'sirver/ultisnips'
+Plug 'airblade/vim-gitgutter', { 'commit': '51d9a3f' }
+Plug 'Raimondi/delimitMate', { 'commit': '8bc47fd' }
+Plug 'sirver/ultisnips', { 'commit': 'c5a21c5' }
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'junegunn/goyo.vim'
 Plug 'rizzatti/dash.vim'
-Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }
 Plug 'tpope/vim-fugitive'
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
