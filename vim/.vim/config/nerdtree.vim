@@ -25,10 +25,3 @@ let g:NERDTreeHijackNetrw=0
 nmap <C-T> :NERDTreeToggle<CR>
 " 'Find in Tree' find currently open buffer file in tree
 nmap <leader>ft :NERDTreeFind<CR>
-
-augroup nerdtree
-  autocmd!
-
-  " Refresh tree on pane focus
-  autocmd WinEnter * if exists("b:NERDTree") | execute "normal R" | endif
-augroup END
