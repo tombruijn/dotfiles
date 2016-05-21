@@ -4,7 +4,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '15445be' }
-Plug 'bling/vim-airline', { 'commit': '14d14cf' }
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim', { 'commit': 'b5d3fe6' }
 Plug 'ervandew/supertab', { 'commit': '9f7da6d' }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
