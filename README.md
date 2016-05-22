@@ -4,10 +4,10 @@ These dotfiles contain configuration and installation for:
 
 * XCode
 * Homebrew
-* ITerm2
+* iTerm
 * ZSH
 * Dotfiles
-* VIM (and MacVIM)
+* VIM (and MacVim)
 * chruby and ruby-install
 * Hammerspoon
 * Misc. Utilities
@@ -30,8 +30,8 @@ xcode-select --install
 
 ### Dotfiles installation
 
-Next, clone this Git repository to your $HOME directory and initialize/update
-the submodules and finally hook everything up by running the `install` script.
+Next, clone this Git repository, initialize/update the submodules and finally
+hook everything up by running the install script.
 
 ```sh
 mkdir $HOME/tombruijn
@@ -43,7 +43,7 @@ cd $HOME/tombruijn/dotfiles && git submodule init && \
 
 ### OSX defaults
 
-Set osx defaults.
+Set OSX defaults.
 
 ```sh
 ./.osx
@@ -55,7 +55,7 @@ Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
 command.
 
 ```sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 After installing Homebrew, ensure permissions are correct by running the
@@ -80,7 +80,7 @@ chsh -s $(which zsh)
 This should set up the symlinks from the dotfiles directory to your `$HOME`
 directory, do not remove the `dotfiles` directory.
 
-### iTerm2
+### iTerm
 
 - Set up `Load preferences from a custom folder or URL:`
   in the `General` section of `Preferences`.
