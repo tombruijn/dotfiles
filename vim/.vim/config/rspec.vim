@@ -1,5 +1,5 @@
 " RSpec command
-let g:rspec_command="spring rspec {spec}"
+let g:rspec_command="bundle exec rspec {spec}"
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
