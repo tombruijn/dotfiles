@@ -31,6 +31,9 @@ if type "go" > /dev/null; then
   export GOROOT=$(go env GOROOT)
 fi
 
+# Rust paths
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # pgit tool
 export PGIT_URL=git@repositories.tomdebruijn.com
 
