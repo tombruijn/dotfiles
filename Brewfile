@@ -1,4 +1,3 @@
-tap "caskroom/cask"
 tap "homebrew/dupes"
 tap "neovim/neovim"
 tap "universal-ctags/universal-ctags"
@@ -44,10 +43,3 @@ brew "node"
 brew "phantomjs"
 
 brew "heroku-toolbelt"
-
-cask "atom"
-cask "skype"
-cask "libreoffice"
-cask "mou"
-cask "vlc"
-cask "seil"
