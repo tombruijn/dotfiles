@@ -6,7 +6,7 @@ Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '15445be' }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
-Plug 'kien/ctrlp.vim', { 'commit': 'b5d3fe6' }
+Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f' }
 Plug 'ervandew/supertab', { 'commit': '9f7da6d' }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
