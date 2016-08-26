@@ -9,6 +9,7 @@ These dotfiles contain configuration and installation for:
 * Dotfiles
 * VIM (and MacVim)
 * chruby and ruby-install
+* rustup and Rust
 * Hammerspoon
 * Misc. Utilities
 
@@ -101,6 +102,12 @@ vim +:PlugInstall
 ```sh
 ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 ```
+
+### Rust and rustup
+
+Install [rustup](https://www.rustup.rs/) and with it Rust.
+
+Which Rust version to install depends on the project you're working on.
 
 ### Misc. Utilities
 

@@ -34,6 +34,7 @@ brew "chruby"
 brew "ruby-install"
 
 brew "postgresql"
+brew "mongodb"
 brew "mysql"
 brew "redis"
 brew "sqlite"
