@@ -13,7 +13,6 @@ alias tdb="cd $HOME/tombruijn/"
 alias pro="cd $HOME/projects/"
 alias pgo="cd $HOME/projects/go"
 alias dot="cd $HOME/tombruijn/dotfiles"
-alias a="cd $HOME/appsignal/"
 alias exp="cd $HOME/projects/experiments"
 
 # Small utilities
