@@ -8,7 +8,7 @@ ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 
-mkdir -p "$HOME/.bin" "$HOME/.karabiner"
+mkdir -p "$HOME/.bin" "$HOME/.karabiner.d"
 ln -nfs "$(pwd)/bin/git-fixup" "$HOME/.bin/git-fixup"
 ln -nfs "$(pwd)/bin/e" "$HOME/.bin/e"
 
@@ -18,7 +18,7 @@ ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.config/nvim"
 ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
 ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
-ln -nfs "$(pwd)/karabiner/configuration" "$HOME/.karabiner/configuration"
+ln -nfs "$(pwd)/karabiner"              "$HOME/.karabiner.d/configuration"
 
 ln -nfs "$(pwd)/.agignore" "$HOME/.agignore"
 ln -nfs "$(pwd)/git/.gitignore_global" "$HOME/.gitignore_global"
