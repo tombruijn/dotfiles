@@ -25,6 +25,7 @@ Keys = {
     ["Right 50% window"] = {{{"alt", "cmd"}, "]"}, {hyper, "L"}},
     ["Top left 25% window"] = {{{"ctrl", "alt"}, "["}, {hyper, "U"}},
     ["Top right 25% window"] = {{{"ctrl", "alt"}, "]"}, {hyper, "O"}},
+    ["Bottom center 25% window"] = {{{"ctrl", "alt"}, "\\"}, {nil, "f15"}},
     ["Move window display left"] = {{{"ctrl", "cmd"}, "-"}, {hyper, "Y"}},
     ["Move window display right"] = {{{"ctrl", "cmd"}, "="}, {hyper, "P"}},
     ["Shrink window"] = {{{"ctrl", "alt"}, "-"}, {hyper, "pagedown"}},

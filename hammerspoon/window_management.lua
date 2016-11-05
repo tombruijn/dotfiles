@@ -120,6 +120,28 @@ keys.bindKeyFor("Top right 25% window", function()
   win:setFrame(f)
 end)
 
+keys.bindKeyFor("Bottom center 25% window", function()
+  local win = window.focusedWindow()
+  if not win then
+    alertCannotManipulateWindow()
+    return
+  end
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  if max.x < 0 then
+    -- If on screen on the left of the main display
+    f.x = max.x + max.w / 4
+  else
+    f.x = max.x2 / 4
+  end
+  f.y = max.y2 / 2
+  f.x2 = (max.x2 / 4) * 3
+  f.h = max.h / 2
+  win:setFrame(f)
+end)
+
 keys.bindKeyFor("Move window display left", function()
   local win = hs.window.focusedWindow()
   if not win then
