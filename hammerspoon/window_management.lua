@@ -138,7 +138,7 @@ keys.bindKeyFor("Bottom center 25% window", function()
   end
   f.y = max.y2 / 2
   f.x2 = (max.x2 / 4) * 3
-  f.h = max.h / 2
+  f.y2 = max.y2
   win:setFrame(f)
 end)
 
