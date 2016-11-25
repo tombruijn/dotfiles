@@ -100,7 +100,7 @@ augroup filetypes
   autocmd!
 
   " Ruby
-  autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile,Brewfile}
+  autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile,Brewfile,*.jpbuilder}
         \ let g:SuperTabDefaultCompletionType="context" |
         \ set ft=ruby
 
