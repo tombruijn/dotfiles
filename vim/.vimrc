@@ -7,7 +7,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f' }
-Plug 'ervandew/supertab', { 'commit': '9f7da6d' }
+Plug 'lifepillar/vim-mucomplete'
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 Plug 'tpope/vim-unimpaired', { 'commit': '23f471a' }
@@ -60,7 +60,6 @@ set hlsearch                      " Highlight matches.
 set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 set complete+=kspell
-set completeopt=longest,menu,preview
 
 set wrap                          " Turn on line wrapping.
 set linebreak                     " Break lines.
@@ -100,21 +99,13 @@ augroup filetypes
 
   " Ruby
   autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile,Brewfile,*.jpbuilder}
-        \ let g:SuperTabDefaultCompletionType="context" |
         \ set ft=ruby
 
   " Sass/Scss
   autocmd BufRead,BufNewFile *.sass set ft=sass.css
   autocmd BufRead,BufNewFile *.scss set ft=scss.css
   autocmd FileType css,sass
-        \ let b:SuperTabDefaultCompletionType="<c-x><c-o>" |
         \ setlocal iskeyword+=-
-
-  " Activate omnifunc on filetypes
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 
   " git commit
   autocmd Filetype gitcommit
