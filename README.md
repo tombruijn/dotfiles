@@ -75,10 +75,10 @@ brew bundle Brewfile
 
 ### ZSH
 
-Set it as the default shell:
+Let it as the default shell.
 
 ```sh
-chsh -s $(which zsh)
+sudo dscl . -create /Users/$USER UserShell $(which zsh)
 ```
 
 ### iTerm
