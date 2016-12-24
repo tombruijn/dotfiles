@@ -40,3 +40,5 @@ export PGIT_URL=git@repositories.tomdebruijn.com
 # chruby
 source "/usr/local/share/chruby/chruby.sh"
 source "/usr/local/share/chruby/auto.sh"
+
+export HOMEBREW_NO_ANALYTICS=1
