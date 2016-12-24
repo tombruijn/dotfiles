@@ -36,11 +36,14 @@ hook everything up by running the install script.
 
 ```sh
 mkdir $HOME/tombruijn
-git clone git://github.com/tombruijn/dotfiles.git $HOME/tombruijn/dotfiles
+git clone git://github.com:tombruijn/dotfiles.git $HOME/tombruijn/dotfiles
 cd $HOME/tombruijn/dotfiles && git submodule init && \
   git submodule update --recursive
 ./install
 ```
+
+This should set up the symlinks from the dotfiles directory to your `$HOME`
+directory, do not remove the `dotfiles` directory.
 
 ### OSX defaults
 
@@ -77,9 +80,6 @@ Set it as the default shell:
 ```sh
 chsh -s $(which zsh)
 ```
-
-This should set up the symlinks from the dotfiles directory to your `$HOME`
-directory, do not remove the `dotfiles` directory.
 
 ### iTerm
 
