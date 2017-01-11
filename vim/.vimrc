@@ -16,8 +16,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'airblade/vim-gitgutter', { 'commit': '51d9a3f' }
 Plug 'Raimondi/delimitMate', { 'commit': '8bc47fd' }
 Plug 'sirver/ultisnips', { 'commit': 'c5a21c5' }
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
 Plug 'junegunn/goyo.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }

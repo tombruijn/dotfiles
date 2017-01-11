@@ -1,6 +1,5 @@
 tap "homebrew/dupes"
 tap "neovim/neovim"
-tap "universal-ctags/universal-ctags"
 
 brew "python"
 brew "lua"
@@ -18,7 +17,6 @@ brew "zsh"
 brew "the_silver_searcher"
 brew "cloc"
 brew "tree"
-brew "universal-ctags", args: ["HEAD"]
 brew "imagemagick"
 brew "jpegoptim"
 brew "optipng"
