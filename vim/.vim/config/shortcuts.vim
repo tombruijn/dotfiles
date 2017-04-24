@@ -85,3 +85,5 @@ nmap <silent> <leader>g :Dispatch bundle exec rubocop %<CR>
 " Quickfix window open and close
 nmap <silent> <leader>fs :cclose<CR>
 nmap <silent> <leader>fd :copen<CR>
+
+map K <Nop>
