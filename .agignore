@@ -6,6 +6,8 @@
 /doc
 .yarddoc
 coverage
+_build
+deps
 tmp
 .sass-cache
 *.ttf
