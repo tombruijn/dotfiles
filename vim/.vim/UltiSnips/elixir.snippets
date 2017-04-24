@@ -1,0 +1,43 @@
+priority -50
+
+snippet "\b(de)?fm" "defmodule <name>... do" r
+defmodule ${1:module_name} do
+  ${0:${VISUAL:# functions}}
+end
+endsnippet
+
+snippet "\b(de)?f" "def <name>... do" r
+def ${1:func_name} do
+  ${0:${VISUAL:# object}}
+end
+endsnippet
+
+snippet "\b(de)?fp" "defp <name>... do" r
+defp ${1:func_name} do
+  ${0:${VISUAL:# object}}
+end
+endsnippet
+
+snippet "\b(des)" "describe name do" r
+describe "${1:describe name}" do
+  ${0:${VISUAL:tests}}
+end
+endsnippet
+
+snippet "\b(test)" "test name do" r
+test "${1:test name}" do
+  ${0:${VISUAL:assertions}}
+end
+endsnippet
+
+snippet pry "IEx.pry"
+require IEx; IEx.pry
+endsnippet
+
+snippet puts "IO.puts"
+IO.puts ${0:${VISUAL:object}}
+endsnippet
+
+snippet inspect "IO.inspect"
+IO.inspect ${0:${VISUAL:object}}
+endsnippet
