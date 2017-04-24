@@ -23,7 +23,7 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
-Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
+Plug 'janko-m/vim-test'
 
 Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
