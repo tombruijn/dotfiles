@@ -130,6 +130,10 @@ hi gitCommitUnmergedType        ctermfg=167  ctermbg=NONE cterm=NONE         gui
 hi gitCommitSelectedFile        ctermfg=107  ctermbg=NONE cterm=NONE         guifg=#8f9d6a guibg=NONE    gui=NONE
 hi gitCommitSelectedArrow       ctermfg=107  ctermbg=NONE cterm=NONE         guifg=#8f9d6a guibg=NONE    gui=NONE
 hi gitCommitSelectedType        ctermfg=107  ctermbg=NONE cterm=NONE         guifg=#8f9d6a guibg=NONE    gui=NONE
+hi link GitGutterAdd          GitGutterAddDefault
+hi link GitGutterChange       GitGutterChangeDefault
+hi link GitGutterDelete       GitGutterDeleteDefault
+hi link GitGutterChangeDelete GitGutterChangeDeleteDefault
 
 let g:indent_guides_auto_colors = 0
 augroup theme

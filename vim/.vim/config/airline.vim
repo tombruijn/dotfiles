@@ -5,9 +5,6 @@ set laststatus=2
 " Only load specific airline extensions
 let g:airline_extensions=['tabline', 'ctrlp', 'whitespace']
 
-" Dark solarized theme
-let g:airline_theme='solarized'
-let g:airline_theme#background='dark'
 let g:airline_powerline_fonts=1
 
 " Configure bottom/status bar

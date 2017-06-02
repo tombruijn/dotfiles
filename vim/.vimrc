@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '15445be' }
 Plug 'vim-airline/vim-airline-themes'
+Plug 'reedes/vim-colors-pencil'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f' }
 Plug 'lifepillar/vim-mucomplete'
@@ -84,9 +85,6 @@ set expandtab                     " Use spaces instead of tabs.
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 set pastetoggle=<F2>
 
-set background=dark
-colorscheme twilight
-
 let &colorcolumn="80,100"         " Highlight column 80 and 100
 let c_space_errors=1              " Highlight trailing spaces
 set splitbelow                    " Open vsplits to below
@@ -123,3 +121,5 @@ let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
 let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim
+
+call Load_default_theme()

@@ -9,6 +9,3 @@ set guioptions-=L
 
 " Remove OSX dialogs, Use Vim's built-in ones instead.
 set go+=c
-
-set background=dark
-colorscheme twilight
