@@ -15,7 +15,7 @@ set line-graphics = utf-8
 
 # Settings controlling how content is read from Git
 set commit-order = auto
-set status-untracked-dirs = yes
+set status-show-untracked-dirs = yes
 set show-notes = yes
 set diff-context = 5
 set log-options = --pretty=raw
