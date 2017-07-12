@@ -1,3 +1,20 @@
+# Open things
+#
+# Usage:
+#
+#   $ o
+#   # open the current directory
+#
+#   $ o README.md
+#   # open the "README.md" file in the preferred application
+function o {
+  if [[ -n "$1" ]]; then
+    open $1
+  else
+    open .
+  fi
+}
+
 function clip {
   echo -n "$($@)" | pbcopy
 }

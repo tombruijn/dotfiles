@@ -3,7 +3,6 @@ alias reload="source $HOME/.zshrc"
 alias sudo="nocorrect sudo"
 
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias o="open ."
 alias la="ls -lah"
 alias lf="less +F"
 
