@@ -10,7 +10,6 @@ ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 
 mkdir -p "$HOME/.bin" "$HOME/.config"
 ln -nfs "$(pwd)/bin/git-fixup" "$HOME/.bin/git-fixup"
-ln -nfs "$(pwd)/bin/e" "$HOME/.bin/e"
 
 ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
 ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"

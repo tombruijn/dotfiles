@@ -3,16 +3,29 @@
 # Usage:
 #
 #   $ o
-#   # open the current directory
+#   # Open the current directory in Finder.app
 #
 #   $ o README.md
-#   # open the "README.md" file in the preferred application
+#   # Open the "README.md" file its the preferred application
 function o {
   if [[ -n "$1" ]]; then
     open $1
   else
     open .
   fi
+}
+
+# Open files in my preferred editor
+#
+# Usage:
+#
+#   $ e
+#   # Open the current directly in the editor
+#
+#   $ e README.md
+#   # Open the "README.md" file in the editor
+function e {
+  mvim $1
 }
 
 function clip {
