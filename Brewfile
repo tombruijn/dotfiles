@@ -3,7 +3,6 @@ tap "neovim/neovim"
 
 brew "python"
 brew "lua"
-brew "go"
 
 brew "openssl"
 brew "openssh"

@@ -31,7 +31,6 @@ Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 

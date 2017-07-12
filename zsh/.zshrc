@@ -24,13 +24,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Node Packager Manager bin path
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-# Go-lang paths
-if type "go" > /dev/null; then
-  export GOPATH="$HOME/projects/go"
-  export GOBIN="$GOPATH/bin"
-  export GOROOT=$(go env GOROOT)
-fi
-
 # Rust paths
 export PATH="$HOME/.cargo/bin:$PATH"
 
