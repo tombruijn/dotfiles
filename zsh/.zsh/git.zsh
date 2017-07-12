@@ -3,7 +3,7 @@ parse_git_branch() {
   (command git symbolic-ref -q HEAD || command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
 }
 
-# Show icon if there are uncommitted changes
+# Show icon when there are uncommitted changes
 parse_git_dirty() {
   if command git diff-index --quiet HEAD 2> /dev/null; then
     echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
