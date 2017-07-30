@@ -51,6 +51,7 @@ Keys = {
     ["TogglDesktop"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Wunderlist"] = {{{"cmd", "shift"}, "§"}, {hyper, "7"}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
+    ["GraphiQL"] = {{{"cmd", "shift"}, "G"}, {hyper, "Z"}},
   },
 }
 
