@@ -21,9 +21,6 @@ export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/
 # Heroku Toolbelt bin path
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Node Packager Manager bin path
-export PATH="/usr/local/share/npm/bin:$PATH"
-
 # Rust paths
 export PATH="$HOME/.cargo/bin:$PATH"
 
