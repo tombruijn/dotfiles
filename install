@@ -7,6 +7,8 @@ ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
+mkdir -p "$HOME/.bundle"
+ln -nfs "$(pwd)/ruby/bundle/config" "$HOME/.bundle/config"
 
 mkdir -p "$HOME/.bin" "$HOME/.config"
 ln -nfs "$(pwd)/bin/git-fixup" "$HOME/.bin/git-fixup"
