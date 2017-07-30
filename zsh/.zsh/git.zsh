@@ -15,5 +15,5 @@ parse_git_dirty() {
 # If in a git repo, show dirty indicator + git branch
 git_custom_status() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX${git_where#(refs/heads/|tags/)}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  [ -n "$git_where" ] && echo "$ZSH_THEME_GIT_PROMPT_PREFIX${git_where#(refs/heads/|tags/)}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
