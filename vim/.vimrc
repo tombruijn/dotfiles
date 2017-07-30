@@ -21,6 +21,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }
 Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
