@@ -15,7 +15,8 @@ let NERDTreeIgnore=[
   \ '^_build$',
   \ '^build$',
   \ '^node_modules$',
-  \ '^tags$[[file]]'
+  \ '^tags$[[file]]',
+  \ '^__snapshots__$'
 \ ]
 
 " Don't open NERDTree if I open a directory with vim
