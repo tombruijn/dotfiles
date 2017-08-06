@@ -64,6 +64,9 @@ set complete+=kspell
 
 set wrap                          " Turn on line wrapping.
 set linebreak                     " Break lines.
+set breakindent                   " Add indenting after break.
+let &showbreak="↳ "               " Line break indicator.
+
 set nolist                        " `set list` disables linebreak.
 set scrolloff=5                   " Line scroll offset from top and bottom.
 
