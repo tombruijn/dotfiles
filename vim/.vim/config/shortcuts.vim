@@ -21,7 +21,6 @@ nnoremap <d-/> :Ack<Space>
 " Toggle comments on `Command + \`
 nnoremap <d-\> :TComment<cr>
 vnoremap <d-\> :TComment<cr>
-inoremap <d-\> <ESC>:TComment<cr>i
 
 " Toggle spellcheck with F6
 noremap <F6> :set spell! spell?<CR>
@@ -44,11 +43,6 @@ nmap <leader>cl 0d$"_dd
 nmap <leader>d "_dd
 vmap <leader>d "_d
 
-" upper/lower word
-" Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L12-14
-nmap <leader>u mQviwU`Q
-nmap <leader>l mQviwu`Q
-
 " Use F for formatting the current paragraph (or selection)
 " Source: http://nvie.com/posts/how-i-boosted-my-vim/
 vmap F gq
@@ -70,20 +64,12 @@ nmap <D-[> <<
 omap <D-]> >>
 omap <D-[> <<
 
-imap <D-]> <Esc>>>i
-imap <D-[> <Esc><<i
-
 " Open previous edited file
 nnoremap <leader><leader> :e #<CR>
-
-" Dash.app documentation
-nmap <silent> <leader>e <Plug>DashSearch
-
-" Run rubocop for file
-nmap <silent> <leader>g :Dispatch bundle exec rubocop %<CR>
 
 " Quickfix window open and close
 nmap <silent> <leader>fs :cclose<CR>
 nmap <silent> <leader>fd :copen<CR>
 
+" Disable K command. Don't use the feature.
 map K <Nop>
