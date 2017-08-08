@@ -26,7 +26,6 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " Useful tools
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }
