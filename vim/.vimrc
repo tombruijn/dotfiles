@@ -2,38 +2,42 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '15445be' }
+" Themes
 Plug 'vim-airline/vim-airline-themes'
 Plug 'reedes/vim-colors-pencil'
+
+" Navigation
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f' }
-Plug 'lifepillar/vim-mucomplete'
-Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
-Plug 'tpope/vim-surround', { 'commit': '2d05440' }
-Plug 'tpope/vim-unimpaired', { 'commit': '23f471a' }
-Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
-Plug 'tpope/vim-dispatch'
-Plug 'airblade/vim-gitgutter', { 'commit': '51d9a3f' }
-Plug 'Raimondi/delimitMate', { 'commit': '8bc47fd' }
-Plug 'sirver/ultisnips', { 'commit': 'c5a21c5' }
-Plug 'junegunn/goyo.vim'
-Plug 'rizzatti/dash.vim'
-Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }
-Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '15445be' }
 
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
-Plug 'janko-m/vim-test'
-
-Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
-Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Languages
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+
+" Useful tools
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
+Plug 'tpope/vim-surround', { 'commit': '2d05440' }
+Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }
+Plug 'Raimondi/delimitMate', { 'commit': '8bc47fd' }
+Plug 'airblade/vim-gitgutter', { 'commit': '51d9a3f' }
+Plug 'janko-m/vim-test'
+Plug 'junegunn/goyo.vim'
+Plug 'lifepillar/vim-mucomplete'
+Plug 'sirver/ultisnips', { 'commit': 'c5a21c5' }
+Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
+Plug 'w0rp/ale'
 
 call plug#end()
 
