@@ -97,6 +97,7 @@ set splitbelow                    " Open vsplits to below
 set splitright                    " Open hsplits to the right
 
 " Flag filetypes
+let g:jsx_ext_required = 0        " Don't require .jsx ext for JSX plugin
 augroup filetypes
   " Clear this group's autocmds if previously set
   autocmd!
