@@ -121,6 +121,10 @@ augroup filetypes
   autocmd BufRead,BufNewFile *.md
         \ let &l:colorcolumn="80" |
         \ setlocal spell
+
+  autocmd Filetype vim
+        \ let &l:colorcolumn="80,100" |
+        \ setlocal textwidth=0
 augroup END
 
 let mapleader=","
