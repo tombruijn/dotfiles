@@ -57,7 +57,7 @@ attr_accessor :${0:attr_names}
 endsnippet
 
 # Methods
-snippet "\b(de)?f" "def <name>..." r
+snippet def "def <name>..."
 def ${1:method_name}
   ${0:${VISUAL:object}}
 end
@@ -122,7 +122,7 @@ do |${1:args}|
 end
 endsnippet
 
-snippet Do "do ... end" i
+snippet doo "do ... end" i
 do
   ${0:${VISUAL:object}}
 end
@@ -175,7 +175,7 @@ end
 endsnippet
 
 # RSpec
-snippet setup "RSpec setup (setup)"
+snippet "(setup|rspec)" "RSpec setup (setup)" r
 require "spec_helper"
 
 describe ${1:Model} do
@@ -183,19 +183,19 @@ describe ${1:Model} do
 end
 endsnippet
 
-snippet des "RSpec describe block (des)"
+snippet "des(cribe)?" "RSpec describe block (des)" r
 describe "${1:.method_name}" do
   ${0:${VISUAL:# assertions}}
 end
 endsnippet
 
-snippet feature "RSpec feature block (feature)"
+snippet "feat(ure)?" "RSpec feature block (feature)" r
 feature "${1:scenario}" do
   ${0:${VISUAL:# assertions}}
 end
 endsnippet
 
-snippet con "RSpec context block (con)"
+snippet "con(text)?" "RSpec context block (con)" r
 context "${1:when in context}" do
   ${0:${VISUAL:# assertions}}
 end
@@ -213,7 +213,7 @@ after do
 end
 endsnippet
 
-snippet background "RSpec background block (background)"
+snippet "back(ground)?" "RSpec background block (background)" r
 background do
   ${0:${VISUAL:# before feature spec}}
 end
@@ -227,7 +227,7 @@ snippet let! "RSpec let! block (let!)"
 let!(:${1:name}) { ${0:${VISUAL:object}} }
 endsnippet
 
-snippet subject "RSpec subject block (subject)"
+snippet "sub(ject)?" "RSpec subject block (subject)" r
 subject { ${0:${VISUAL:object}} }
 endsnippet
 
@@ -237,13 +237,13 @@ it "${1:does something}" do
 end
 endsnippet
 
-snippet scenario "RSpec scenario block (scenario)"
+snippet "sc(enario)?" "RSpec scenario block (scenario)" r
 scenario "${1:does something}" do
   ${0:${VISUAL:object}}
 end
 endsnippet
 
-snippet expect "RSpec expect block (expect)"
+snippet "ex(pect)?" "RSpec expect block (expect)" r
 expect(${1:subject}).to ${0:${VISUAL:assertion}}
 endsnippet
 

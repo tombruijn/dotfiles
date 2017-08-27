@@ -1,30 +1,30 @@
 priority -50
 
-snippet "\b(de)?fm" "defmodule <name>... do" r
+snippet defm "defmodule <name>... do"
 defmodule ${1:module_name} do
   ${0:${VISUAL:# functions}}
 end
 endsnippet
 
-snippet "\b(de)?f" "def <name>... do" r
+snippet def "def <name>... do"
 def ${1:func_name} do
   ${0:${VISUAL:# object}}
 end
 endsnippet
 
-snippet "\b(de)?fp" "defp <name>... do" r
+snippet defp "defp <name>... do"
 defp ${1:func_name} do
   ${0:${VISUAL:# object}}
 end
 endsnippet
 
-snippet "\b(des)" "describe name do" r
+snippet "des(cribe)?" "describe name do" r
 describe "${1:describe name}" do
   ${0:${VISUAL:tests}}
 end
 endsnippet
 
-snippet "\b(test)" "test name do" r
+snippet test "test name do"
 test "${1:test name}" do
   ${0:${VISUAL:assertions}}
 end
