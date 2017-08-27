@@ -135,7 +135,6 @@ hi link GitGutterChange       GitGutterChangeDefault
 hi link GitGutterDelete       GitGutterDeleteDefault
 hi link GitGutterChangeDelete GitGutterChangeDeleteDefault
 
-let g:indent_guides_auto_colors = 0
 augroup theme
   autocmd!
   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=234
