@@ -133,4 +133,5 @@ let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim
 
+set shortmess+=IF
 call Load_default_theme()
