@@ -7,6 +7,7 @@ let g:ale_linters={
 \  'sass': ['sass-lint'],
 \  'js': ['eslint'],
 \  'ruby': ['ruby', 'rubocop'],
+\  'rust': ['cargo'],
 \}
 let g:ale_ruby_rubocop_executable='bundle exec rubocop'
 let g:ale_set_balloons=0
