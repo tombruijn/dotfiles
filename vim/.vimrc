@@ -34,7 +34,7 @@ Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'lifepillar/vim-mucomplete'
-Plug 'sirver/ultisnips', { 'commit': 'c5a21c5' }
+Plug 'sirver/ultisnips', { 'commit': '423f264' }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
 Plug 'w0rp/ale'
 
