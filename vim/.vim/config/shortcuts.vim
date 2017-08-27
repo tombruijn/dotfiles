@@ -35,7 +35,7 @@ nnoremap L g_
 vnoremap H ^
 vnoremap L g_
 
-" Copy line as data
+" Copy line without line ending
 nmap <leader>yl 0y$
 nmap <leader>cl 0d$"_dd
 
@@ -55,14 +55,13 @@ nnoremap k gk
 
 " Map D+[ and D+] to change indenting
 " Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L58-68
-vmap <D-]> >gv
 vmap <D-[> <gv
-
-nmap <D-]> >>
+vmap <D-]> >gv
 nmap <D-[> <<
-
-omap <D-]> >>
-omap <D-[> <<
+nmap <D-]> >>
+" Stay in visual mode while indenting with < and >
+vmap < <gv
+vmap > >gv
 
 " Open previous edited file
 nnoremap <leader><leader> :e #<CR>
