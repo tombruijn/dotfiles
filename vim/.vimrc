@@ -29,7 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 Plug 'AndrewRadev/splitjoin.vim', { 'commit': '10e7568' }
-Plug 'airblade/vim-gitgutter', { 'commit': '51d9a3f' }
+Plug 'airblade/vim-gitgutter', { 'commit': 'dc73a81' }
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
