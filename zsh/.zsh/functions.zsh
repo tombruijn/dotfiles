@@ -52,10 +52,35 @@ function a {
   fi
 }
 
-function clip {
-  echo -n "$($@)" | pbcopy
+# Copy things onto the system clipboard
+#
+# With the `-s` option it will strip off any newlines from the string. So it's
+# not recommended of multi line strings.
+#
+# Usage:
+#
+#   $ echo "foo" | copy
+#   $ echo "foo" | copy -s
+#
+# macOS only
+function copy {
+  strip="false"
+  option="$1"
+  if [[ "$option" == "-s" ]]; then
+    strip="true"
+  fi
+
+  # Copy STDIN to function to clipboard
+  if [[ "$strip" == "true" ]]; then
+    tr -d '\n' | pbcopy
+  else
+    pbcopy
+  fi
+
+  echo "Copied to clipboard: $(pbpaste)"
 }
 
+# Create directory and navigate into it
 function mk {
   mkdir "$1" && cd "$1"
 }
