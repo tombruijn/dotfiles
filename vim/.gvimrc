@@ -8,4 +8,4 @@ set guioptions-=r
 set guioptions-=L
 
 " Remove OSX dialogs, Use Vim's built-in ones instead.
-set go+=c
+set guioptions+=c
