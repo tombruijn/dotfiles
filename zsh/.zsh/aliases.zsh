@@ -10,6 +10,7 @@ alias cop="be rubocop"
 alias cov="open coverage/index.html"
 
 # Directory shortcuts
+alias c="cd"
 alias desk="cd $HOME/Desktop"
 alias home="cd $HOME/"
 alias tdb="cd $HOME/tombruijn/"

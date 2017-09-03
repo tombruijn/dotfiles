@@ -3,6 +3,10 @@ ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 # Ensure unique paths within PATH. Useful on `reload`
 typeset -U path
 
+# `cd` can navigate to subdirectories in these directories from anywhere
+setopt auto_cd
+cdpath=(. .. ~/tombruijn ~/appsignal ~/projects)
+
 # Config
 source "$ZSH_DIR/config.zsh"
 source "$ZSH_DIR/functions.zsh"
