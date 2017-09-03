@@ -13,7 +13,7 @@ nnoremap <leader>- <C-W>_
 nnoremap <leader>= <C-W>=
 
 " Reload .vimrc
-nnoremap <leader>r :source ~/.vimrc<CR>
+nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
 
 " Open Ack search on `Command + /`
 nnoremap <d-/> :Ack<Space>
