@@ -64,7 +64,8 @@ end)
 -- MacVim - Start only from terminal
 keys.bindKeyFor("MacVim", function()
   if applicationRunning("MacVim") then
-    application.launchOrFocus("MacVim")
+    -- Find first MacVim window and focus it
+    application.find("MacVim"):allWindows()[1]:focus()
   else
     alert.show("MacVim not running")
     application.launchOrFocus("iTerm")
