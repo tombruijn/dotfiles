@@ -135,12 +135,6 @@ hi link GitGutterChange       GitGutterChangeDefault
 hi link GitGutterDelete       GitGutterDeleteDefault
 hi link GitGutterChangeDelete GitGutterChangeDeleteDefault
 
-augroup theme
-  autocmd!
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=234
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=234
-augroup END
-
 if ! has('gui_running')
     hi String ctermfg=2
     hi rubyGlobalVariable ctermfg=4
@@ -148,12 +142,7 @@ if ! has('gui_running')
     hi Constant ctermfg=1
     hi Number ctermfg=1
     hi Boolean ctermfg=1
-    hi link doxygenBrief phpComment
     hi SpecialComment ctermfg=237
-    hi link phpMethodsVar phpIdentifier
-    "hi link phpType phpFunctions
-    hi link phpClasses Tag
-    hi link phpAssignByRef phpFunctions
 
     hi Directory ctermfg=6
     hi NERDTreeDirSlash ctermfg=12
@@ -162,22 +151,16 @@ if ! has('gui_running')
     hi NERDTreeExecFile ctermfg=7
     hi link sqlKeyword sqlOperator
 
-    hi phpFunctions ctermfg=7
     hi doxygenOther ctermfg=3
     hi doxygenSpecial ctermfg=3
-    hi link doxygenSpecialMultilineDesc phpComment
-    hi link doxygenSpecialOnelineDesc phpComment
     hi doxygenParam ctermfg=3
     hi doxygenParamName ctermfg=6 cterm=NONE
     hi doxygenBOther ctermfg=3
     hi Type ctermfg=13
     hi Tag ctermfg=5
-    hi Statement ctermfg=3
     hi Operator ctermfg=3
-    hi phpMemberSelector ctermfg=3
     hi Function ctermfg=7
     hi Identifier ctermfg=4
-    hi link phpInclude phpStatement
 
     hi clear htmlSpecialChar
     hi link htmlSpecialChar Constant
@@ -185,9 +168,6 @@ if ! has('gui_running')
     hi vimHiTerm ctermfg=7
     hi PreProc ctermfg=1
 endif
-
-hi IndentGuidesEven ctermbg=234
-hi IndentGuidesOdd  ctermbg=234
 
 " Color Spelling Errors a little better
 hi clear SpellBad
