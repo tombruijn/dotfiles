@@ -12,4 +12,4 @@ let g:ctrlp_by_filename=0
 " Use the_silver_searcher (ag) https://github.com/ggreer/the_silver_searcher
 " for fast search.
 " http://blog.patspam.com/2014/super-fast-ctrlp
-let g:ctrlp_user_command='ag %s -i --vimgrep --hidden -g ""'
+let g:ctrlp_user_command='ag %s -i --vimgrep --hidden --path-to-ignore ~/.ignore -g ""'
