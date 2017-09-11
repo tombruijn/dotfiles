@@ -26,7 +26,7 @@ hi Pmenu                        ctermfg=95   ctermbg=NONE cterm=NONE         gui
 hi PmenuSel                     ctermfg=NONE ctermbg=59   cterm=NONE         guifg=NONE    guibg=#3c4043 gui=NONE
 hi IncSearch                    ctermfg=NONE ctermbg=59   cterm=NONE         guifg=#ffffff guibg=#ba0000 gui=NONE
 hi Search                       ctermfg=NONE ctermbg=59   cterm=NONE         guifg=#ffffff guibg=#ba0000 gui=NONE
-hi Directory                    ctermfg=167  ctermbg=NONE cterm=NONE         guifg=#cf6a4c guibg=NONE    gui=NONE
+hi Directory                    ctermfg=6    ctermbg=NONE cterm=NONE         guifg=#cf6a4c guibg=NONE    gui=NONE
 hi Folded                       ctermfg=59   ctermbg=233  cterm=NONE         guifg=#5f5a60 guibg=#141414 gui=NONE
 
 hi Normal                       ctermfg=231  ctermbg=0    cterm=NONE         guifg=#f8f8f8 guibg=#141414 gui=NONE
@@ -49,7 +49,7 @@ hi Operator                     ctermfg=179  ctermbg=NONE cterm=NONE         gui
 hi PreProc                      ctermfg=179  ctermbg=NONE cterm=NONE         guifg=#cda869 guibg=NONE    gui=NONE
 hi Special                      ctermfg=231  ctermbg=NONE cterm=NONE         guifg=#f8f8f8 guibg=NONE    gui=NONE
 hi SpecialKey                   ctermfg=239  ctermbg=235  cterm=NONE         guifg=#4f4f4f guibg=#2b2b2b gui=NONE
-hi Statement                    ctermfg=179  ctermbg=NONE cterm=NONE         guifg=#cda869 guibg=NONE    gui=NONE
+hi Statement                    ctermfg=3    ctermbg=NONE cterm=NONE         guifg=#cda869 guibg=NONE    gui=NONE
 hi StorageClass                 ctermfg=228  ctermbg=NONE cterm=NONE         guifg=#f9ee98 guibg=NONE    gui=NONE
 hi String                       ctermfg=107  ctermbg=NONE cterm=NONE         guifg=#8f9d6a guibg=NONE    gui=NONE
 hi Tag                          ctermfg=95   ctermbg=NONE cterm=NONE         guifg=#9b703f guibg=NONE    gui=NONE
@@ -143,12 +143,6 @@ if ! has('gui_running')
     hi Number ctermfg=1
     hi Boolean ctermfg=1
     hi SpecialComment ctermfg=237
-
-    hi Directory ctermfg=6
-    hi NERDTreeDirSlash ctermfg=12
-    hi NERDTreeFile ctermfg=2
-    hi NERDTreeFlag ctermfg=1
-    hi NERDTreeExecFile ctermfg=7
     hi link sqlKeyword sqlOperator
 
     hi doxygenOther ctermfg=3
@@ -174,3 +168,15 @@ hi clear SpellBad
 hi SpellBad cterm=underline ctermbg=NONE ctermfg=124 guifg=#ba0000 guibg=NONE gui=underline
 hi SpellCap ctermbg=235 ctermfg=NONE
 hi SpellRare ctermbg=235 ctermfg=NONE
+
+" NERDTree theme
+hi NERDTreeDir ctermfg=6 guifg=#91bfdc
+hi link NERDTreeDirSlash NERDTreeDir
+hi link NERDTreeClosable Normal
+hi link NERDTreeOpenable Normal
+"" Files
+hi NERDTreeExecFile ctermfg=2 guifg=#5FB41C
+"" Symlinks
+hi NERDTreeLinkDir ctermfg=5 guifg=#8881BD
+hi link NERDTreeLinkFile NERDTreeLinkDir
+hi NERDTreeLinkTarget ctermfg=8 guifg=#aaaaaa
