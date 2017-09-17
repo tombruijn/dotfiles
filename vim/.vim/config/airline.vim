@@ -3,7 +3,7 @@
 set laststatus=2
 
 " Only load specific airline extensions
-let g:airline_extensions=['tabline', 'ctrlp', 'whitespace']
+let g:airline_extensions=['tabline', 'ctrlp']
 
 let g:airline_powerline_fonts=1
 
