@@ -4,7 +4,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Tools to use
-export EDITOR="vim"
+export EDITOR="nvim"
 export PAGER="less"
 export LESS="-R"
 

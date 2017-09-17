@@ -12,3 +12,8 @@ nnoremap N Nzz
 " Source: https://github.com/thoughtstream/Damian-Conway-s-Vim-Setup/blob/59981573773d682abb81df209c20e505ae7b703e/.vimrc#L146-L152
 nmap <expr> R ':%s/' . @/ . '//g<LEFT><LEFT>'
 vmap <expr> R ':s/' . @/ . '//g<LEFT><LEFT>'
+
+" Enable live search and replace in Neovim
+if has("nvim")
+  set inccommand=nosplit
+endif

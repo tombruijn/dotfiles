@@ -7,7 +7,7 @@ These dotfiles contain configuration and installation for:
 * iTerm
 * ZSH
 * Dotfiles
-* VIM (and MacVim)
+* VIM (Neovim and MacVim)
 * chruby and ruby-install
 * rustup and Rust
 * Hammerspoon
@@ -90,6 +90,19 @@ sudo dscl . -create /Users/$USER UserShell $(which zsh)
 - Restart iTerm.
 
 ### vim
+
+Install Neovim.
+
+```sh
+# Should be installed through the Brewfile, but to do so manually:
+brew install neovim
+
+# Additional packages
+# Ruby package for neovim
+gem install neovim
+# Python package for Python bindings (Python is used by UltiSnips)
+pip2 install --upgrade neovim
+```
 
 Use [vim-plug](https://github.com/junegunn/vim-plug/) to install vim plugins.
 
