@@ -8,7 +8,7 @@ Plug 'reedes/vim-colors-pencil'
 
 " Navigation
 Plug 'bling/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f' }
+Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f', 'on': 'CtrlP' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '5782b22' }
 
@@ -33,10 +33,10 @@ Plug 'AndrewRadev/splitjoin.vim', { 'commit': '9e2d602' }
 Plug 'airblade/vim-gitgutter', { 'commit': 'dc73a81' }
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sirver/ultisnips', { 'commit': '423f264' }
-Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095' }
+Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 Plug 'w0rp/ale'
 
 call plug#end()
