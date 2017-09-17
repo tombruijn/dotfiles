@@ -290,15 +290,11 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 ################################################################################
-# Chrome & Opera
+# Chrome
 
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
-
-# Expand the print dialog by default
-defaults write com.operasoftware.Opera PMPrintingExpandedStateForPrint2 -boolean true
-defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2 -boolean true
 
 ################################################################################
 # Twitter.app
@@ -322,7 +318,7 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 # Kill affected applications
 
 for app in "Activity Monitor" "Spotlight" "Dashboard" "Dock" "Finder" \
-  "Google Chrome" "Messages" "Opera" "Safari" "SystemUIServer" "Twitter"; do
+  "Google Chrome" "Messages" "Safari" "SystemUIServer" "Twitter"; do
   killall "${app}" > /dev/null 2>&1
 done
 
