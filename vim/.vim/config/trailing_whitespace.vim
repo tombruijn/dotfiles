@@ -1,6 +1,5 @@
 " Create a list and make invisible chars visible
 set list
-set listchars=nbsp:␣,tab:▸\ ,extends:»,precedes:«,trail:•
 
 " Highlight trailing whitespace as an error
 " Source: https://github.com/bronson/vim-trailing-whitespace/blob/733fb64337b6da4a51c85a43450cd620d8b617b5/plugin/trailing-whitespace.vim

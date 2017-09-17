@@ -3,6 +3,7 @@ function! Load_default_theme()
 
   let g:airline_theme='solarized'
   let g:airline_theme#background='dark'
+  set listchars=nbsp:␣,tab:▸\ ,extends:»,precedes:«,trail:·,space:·
   set background=dark
   colorscheme twilight
 endfunction
@@ -12,6 +13,7 @@ function! Load_writer_theme()
 
   let g:airline_theme='pencil'
   let g:airline_theme#background='light'
+  set listchars=nbsp:␣,tab:▸\ ,extends:»,precedes:«,trail:·
   set background=light
   colorscheme pencil
 endfunction
