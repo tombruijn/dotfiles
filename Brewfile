@@ -37,3 +37,9 @@ brew "memcached"
 
 brew "node"
 
+# Build tools for qmk_firmware
+tap "osx-cross/avr"
+tap "PX4/homebrew-px4"
+brew "avr-libc"
+brew "dfu-programmer"
+brew "gcc-arm-none-eabi"
