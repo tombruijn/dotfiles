@@ -10,7 +10,6 @@ brew "libyaml"
 
 brew "git"
 brew "tig"
-brew "mercurial"
 brew "zsh"
 
 brew "the_silver_searcher"
@@ -23,7 +22,7 @@ brew "htop-osx"
 brew "qt"
 brew "blueutil"
 
-brew "vim", args: ["with-lua"]
+brew "vim"
 brew "neovim", args: ["HEAD"]
 brew "macvim"
 
@@ -32,12 +31,9 @@ brew "ruby-install"
 
 brew "postgresql"
 brew "mongodb"
-brew "mysql"
 brew "redis"
 brew "sqlite"
 brew "memcached"
 
 brew "node"
-brew "phantomjs"
 
-brew "heroku-toolbelt"
