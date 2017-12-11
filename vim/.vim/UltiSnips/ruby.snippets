@@ -213,6 +213,13 @@ after do
 end
 endsnippet
 
+snippet around "RSpec around block (around)"
+around do |example|
+  $0
+  example.run
+end
+endsnippet
+
 snippet "back(ground)?" "RSpec background block (background)" r
 background do
   ${0:${VISUAL:# before feature spec}}
