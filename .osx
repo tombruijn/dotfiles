@@ -78,6 +78,10 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable smart dashes
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
+# Disable animations on all app windows
+# To renable, use: YES
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
+
 ################################################################################
 # Trackpad
 
