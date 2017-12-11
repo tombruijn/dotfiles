@@ -1,7 +1,6 @@
 .git
 .svn
 .hg
-/tags
 /log
 /doc
 .yarddoc
@@ -16,3 +15,6 @@ tmp
 *.woff2
 !.env
 **.js.snap
+/tags
+tags.lock
+tags.temp

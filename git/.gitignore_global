@@ -42,3 +42,5 @@ ehthumbs.dba
 config/initializers/opensslhack.rb
 .yardoc
 /tags
+tags.lock
+tags.temp
