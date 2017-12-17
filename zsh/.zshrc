@@ -39,3 +39,7 @@ source "/usr/local/share/chruby/chruby.sh"
 source "/usr/local/share/chruby/auto.sh"
 
 export HOMEBREW_NO_ANALYTICS=1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'

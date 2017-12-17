@@ -40,6 +40,9 @@ Plug 'sirver/ultisnips', { 'commit': '423f264' }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 Plug 'w0rp/ale'
 
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags'] }
+
 call plug#end()
 
 set encoding=utf-8

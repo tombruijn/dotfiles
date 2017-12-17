@@ -11,6 +11,7 @@ brew "libyaml"
 brew "git"
 brew "tig"
 brew "zsh"
+brew "fzf"
 
 brew "the_silver_searcher"
 brew "cloc"
