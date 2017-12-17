@@ -70,5 +70,9 @@ nnoremap <leader><leader> :e #<CR>
 nmap <silent> <leader>fs :cclose<CR>
 nmap <silent> <leader>fd :copen<CR>
 
+" EasyAlign shortcuts
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 " Disable K command. Don't use the feature.
 map K <Nop>

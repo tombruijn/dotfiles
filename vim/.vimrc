@@ -34,6 +34,7 @@ Plug 'airblade/vim-gitgutter', { 'commit': 'dc73a81' }
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
+Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sirver/ultisnips', { 'commit': '423f264' }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
