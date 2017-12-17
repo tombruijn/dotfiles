@@ -63,8 +63,8 @@ set cursorline                    " Highlight the line of the cursor.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
-set spelllang=en
-set spellfile=$HOME/.vim/spell/en.utf-8.add
+set spelllang=en,nl
+set spellfile=$HOME/.vim/spell/en.utf-8.add,$HOME/.vim/spell/nl.utf-8.add
 set complete+=kspell
 
 set wrap                          " Turn on line wrapping.
