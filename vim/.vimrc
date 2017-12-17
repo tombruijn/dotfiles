@@ -85,6 +85,7 @@ set wildignore=*.swp,*.swo,*.bak,*.class
 
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
+set shiftround
 set expandtab                     " Use spaces instead of tabs.
 
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.

@@ -1,3 +1,8 @@
+nmap <leader>w :w<CR>
+
+let g:ctrlp_cmd = 'CtrlP'
+nmap <C-\> :CtrlPBuffer<CR>
+
 " Cycle through splits with tab
 nmap <Tab> <C-w>w
 
@@ -16,18 +21,20 @@ nnoremap <leader>= <C-W>=
 nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
 
 " Open Ack search on `Command + /`
-nnoremap <d-/> :Ack<Space>
+nnoremap <d-/> :Ack!<Space>
+nnoremap <leader>/ :Ack!<Space>
 
-" Toggle comments on `Command + \`
+" Toggle comments on `Command/Leader + \`
 nnoremap <d-\> :TComment<cr>
+nnoremap <leader>\ :TComment<cr>
 vnoremap <d-\> :TComment<cr>
+vnoremap <leader>\ :TComment<cr>
 
 " Toggle spellcheck with F6
 noremap <F6> :set spell! spell?<CR>
 
-" Lazy command open
-nnoremap ; :
-vnoremap ; :
+nmap <silent> [w <Plug>(ale_previous_wrap)
+nmap <silent> ]w <Plug>(ale_next_wrap)
 
 " Easier start/end of line navigation
 nnoremap H ^
