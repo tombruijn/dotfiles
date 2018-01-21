@@ -8,7 +8,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 set wildmenu " Enhanced command line completion.
 set wildmode=list:longest " Complete files like a shell.
 set shortmess+=c " Turn off completion messages
-set completeopt=menu,menuone,noinsert,noselect,preview
+set completeopt=menu,menuone,preview,noinsert,noselect
 set complete=.,w,b,u,i
 
 " mucomplete
@@ -22,6 +22,7 @@ imap <tab> <plug>(MUcompleteFwd)
 imap <s-tab> <plug>(MUcompleteBwd)
 
 " Cycle completion methods
+inoremap <silent> <plug>(MUcompleteFwdKey) <c-y>
 imap <c-y> <plug>(MUcompleteCycFwd)
 
 " Exit autocomplete menu on these combinations
