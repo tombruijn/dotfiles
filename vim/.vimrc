@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " Themes
 Plug 'vim-airline/vim-airline-themes'
-Plug 'reedes/vim-colors-pencil'
+Plug 'reedes/vim-colors-pencil', { 'on': [] }
 
 " Navigation
 Plug 'bling/vim-airline'

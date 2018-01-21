@@ -10,6 +10,7 @@ endfunction
 
 function! Load_writer_theme()
   let g:my_theme=1
+  execute plug#load('vim-colors-pencil')
 
   let g:airline_theme='pencil'
   let g:airline_theme#background='light'
