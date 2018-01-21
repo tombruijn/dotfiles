@@ -3,7 +3,7 @@ priority -50
 snippet wrap "Immediately-Invoked Function Expression" b
 (function(${1:parameters}) {
   ${VISUAL}$0
-}(${2:$1}));
+}(${2:$1}))
 endsnippet
 
 snippet func "Function" i
@@ -55,38 +55,38 @@ endsnippet
 snippet timeout "setTimeout function"
 setTimeout(function() {
   ${VISUAL}$0
-}, ${1:10});
+}, ${1:10})
 endsnippet
 
 snippet cl "console.log" b
-console.log(${0:${VISUAL:value}});
+console.log(${0:${VISUAL:value}})
 endsnippet
 
 snippet ce "console.error" b
-console.error(${1:value});
+console.error(${1:value})
 endsnippet
 
 snippet cw "console.warn" b
-console.warn(${1:value});
+console.warn(${1:value})
 endsnippet
 
 snippet tstart "console.time" b
-console.time("${1:label}");
+console.time("${1:label}")
 ${VISUAL}$0
 endsnippet
 
 snippet tend "console.timeEnd" b
-console.timeEnd("${1:label}");
+console.timeEnd("${1:label}")
 ${VISUAL}$0
 endsnippet
 
 snippet que "document.querySelector(...)" b
-var ${1:variable} = document.querySelector(".${2:selector}");
+var ${1:variable} = document.querySelector(".${2:selector}")
 ${VISUAL}$0
 endsnippet
 
 snippet query "document.querySelectorAll(...)" b
-var ${1:variable} = document.querySelectorAll(".${2:selector}");
+var ${1:variable} = document.querySelectorAll(".${2:selector}")
 ${VISUAL}$0
 endsnippet
 
