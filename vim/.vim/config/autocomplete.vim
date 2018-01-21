@@ -4,6 +4,17 @@ let g:UltiSnipsExpandTrigger="<C-J>"
 let g:UltiSnipsJumpForwardTrigger="<C-J>"
 let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 
+" This function only runs when UltiSnips is not loaded
+" Source: https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
+inoremap <silent> <C-j> <C-r>=LoadUltiSnips()<cr>
+function! LoadUltiSnips()
+  let l:curpos = getcurpos()
+  execute plug#load('ultisnips')
+  call cursor(l:curpos[1], l:curpos[2])
+  call UltiSnips#ExpandSnippet()
+  return ""
+endfunction
+
 " Autocomplete
 set wildmenu " Enhanced command line completion.
 set wildmode=list:longest " Complete files like a shell.

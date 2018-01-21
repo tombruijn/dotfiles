@@ -36,7 +36,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
 Plug 'lifepillar/vim-mucomplete'
-Plug 'sirver/ultisnips', { 'commit': '423f264' }
+Plug 'sirver/ultisnips', { 'commit': '423f264', 'on': [] }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 Plug 'w0rp/ale'
 
