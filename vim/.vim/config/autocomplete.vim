@@ -7,13 +7,13 @@ let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 " Autocomplete
 set wildmenu " Enhanced command line completion.
 set wildmode=list:longest " Complete files like a shell.
-set completeopt=menu,menuone,preview,noinsert,noselect
 set shortmess+=c " Turn off completion messages
+set completeopt=menu,menuone,noinsert,noselect,preview
 set complete=.,w,b,u,i
 
 " mucomplete
 let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#chains = { 'default': ['c-n', 'omni', 'ulti', 'uspl', 'path'] }
+let g:mucomplete#chains = { 'default': ['c-n', 'omni', 'uspl', 'path'] }
 let g:mucomplete#no_mappings = 1
 let g:mucomplete#spel#max = 10
 
