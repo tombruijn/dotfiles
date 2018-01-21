@@ -41,14 +41,11 @@ function e {
 #   $ a function
 #   # perform "function"
 function a {
-  cd ~/appsignal
-
   if [[ -n "$1" ]]; then
-    if [[ -d "$1" ]]; then
-      cd $1
-    else
-      $1
-    fi
+    echo "Error: Use \`c\` instead"
+    false
+  else
+    cd ~/appsignal
   fi
 }
 
