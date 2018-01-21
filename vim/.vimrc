@@ -31,7 +31,7 @@ Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 
 Plug 'AndrewRadev/splitjoin.vim', { 'commit': '9e2d602' }
 Plug 'airblade/vim-gitgutter', { 'commit': 'dc73a81' }
-Plug 'janko-m/vim-test'
+Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSuite'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
