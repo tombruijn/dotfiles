@@ -99,6 +99,8 @@ let c_space_errors=1              " Highlight trailing spaces
 set splitbelow                    " Open vsplits to below
 set splitright                    " Open hsplits to the right
 
+set lazyredraw
+
 " Flag filetypes
 let g:jsx_ext_required = 0        " Don't require .jsx ext for JSX plugin
 augroup filetypes

@@ -2,6 +2,10 @@
 " Not just when a split has been created
 set laststatus=2
 
+" Enable cache
+" Reset with `:AirlineRefresh`
+let g:airline_highlighting_cache=1
+
 " Only load specific airline extensions
 let g:airline_extensions=['tabline', 'ctrlp']
 
@@ -24,7 +28,7 @@ let g:airline_section_z=airline#section#create(['linenr', 'maxlinenr', ' :%3v'])
 
 " Configure top/tab bar
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_splits=0
 let g:airline#extensions#tabline#show_buffers=0
 let g:airline#extensions#tabline#show_tabs=1
 let g:airline#extensions#tabline#show_tab_nr=0
