@@ -58,13 +58,13 @@ endsnippet
 
 # Methods
 snippet def "def <name>..."
-def ${1:method_name}
+def ${1:method_name}${3:(${2:args})}
   ${0:${VISUAL:object}}
 end
 endsnippet
 
-snippet defi "def initialize ..."
-def initialize
+snippet defi "def initialize..."
+def initialize${2:(${1:args})}
   ${0:${VISUAL:object}}
 end
 endsnippet
@@ -137,7 +137,7 @@ end
 endsnippet
 
 snippet rescue
-rescue => e
+rescue ${1:Exception }=> e
   puts e.message
   puts e.backtrace.inspect
   ${0:# Rescue}
@@ -156,14 +156,6 @@ class ${1:ClassName}
   def initialize(${2:*args})
     $0
   end
-end
-endsnippet
-
-snippet model "class <ClassName> < ActiveRecord::Base ... end"
-class ${1:ClassName} < ActiveRecord::Base
-  scope :list, -> { order(id: :desc) }
-
-  ${0:${VISUAL:# code}}
 end
 endsnippet
 

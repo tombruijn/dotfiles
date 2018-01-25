@@ -30,13 +30,20 @@ endsnippet
 
 snippet controller "Create controller class (controller)"
 class ${1:Model}Controller < ${2:ApplicationController}
-  $0
-
+  ${0:${VISUAL:# code}}${4:
   private
 
   def ${3}
     @$3 ||= ${4:$1}.find(params[:id])
-  end
+  end}
+end
+endsnippet
+
+snippet model "class <ClassName> < ActiveRecord::Base ... end"
+class ${1:ClassName} < ActiveRecord::Base
+  scope :list, -> { order(id: :desc) }
+
+  ${0:${VISUAL:# code}}
 end
 endsnippet
 
