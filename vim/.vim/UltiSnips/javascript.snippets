@@ -1,5 +1,21 @@
 priority -50
 
+snippet "im(port)?" "import ... from ..." r
+import "${1:module}" from "${2:path}"
+endsnippet
+
+snippet $ "${code}"
+${${0:${VISUAL:code}}}
+endsnippet
+
+snippet f "() => {}"
+(${1:args}) => { ${2:code} }
+endsnippet
+
+snippet ff "() => ()"
+(${1:args}) => (${2:code})
+endsnippet
+
 snippet wrap "Immediately-Invoked Function Expression" b
 (function(${1:parameters}) {
   ${VISUAL}$0
@@ -29,13 +45,26 @@ if (${1:condition}) {
 endsnippet
 
 snippet elseif "else if (...) {...}"
-} else if (${1:condition}) {
+else if (${1:condition}) {
   ${VISUAL}$0
 }
 endsnippet
 
 snippet else "else (...) {...}"
-} else {
+else {
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet forin "for (let foo in bar) {...}" b
+for (let ${1} in ${2}) {
+  let ${3:value} = $2[$1]
+  ${VISUAL}$0
+}
+endsnippet
+
+snippet forof "for (let foo of bar) {...}" b
+for (let ${1} of ${2}) {
   ${VISUAL}$0
 }
 endsnippet
@@ -88,6 +117,48 @@ endsnippet
 snippet query "document.querySelectorAll(...)" b
 var ${1:variable} = document.querySelectorAll(".${2:selector}")
 ${VISUAL}$0
+endsnippet
+
+# Testing
+
+snippet "before(all)?" "beforeAll block" r
+beforeAll(() => {
+  ${VISUAL}$0
+})
+endsnippet
+
+snippet "before(each)?" "beforeEach block" r
+beforeEach(() => {
+  ${VISUAL}$0
+})
+endsnippet
+
+snippet "after(all)?" "afterAll block" r
+afterAll(() => {
+  ${VISUAL}$0
+})
+endsnippet
+
+snippet "after(each)?" "afterEach block" r
+afterEach(() => {
+  ${VISUAL}$0
+})
+endsnippet
+
+snippet "des(cribe)?" "describe test block" r
+describe("${1:block name}", () => {
+  ${VISUAL}$0
+})
+endsnippet
+
+snippet test "test block" b
+test("${1:test name}", () => {
+  ${VISUAL}$0
+})
+endsnippet
+
+snippet "ex(pect)?" "expect" r
+expect(${1:subject}).to${2:Equal}(${0:${VISUAL:assertion}})
 endsnippet
 
 # vim:ft=snippets:
