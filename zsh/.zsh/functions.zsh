@@ -82,6 +82,17 @@ function mk {
   mkdir "$1" && cd "$1"
 }
 
+# Toggle Chrome headless testing with param
+function headless {
+  if [[ "$CHROME_HEADLESS" == "false" ]]; then
+    echo "Running headless"
+    unset CHROME_HEADLESS
+  else
+    echo "Running without headless"
+    export CHROME_HEADLESS=false
+  fi
+}
+
 # Docker shorthands
 #
 # Mostly removal commands.
