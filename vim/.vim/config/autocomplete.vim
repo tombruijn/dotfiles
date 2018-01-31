@@ -1,3 +1,6 @@
+" Autopairs
+let g:AutoPairsMultilineClose=0
+
 " Snippets config
 " Bound to C-J/K because TAB is used by autocomplete.
 let g:UltiSnipsExpandTrigger="<C-J>"
