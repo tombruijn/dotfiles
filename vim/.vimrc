@@ -101,37 +101,6 @@ set splitright                    " Open hsplits to the right
 
 set lazyredraw
 
-" Flag filetypes
-let g:jsx_ext_required = 0        " Don't require .jsx ext for JSX plugin
-augroup filetypes
-  " Clear this group's autocmds if previously set
-  autocmd!
-
-  " Ruby
-  autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile,Brewfile,*.jpbuilder}
-        \ set ft=ruby
-
-  " Sass/Scss
-  autocmd BufRead,BufNewFile *.sass set ft=sass.css
-  autocmd BufRead,BufNewFile *.scss set ft=scss.css
-  autocmd FileType css,sass
-        \ setlocal iskeyword+=-
-
-  " git commit
-  autocmd Filetype gitcommit
-        \ let &l:colorcolumn="50,72" |
-        \ setlocal spell textwidth=72
-
-  " Markdown
-  autocmd BufRead,BufNewFile *.md
-        \ let &l:colorcolumn="80" |
-        \ setlocal spell
-
-  autocmd Filetype vim
-        \ let &l:colorcolumn="80,100" |
-        \ setlocal textwidth=0
-augroup END
-
 let mapleader=","
 let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
 let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
