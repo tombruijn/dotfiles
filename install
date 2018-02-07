@@ -26,6 +26,10 @@ ln -nfs "$(pwd)/git/.tigrc" "$HOME/.tigrc"
 ln -nfs "$HOME/Dropbox/vim/spell" "$HOME/.vim/spell"
 mkdir -p "$HOME/.VIM_UNDO_FILES"
 
+mkdir -p "$HOME/.gnupg"
+ln -nfs "$(pwd)/.gnupg/gpg.conf" "$HOME/.gnupg/gpg.conf"
+ln -nfs "$(pwd)/.gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+
 # Copy powerlines
 for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
@@ -42,3 +46,10 @@ git config --global merge.ff only
 git config --global push.default current
 git config --global remote.origin.prune true
 git config --global merge.conflictstyle diff3
+
+if [ -n "$GPG_SIGNING_KEY" ]; then
+  git config --global user.signingkey $GPG_SIGNING_KEY
+  git config --global commit.gpgsign true
+else
+  echo "WARNING: Git GPG configuration skipped. No \$GPG_SIGNING_KEY found."
+fi

@@ -38,6 +38,11 @@ brew "memcached"
 
 brew "node"
 
+# GPG
+brew "gnupg"
+brew "gpg-agent"
+brew "pinentry-mac"
+
 # Build tools for qmk_firmware
 tap "osx-cross/avr"
 tap "PX4/homebrew-px4"

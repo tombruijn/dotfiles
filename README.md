@@ -81,6 +81,19 @@ Let it as the default shell.
 sudo dscl . -create /Users/$USER UserShell $(which zsh)
 ```
 
+#### Private credentials
+
+To configure credentials that shouldn't be checked into git, create a
+`~/.extra` file like the example below.
+
+```sh
+#!/bin/sh
+
+export GPG_SIGNING_KEY="KEY_ID"
+```
+
+Run `./install` again in the dotfiles repo and refresh you shell sessions.
+
 ### iTerm
 
 - Set up `Load preferences from a custom folder or URL:`

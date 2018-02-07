@@ -24,6 +24,7 @@ source "$ZSH_DIR/aliases.zsh"
 
 # Base paths
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:./bin:$PATH"
+export PATH="/usr/local/opt/gnupg/bin:$PATH"
 
 # Heroku Toolbelt bin path
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -43,3 +44,11 @@ export HOMEBREW_NO_ANALYTICS=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'
+
+# Load private credentials from ~/.extra file
+if [ -f ~/.extra ]; then
+  source ~/.extra
+fi
+
+# Configure GPG
+export GPG_TTY=$(tty)
