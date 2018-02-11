@@ -5,7 +5,7 @@ typeset -U path
 
 # `cd` can navigate to subdirectories in these directories from anywhere
 setopt auto_cd
-cdpath=(. .. ~/tombruijn ~/appsignal ~/projects)
+cdpath=(. .. ~/tombruijn ~/appsignal)
 
 # Config
 source "$ZSH_DIR/config.zsh"
