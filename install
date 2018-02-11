@@ -30,6 +30,9 @@ mkdir -p "$HOME/.gnupg"
 ln -nfs "$(pwd)/.gnupg/gpg.conf" "$HOME/.gnupg/gpg.conf"
 ln -nfs "$(pwd)/.gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
+mkdir -p "$HOME/.ctags.d"
+ln -nfs "$(pwd)/config.ctags" "$HOME/.ctags.d/config.ctags"
+
 # Copy powerlines
 for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"

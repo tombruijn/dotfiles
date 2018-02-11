@@ -1,0 +1,24 @@
+--exclude=*.json
+--exclude=*.lock
+--exclude=*.min.js
+--exclude=*.yml
+--exclude=.git
+--exclude=.yardoc
+--exclude=_build
+--exclude=build
+--exclude=coverage
+--exclude=deps
+--exclude=doc
+--exclude=log
+--exclude=node_modules
+--exclude=frontend/gulp.node_modules
+--exclude=spec/fixtures
+--exclude=target
+--exclude=tmp
+--exclude=vendor
+--languages=-html
+--languages=+ruby
+--extras=+q+f
+--fields=+i+a+S+n
+
+--regex-ruby=/(^|;)[ \t]*(class|module)[ \t]+([A-Z][[:alnum:]_]+(::[A-Z][[:alnum:]_]+)+)/\3/c,class,constant/

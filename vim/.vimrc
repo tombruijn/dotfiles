@@ -40,6 +40,7 @@ Plug 'sirver/ultisnips', { 'commit': '423f264', 'on': [] }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 Plug 'w0rp/ale'
 
+Plug 'ludovicchabant/vim-gutentags'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags'] }
 
