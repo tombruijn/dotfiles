@@ -39,6 +39,9 @@ export PGIT_URL=git@repositories.tomdebruijn.com
 source "/usr/local/share/chruby/chruby.sh"
 source "/usr/local/share/chruby/auto.sh"
 
+# Enable Elixir IEX history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 export HOMEBREW_NO_ANALYTICS=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
