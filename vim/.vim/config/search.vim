@@ -17,3 +17,6 @@ vmap <expr> R ':s/' . @/ . '//g<LEFT><LEFT>'
 if has("nvim")
   set inccommand=nosplit
 endif
+" https://medium.com/@haya14busa/incsearch-vim-is-dead-long-live-incsearch-2b7070d55250
+set incsearch
+set hlsearch
