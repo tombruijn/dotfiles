@@ -20,7 +20,8 @@ augroup filetypes
   " git commit
   autocmd Filetype gitcommit
         \ let &l:colorcolumn="50,72" |
-        \ setlocal spell textwidth=72
+        \ setlocal spell textwidth=72 |
+        \ setlocal omnifunc& " Unset vim-rhubarb autocomplete
 
   " Markdown
   autocmd BufRead,BufNewFile *.md
