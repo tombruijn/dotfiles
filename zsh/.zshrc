@@ -32,9 +32,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Rust paths
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# pgit tool
-export PGIT_URL=git@repositories.tomdebruijn.com
-
 # Ansible
 export PATH="/usr/local/opt/ansible@1.9/bin:$PATH"
 
