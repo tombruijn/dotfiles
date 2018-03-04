@@ -18,3 +18,9 @@ tmp
 /tags
 tags.lock
 tags.temp
+*.png
+*.jpeg
+*.jpg
+*.gif
+*.svg
+*.tiff

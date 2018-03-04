@@ -7,7 +7,7 @@ set laststatus=2
 let g:airline_highlighting_cache=1
 
 " Only load specific airline extensions
-let g:airline_extensions=['tabline', 'ctrlp']
+let g:airline_extensions=['tabline']
 
 let g:airline_powerline_fonts=1
 

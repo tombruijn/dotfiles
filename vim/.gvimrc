@@ -1,5 +1,4 @@
 " Font/Text settings.
-let &guifont=g:font_normal
 set linespace=1
 
 " Remove toolbar.

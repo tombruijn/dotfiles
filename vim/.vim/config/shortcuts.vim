@@ -1,7 +1,5 @@
 nmap <leader>w :w<CR>
 
-let g:ctrlp_cmd = 'CtrlP'
-nmap <C-\> :CtrlPBuffer<CR>
 
 " Cycle through splits with tab
 nmap <Tab> <C-w>w

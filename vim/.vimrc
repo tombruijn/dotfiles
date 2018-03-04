@@ -8,7 +8,6 @@ Plug 'reedes/vim-colors-pencil', { 'on': [] }
 
 " Navigation
 Plug 'bling/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim', { 'commit': '28fce0f' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '5782b22' }
 
@@ -43,7 +42,7 @@ Plug 'w0rp/ale'
 
 Plug 'ludovicchabant/vim-gutentags'
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags'] }
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
 
 call plug#end()
 
@@ -92,6 +91,8 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set shiftround
 set expandtab                     " Use spaces instead of tabs.
+set autoread
+au FocusGained,BufEnter * checktime
 
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
 set pastetoggle=<F2>

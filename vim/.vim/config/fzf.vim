@@ -14,3 +14,5 @@ let g:fzf_colors = {
   \ 'header':  ['fg', 'Comment']
   \ }
 nmap <leader>p :Files<CR>
+nmap <c-p> :Files<CR>
+nmap <c-\> :Buffers<CR>

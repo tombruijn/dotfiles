@@ -1,3 +1,18 @@
+if has("gui_vimr")
+  nmap <S-D-}> :tabn<CR>
+  nmap <S-D-{> :tabp<CR>
+
+  set linespace=1
+
+  " Remove toolbar.
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+
+  " Remove OSX dialogs, Use Vim's built-in ones instead.
+  set guioptions+=c
+endif
+
 function! Load_default_theme()
   let g:my_theme=0
 

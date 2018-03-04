@@ -17,7 +17,7 @@ Keys = {
     ["Console"] = {{{"ctrl", "alt", "cmd"}, "C"}, {hyper, "4"}},
     ["WiFi"] = {{{"ctrl", "alt", "cmd"}, "W"}, {hyper, "1"}},
     ["Bluetooth"] = {{{"ctrl", "alt", "cmd"}, "E"}, {hyper, "2"}},
-    ["MacVim"] = {{{"ctrl"}, "2"}, {hyper, "D"}},
+    ["VimR"] = {{{"ctrl"}, "2"}, {hyper, "D"}},
 
     ["Fullscreen window"] = {{{"alt", "cmd"}, "F"}, {hyper, "I"}},
     ["Center window"] = {{{"alt", "cmd"}, "C"}, {hyper, "K"}},
