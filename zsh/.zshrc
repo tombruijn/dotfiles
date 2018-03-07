@@ -36,8 +36,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/ansible@1.9/bin:$PATH"
 
 # chruby
-source "/usr/local/share/chruby/chruby.sh"
-source "/usr/local/share/chruby/auto.sh"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Enable Elixir IEX history
 export ERL_AFLAGS="-kernel shell_history enabled"
