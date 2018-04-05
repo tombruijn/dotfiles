@@ -30,6 +30,7 @@ Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 
 Plug 'AndrewRadev/splitjoin.vim', { 'commit': '9e2d602' }
+Plug 'AndrewRadev/switch.vim'
 Plug 'airblade/vim-gitgutter', { 'commit': 'dc73a81' }
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSuite'] }
 Plug 'jiangmiao/auto-pairs'
