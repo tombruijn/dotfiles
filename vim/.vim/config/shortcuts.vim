@@ -82,3 +82,16 @@ nmap ga <Plug>(EasyAlign)
 
 " Disable K command. Don't use the feature.
 map K <Nop>
+
+" Paste without overwriting the clipboard with selection
+vnoremap <leader>p "_dP
+
+" Send single characters to black hole on deletion
+nnoremap x v"_d
+" Send selection characters to black hole on deletion
+vnoremap x "_d
+
+" Jump paragraph by beginning and end rather than the empty lines between them
+" Source: https://www.reddit.com/r/vim/comments/458buq/moving_by_paragraph/czvy13u/
+nnoremap <expr> { len(getline(line('.')-1)) > 0 ? '{+' : '{-'
+nnoremap <expr> } len(getline(line('.')+1)) > 0 ? '}-' : '}+'
