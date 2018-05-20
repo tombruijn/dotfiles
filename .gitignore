@@ -6,3 +6,4 @@ Icon
 .netrwhist
 vim/.vim/plugged
 vim/.vim/spell
+zsh/.zsh/.cache
