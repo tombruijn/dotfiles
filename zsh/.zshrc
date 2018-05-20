@@ -1,62 +1,91 @@
-ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
+###############################################################################
+# $PATH configuration
 
-# Ensure unique paths within PATH. Useful on `reload`
+## Ensure unique paths within $PATH. Useful on calling `reload`
 typeset -U path
 
-# `cd` can navigate to subdirectories in these directories from anywhere
-setopt auto_cd
-cdpath=(. .. ~/tombruijn ~/appsignal)
-
-# Config
-source "$ZSH_DIR/config.zsh"
-source "$ZSH_DIR/functions.zsh"
-
-# Git functions
-source "$ZSH_DIR/git.zsh"
-
-# Theme
-source "$ZSH_DIR/appearance.zsh"
-source "$ZSH_DIR/prompt.zsh"
-source "$ZSH_DIR/termsupport.zsh"
-
-# Aliases
-source "$ZSH_DIR/aliases.zsh"
-
-# Base paths
-export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:./bin:$PATH"
+## Base paths
+export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+## GPG paths
 export PATH="/usr/local/opt/gnupg/bin:$PATH"
-
-# Heroku Toolbelt bin path
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Rust paths
+## Python paths
+export PATH="/usr/local/opt/python/libexec/bin/:$PATH"
+## Rust paths
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# Ansible
+## Heroku Toolbelt bin path
+export PATH="/usr/local/heroku/bin:$PATH"
+## Ansible paths
 export PATH="/usr/local/opt/ansible@1.9/bin:$PATH"
 
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+###############################################################################
+# Configuration
 
-# Enable Elixir IEX history
+## Set language and encoding
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+## Configure ZSH prompt
+## See: man zshoptions
+unsetopt menu_complete # do not autoselect the first completion entry
+unsetopt flowcontrol
+setopt auto_cd # `cd` command not necessary to open a dir
+setopt multios # Enable multiple outputs
+setopt cdable_vars
+setopt extended_glob # Allow special chars as part of filename patterns
+setopt auto_menu # Show completion menu on succesive tab press
+setopt complete_in_word
+setopt always_to_end
+
+# Tools to use
+export EDITOR="nvim"
+export PAGER="less"
+export LESS="-R"
+
+## Configure cd quick paths
+## `cd` can navigate to subdirectories in these directories from anywhere
+cdpath=(. .. ~/tombruijn ~/appsignal)
+
+## Enable Elixir IEX history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+## Disable Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'
-
-# Load private credentials from ~/.extra file
+## Load private credentials from ~/.extra file
 if [ -f ~/.extra ]; then
   source ~/.extra
 fi
 
-# Configure GPG
+###############################################################################
+# Load additional configuration
+
+ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
+
+source "$ZSH_DIR/history.zsh"
+source "$ZSH_DIR/completions.zsh"
+source "$ZSH_DIR/functions.zsh"
+source "$ZSH_DIR/aliases.zsh"
+
+# Theme
+source "$ZSH_DIR/theme.zsh"
+source "$ZSH_DIR/termsupport.zsh"
+
+###############################################################################
+# Load tools
+
+## Configure GPG
 export GPG_TTY=$(tty)
 
+## Load FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'
+
+## Load chruby version manager + auto detection
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+## Load ASDF version manager
 if [ -d $HOME/.asdf ]; then
   . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
 fi

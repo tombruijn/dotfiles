@@ -1,10 +1,11 @@
-bindkey -e
+# iTerm keybindings
+bindkey -e # Emacs mode
 bindkey '\ew' kill-region
 
 # Ctrl + r/s - incremental search
 bindkey "^r" history-incremental-search-backward
 
-# ?
+# TODO: document
 bindkey "^[[5~" up-line-or-history
 bindkey "^[[6~" down-line-or-history
 
