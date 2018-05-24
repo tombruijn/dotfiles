@@ -63,6 +63,7 @@ fi
 ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 
 source "$ZSH_DIR/history.zsh"
+source "$ZSH_DIR/key-bindings.zsh"
 source "$ZSH_DIR/completions.zsh"
 source "$ZSH_DIR/functions.zsh"
 source "$ZSH_DIR/aliases.zsh"
