@@ -30,6 +30,7 @@ Keys = {
     ["Move window display right"] = {{{"ctrl", "cmd"}, "="}, {hyper, "P"}},
     ["Shrink window"] = {{{"ctrl", "alt"}, "-"}, {hyper, "pagedown"}},
     ["Grow window"] = {{{"ctrl", "alt"}, "="}, {hyper, "pageup"}},
+    ["Open screenshots"] = {{{"cmd", "shift"}, "S"}, {hyper, "M"}},
   },
   ["triggers"] = {
     ["Activity Monitor"] = {{{"ctrl", "alt", "cmd"}, "A"}, {hyper, "5"}},

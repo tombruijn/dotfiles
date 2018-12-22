@@ -71,6 +71,11 @@ keys.bindKeyFor("VimR", function()
   end
 end)
 
+-- Open screenshots directory
+keys.bindKeyFor("Open screenshots", function()
+  hs.execute("open /Users/tombruijn/Pictures/Monosnap")
+end)
+
 -- Simple triggers
 for applicationName, _ in pairs(keys.triggers) do
   keys.bindKeyFor(applicationName, function()
