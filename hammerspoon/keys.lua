@@ -51,6 +51,7 @@ Keys = {
     ["TogglDesktop"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
     ["GraphiQL"] = {{{"cmd", "shift"}, "G"}, {hyper, "Z"}},
+    ["zoom.us"] = {{{"ctrl"}, "5"}, {hyper, "H"}},
   },
 }
 
