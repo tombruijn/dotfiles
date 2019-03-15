@@ -15,4 +15,4 @@ let g:fzf_colors = {
   \ }
 nmap <leader>p :Files<CR>
 nmap <c-p> :Files<CR>
-nmap <c-\> :Buffers<CR>
+nmap <c-;> :Buffers<CR>

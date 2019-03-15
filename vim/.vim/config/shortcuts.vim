@@ -1,5 +1,5 @@
-nmap <leader>w :w<CR>
-
+" Reload .vimrc
+nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
 
 " Cycle through splits with tab
 nmap <Tab> <C-w>w
@@ -14,9 +14,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>- <C-W>_
 " Equalize splits
 nnoremap <leader>= <C-W>=
-
-" Reload .vimrc
-nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
 
 " Open Ack search on `Command + /`
 nnoremap <d-/> :Ack!<Space>
@@ -90,6 +87,9 @@ vnoremap <leader>p "_dP
 nnoremap x v"_d
 " Send selection characters to black hole on deletion
 vnoremap x "_d
+
+" Write buffer on <leader>w
+nnoremap <leader>w :w<CR>
 
 " Jump paragraph by beginning and end rather than the empty lines between them
 " Source: https://www.reddit.com/r/vim/comments/458buq/moving_by_paragraph/czvy13u/

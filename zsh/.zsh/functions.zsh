@@ -85,7 +85,7 @@ function mk {
 # Toggle Chrome headless testing with param
 function headless {
   if [[ "$CHROME_HEADLESS" == "false" ]]; then
-    echo "🔮 😰 Running headless"
+    echo "🔮😰 Running headless"
     unset CHROME_HEADLESS
   else
     echo "🖥 🍿 Running in foreground"

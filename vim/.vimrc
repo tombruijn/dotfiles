@@ -92,7 +92,6 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set shiftround
 set expandtab                     " Use spaces instead of tabs.
-set autoread
 au FocusGained,BufEnter * checktime
 
 set clipboard=unnamed             " Enable OS clipboard to properly paste in to VIM buffer.
