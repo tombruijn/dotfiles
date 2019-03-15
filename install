@@ -49,6 +49,11 @@ git config --global merge.ff only
 git config --global push.default current
 git config --global remote.origin.prune true
 git config --global merge.conflictstyle diff3
+# Override default git commit message comment symbol.
+# This allows me to use the default comment symbol (#) at the beginning of a
+# line instead. Useful for when used in code examples.
+# see @gitCommitMessage
+git config --global core.commentChar ";"
 
 if [ -n "$GPG_SIGNING_KEY" ]; then
   git config --global user.signingkey $GPG_SIGNING_KEY
