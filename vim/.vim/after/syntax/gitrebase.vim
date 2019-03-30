@@ -1,4 +1,4 @@
-if exists("b:current_syntax")
+if exists("b:my_current_syntax")
   finish
 endif
 
@@ -8,4 +8,4 @@ endif
 syn match gitCommitComment "^;.*"
 highlight def link gitCommitComment Comment
 
-let b:current_syntax = "gitCommit"
+let b:my_current_syntax = "gitRebase"
