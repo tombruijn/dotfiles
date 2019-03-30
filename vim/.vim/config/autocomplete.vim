@@ -23,11 +23,21 @@ set wildmenu " Enhanced command line completion.
 set wildmode=list:longest " Complete files like a shell.
 set shortmess+=c " Turn off completion messages
 set completeopt=menu,menuone,preview,noinsert,noselect
-set complete=.,w,b,u,i
+" Completion options
+" :help cpt
+" .: Current buffer
+" b: Loaded buffers
+" u: Unloaded buffers
+" t: Tags
+" i: Scan current and included files
+set complete=.,w,b,u,t,i
 
 " mucomplete
 let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#chains = { 'default': ['c-n', 'omni', 'uspl', 'path'] }
+let g:mucomplete#chains = {
+      \ 'default': ['c-n', 'omni', 'uspl', 'path', 'tags', 'ulti'],
+      \ 'gitcommit': ['c-n', 'uspl', 'path']
+      \ }
 let g:mucomplete#no_mappings = 1
 let g:mucomplete#spel#max = 10
 
@@ -41,4 +51,4 @@ imap <c-y> <plug>(MUcompleteCycFwd)
 
 " Exit autocomplete menu on these combinations
 inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
-inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+inoremap <expr> <cr> mucomplete#popup_exit("\<cr>")
