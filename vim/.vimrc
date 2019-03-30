@@ -43,7 +43,7 @@ Plug 'w0rp/ale'
 
 Plug 'ludovicchabant/vim-gutentags'
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 
 call plug#end()
 
