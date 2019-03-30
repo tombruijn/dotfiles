@@ -38,8 +38,8 @@ bind main F none
 bind main Ff :set main-options = -n 1000
 bind main Fg :set main-options = -n 1000 --all
 
-bind status C !git commit -S
-bind status A !git commit --amend
+bind status C !git commit --gpg-sign --verbose
+bind status A !git commit --gpg-sign --amend --verbose
 bind status F !git-fixup
 bind generic D none
 bind status D none
