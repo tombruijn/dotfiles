@@ -25,7 +25,6 @@ brew "blueutil"
 
 brew "vim"
 brew "neovim", args: ["HEAD"]
-brew "macvim"
 
 brew "chruby"
 brew "ruby-install"

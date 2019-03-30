@@ -7,7 +7,7 @@ These dotfiles contain configuration and installation for:
 * iTerm
 * ZSH
 * Dotfiles
-* VIM (Neovim and MacVim)
+* VIM (Neovim and VimR)
 * chruby and ruby-install
 * rustup and Rust
 * Hammerspoon
@@ -55,12 +55,7 @@ Set OSX defaults.
 
 ### Homebrew
 
-Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
-command.
-
-```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+Next, install [Homebrew](https://brew.sh/) using the following command.
 
 After installing Homebrew, ensure permissions are correct by running the
 following.
@@ -92,7 +87,8 @@ To configure credentials that shouldn't be checked into git, create a
 export GPG_SIGNING_KEY="KEY_ID"
 ```
 
-Run `./install` again in the dotfiles repo and refresh you shell sessions.
+Now refresh you shell sessions either by opening a new pane or by running
+`reload`.
 
 ### iTerm
 
@@ -126,7 +122,7 @@ vim +:PlugInstall
 ### chruby and ruby-install
 
 ```sh
-ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
+ruby-install ruby [VERSION]
 ```
 
 ### Rust and rustup
@@ -134,11 +130,3 @@ ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 Install [rustup](https://www.rustup.rs/) and with it Rust.
 
 Which Rust version to install depends on the project you're working on.
-
-### Misc. Utilities
-
-**CoffeeScript language.**
-
-```sh
-npm install coffee-script
-```
