@@ -42,6 +42,9 @@ export EDITOR="nvim"
 export PAGER="less"
 export LESS="-R"
 
+# Configure shared config dir
+export XDG_CONFIG_HOME="$HOME/.config"
+
 ## Configure cd quick paths
 ## `cd` can navigate to subdirectories in these directories from anywhere
 cdpath=(. .. ~/tombruijn ~/appsignal)

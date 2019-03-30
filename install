@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Configure shared config dir
+XDG_CONFIG_HOME="$HOME/.config"
+mkdir -p "$XDG_CONFIG_HOME"
+
 # Set up symlinks
 ln -nfs "$(pwd)/ruby/.gemrc"            "$HOME/.gemrc"
 ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
@@ -10,19 +14,21 @@ ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 mkdir -p "$HOME/.bundle"
 ln -nfs "$(pwd)/ruby/bundle/config" "$HOME/.bundle/config"
 
-mkdir -p "$HOME/.bin" "$HOME/.config"
+mkdir -p "$HOME/.bin"
 ln -nfs "$(pwd)/bin/git-fixup" "$HOME/.bin/git-fixup"
 
 ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
 ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
-ln -nfs "$(pwd)/vim/.vim"               "$HOME/.config/nvim"
+ln -nfs "$(pwd)/vim/.vim"               "$XDG_CONFIG_HOME/nvim"
 ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
 ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 
 ln -nfs "$(pwd)/.ignore_global" "$HOME/.ignore"
-ln -nfs "$(pwd)/git/.gitignore_global" "$HOME/.gitignore_global"
-ln -nfs "$(pwd)/git/.tigrc" "$HOME/.tigrc"
+mkdir -p "$XDG_CONFIG_HOME/git"
+ln -nfs "$(pwd)/git/.gitignore_global" "$XDG_CONFIG_HOME/git/.gitignore_global"
+mkdir -p "$XDG_CONFIG_HOME/tig"
+ln -nfs "$(pwd)/git/.tigrc" "$XDG_CONFIG_HOME/tig/config"
 ln -nfs "$HOME/Dropbox/vim/spell" "$HOME/.vim/spell"
 mkdir -p "$HOME/.VIM_UNDO_FILES"
 
