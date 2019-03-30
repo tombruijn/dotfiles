@@ -95,3 +95,7 @@ nnoremap <leader>w :w<CR>
 " Source: https://www.reddit.com/r/vim/comments/458buq/moving_by_paragraph/czvy13u/
 nnoremap <expr> { len(getline(line('.')-1)) > 0 ? '{+' : '{-'
 nnoremap <expr> } len(getline(line('.')+1)) > 0 ? '}-' : '}+'
+
+" Jump back in tags stack. Reverse `CTRL-]` functionality.
+" Remaps built-in CTRL-T to `C-[`.
+nmap <C-[> :po1<CR>
