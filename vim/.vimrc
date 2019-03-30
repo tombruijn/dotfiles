@@ -85,7 +85,8 @@ set nowritebackup                 " And again.
 
 set history=1000                  " Remember last 1000 commands.
 set undolevels=1000               " Remember last 1000 undos.
-set wildignore=*.swp,*.swo,*.bak,*.class
+set path+=**
+set wildignore=*.swp,*.swo,*.bak,*.class,*/vendor/*,*/tmp/*
 
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
