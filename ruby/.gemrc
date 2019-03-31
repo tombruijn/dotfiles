@@ -1,6 +1,6 @@
 ---
 verbose: true
-gem: --no-ri --no-rdoc
+gem: --no-ri --no-rdoc --no-document
 update_sources: true
 backtrace: false
 bulk_threshold: 1000
