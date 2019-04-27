@@ -13,7 +13,6 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit'
 
 " Languages
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
