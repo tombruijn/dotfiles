@@ -21,6 +21,7 @@ ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
 ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
 ln -nfs "$(pwd)/vim/.vim"               "$XDG_CONFIG_HOME/nvim"
+ln -nfs "$(pwd)/cloc/"                  "$XDG_CONFIG_HOME/cloc"
 ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 
 ln -nfs "$(pwd)/.ignore_global" "$HOME/.ignore"
