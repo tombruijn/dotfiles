@@ -24,8 +24,8 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " Useful tools
-Plug 'tpope/vim-fugitive' ", { 'on': ['Gblame', 'Gbrowse'] }
-Plug 'tpope/vim-rhubarb' ", { 'on': ['Gbrowse'] }
+Plug 'tpope/vim-fugitive', { 'on': ['Gblame', 'Gbrowse'] }
+Plug 'tpope/vim-rhubarb', { 'on': ['Gbrowse'] }
 Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 
