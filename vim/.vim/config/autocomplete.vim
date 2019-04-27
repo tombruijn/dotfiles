@@ -39,6 +39,7 @@ let g:mucomplete#chains = {
       \ 'gitcommit': ['c-n', 'uspl', 'path']
       \ }
 let g:mucomplete#no_mappings = 1
+let g:mucomplete#no_popup_mappings = 1
 let g:mucomplete#spel#max = 10
 
 " Configure TAB and SHIFT-TAB to also function as CTRL-N and CTRL-P
@@ -48,7 +49,3 @@ imap <s-tab> <plug>(MUcompleteBwd)
 " Cycle completion methods
 inoremap <silent> <plug>(MUcompleteFwdKey) <c-y>
 imap <c-y> <plug>(MUcompleteCycFwd)
-
-" Exit autocomplete menu on these combinations
-inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
-inoremap <expr> <cr> mucomplete#popup_exit("\<cr>")
