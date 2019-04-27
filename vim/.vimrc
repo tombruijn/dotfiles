@@ -41,7 +41,7 @@ Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 Plug 'w0rp/ale'
 
 Plug 'ludovicchabant/vim-gutentags'
-Plug '/usr/local/opt/fzf'
+Plug '/usr/local/opt/fzf', { 'on': ['Files', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 
 call plug#end()
