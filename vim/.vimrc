@@ -21,6 +21,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " Useful tools
 Plug 'tpope/vim-fugitive', { 'on': ['Gblame', 'Gbrowse'] }
