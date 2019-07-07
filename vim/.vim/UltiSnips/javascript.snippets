@@ -91,6 +91,10 @@ snippet cl "console.log" b
 console.log(${0:${VISUAL:value}})
 endsnippet
 
+snippet cll "console.log prefilled" b
+console.log("${2:$1}", ${1:${VISUAL:value}})
+endsnippet
+
 snippet ce "console.error" b
 console.error(${1:value})
 endsnippet
