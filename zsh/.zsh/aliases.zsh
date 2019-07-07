@@ -14,7 +14,6 @@ alias cov="open coverage/index.html"
 # Directory shortcuts
 alias c="cd"
 alias desk="cd $HOME/Desktop"
-alias home="cd $HOME/"
 alias tdb="cd $HOME/tombruijn/"
 alias pro="cd $HOME/projects/"
 alias dot="cd $HOME/tombruijn/dotfiles"
