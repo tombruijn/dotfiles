@@ -1,0 +1,36 @@
+#!/bin/bash
+# Retry a command until it fails
+#
+# Usage:
+#
+#   $ retry true
+#   # Will repeat forever
+#
+#   $ retry false
+#   # Fails at the first iteration and break out of the while loop
+#
+#   $ retry ruby -e "(rand(0..1) == 1) && (puts 'failed'; exit(1)) || (puts 'success')"
+#   # Fails randomly and breaks out of the while loop when it fails
+
+cmd=$@
+if [[ -z "$cmd" ]]; then
+  echo "ERROR: No command given to retry"
+  exit 1 # Error status
+fi
+
+i=0
+while true; do
+  i=$((i + 1))
+  echo "================================================================================"
+  echo "Loop iteration: $i"
+  echo
+  $cmd
+  if [[ "$?" == "0" ]]; then
+    # Success: Do nothing this loop. Retry in the next loop.
+    : # noop
+  else
+    echo
+    echo "ERROR: Loop $i broke!"
+    exit 1 # Exit loop with error status
+  fi
+done

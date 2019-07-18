@@ -28,39 +28,6 @@ function e {
   vimr $1
 }
 
-# Retry a command until it fails
-#
-# Usage:
-#
-#   $ retry true
-#   # Will repeat forever
-#
-#   $ retry false
-#   # Fails at the first iteration and break out of the while loop
-#
-#   $ retry ruby -e "(rand(0..1) == 1) && (puts 'failed'; exit(1)) || (puts 'success')"
-#   # Fails randomly and breaks out of the while loop when it fails
-function retry {
-  cmd=$@
-  if [[ -z "$cmd" ]]; then
-    echo "ERROR: No command given to retry"
-    return 1 # Error status
-  fi
-
-  i=0
-  while true; do
-    i=$((i + 1))
-    echo "================================================================================"
-    echo "Loop iteration: $i\n"
-    if $cmd; then
-      # Success: Do nothing this loop. Retry in the next loop.
-    else
-      echo "\nERROR: Loop $i broke!"
-      return 1 # Exit loop with error status
-    fi
-  done
-}
-
 # AppSignal cd + function helper
 #
 # Usage:
