@@ -56,6 +56,7 @@ git config --global merge.ff only
 git config --global push.default current
 git config --global remote.origin.prune true
 git config --global merge.conflictstyle diff3
+git config --global diff.noprefix true
 # Allow use of markdown headers before git commit message scissors, after which
 # the code starts.
 git config --global commit.cleanup scissors
