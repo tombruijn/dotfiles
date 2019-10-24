@@ -30,7 +30,7 @@ mkdir -p "$XDG_CONFIG_HOME/git"
 ln -nfs "$(pwd)/git/.gitignore_global" "$XDG_CONFIG_HOME/git/.gitignore_global"
 mkdir -p "$XDG_CONFIG_HOME/tig"
 ln -nfs "$(pwd)/git/.tigrc" "$XDG_CONFIG_HOME/tig/config"
-ln -nfs "$HOME/Dropbox/vim/spell" "$HOME/.vim/spell"
+ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/vim/spell" "$HOME/.vim/spell"
 mkdir -p "$HOME/.VIM_UNDO_FILES"
 
 mkdir -p "$HOME/.gnupg"
