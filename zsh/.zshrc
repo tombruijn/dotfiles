@@ -14,6 +14,8 @@ export PATH="/usr/local/opt/python/libexec/bin/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 ## Heroku Toolbelt bin path
 export PATH="/usr/local/heroku/bin:$PATH"
+## MongoDB custom path
+export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
 
 ###############################################################################
 # Configuration
