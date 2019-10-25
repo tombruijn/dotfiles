@@ -55,13 +55,12 @@ Set OSX defaults.
 
 ### Homebrew
 
-Next, install [Homebrew](https://brew.sh/) using the following command.
+Next, install [Homebrew](https://brew.sh/) using the command listed on the website.
 
 After installing Homebrew, ensure permissions are correct by running the
 following.
 
 ```sh
-sudo chown -R "$USER" /usr/local
 brew update
 brew tap Homebrew/bundle
 
@@ -69,12 +68,6 @@ brew bundle Brewfile
 ```
 
 ### ZSH
-
-Let it as the default shell.
-
-```sh
-sudo dscl . -create /Users/$USER UserShell $(which zsh)
-```
 
 #### Private credentials
 
