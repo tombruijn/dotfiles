@@ -44,3 +44,4 @@ config/initializers/opensslhack.rb
 /tags
 tags.lock
 tags.temp
+.tool-versions
