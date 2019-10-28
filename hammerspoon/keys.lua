@@ -1,6 +1,7 @@
 local alert = require "hs.alert"
 local hotkey = require "hs.hotkey"
 
+meh = {"ctrl", "alt", "shift"}
 hyper = {"cmd", "alt", "ctrl", "shift"}
 local shortcuts = {
   ["normal"] = {},
@@ -40,7 +41,7 @@ Keys = {
     ["Google Chrome"] = {{{"alt"}, "3"}, {hyper, "V"}},
     ["Brave Browser"] = {{{"ctrl"}, "4"}, {hyper, "G"}},
     ["Safari"] = {{{"alt"}, "4"}, {hyper, "C"}},
-    ["Tweetbot"] = {{{"ctrl"}, "8"}, {hyper, "W"}},
+    ["Tweetbot"] = {{{"ctrl"}, "8"}, {meh, "W"}},
     ["Telegram"] = {{{"alt"}, "8"}, {hyper, "Q"}},
     ["Mail"] = {{{"ctrl"}, "0"}, {hyper, "A"}},
     ["Slack"] = {{{"alt"}, "0"}, {hyper, "B"}},
