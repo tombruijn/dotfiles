@@ -7,8 +7,8 @@
 "" Source: https://github.com/janko-m/vim-test/blob/e730ac7bcd3b45faee6ca212459186583f173792/autoload/test/strategy.vim
 "" Functions: `test#strategy#iterm` and `s:execute_script` combined.
 function! Custom_iterm(cmd) abort
-  " Point to osx_iterm_vimr script in this directory
-  let name = 'osx_iterm_vimr'
+  " Point to osx_iterm_vim_gui script in this directory
+  let name = 'osx_iterm_vim_gui'
   let script_path = g:test#plugin_path . '/../../config/' . name
   let cmd = join([script_path, shellescape(a:cmd)])
   execute 'silent !'.cmd
