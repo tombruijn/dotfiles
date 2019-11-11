@@ -108,7 +108,7 @@ set splitright                    " Open hsplits to the right
 set lazyredraw
 
 let mapleader=","
-let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h14"
+let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h16"
 let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim

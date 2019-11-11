@@ -300,6 +300,10 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
+################################################################################
+# MacVim
+defaults write org.vim.MacVim MMNoTitleBarWindow 1
+
 ###############################################################################
 # Kill affected applications
 

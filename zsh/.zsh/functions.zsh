@@ -25,7 +25,7 @@ function o {
 #   $ e README.md
 #   # Open the "README.md" file in the editor
 function e {
-  vimr $1
+  /Applications/MacVim.app/Contents/bin/mvim $1
 }
 
 # AppSignal cd + function helper

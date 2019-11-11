@@ -61,12 +61,12 @@ keys.bindKeyFor("Bluetooth", function()
   bluetooth_control.toggle()
 end)
 
--- VimR - Start only from terminal
-keys.bindKeyFor("VimR", function()
-  if applicationRunning("VimR") then
-    application.find("VimR"):activate()
+-- MacVim - Start only from terminal
+keys.bindKeyFor("MacVim", function()
+  if applicationRunning("MacVim") then
+    application.find("MacVim"):activate()
   else
-    alert.show("VimR not running")
+    alert.show("MacVim not running")
     application.launchOrFocus("iTerm")
   end
 end)
