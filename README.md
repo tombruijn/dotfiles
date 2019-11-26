@@ -91,6 +91,14 @@ Now refresh you shell sessions either by opening a new pane or by running
 - Run `defaults read com.googlecode.iterm2`.
 - Restart iTerm.
 
+### fzf
+
+To install [fzf](https://github.com/junegunn/fzf), use the
+`/usr/local/opt/fzf/install` install script (listed in `brew info fzf` after
+installing it through `brew install fzf`).
+
+Say yes to "fuzzy auto-completion" and "key bindings".
+
 ### vim
 
 Install Neovim.
