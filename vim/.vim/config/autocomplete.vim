@@ -29,8 +29,7 @@ set completeopt=menu,menuone,preview,noinsert,noselect
 " b: Loaded buffers
 " u: Unloaded buffers
 " t: Tags
-" i: Scan current and included files
-set complete=.,w,b,u,t,i
+set complete=.,w,b,u,t
 
 " mucomplete
 let g:mucomplete#enable_auto_at_startup = 1

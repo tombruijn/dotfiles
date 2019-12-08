@@ -86,7 +86,10 @@ set nowritebackup                 " And again.
 set history=1000                  " Remember last 1000 commands.
 set undolevels=1000               " Remember last 1000 undos.
 set path+=**
-set wildignore=*.swp,*.swo,*.bak,*.class,*/vendor/*,*/tmp/*
+set wildignore=*.swp,*.swo,*.bak,*.class,*.lock,.gitkeep,.git/**
+set wildignore+=**/vendor/**,**/tmp/**,tmp/**,log/**,coverage/**,doc/**
+set wildignore+=*.ico,*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif
+set wildignore+=*/node_modules,node_modules,*.min.js,public/packs/**,**/public/packs-test/**
 
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
