@@ -11,4 +11,7 @@ require "application_watcher"
 keys.deactivateKeys()
 keys.activateKeys()
 
+hs.loadSpoon("URLDispatcher")
+spoon.URLDispatcher:start()
+
 alert.show("Hammerspoon loaded!")
