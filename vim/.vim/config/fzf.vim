@@ -14,5 +14,9 @@ let g:fzf_colors = {
   \ 'header':  ['fg', 'Comment']
   \ }
 nmap <leader>p :Files<CR>
-nmap <c-p> :Files<CR>
-nmap <c-;> :Buffers<CR>
+nmap <C-P> :Files2<CR>
+nmap <C-\> :Buffers<CR>
+nnoremap <leader>\ :Buffers<CR>
+
+command! -bang -nargs=? -complete=dir Files2
+  \ call fzf#vim#files(<q-args>, {'options': ['--tiebreak=end']}, <bang>0)
