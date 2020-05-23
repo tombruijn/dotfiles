@@ -108,6 +108,13 @@ let c_space_errors=1              " Highlight trailing spaces
 set splitbelow                    " Open vsplits to below
 set splitright                    " Open hsplits to the right
 
+" Configure syntax highlighting
+" Reduce syntax highlighting so it doesn't hang while trying to
+" highlight everything.
+syntax sync minlines=2000
+syntax sync maxlines=5000
+set synmaxcol=400
+set redrawtime=4000
 set lazyredraw
 
 let mapleader=","
