@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Comprehensive list here:
-# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
 # How-to detect (non-hidden) settings:
 # see: http://superuser.com/questions/455755/how-to-explore-more-defaults-write-tweaks-on-os-x
