@@ -116,5 +116,6 @@ let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
 
 runtime! config/**/*.vim
 
+set shell=$SHELL " Fix Ruby + chruby loading (https://github.com/postmodern/chruby/wiki/Vim)
 set shortmess+=IF
 call Load_default_theme()
