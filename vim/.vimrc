@@ -29,7 +29,7 @@ Plug 'tpope/vim-rhubarb', { 'on': ['Gbrowse'] }
 Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 
-Plug 'AndrewRadev/splitjoin.vim', { 'commit': '9e2d602' }
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'airblade/vim-gitgutter', { 'commit': 'b27ee4d' }
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSuite'] }
