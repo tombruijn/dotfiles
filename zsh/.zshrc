@@ -8,8 +8,6 @@ typeset -U path
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 ## GPG paths
 export PATH="/usr/local/opt/gnupg/bin:$PATH"
-## Python paths
-export PATH="/usr/local/opt/python/libexec/bin/:$PATH"
 ## Rust paths
 export PATH="$HOME/.cargo/bin:$PATH"
 ## Heroku Toolbelt bin path
@@ -24,6 +22,7 @@ export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LC_COLLATE=C
 
 ## Configure ZSH prompt
 ## See: man zshoptions
