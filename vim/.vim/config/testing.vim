@@ -16,6 +16,7 @@ endfunction
 
 let g:test#custom_strategies = {'custom_iterm': function('Custom_iterm')}
 let g:test#strategy = 'custom_iterm'
+let g:test#javascript#jest#executable = "yarn jest"
 
 "" Configuration
 let g:test#ruby#rspec#options = {
