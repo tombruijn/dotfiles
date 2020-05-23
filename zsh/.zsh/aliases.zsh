@@ -27,7 +27,7 @@ alias redis="redis-server /usr/local/etc/redis.conf"
 alias md="open -a \"iA Writer.app\""
 
 # Git
-alias g="open -a gitx ."
+alias g="fork open"
 alias t="tig"
 alias ts="tig status"
 alias gs="git status -sb"
