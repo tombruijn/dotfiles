@@ -7,7 +7,7 @@ These dotfiles contain configuration and installation for:
 * iTerm
 * ZSH
 * Dotfiles
-* VIM (Neovim and VimR)
+* VIM (Neovim and MacVim)
 * chruby and ruby-install
 * rustup and Rust
 * Hammerspoon
