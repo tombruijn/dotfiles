@@ -92,3 +92,5 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 if [ -d $HOME/.asdf ]; then
   . $HOME/.asdf/asdf.sh
 fi
+
+export DISABLE_LIVE_RELOADING=true
