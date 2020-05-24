@@ -1,4 +1,3 @@
-tap "homebrew/dupes"
 tap "neovim/neovim"
 
 brew "openssl"

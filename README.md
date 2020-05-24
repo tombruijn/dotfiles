@@ -64,7 +64,7 @@ following.
 brew update
 brew tap Homebrew/bundle
 
-brew bundle Brewfile
+brew bundle
 ```
 
 ### ZSH
