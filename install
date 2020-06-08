@@ -53,6 +53,7 @@ git config --global user.name "Tom de Bruijn"
 git config --global core.excludesfile "$XDG_CONFIG_HOME/git/.gitignore_global"
 git config --global color.diff always
 git config --global merge.ff only
+git config --global pull.ff only
 git config --global push.default current
 git config --global remote.origin.prune true
 git config --global merge.conflictstyle diff3
