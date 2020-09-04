@@ -1,19 +1,21 @@
 #!/bin/bash
+
 # Retry a command until it fails
 #
 # Usage:
 #
-#   $ retry true
+#   $ until-fail true
 #   # Will repeat forever
 #
-#   $ retry false
-#   # Fails at the first iteration and break out of the while loop
+#   $ until-fail false
+#   # Fails at the first iteration and breaks out of the retry loop
 #
-#   $ retry ruby -e "(rand(0..1) == 1) && (puts 'failed'; exit(1)) || (puts 'success')"
-#   # Fails randomly and breaks out of the while loop when it fails
+#   $ until-fail ruby -e "rand(0..1) == 1 ? (puts 'failed'; exit(1)) : (puts 'success')"
+#   # Fails randomly and breaks out of the retry loop when it fails
+#
+# Source: https://gist.github.com/tombruijn/0cde5de10e86d91717ed855623929b05
 
-cmd=$@
-if [[ -z "$cmd" ]]; then
+if [[ -z "$*" ]]; then
   echo "ERROR: No command given to retry"
   exit 1 # Error status
 fi
@@ -22,15 +24,12 @@ i=0
 while true; do
   i=$((i + 1))
   echo "================================================================================"
-  echo "Loop iteration: $i"
+  echo "Retry #$i: $*"
   echo
-  $cmd
-  if [[ "$?" == "0" ]]; then
-    # Success: Do nothing this loop. Retry in the next loop.
-    : # noop
-  else
+  # Run command and exit only if it fails
+  if ! "$@"; then
     echo
-    echo "ERROR: Loop $i broke!"
+    echo "ERROR: Failure on retry #$i"
     exit 1 # Exit loop with error status
   fi
 done
