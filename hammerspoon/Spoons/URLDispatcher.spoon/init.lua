@@ -8,6 +8,8 @@
 --- dispatches them to different apps according to the patterns defined
 --- in the config. If no pattern matches, `default_handler` is used.
 
+local spoons = require("hs.spoons")
+
 local obj={}
 obj.__index = obj
 
@@ -40,9 +42,7 @@ obj.decode_slack_redir_urls = false
 --- ID" is specified, that application will be used to open matching URLs. If no
 --- "application bundle ID" is specified, but "function" is provided (and is a
 --- Lua function) it will be called with the URL.
-obj.url_patterns = {
-  { "https://%w+.google.com", "com.google.Chrome" }
-}
+obj.url_patterns = dofile(spoons.scriptPath() .. "url_patterns.lua")
 
 --- URLDispatcher.logger
 --- Variable

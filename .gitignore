@@ -7,3 +7,4 @@ Icon
 vim/.vim/plugged
 vim/.vim/spell
 zsh/.zsh/.cache
+hammerspoon/Spoons/URLDispatcher.spoon/url_patterns.lua
