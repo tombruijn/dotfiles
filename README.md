@@ -45,12 +45,12 @@ cd $HOME/tombruijn/dotfiles && git submodule init && \
 This should set up the symlinks from the dotfiles directory to your `$HOME`
 directory, do not remove the `dotfiles` directory.
 
-### OSX defaults
+### macOS defaults
 
-Set OSX defaults.
+Set macOS defaults.
 
 ```sh
-./.osx
+./.macos
 ```
 
 ### Homebrew
