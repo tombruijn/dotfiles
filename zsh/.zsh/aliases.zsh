@@ -64,7 +64,6 @@ alias DEV="RAILS_ENV=development"
 
 alias rs="bundle exec rails server -b 0.0.0.0"
 alias rc="bundle exec rails console"
-alias rg="bundle exec rails generate"
 
 alias rr="bundle exec rake routes"
 alias rdm="bundle exec rake db:migrate"

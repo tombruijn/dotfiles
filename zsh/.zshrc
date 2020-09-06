@@ -82,7 +82,7 @@ export GPG_TTY=$(tty)
 
 ## Load FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 ## Load chruby version manager + auto detection
 source /usr/local/opt/chruby/share/chruby/chruby.sh
