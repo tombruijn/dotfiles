@@ -14,13 +14,14 @@ function! Custom_iterm(cmd) abort
   execute 'silent !'.cmd
 endfunction
 
+let g:test#enabled_runners = ["ruby#rspec", "rust#cargotest", "elixir#exunit", "javascript#jest"]
 let g:test#custom_strategies = {'custom_iterm': function('Custom_iterm')}
 let g:test#strategy = 'custom_iterm'
 let g:test#javascript#jest#executable = "yarn jest"
 
 "" Configuration
 let g:test#ruby#rspec#options = {
-  \ 'file':    '--format documentation',
+  \ 'file': '--format documentation'
 \}
 
 "" Mappings
