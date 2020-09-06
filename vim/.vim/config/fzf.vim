@@ -18,5 +18,6 @@ nmap <C-P> :Files2<CR>
 nmap <C-\> :Buffers<CR>
 nnoremap <leader>\ :Buffers<CR>
 
+" Favor results with matches at the end first, then the shortest results first
 command! -bang -nargs=? -complete=dir Files2
-  \ call fzf#vim#files(<q-args>, {'options': ['--tiebreak=end']}, <bang>0)
+  \ call fzf#vim#files(<q-args>, {'options': ['--tiebreak=end,length']}, <bang>0)
