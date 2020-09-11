@@ -61,6 +61,7 @@ git config --global diff.noprefix true
 # Allow use of markdown headers before git commit message scissors, after which
 # the code starts.
 git config --global commit.cleanup scissors
+git config --global init.defaultBranch main
 
 if [ -n "$GPG_SIGNING_KEY" ]; then
   git config --global user.signingkey $GPG_SIGNING_KEY
