@@ -86,7 +86,14 @@ set nowritebackup                 " And again.
 
 set history=1000                  " Remember last 1000 commands.
 set undolevels=1000               " Remember last 1000 undos.
-set path+=**
+
+" Configure vim path
+" - .: search relative to the directory of the current file
+" - **: current directory and all sub directories
+set path=.,**
+" Ignore paths for `path` config
+" The path config sets `**` which searches everything, which can be a
+" performance issue. Tell vim which directories to ignore.
 set wildignore=*.swp,*.swo,*.bak,*.class,*.lock,.gitkeep,.git/**
 set wildignore+=**/vendor/**,**/tmp/**,tmp/**,log/**,coverage/**,doc/**
 set wildignore+=*.ico,*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif
