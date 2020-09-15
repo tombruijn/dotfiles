@@ -27,21 +27,4 @@ augroup filetypes
   " Sass/Scss
   autocmd BufRead,BufNewFile *.sass set ft=sass.css
   autocmd BufRead,BufNewFile *.scss set ft=scss.css
-  autocmd FileType css,sass
-        \ setlocal iskeyword+=-
-
-  " git commit
-  autocmd Filetype gitcommit
-        \ let &l:colorcolumn="50,72" |
-        \ setlocal spell textwidth=72 |
-        \ setlocal omnifunc& " Unset vim-rhubarb autocomplete
-
-  " Markdown
-  autocmd BufRead,BufNewFile *.md
-        \ let &l:colorcolumn="80" |
-        \ setlocal spell
-
-  autocmd Filetype vim
-        \ let &l:colorcolumn="80,100" |
-        \ setlocal textwidth=0
 augroup END
