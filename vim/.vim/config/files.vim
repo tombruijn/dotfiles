@@ -24,6 +24,10 @@ augroup filetypes
   autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile,Brewfile,*.jpbuilder}
         \ set ft=ruby
 
+  " JavaScript
+  autocmd BufRead,BufNewFile {*/app/frontend/javascripts/components/**/*.js}
+        \ set ft=javascriptreact
+
   " Sass/Scss
   autocmd BufRead,BufNewFile *.sass set ft=sass.css
   autocmd BufRead,BufNewFile *.scss set ft=scss.css
