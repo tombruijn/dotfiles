@@ -133,4 +133,5 @@ runtime! config/**/*.vim
 
 set shell=$SHELL " Fix Ruby + chruby loading (https://github.com/postmodern/chruby/wiki/Vim)
 set shortmess+=IF
+set shortmess-=S " Show search matches count on search
 call Load_default_theme()
