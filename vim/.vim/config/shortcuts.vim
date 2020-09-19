@@ -99,3 +99,6 @@ nnoremap <expr> } len(getline(line('.')+1)) > 0 ? '}-' : '}+'
 " Jump back in tags stack. Reverse `CTRL-]` functionality.
 " Remaps built-in CTRL-T to `C-[`.
 nmap <C-[> :po1<CR>
+
+" Open alternative file (usually test file) for Rails projects (vim-rails)
+nmap <silent> <leader><CR> :A<CR>

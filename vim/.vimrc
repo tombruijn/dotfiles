@@ -10,6 +10,7 @@ Plug 'reedes/vim-colors-pencil', { 'on': [] }
 Plug 'bling/vim-airline'
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '5782b22' }
+Plug 'tpope/vim-projectionist'
 
 " Languages
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }

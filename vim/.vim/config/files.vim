@@ -1,3 +1,28 @@
+" Global vim projectionist config.
+" Applies to all "projects" that are opened.
+let g:projectionist_heuristics = {
+  \   "Gemfile": {
+  \     "lib/*.rb": {
+  \       "type": "source",
+  \       "alternate": "spec/lib/{dirname}/{basename}_spec.rb"
+  \     },
+  \     "spec/*_spec.rb": {
+  \       "type": "test",
+  \       "alternate": "{dirname}/{basename}.rb"
+  \     }
+  \   },
+  \   "app/frontend/javascripts/": {
+  \     "app/frontend/javascripts/*.js": {
+  \       "type": "source",
+  \       "alternate": "spec/javascripts/{dirname}/{basename}.test.js"
+  \     },
+  \     "spec/javascripts/*.test.js": {
+  \       "type": "test",
+  \       "alternate": "app/frontend/javascripts/{dirname}/{basename}.js"
+  \     }
+  \   }
+  \ }
+
 let g:jsx_ext_required = 0 " Don't require .jsx ext for JSX plugin
 let g:ruby_indent_block_style = 'do' " Indent lines by block `do`-statement
 let g:ruby_spellcheck_strings = 1
