@@ -9,7 +9,7 @@ Plug 'reedes/vim-colors-pencil', { 'on': [] }
 " Navigation
 Plug 'bling/vim-airline'
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'], 'commit': '5782b22' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'tpope/vim-projectionist'
 
 " Languages
@@ -39,7 +39,7 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sirver/ultisnips', { 'commit': '423f264', 'on': [] }
-Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
+Plug 'tomtom/tcomment_vim', { 'on': 'TComment' }
 Plug 'w0rp/ale'
 
 Plug 'ludovicchabant/vim-gutentags'
