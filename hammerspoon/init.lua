@@ -7,6 +7,7 @@ require "triggers"
 require "window_management"
 require "auto_muter"
 require "application_watcher"
+require "device_watcher"
 
 keys.deactivateKeys()
 keys.activateKeys()

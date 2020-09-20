@@ -97,10 +97,23 @@ end
 
 function Keys.toggleKeyboard()
   if Keys.keyboardType() == "normal" then
-    Keys.keyboard = "ergodox"
+    Keys.enableErgodoxKeyboard()
   else
-    Keys.keyboard = "normal"
+    Keys.enableDefaultKeyboard()
   end
+end
+
+function Keys.enableErgodoxKeyboard()
+  Keys.keyboard = "ergodox"
+  Keys.updateKeyboardTriggers()
+end
+
+function Keys.enableDefaultKeyboard()
+  Keys.keyboard = "normal"
+  Keys.updateKeyboardTriggers()
+end
+
+function Keys.updateKeyboardTriggers()
   alert.show("Keyboard: " .. Keys.keyboardType())
   Keys.deactivateKeys()
   Keys.activateKeys()
