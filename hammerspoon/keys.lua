@@ -52,7 +52,8 @@ Keys = {
     ["TogglDesktop"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
     ["GraphiQL"] = {{{"cmd", "shift"}, "G"}, {hyper, "Z"}},
-    ["zoom.us"] = {{{"ctrl"}, "5"}, {hyper, "H"}},
+    ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "H"}},
+    ["Todoist"] = {{{"ctrl"}, "5"}, {meh, "M"}},
   },
 }
 
