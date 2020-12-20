@@ -12,10 +12,10 @@ end
 function BluetoothControl.toggle()
   if BluetoothControl.status() == "on" then
     alert.show("Bluetooth: Off")
-    os.execute(blueutil.." power 0")
+    os.execute(blueutil.." --power 0")
   else
     alert.show("Bluetooth: On")
-    os.execute(blueutil.." power 1")
+    os.execute(blueutil.." --power 1")
   end
 end
 
