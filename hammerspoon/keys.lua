@@ -49,7 +49,7 @@ Keys = {
     ["iA Writer"] = {{{"ctrl"}, "="}, {hyper, "T"}},
     ["Finder"] = {{{"ctrl"}, "TAB"}, {hyper, "R"}},
     ["1Password 7"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
-    ["TogglDesktop"] = {{{"alt"}, "§"}, {hyper, "="}},
+    ["Toggl Track"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
     ["GraphiQL"] = {{{"cmd", "shift"}, "G"}, {hyper, "Z"}},
     ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "H"}},
