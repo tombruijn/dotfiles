@@ -2,7 +2,7 @@
 
 These dotfiles contain configuration and installation for:
 
-* XCode
+* Xcode
 * Homebrew
 * iTerm
 * ZSH
@@ -19,9 +19,9 @@ These dotfiles contain configuration and installation for:
 
 Here is a step-by-step installation.
 
-### XCode
+### Xcode
 
-Install XCode through the Mac App Store.
+Install Xcode through the Mac App Store.
 
 Then run:
 
