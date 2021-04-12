@@ -5,7 +5,7 @@ These dotfiles contain configuration and installation for:
 * Xcode
 * Homebrew
 * iTerm
-* ZSH
+* Zsh
 * Dotfiles
 * VIM (Neovim and MacVim)
 * chruby and ruby-install
@@ -67,7 +67,7 @@ brew tap Homebrew/bundle
 brew bundle
 ```
 
-### ZSH
+### Zsh
 
 #### Private credentials
 

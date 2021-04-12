@@ -24,7 +24,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_COLLATE=C
 
-## Configure ZSH prompt
+## Configure Zsh prompt
 ## See: man zshoptions
 unsetopt menu_complete # do not autoselect the first completion entry
 unsetopt flowcontrol
