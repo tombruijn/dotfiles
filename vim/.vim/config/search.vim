@@ -1,4 +1,4 @@
-let g:ackprg='rg --hidden --vimgrep --smart-case'
+let g:ackprg='rg --vimgrep'
 
 " Clear current search highlights
 nnoremap <leader>m :noh<CR>

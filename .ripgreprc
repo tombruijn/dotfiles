@@ -1,0 +1,5 @@
+--type-add
+ruby:*.rake
+
+--smart-case
+--hidden

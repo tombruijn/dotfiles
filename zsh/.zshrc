@@ -43,6 +43,7 @@ export LESS="-R"
 
 # Configure shared config dir
 export XDG_CONFIG_HOME="$HOME/.config"
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
 ## Configure cd quick paths
 ## `cd` can navigate to subdirectories in these directories from anywhere
