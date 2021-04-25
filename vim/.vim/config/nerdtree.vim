@@ -15,7 +15,6 @@ let NERDTreeIgnore=[
   \ '^_build$',
   \ '^build$',
   \ '^node_modules$',
-  \ '^tags$[[file]]',
   \ '^__snapshots__$'
 \ ]
 
