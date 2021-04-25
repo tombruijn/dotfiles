@@ -1,4 +1,4 @@
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.4 } }
 let g:fzf_colors = {
   \ 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -13,11 +13,11 @@ let g:fzf_colors = {
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment']
   \ }
-nmap <leader>p :Files<CR>
+nmap <leader>p :Files2<CR>
 nmap <C-P> :Files2<CR>
 nmap <C-\> :Buffers<CR>
 nnoremap <leader>\ :Buffers<CR>
 
 " Favor results with matches at the end first, then the shortest results first
 command! -bang -nargs=? -complete=dir Files2
-  \ call fzf#vim#files(<q-args>, {'options': ['--tiebreak=end,length']}, <bang>0)
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--tiebreak=length,end']}), <bang>0)
