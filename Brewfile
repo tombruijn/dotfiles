@@ -1,4 +1,5 @@
 tap "neovim/neovim"
+tap "universal-ctags/universal-ctags"
 
 brew "openssl"
 brew "openssh"
@@ -8,6 +9,7 @@ brew "tig"
 brew "zsh"
 brew "fzf"
 
+brew "universal-ctags/universal-ctags/universal-ctags", :args => ["HEAD"]
 brew "ripgrep"
 brew "cloc"
 brew "tree"

@@ -9,3 +9,4 @@ vim/.vim/spell
 zsh/.zsh/.cache
 hammerspoon/Spoons/URLDispatcher.spoon/url_patterns.lua
 hammerspoon/todoist_projects.lua
+Brewfile.lock.json
