@@ -32,6 +32,7 @@ Keys = {
     ["Shrink window"] = {{{"ctrl", "alt"}, "-"}, {hyper, "pagedown"}},
     ["Grow window"] = {{{"ctrl", "alt"}, "="}, {hyper, "pageup"}},
     ["Open screenshots"] = {{{"cmd", "shift"}, "S"}, {hyper, "M"}},
+    ["Switch audio"] = {nil, {hyper, "Z"}},
   },
   ["triggers"] = {
     ["Activity Monitor"] = {{{"ctrl", "alt", "cmd"}, "A"}, {hyper, "5"}},

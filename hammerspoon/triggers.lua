@@ -76,6 +76,19 @@ keys.bindKeyFor("Open screenshots", function()
   hs.execute("open /Users/tombruijn/Pictures/Monosnap")
 end)
 
+-- Switch between audio output
+keys.bindKeyFor("Switch audio", function()
+  speakersName = "Audioengine HD3"
+  headphonesName = "CalDigit Thunderbolt 3 Audio"
+  if hs.audiodevice.current().name == speakersName then
+    hs.audiodevice.findDeviceByName(headphonesName):setDefaultOutputDevice()
+    alert.show("Audio: headphones 🎧")
+  else
+    hs.audiodevice.findDeviceByName(speakersName):setDefaultOutputDevice()
+    alert.show("Audio: speakers 🔈")
+  end
+end)
+
 -- Simple triggers
 for applicationName, _ in pairs(keys.triggers) do
   keys.bindKeyFor(applicationName, function()
