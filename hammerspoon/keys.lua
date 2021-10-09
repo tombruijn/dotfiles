@@ -51,7 +51,6 @@ Keys = {
     ["1Password 7"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
     ["Toggl Track"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
-    ["GraphiQL"] = {{{"cmd", "shift"}, "G"}, {hyper, "Z"}},
     ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "H"}},
     ["Todoist"] = {{{"ctrl"}, "5"}, {meh, "M"}},
   },
