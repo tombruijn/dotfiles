@@ -70,7 +70,9 @@ function Keys.bindKeyFor(appName, fn)
   keys = Keys.keyFor(appName)
   normalKeys = keys[1]
   ergodoxKeys = keys[2]
-  shortcuts["normal"][appName] = hotkey.new(normalKeys[1], normalKeys[2], fn)
+  if normalKeys then
+    shortcuts["normal"][appName] = hotkey.new(normalKeys[1], normalKeys[2], fn)
+  end
   shortcuts["ergodox"][appName] = hotkey.new(ergodoxKeys[1], ergodoxKeys[2], fn)
 end
 
