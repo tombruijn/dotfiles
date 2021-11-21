@@ -83,14 +83,6 @@ export GPG_SIGNING_KEY="KEY_ID"
 Now refresh you shell sessions either by opening a new pane or by running
 `reload`.
 
-### iTerm
-
-- Set up `Load preferences from a custom folder or URL:`
-  in the `General` section of `Preferences`.
-- Select the directory `$DOTFILES/iterm2/`.
-- Run `defaults read com.googlecode.iterm2`.
-- Restart iTerm.
-
 ### fzf
 
 To install [fzf](https://github.com/junegunn/fzf), use the
