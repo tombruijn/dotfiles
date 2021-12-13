@@ -136,3 +136,6 @@ set shell=$SHELL " Fix Ruby + chruby loading (https://github.com/postmodern/chru
 set shortmess+=IF
 set shortmess-=S " Show search matches count on search
 call Load_default_theme()
+
+abbr changset changeset
+abbr changsets changesets
