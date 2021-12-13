@@ -180,3 +180,6 @@ hi NERDTreeExecFile ctermfg=2 guifg=#5FB41C
 hi NERDTreeLinkDir ctermfg=5 guifg=#8881BD
 hi link NERDTreeLinkFile NERDTreeLinkDir
 hi NERDTreeLinkTarget ctermfg=8 guifg=#aaaaaa
+
+" Hide ~ symbol in gutter at end of buffer
+hi! link EndOfBuffer Ignore
