@@ -57,6 +57,7 @@
 --exclude=frontend/gulp/node_modules
 --exclude=log
 --exclude=node_modules
+--exclude=pkg
 --exclude=public/packs
 --exclude=public/packs-test
 --exclude=spec/fixtures
