@@ -50,7 +50,7 @@ Keys = {
     ["iA Writer"] = {{{"ctrl"}, "="}, {hyper, "T"}},
     ["Finder"] = {{{"ctrl"}, "TAB"}, {hyper, "R"}},
     ["1Password 7"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
-    ["Toggl Track"] = {{{"alt"}, "§"}, {hyper, "="}},
+    ["Clockify Desktop"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
     ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "H"}},
     ["Todoist"] = {{{"ctrl"}, "5"}, {meh, "M"}},
