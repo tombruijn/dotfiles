@@ -102,3 +102,6 @@ nmap <C-[> :po1<CR>
 
 " Open alternative file (usually test file) for Rails projects (vim-rails)
 nmap <silent> <leader><CR> :A<CR>
+
+" Format buffer with JSON
+command! FormatJSON %!python -m json.tool
