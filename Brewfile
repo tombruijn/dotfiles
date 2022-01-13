@@ -26,6 +26,10 @@ brew "redis"
 brew "sqlite"
 brew "memcached"
 
+brew "exa" # ls replacement
+brew "bat" # cat replacement
+brew "git-delta"
+
 # GPG
 brew "gnupg"
 brew "pinentry-mac"

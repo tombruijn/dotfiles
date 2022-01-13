@@ -1,0 +1,4 @@
+--theme="OneHalfDark"
+--decorations=never
+
+--map-syntax "*.gemfile:Ruby"

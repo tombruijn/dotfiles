@@ -32,6 +32,8 @@ mkdir -p "$XDG_CONFIG_HOME/tig"
 ln -nfs "$(pwd)/git/.tigrc" "$XDG_CONFIG_HOME/tig/config"
 mkdir -p "$XDG_CONFIG_HOME/ripgrep"
 ln -nfs "$(pwd)/.ripgreprc" "$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
+mkdir -p "$XDG_CONFIG_HOME/bat"
+ln -nfs "$(pwd)/bat/config" "$XDG_CONFIG_HOME/bat/config"
 ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/vim/spell" "$HOME/.vim/spell"
 mkdir -p "$HOME/.VIM_UNDO_FILES"
 

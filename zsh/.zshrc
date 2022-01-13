@@ -40,6 +40,7 @@ setopt always_to_end
 export EDITOR="nvim"
 export PAGER="less"
 export LESS="-R"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Configure shared config dir
 export XDG_CONFIG_HOME="$HOME/.config"
