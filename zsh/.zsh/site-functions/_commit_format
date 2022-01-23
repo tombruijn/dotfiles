@@ -1,0 +1,32 @@
+#compdef commit-format
+
+# https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org
+# https://mrigank11.github.io/2018/03/zsh-auto-completion/
+
+# List local branches by last used
+local_branches() {
+  git for-each-ref --sort=-committerdate --format='%(refname:lstrip=2)' refs/heads/
+}
+
+_commit_format() {
+  _arguments '1: :->selector' \
+    '-b[select the base branch to compare to]: :->base_branch' \
+    '--base-branch[select the base branch to compare to]: :->base_branch' \
+    '-n[set maximum number of commits to print]' \
+    '--max-count[set maximum number of commits to print]' \
+    '-h[print help output]' \
+    '--help[print help output]' \
+    '-v[print version number]' \
+    '--version[print version number]'
+
+  case "$state" in
+    selector)
+      _values "Branches" $(local_branches)
+      ;;
+    base_branch)
+      _values "Branches" $(local_branches)
+      ;;
+  esac
+}
+
+_commit_format
