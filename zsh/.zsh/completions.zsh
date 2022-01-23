@@ -1,6 +1,10 @@
 # Source for some of this:
 # https://github.com/robbyrussell/oh-my-zsh/blob/a600ab4b8578ca0a8e6c6dae0373033b9d8c201c/lib/completion.zsh
 
+if type brew &>/dev/null; then
+  export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 autoload -U compinit
 compinit -i
 zmodload -i zsh/complist
