@@ -61,9 +61,6 @@ After installing Homebrew, ensure permissions are correct by running the
 following.
 
 ```sh
-brew update
-brew tap Homebrew/bundle
-
 brew bundle
 ```
 
