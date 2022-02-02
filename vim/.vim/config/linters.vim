@@ -13,8 +13,11 @@ let g:ale_linters={
 \  'javascript': ['eslint'],
 \  'ruby': ['ruby', 'rubocop'],
 \  'erb': ['erb'],
-\  'rust': ['cargo'],
+\  'rust': ['rustc', 'cargo', 'rustfmt'],
 \  'markdown': ['vale'],
+\}
+let g:ale_fixers={
+\  'rust': ['rustfmt'],
 \}
 let g:ale_ruby_rubocop_executable='bundle'
 let g:ale_javascript_eslint_executable='yarn'
