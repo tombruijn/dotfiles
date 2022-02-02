@@ -28,6 +28,7 @@ brew "memcached"
 brew "exa" # ls replacement
 brew "bat" # cat replacement
 brew "git-delta"
+brew "shellcheck"
 
 # GPG
 brew "gnupg"
