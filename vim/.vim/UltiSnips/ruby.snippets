@@ -43,6 +43,10 @@ snippet pry "binding.pry"
 require "pry"; binding.pry
 endsnippet
 
+snippet "pu(ts)?" "puts = * 80" r
+puts "${0:=}" * 80
+endsnippet
+
 # attribute helpers
 snippet "\b(r|attr)" "attr_reader :<attr_names>" r
 attr_reader :${0:attr_names}
