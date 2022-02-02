@@ -1,4 +1,3 @@
-tap "neovim/neovim"
 tap "universal-ctags/universal-ctags"
 
 brew "openssl"
