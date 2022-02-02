@@ -80,6 +80,23 @@ export GPG_SIGNING_KEY="KEY_ID"
 Now refresh you shell sessions either by opening a new pane or by running
 `reload`.
 
+#### GPG configuration
+
+Transfer your `~/.gnupg` directory to the new machine. You need the following
+files:
+
+```
+private-keys-v1.d/*
+pubring.kbx
+```
+
+Fix the permissions of this directory after the move.
+
+```
+chmod 600 ~/.gnupg/*
+chmod 700 ~/.gnupg
+```
+
 ### fzf
 
 To install [fzf](https://github.com/junegunn/fzf), use the
