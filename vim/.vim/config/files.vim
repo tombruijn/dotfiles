@@ -11,6 +11,16 @@ let g:projectionist_heuristics = {
   \       "alternate": "{dirname}/{basename}.rb"
   \     }
   \   },
+  \   "mix.exs": {
+  \     "lib/*.ex": {
+  \       "type": "source",
+  \       "alternate": ["test/lib/{dirname}/{basename}_test.exs", "test/{dirname}/{basename}_test.exs"]
+  \     },
+  \     "test/*_test.exs": {
+  \       "type": "test",
+  \       "alternate": "{dirname}/{basename}.ex"
+  \     }
+  \   },
   \   "app/frontend/javascripts/": {
   \     "app/frontend/javascripts/*.js": {
   \       "type": "source",
