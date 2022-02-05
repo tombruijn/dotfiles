@@ -21,6 +21,26 @@ let g:projectionist_heuristics = {
   \       "alternate": "{dirname}/{basename}.ex"
   \     }
   \   },
+  \   "packages/*/tsconfig.json": {
+  \     "packages/**/__tests__/*.test.ts": {
+  \       "type": "test",
+  \       "alternate": "packages/{dirname}/{basename}.ts"
+  \     },
+  \     "*.ts": {
+  \       "type": "source",
+  \       "alternate": "{dirname}/__tests__/{basename}.test.ts"
+  \     },
+  \   },
+  \   "packages/*/package.json": {
+  \     "packages/**/__tests__/*.test.js": {
+  \       "type": "test",
+  \       "alternate": "packages/{dirname}/{basename}.js"
+  \     },
+  \     "*.js": {
+  \       "type": "source",
+  \       "alternate": "{dirname}/__tests__/{basename}.test.js"
+  \     },
+  \   },
   \   "app/frontend/javascripts/": {
   \     "app/frontend/javascripts/*.js": {
   \       "type": "source",
