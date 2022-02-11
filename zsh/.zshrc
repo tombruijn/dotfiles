@@ -48,7 +48,7 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
 ## Configure cd quick paths
 ## `cd` can navigate to subdirectories in these directories from anywhere
-cdpath=(. .. ~/tombruijn ~/appsignal)
+cdpath=(. .. ~/tombruijn ~/tombruijn/projects ~/tombruijn/writing ~/appsignal)
 
 ## Enable Elixir IEX history
 export ERL_AFLAGS="-kernel shell_history enabled"
