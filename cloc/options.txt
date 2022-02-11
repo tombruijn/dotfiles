@@ -1,1 +1,1 @@
---exclude-dir=node_modules,tmp,vendor
+--exclude-dir=dist,node_modules,target,tmp,vendor
