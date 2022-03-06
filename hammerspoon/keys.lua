@@ -53,7 +53,7 @@ Keys = {
     ["Clockify Desktop"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "E"}, {hyper, "E"}},
     ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "H"}},
-    ["Todoist"] = {{{"ctrl"}, "5"}, {meh, "M"}},
+    ["Todoist"] = {{{"ctrl"}, "5"}, {hyper, "6"}},
   },
 }
 
