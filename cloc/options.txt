@@ -1,1 +1,2 @@
+--vcs=git
 --exclude-dir=dist,node_modules,target,tmp,vendor
