@@ -1,4 +1,7 @@
+tap "tombruijn/lintje"
 tap "universal-ctags/universal-ctags"
+
+brew "lintje"
 
 brew "openssl"
 brew "openssh"
