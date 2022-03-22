@@ -48,6 +48,7 @@ Keys = {
     ["Slack"] = {{{"alt"}, "0"}, {hyper, "B"}},
     ["Calendar"] = {{{"ctrl"}, "-"}, {hyper, "X"}},
     ["iA Writer"] = {{{"ctrl"}, "="}, {hyper, "T"}},
+    ["Obsidian"] = {nil, {hyper, "7"}},
     ["Finder"] = {{{"ctrl"}, "TAB"}, {hyper, "R"}},
     ["1Password 7"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
     ["Clockify Desktop"] = {{{"alt"}, "§"}, {hyper, "="}},
