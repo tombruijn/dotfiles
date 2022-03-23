@@ -13,7 +13,6 @@ let NERDTreeIgnore=[
   \ '\.capistrano',
   \ '\.yardoc',
   \ '^_build$',
-  \ '^build$',
   \ '^node_modules$',
   \ '^__snapshots__$'
 \ ]
