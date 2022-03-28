@@ -79,15 +79,30 @@ end)
 -- Switch between audio output
 keys.bindKeyFor("Switch audio", function()
   speakersName = "Audioengine HD3"
-  headphonesName = "CalDigit Thunderbolt 3 Audio"
-  if hs.audiodevice.current().name == speakersName then
-    hs.audiodevice.findDeviceByName(headphonesName):setDefaultOutputDevice()
-    alert.show("Audio: headphones 🎧")
+  headphonesName = "WH-1000XM4"
+  currentAudioDevice = hs.audiodevice.current().name
+  if currentAudioDevice == speakersName then
+    setDefaultOutputDevice(headphonesName, "Audio: wireless headphones 🎧")
   else
-    hs.audiodevice.findDeviceByName(speakersName):setDefaultOutputDevice()
-    alert.show("Audio: speakers 🔈")
+    setDefaultOutputDevice(speakersName, "Audio: speakers 🔈")
   end
 end)
+
+function setDefaultOutputDevice(audioDevice, label)
+  local status, _returnValue = pcall(_setDefaultOutputDevice, audioDevice, label)
+  if status == false then
+    alert.show("Error switching to \"" .. audioDevice .. "\"")
+    return status
+  end
+end
+
+function _setDefaultOutputDevice(audioDevice, label)
+  if hs.audiodevice.findOutputByName(audioDevice):setDefaultOutputDevice() then
+    alert.show(label)
+  else
+    alert.show("Unable to switch to " .. audioDevice)
+  end
+end
 
 -- Simple triggers
 for applicationName, _ in pairs(keys.triggers) do
