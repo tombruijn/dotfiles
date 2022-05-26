@@ -69,8 +69,8 @@ color "Refs: " black default bold
 color "commit " black default bold
 color "author " green default
 
-color title-blur white color21 bold
-color title-focus white color21
+color title-blur white color25 bold
+color title-focus white color237
 
 color main-tag magenta default bold
 color main-ref cyan default
