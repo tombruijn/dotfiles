@@ -31,8 +31,6 @@ set editor-line-number = yes
 set mouse = no
 
 # Custom commands
-bind generic Z :source ~/.tigrc
-
 bind generic F none
 bind main F none
 bind main Ff :set main-options = -n 1000
