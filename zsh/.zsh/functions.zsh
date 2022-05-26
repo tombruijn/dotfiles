@@ -93,6 +93,19 @@ function headless {
   fi
 }
 
+# Wrapper around the commit_format gem
+#
+# Make sure commit_format is installed. Use a specific Ruby version so that it
+# only needs to be installed once on the system, instead of for whatever Ruby
+# version is currently being used.
+function cf {
+  ruby_version="ruby-3.1"
+  if [ ! chruby-exec "$ruby_version" -- gem list commit_format --installed &> /dev/null ]; then
+    chruby-exec "$ruby_version" -- gem install commit_format
+  fi
+  chruby-exec "$ruby_version" -- commit-format "$@" | pbcopy
+}
+
 # Docker shorthands
 #
 # Mostly removal commands.
