@@ -29,8 +29,6 @@ Keys = {
     ["Bottom center 25% window"] = {{{"ctrl", "alt"}, "\\"}, {nil, "f15"}},
     ["Move window display left"] = {{{"ctrl", "cmd"}, "-"}, {hyper, "Y"}},
     ["Move window display right"] = {{{"ctrl", "cmd"}, "="}, {hyper, "P"}},
-    ["Shrink window"] = {{{"ctrl", "alt"}, "-"}, {hyper, "pagedown"}},
-    ["Grow window"] = {{{"ctrl", "alt"}, "="}, {hyper, "pageup"}},
     ["Open screenshots"] = {{{"cmd", "shift"}, "S"}, {hyper, "M"}},
     ["Switch audio"] = {nil, {hyper, "Z"}},
   },
