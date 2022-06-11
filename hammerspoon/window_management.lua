@@ -9,7 +9,6 @@ window.animationDuration = 0
 local positions = {
   fullscreen = { x = 0.00, y = 0.00, w = 1.00, h = 1.00 },
 
-  center50 = { x = 0.25, y = 0.00, w = 0.50, h = 1.00 },
   right50  = { x = 0.50, y = 0.00, w = 0.50, h = 1.00 },
   left50   = { x = 0.00, y = 0.00, w = 0.50, h = 1.00 },
   top50    = { x = 0.00, y = 0.00, w = 1.00, h = 0.50 },
@@ -36,7 +35,7 @@ keys.bindKeyFor("Fullscreen window", function()
 end)
 
 keys.bindKeyFor("Center window", function()
-  move(positions.center50)
+  window.focusedWindow():centerOnScreen(nil, true)
 end)
 
 keys.bindKeyFor("Left 50% window", function()
