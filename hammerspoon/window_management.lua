@@ -28,7 +28,7 @@ function move(position)
     alertCannotManipulateWindow()
     return
   end
-  win:move(position, nil, true, window.animationDuration)
+  win:move(position, nil, true)
 end
 
 keys.bindKeyFor("Fullscreen window", function()
