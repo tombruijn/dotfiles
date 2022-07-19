@@ -86,4 +86,5 @@ augroup filetypes
   " Sass/Scss
   autocmd BufRead,BufNewFile *.sass set ft=sass.css
   autocmd BufRead,BufNewFile *.scss set ft=scss.css
+  autocmd BufRead,BufNewFile Dockerfile.* set ft=Dockerfile
 augroup END
