@@ -69,6 +69,8 @@ git config --global diff.noprefix true
 # the code starts.
 git config --global commit.cleanup scissors
 git config --global init.defaultBranch main
+git config --global checkout.defaultRemote origin
+git config --global push.autoSetupRemote true
 
 if [ -n "$GPG_SIGNING_KEY" ]; then
   git config --global user.signingkey $GPG_SIGNING_KEY
