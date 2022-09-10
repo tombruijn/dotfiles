@@ -104,4 +104,4 @@ nmap <C-[> :po1<CR>
 nmap <silent> <leader><CR> :A<CR>
 
 " Format buffer with JSON
-command! FormatJSON %!python -m json.tool
+command! FormatJSON %!python3 -m json.tool

@@ -23,7 +23,7 @@ brew "neovim"
 brew "chruby"
 brew "ruby-install"
 
-brew "postgresql"
+brew "postgresql@14"
 brew "redis"
 brew "sqlite"
 brew "memcached"

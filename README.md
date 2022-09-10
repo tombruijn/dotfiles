@@ -2,22 +2,22 @@
 
 These dotfiles contain configuration and installation for:
 
-* Xcode
-* Homebrew
-* iTerm
-* Zsh
-* Dotfiles
-* VIM (Neovim and MacVim)
-* chruby and ruby-install
-* rustup and Rust
-* Hammerspoon
-* Misc. Utilities
+- Xcode
+- Homebrew
+- iTerm
+- Zsh
+- Dotfiles
+- VIM (Neovim and MacVim)
+- chruby and ruby-install
+- rustup and Rust
+- Hammerspoon
+- Misc. Utilities
 
-**This setup is intended for macOS >= 10.9**
+**This setup is intended for the latest macOS version**
 
 ## Installation
 
-Here is a step-by-step installation.
+This is a step-by-step installation guide.
 
 ### Xcode
 
@@ -99,9 +99,8 @@ chmod 700 ~/.gnupg
 
 ### fzf
 
-To install [fzf](https://github.com/junegunn/fzf), use the
-`/usr/local/opt/fzf/install` install script (listed in `brew info fzf` after
-installing it through `brew install fzf`).
+To install [fzf](https://github.com/junegunn/fzf), use the install script
+listed in `brew info fzf` after installing it through `brew install fzf`.
 
 Say yes to "fuzzy auto-completion" and "key bindings".
 

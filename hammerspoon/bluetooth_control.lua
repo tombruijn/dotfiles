@@ -1,5 +1,5 @@
 local alert = require "hs.alert"
-local blueutil = "/usr/local/bin/blueutil"
+local blueutil = "/opt/homebrew/bin/blueutil"
 
 BluetoothControl = {}
 

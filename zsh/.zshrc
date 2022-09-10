@@ -5,15 +5,13 @@
 typeset -U path
 
 ## Base paths
-export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-## GPG paths
-export PATH="/usr/local/opt/gnupg/bin:$PATH"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+## Homebrew paths
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 ## Rust paths
 export PATH="$HOME/.cargo/bin:$PATH"
-## Heroku Toolbelt bin path
-export PATH="/usr/local/heroku/bin:$PATH"
 ## MongoDB custom path
-export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
+export PATH="/usr/local/opt/mongodb-community@3.6/bin:/opt/homebrew/opt/mongodb-community@3.6/bin:$PATH"
 
 ###############################################################################
 # Configuration
@@ -87,8 +85,15 @@ export GPG_TTY=$(tty)
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 ## Load chruby version manager + auto detection
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+if [ -d /opt/homebrew/opt/chruby/share/chruby/ ]; then
+  # New homebrew install location
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+else
+  # Remove this when all laptops have the new homebrew file structure
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
 ## Load ASDF version manager
 if [ -d $HOME/.asdf ]; then

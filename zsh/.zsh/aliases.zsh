@@ -20,10 +20,11 @@ alias dot="cd $HOME/tombruijn/dotfiles"
 alias exp="cd $HOME/projects/experiments"
 
 # Small utilities
+postgres_path="/opt/homebrew/var/postgresql@14/"
 alias flushdns="sudo discoveryutil mdnsflushcache"
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-alias redis="redis-server /usr/local/etc/redis.conf"
+alias pgstart="pg_ctl -D $postgres_path -l $postgres_path/server.log start"
+alias pgstop="pg_ctl -D $postgres_path stop -s -m fast"
+alias redis="redis-server /opt/homebrew/etc/redis.conf"
 alias md="open -a \"iA Writer.app\""
 
 # Git
