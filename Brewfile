@@ -1,4 +1,4 @@
-tap "tombruijn/lintje"
+tap "lintje/lintje"
 tap "universal-ctags/universal-ctags"
 
 brew "lintje"
