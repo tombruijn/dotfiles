@@ -125,6 +125,18 @@ Use [vim-plug](https://github.com/junegunn/vim-plug/) to install vim plugins.
 vim +:PlugInstall
 ```
 
+### Python
+
+For neovim to pick up Python support Python and the neovim package need to be
+installed.
+
+```sh
+pyenv install <latest python version>
+pyenv global <latest python version>
+pip install --upgrade pip # Updating is just good practice
+pip install neovim
+```
+
 ### chruby and ruby-install
 
 ```sh

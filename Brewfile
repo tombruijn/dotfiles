@@ -22,6 +22,7 @@ brew "neovim"
 
 brew "chruby"
 brew "ruby-install"
+brew "pyenv"
 
 brew "postgresql@14"
 brew "redis"
