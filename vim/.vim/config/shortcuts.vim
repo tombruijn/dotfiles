@@ -105,3 +105,6 @@ nmap <silent> <leader><CR> :A<CR>
 
 " Format buffer with JSON
 command! FormatJSON %!python3 -m json.tool
+
+" Close quicklist
+nnoremap cq :cclose<CR>

@@ -14,10 +14,13 @@ let g:fzf_colors = {
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment']
   \ }
-nmap <leader>p :Files2<CR>
-nmap <C-P> :Files2<CR>
-nmap <C-\> :Buffers<CR>
-nnoremap <leader>\ :Buffers<CR>
+
+" Shortcuts
+nnoremap <c-p> :Files2<CR>
+nnoremap <c-\> :Buffers<CR>
+nnoremap <leader>; :Commands<CR>
+nnoremap <leader>h :Tags<CR>
+nnoremap <c-/> :Rg<CR>
 
 " Favor results with matches at the end first, then the shortest results first
 command! -bang -nargs=? -complete=dir Files2
