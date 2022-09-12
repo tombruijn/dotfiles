@@ -1,3 +1,4 @@
+let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse""
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.4 } }
 let g:fzf_colors = {
   \ 'fg':      ['fg', 'Normal'],
@@ -20,4 +21,4 @@ nnoremap <leader>\ :Buffers<CR>
 
 " Favor results with matches at the end first, then the shortest results first
 command! -bang -nargs=? -complete=dir Files2
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--tiebreak=length,end']}), <bang>0)
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--tiebreak=length,end']}), <bang>0)
