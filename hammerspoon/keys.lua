@@ -84,41 +84,10 @@ function Keys.deactivateKeys()
 end
 
 function Keys.activateKeys()
-  keys = shortcuts[Keys.keyboardType()]
+  keys = shortcuts[Keyboards.keyboardType()]
   for _, k in pairs(keys) do
     k:enable()
   end
-end
-
-function Keys.keyboardType()
-  if not Keys.keyboard then
-    Keys.keyboard = "normal"
-  end
-  return Keys.keyboard
-end
-
-function Keys.toggleKeyboard()
-  if Keys.keyboardType() == "normal" then
-    Keys.enableErgodoxKeyboard()
-  else
-    Keys.enableDefaultKeyboard()
-  end
-end
-
-function Keys.enableErgodoxKeyboard()
-  Keys.keyboard = "ergodox"
-  Keys.updateKeyboardTriggers()
-end
-
-function Keys.enableDefaultKeyboard()
-  Keys.keyboard = "normal"
-  Keys.updateKeyboardTriggers()
-end
-
-function Keys.updateKeyboardTriggers()
-  alert.show("Keyboard: " .. Keys.keyboardType())
-  Keys.deactivateKeys()
-  Keys.activateKeys()
 end
 
 return Keys

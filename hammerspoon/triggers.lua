@@ -4,6 +4,7 @@ local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
 local battery = require "hs.battery"
 local keys = require "keys"
+local Keyboards = require "keyboards"
 local wifi_control = require "wifi_control"
 local bluetooth_control = require "bluetooth_control"
 
@@ -21,7 +22,7 @@ function applicationRunning(name)
 end
 
 keys.bindKeyFor("ToggleKeyboard", function()
-  keys.toggleKeyboard()
+  Keyboards.toggleKeyboard()
 end)
 
 -- System management

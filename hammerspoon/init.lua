@@ -8,6 +8,7 @@ require "window_management"
 require "auto_muter"
 require "application_watcher"
 require "device_watcher"
+require "keyboards"
 
 keys.deactivateKeys()
 keys.activateKeys()
