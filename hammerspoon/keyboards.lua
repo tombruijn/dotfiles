@@ -41,14 +41,14 @@ function Keyboards.updateKeyboardTriggers()
   Keys.activateKeys()
 end
 
-function isErgodoxKeyboard(deviceName)
+function Keyboards.isErgodoxKeyboard(deviceName)
   return deviceName == ergodoxKeyboardName
 end
 
 function Keyboards.connectedKeyboardType()
   local ergodoxFound = false
   for _, device in pairs(usb.attachedDevices()) do
-    if isErgodoxKeyboard(device.productName) then
+    if Keyboards.isErgodoxKeyboard(device.productName) then
       ergodoxFound = true
     end
   end
