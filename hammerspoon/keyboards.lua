@@ -4,7 +4,7 @@ local Keys = require "keys"
 
 Keyboards = {}
 
-local ergodoxKeyboardName = "ErgoDox EZ"
+local ergodoxKeyboardName = "ErgoDox EZ Shine"
 
 function Keyboards.keyboardType()
   if not Keyboards.keyboard then
