@@ -108,3 +108,6 @@ command! FormatJSON %!python3 -m json.tool
 
 " Close quicklist
 nnoremap cq :cclose<CR>
+
+" Open Vista to show functions/methods and such in the file
+nmap <leader>. :Vista<CR>
