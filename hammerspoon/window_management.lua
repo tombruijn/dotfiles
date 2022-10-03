@@ -13,6 +13,8 @@ local positions = {
   left50   = { x = 0.00, y = 0.00, w = 0.50, h = 1.00 },
   top50    = { x = 0.00, y = 0.00, w = 1.00, h = 0.50 },
   bottom50 = { x = 0.00, y = 0.50, w = 1.00, h = 0.50 },
+  right33  = { x = (1 / 3) * 2, y = 0.00, x2 = 1.00, h = 1.00 },
+  left33   = { x = 0.00, y = 0.00, w = 1 / 3, h = 1.00 },
 
   bottomCenter50 = { x = 0.25, y = 0.50, w = 0.50, h = 0.50 }
 }
@@ -44,6 +46,14 @@ end)
 
 keys.bindKeyFor("Right 50% window", function()
   move(positions.right50)
+end)
+
+keys.bindKeyFor("Left 33% window", function()
+  move(positions.left33)
+end)
+
+keys.bindKeyFor("Right 33% window", function()
+  move(positions.right33)
 end)
 
 keys.bindKeyFor("Bottom center 25% window", function()
