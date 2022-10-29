@@ -5,11 +5,13 @@ let g:goyo_linenr=0
 function! s:goyo_enter()
   set noshowcmd
   set scrolloff=999
+  set nocursorline
 endfunction
 
 function! s:goyo_leave()
   set showcmd
   set scrolloff=5
+  set cursorline
 endfunction
 
 augroup mygoyo
