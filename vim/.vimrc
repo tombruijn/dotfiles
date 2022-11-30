@@ -40,7 +40,7 @@ Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sirver/ultisnips', { 'commit': '423f264', 'on': [] }
 Plug 'tomtom/tcomment_vim', { 'on': 'TComment' }
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 Plug 'liuchengxu/vista.vim'
 Plug 'ludovicchabant/vim-gutentags'
