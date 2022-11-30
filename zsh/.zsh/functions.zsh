@@ -79,7 +79,7 @@ function copy {
 
 # Create directory and navigate into it
 function mk {
-  mkdir "$1" && cd "$1"
+  mkdir -p "$1" && cd "$1"
 }
 
 # Toggle Chrome headless testing with param
