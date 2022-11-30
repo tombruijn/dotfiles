@@ -28,6 +28,7 @@ ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 ln -nfs "$(pwd)/.ignore_global" "$HOME/.ignore"
 mkdir -p "$XDG_CONFIG_HOME/git"
 ln -nfs "$(pwd)/git/.gitignore_global" "$XDG_CONFIG_HOME/git/.gitignore_global"
+ln -nfs "$(pwd)/git/.gitattributes_global" "$XDG_CONFIG_HOME/git/.gitattributes_global"
 mkdir -p "$XDG_CONFIG_HOME/tig"
 ln -nfs "$(pwd)/git/.tigrc" "$XDG_CONFIG_HOME/tig/config"
 mkdir -p "$XDG_CONFIG_HOME/ripgrep"
@@ -58,6 +59,7 @@ done
 git config --global user.email "tom@tomdebruijn.com"
 git config --global user.name "Tom de Bruijn"
 git config --global core.excludesfile "$XDG_CONFIG_HOME/git/.gitignore_global"
+git config --global core.attributesfile "$XDG_CONFIG_HOME/git/.gitattributes_global"
 git config --global color.diff always
 git config --global merge.ff only
 git config --global pull.ff only
