@@ -1,6 +1,9 @@
 " Reload .vimrc
 nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
 
+" Copy filepath of focussed buffer to clipboard
+nnoremap <leader>fc :let @* = expand('%')<cr>
+
 " Cycle through splits with tab
 nmap <Tab> <C-w>w
 
