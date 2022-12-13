@@ -8,6 +8,8 @@ local Keyboards = require "keyboards"
 local wifi_control = require "wifi_control"
 local bluetooth_control = require "bluetooth_control"
 
+application.enableSpotlightForNameSearches(true)
+
 function applicationRunning(name)
   apps = application.runningApplications()
   found = false
@@ -67,8 +69,12 @@ keys.bindKeyFor("MacVim", function()
   if applicationRunning("MacVim") then
     application.find("MacVim"):activate()
   else
-    alert.show("MacVim not running")
-    application.launchOrFocus("iTerm")
+    if applicationRunning("Code") then
+      application.launchOrFocus("Visual Studio Code")
+    else
+      alert.show("No editor running")
+      application.launchOrFocus("iTerm")
+    end
   end
 end)
 
