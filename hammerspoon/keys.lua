@@ -43,7 +43,6 @@ Keys = {
     ["Basecamp 3"] = {{{"alt"}, "3"}, {hyper, "V"}},
     ["Firefox"] = {{{"ctrl"}, "4"}, {hyper, "G"}},
     ["Google Chrome"] = {{{"alt"}, "4"}, {hyper, "C"}},
-    ["Tweetbot"] = {{{"ctrl"}, "8"}, {hyper, "W"}},
     ["Safari"] = {{{"alt"}, "8"}, {hyper, "Q"}},
     ["Mail"] = {{{"ctrl"}, "0"}, {hyper, "A"}},
     ["Slack"] = {{{"alt"}, "0"}, {hyper, "B"}},
