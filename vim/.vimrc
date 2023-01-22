@@ -9,7 +9,7 @@ Plug 'reedes/vim-colors-pencil', { 'on': [] }
 " Navigation
 Plug 'bling/vim-airline'
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'lambdalisue/fern.vim', { 'on': ['Fern'] }
 Plug 'tpope/vim-projectionist'
 
 " Languages
