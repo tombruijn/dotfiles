@@ -47,6 +47,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug '/opt/homebrew/opt/fzf' ", { 'on': ['Files2', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 Plug 'junegunn/fzf.vim' ", { 'on': ['Files2', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 
+Plug 'zerowidth/vim-copy-as-rtf', { 'on': 'CopyRTF' }
+
 call plug#end()
 
 set encoding=utf-8
