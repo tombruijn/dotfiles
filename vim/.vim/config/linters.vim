@@ -10,7 +10,8 @@ let g:ale_linters={
 \  'sh': ['shell', 'shellcheck'],
 \  'elixir': ['credo'],
 \  'sass': ['sass-lint'],
-\  'javascript': ['eslint'],
+\  'javascript': ['eslint', 'prettier'],
+\  'typescript': ['eslint', 'prettier', 'tsserver'],
 \  'ruby': ['ruby', 'rubocop', 'standardrb'],
 \  'erb': ['erb'],
 \  'rust': ['rustc', 'cargo', 'rustfmt', 'analyzer'],
@@ -18,7 +19,9 @@ let g:ale_linters={
 \ }
 let g:ale_fixers={
 \  'ruby': ['rubocop', 'standardrb'],
-\  'rust': ['rustfmt']
+\  'rust': ['rustfmt'],
+\  'javascript': ['eslint', 'prettier'],
+\  'typescript': ['eslint', 'prettier']
 \ }
 let g:ale_ruby_rubocop_executable='bundle'
 let g:ale_set_balloons=0
