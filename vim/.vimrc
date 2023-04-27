@@ -142,3 +142,24 @@ call Load_default_theme()
 
 abbr changset changeset
 abbr changsets changesets
+
+if exists("g:neovide")
+  let g:neovide_cursor_animation_length=0.0
+  let g:neovide_remember_window_size = v:true
+  let g:neovide_remember_window_position = v:true
+  let g:neovide_hide_mouse_when_typing = v:true
+  set clipboard+=unnamedplus
+  " System clipboard
+  nmap <d-c> "+y
+  vmap <d-c> "+y
+  nmap <d-v> "+p
+  inoremap <d-v> <c-r>+
+  cnoremap <d-v> <c-r>+
+  " Use <c-r> to insert original character without triggering things like auto-pairs
+  inoremap <d-r> <c-v>
+
+  " Powerline font Meslo renders broken
+  set guifont=Menlo:h16
+  let g:neovide_background_color = '#000000'
+  set mouse=a
+endif

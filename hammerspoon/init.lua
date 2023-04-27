@@ -9,6 +9,7 @@ require "auto_muter"
 require "application_watcher"
 require "device_watcher"
 require "keyboards"
+require "neovide"
 
 keys.deactivateKeys()
 keys.activateKeys()
