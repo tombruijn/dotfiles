@@ -11,13 +11,13 @@ let g:ale_linters={
 \  'elixir': ['credo'],
 \  'sass': ['sass-lint'],
 \  'javascript': ['eslint'],
-\  'ruby': ['ruby', 'rubocop'],
+\  'ruby': ['ruby', 'rubocop', 'standardrb'],
 \  'erb': ['erb'],
 \  'rust': ['rustc', 'cargo', 'rustfmt', 'analyzer'],
 \  'markdown': ['vale'],
-\}
+\ }
 let g:ale_fixers={
-\  'ruby': ['rubocop'],
+\  'ruby': ['rubocop', 'standardrb'],
 \  'rust': ['rustfmt']
 \ }
 let g:ale_ruby_rubocop_executable='bundle'
