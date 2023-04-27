@@ -93,6 +93,20 @@ function headless {
   fi
 }
 
+# Git diff with defaults
+#
+# $ gdw
+#
+#   If no argument is given, it will show the staged and unstaged changes in
+#   the diff.
+#
+# $ gdw HEAD~1..HEAD
+#
+#   If a range argument is given, it will show the changes between the commits.
+function gdw {
+  git diff --ignore-all-space --word-diff=color ${@-HEAD}
+}
+
 # Wrapper around the commit_format gem
 function cf {
   gem exec commit_format "$@" | pbcopy
