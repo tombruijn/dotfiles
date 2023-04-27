@@ -1,4 +1,4 @@
-let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse""
+let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse"
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.4 } }
 let g:fzf_colors = {
   \ 'fg':      ['fg', 'Normal'],
