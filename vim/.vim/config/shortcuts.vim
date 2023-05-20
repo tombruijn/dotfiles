@@ -109,8 +109,12 @@ nmap <silent> <leader><CR> :A<CR>
 " Format buffer with JSON
 command! FormatJSON %!python3 -m json.tool
 
-" Close quicklist
+" Quicklist
 nnoremap cq :cclose<CR>
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
 
 " Open Vista to show functions/methods and such in the file
 nmap <leader>. :Vista<CR>
