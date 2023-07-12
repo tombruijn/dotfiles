@@ -35,11 +35,19 @@ keys.bindKeyFor("Console", function()
   hs.openConsole()
 end)
 
+function sleep(seconds)
+    local sec = tonumber(os.clock() + seconds);
+    while (os.clock() < sec) do
+    end
+end
+
 -- Lock & sleep
 keys.bindKeyFor("Lock", function()
-  hs.caffeinate.startScreensaver()
+  sleep(0.5)
+  hs.caffeinate.lockScreen()
 end)
 keys.bindKeyFor("Sleep", function()
+  sleep(0.5)
   hs.caffeinate.systemSleep()
 end)
 
