@@ -55,7 +55,7 @@ Keys = {
     ["Dash"] = {{{"cmd", "shift"}, "Q"}, {hyper, "E"}},
     ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "Y"}},
     ["Todoist"] = {{{"ctrl"}, "5"}, {hyper, "J"}},
-    ["Visual Studio Code"] = {nil, {hyper, "P"}},
+    ["Visual Studio Code"] = {nil, {hyper, "T"}},
   },
 }
 
