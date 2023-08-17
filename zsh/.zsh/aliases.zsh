@@ -20,7 +20,7 @@ alias dot="cd $HOME/tombruijn/dotfiles"
 alias exp="cd $HOME/projects/experiments"
 
 # Small utilities
-postgres_path="/opt/homebrew/var/postgresql@14/"
+postgres_path="/opt/homebrew/var/postgresql@15/"
 alias flushdns="sudo discoveryutil mdnsflushcache"
 alias pgstart="pg_ctl -D $postgres_path -l $postgres_path/server.log start"
 alias pgstop="pg_ctl -D $postgres_path stop -s -m fast"

@@ -12,6 +12,8 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 ## MongoDB custom path
 export PATH="/usr/local/opt/mongodb-community@3.6/bin:/opt/homebrew/opt/mongodb-community@3.6/bin:$PATH"
+## PostgreSQL path
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 ###############################################################################
 # Configuration

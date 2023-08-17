@@ -24,7 +24,7 @@ brew "chruby"
 brew "ruby-install"
 brew "pyenv"
 
-brew "postgresql@14"
+brew "postgresql@15"
 brew "redis"
 brew "sqlite"
 brew "memcached"
