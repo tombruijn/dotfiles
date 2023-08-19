@@ -129,6 +129,9 @@ set synmaxcol=400
 set redrawtime=4000
 set lazyredraw
 
+" Disable line numbers in TOHtml output (which CopyRTF uses)
+let g:html_number_lines=0
+
 let mapleader=","
 let g:font_normal="Meslo\ LG\ M\ Regular\ for\ Powerline:h16"
 let g:font_focus="Meslo\ LG\ M\ Regular\ for\ Powerline:h20"
