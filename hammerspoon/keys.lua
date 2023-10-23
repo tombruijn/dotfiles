@@ -56,6 +56,7 @@ Keys = {
     ["Todoist"] = {{{"ctrl"}, "5"}, {hyper, "J"}},
     ["Visual Studio Code"] = {nil, {hyper, "T"}},
     ["Keynote"] = {{{"ctrl"}, "8"}, {hyper, "U"}},
+    ["Proton Mail"] = {{{"ctrl"}, "7"}, {hyper, "H"}},
   },
 }
 
