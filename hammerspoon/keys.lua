@@ -47,7 +47,6 @@ Keys = {
     ["Mail"] = {{{"ctrl"}, "0"}, {hyper, "A"}},
     ["Slack"] = {{{"alt"}, "0"}, {hyper, "B"}},
     ["Calendar"] = {{{"ctrl"}, "-"}, {hyper, "X"}},
-    ["iA Writer"] = {{{"ctrl"}, "7"}, {hyper, "I"}},
     ["Obsidian"] = {{{"ctrl"}, "="}, {hyper, "K"}},
     ["Finder"] = {{{"ctrl"}, "TAB"}, {hyper, "R"}},
     ["1Password 7"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
