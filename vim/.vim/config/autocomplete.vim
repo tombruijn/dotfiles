@@ -1,3 +1,7 @@
+" Disable SQL Complete error on editing SQL files
+" https://github.com/neovim/neovim/issues/14433#issuecomment-1183682651
+let g:omni_sql_default_compl_type = 'syntax'
+
 " Autopairs
 let g:AutoPairsMultilineClose=0
 
