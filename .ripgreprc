@@ -1,5 +1,6 @@
---type-add
-ruby:*.rake
+--type-add=ruby:*.rake
+--type-add=js:*.jsx
 
 --smart-case
 --hidden
+--no-ignore-vcs

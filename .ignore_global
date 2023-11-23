@@ -1,26 +1,93 @@
+# SCM
 .git
 .svn
 .hg
-/log
-/doc
-.yarddoc
-coverage
-_build
-deps
-tmp
-.sass-cache
-*.ttf
-*.eot
-*.woff
-*.woff2
-!.env
-**.js.snap
-/tags
-tags.lock
-tags.temp
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+
+# Databases
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.dba
+.AppleDouble
+
+# Images and fonts
 *.png
 *.jpeg
 *.jpg
 *.gif
 *.svg
 *.tiff
+*.ttf
+*.eot
+*.woff
+*.woff2
+
+# Other
+!.env
+.rbx
+.yardoc
+.yarddoc
+.sass-cache
+/tags
+tags.lock
+tags.temp
+target/
+**/tmp/
+log/
+build/
+_build/
+deps/
+node_modules/
+doc/
+dist/
+pkg/
+coverage/
+.coverage/
+cover/
+htmlcov/
+
+# JavaScript
+*.js.map
+*.js.snap
+**/public/packs*/
+
+# Python
+/.mypy_cache
+/.pytest_cache
+/.ruff_cache
+__pycache__
+
+# Elixir
+erl_crash.dump
+*.ez
+priv/plts
