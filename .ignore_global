@@ -76,10 +76,15 @@ coverage/
 cover/
 htmlcov/
 
+# Ruby
+**/vendor/bundle
+
 # JavaScript
 *.js.map
 *.js.snap
 **/public/packs*/
+.contentlayer/
+.next/
 
 # Python
 /.mypy_cache
