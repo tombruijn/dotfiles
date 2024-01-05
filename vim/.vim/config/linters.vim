@@ -12,13 +12,13 @@ let g:ale_linters={
 \  'sass': ['sass-lint'],
 \  'javascript': ['eslint', 'prettier'],
 \  'typescript': ['eslint', 'prettier', 'tsserver'],
-\  'ruby': ['ruby', 'rubocop', 'standardrb'],
+\  'ruby': ['ruby', 'rubocop'],
 \  'erb': ['erb'],
 \  'rust': ['rustc', 'cargo', 'rustfmt', 'analyzer'],
 \  'markdown': ['vale'],
 \ }
 let g:ale_fixers={
-\  'ruby': ['rubocop', 'standardrb'],
+\  'ruby': ['rubocop'],
 \  'rust': ['rustfmt'],
 \  'javascript': ['eslint', 'prettier'],
 \  'typescript': ['eslint', 'prettier']
