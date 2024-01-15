@@ -32,6 +32,8 @@ caffeinateWathcer = caffeinate.watcher.new(function(event)
 
     if Keyboards.isErgodoxKeyboardConnected() then
       Keyboards.enableErgodoxKeyboard()
+    elseif Keyboards.isVoyagerKeyboardConnected() then
+      Keyboards.enableErgodoxKeyboard()
     else
       Keyboards.enableDefaultKeyboard()
     end
