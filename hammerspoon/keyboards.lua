@@ -5,6 +5,7 @@ local Keys = require "keys"
 Keyboards = {}
 
 local ergodoxKeyboardName = "ErgoDox EZ Shine"
+local voyagerKeyboardName = "Voyager"
 
 function Keyboards.keyboardType()
   if not Keyboards.keyboard then
@@ -45,16 +46,24 @@ function Keyboards.isErgodoxKeyboard(deviceName)
   return deviceName == ergodoxKeyboardName
 end
 
+function Keyboards.isVoyagerKeyboard(deviceName)
+  return deviceName == voyagerKeyboardName
+end
+
 function Keyboards.connectedKeyboardType()
   local ergodoxFound = false
   for _, device in pairs(usb.attachedDevices()) do
     if Keyboards.isErgodoxKeyboard(device.productName) then
       ergodoxFound = true
+    elseif Keyboards.isVoyagerKeyboard(device.productName) then
+      voyagerFound = true
     end
   end
 
   if ergodoxFound then
     return "ergodox"
+  elseif voyagerFound then
+    return "voyager"
   else
     return "normal"
   end
@@ -64,7 +73,11 @@ function Keyboards.isErgodoxKeyboardConnected()
   return Keyboards.connectedKeyboardType() == "ergodox"
 end
 
-if Keyboards.isErgodoxKeyboardConnected() then
+function Keyboards.isVoyagerKeyboardConnected()
+  return Keyboards.connectedKeyboardType() == "voyager"
+end
+
+if Keyboards.isErgodoxKeyboardConnected() or Keyboards.isVoyagerKeyboardConnected() then
   Keyboards.enableErgodoxKeyboard()
 end
 
