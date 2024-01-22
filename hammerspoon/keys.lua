@@ -88,7 +88,11 @@ function Keys.deactivateKeys()
 end
 
 function Keys.activateKeys()
-  keys = shortcuts[Keyboards.keyboardType()]
+  keyboardType = Keyboards.keyboardType()
+  if keyboardType == "voyager" then
+    keyboardType = "ergodox"
+  end
+  keys = shortcuts[keyboardType]
   for _, k in pairs(keys) do
     k:enable()
   end

@@ -14,7 +14,7 @@ usbWatcher = usb.watcher.new(function(event)
     end
   elseif Keyboards.isVoyagerKeyboard(event.productName) then
     if event.eventType == "added" then
-      Keyboards.enableErgodoxKeyboard()
+      Keyboards.enableVoyagerKeyboard()
     elseif event.eventType == "removed" then
       Keyboards.enableDefaultKeyboard()
     end

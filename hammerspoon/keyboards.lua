@@ -18,6 +18,10 @@ function Keyboards.isCurrentKeyboardErgodox()
   return Keyboards.keyboardType() == "ergodox"
 end
 
+function Keyboards.isCurrentKeyboardVoyager()
+  return Keyboards.keyboardType() == "voyager"
+end
+
 function Keyboards.toggleKeyboard()
   if Keyboards.keyboardType() == "normal" then
     Keyboards.enableErgodoxKeyboard()
@@ -28,6 +32,11 @@ end
 
 function Keyboards.enableErgodoxKeyboard()
   Keyboards.keyboard = "ergodox"
+  Keyboards.updateKeyboardTriggers()
+end
+
+function Keyboards.enableVoyagerKeyboard()
+  Keyboards.keyboard = "voyager"
   Keyboards.updateKeyboardTriggers()
 end
 
@@ -77,8 +86,10 @@ function Keyboards.isVoyagerKeyboardConnected()
   return Keyboards.connectedKeyboardType() == "voyager"
 end
 
-if Keyboards.isErgodoxKeyboardConnected() or Keyboards.isVoyagerKeyboardConnected() then
+if Keyboards.isErgodoxKeyboardConnected() then
   Keyboards.enableErgodoxKeyboard()
+elseif Keyboards.isVoyagerKeyboardConnected() then
+  Keyboards.enableVoyagerKeyboard()
 end
 
 return Keyboards
