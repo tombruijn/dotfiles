@@ -118,3 +118,6 @@ nnoremap ]Q :clast<CR>
 
 " Open Vista to show functions/methods and such in the file
 nmap <leader>. :Vista<CR>
+
+nmap <leader>rtf :CopyRTF<CR>
+vmap <leader>rtf :CopyRTF<CR>
