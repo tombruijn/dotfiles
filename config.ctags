@@ -43,7 +43,6 @@
 --exclude=.yardoc
 --exclude=_build
 --exclude=bin
---exclude=build
 --exclude=bundle
 --exclude=cache
 --exclude=compiled
