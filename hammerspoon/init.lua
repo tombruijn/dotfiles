@@ -8,7 +8,7 @@ require "window_management"
 require "auto_muter"
 require "application_watcher"
 require "device_watcher"
-require "keyboards"
+local Keyboards = require "keyboards"
 
 keys.deactivateKeys()
 keys.activateKeys()
@@ -17,3 +17,4 @@ hs.loadSpoon("URLDispatcher")
 spoon.URLDispatcher:start()
 
 alert.show("Hammerspoon loaded!")
+Keyboards.enableConnectedKeyboard()

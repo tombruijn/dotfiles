@@ -5,7 +5,7 @@ local Keyboards = require "keyboards"
 local watcher = caffeinate.watcher
 
 usbWatcher = usb.watcher.new(function(event)
-  print("event: " .. event.productName)
+  print("device watcher event: " .. event.productName)
   if Keyboards.isErgodoxKeyboard(event.productName) then
     if event.eventType == "added" then
       Keyboards.enableErgodoxKeyboard()
@@ -22,21 +22,10 @@ usbWatcher = usb.watcher.new(function(event)
 end)
 usbWatcher:start()
 
-caffeinateWathcer = caffeinate.watcher.new(function(event)
-  print("event:" .. event)
+caffeinateWatcher = caffeinate.watcher.new(function(event)
+  print("caffinate watcher event: " .. event)
   if event == watcher.screensDidWake or event == watcher.screensDidUnlock then
-    -- Don't show keyboard change message when nothing changes
-    if Keyboards.keyboardType() == Keyboards.connectedKeyboardType() then
-      return
-    end
-
-    if Keyboards.isErgodoxKeyboardConnected() then
-      Keyboards.enableErgodoxKeyboard()
-    elseif Keyboards.isVoyagerKeyboardConnected() then
-      Keyboards.enableErgodoxKeyboard()
-    else
-      Keyboards.enableDefaultKeyboard()
-    end
+    Keyboards.enableConnectedKeyboard()
   end
 end)
-caffeinateWathcer:start()
+caffeinateWatcher:start()

@@ -61,6 +61,7 @@ end
 
 function Keyboards.connectedKeyboardType()
   local ergodoxFound = false
+  local voyagerFound = false
   for _, device in pairs(usb.attachedDevices()) do
     if Keyboards.isErgodoxKeyboard(device.productName) then
       ergodoxFound = true
@@ -86,10 +87,19 @@ function Keyboards.isVoyagerKeyboardConnected()
   return Keyboards.connectedKeyboardType() == "voyager"
 end
 
-if Keyboards.isErgodoxKeyboardConnected() then
-  Keyboards.enableErgodoxKeyboard()
-elseif Keyboards.isVoyagerKeyboardConnected() then
-  Keyboards.enableVoyagerKeyboard()
+function Keyboards.enableConnectedKeyboard()
+  -- Don't show keyboard change message when nothing changes
+  if Keyboards.keyboardType() == Keyboards.connectedKeyboardType() then
+    return
+  end
+
+  if Keyboards.isVoyagerKeyboardConnected() then
+    Keyboards.enableVoyagerKeyboard()
+  elseif Keyboards.isErgodoxKeyboardConnected() then
+    Keyboards.enableErgodoxKeyboard()
+  else
+    Keyboards.enableDefaultKeyboard()
+  end
 end
 
 return Keyboards
