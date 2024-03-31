@@ -44,7 +44,7 @@ Keys = {
     ["Firefox"] = {{{"ctrl"}, "4"}, {hyper, "G"}},
     ["Google Chrome"] = {{{"alt"}, "4"}, {hyper, "C"}},
     ["Safari"] = {{{"alt"}, "8"}, {hyper, "Q"}},
-    ["Proton Mail Beta"] = {{{"ctrl"}, "0"}, {hyper, "A"}},
+    ["Proton Mail"] = {{{"ctrl"}, "0"}, {hyper, "A"}},
     ["Slack"] = {{{"alt"}, "0"}, {hyper, "B"}},
     ["Calendar"] = {{{"ctrl"}, "-"}, {hyper, "X"}},
     ["Obsidian"] = {{{"ctrl"}, "="}, {hyper, "K"}},
