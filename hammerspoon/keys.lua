@@ -21,7 +21,7 @@ Keys = {
     ["MacVim"] = {{{"ctrl"}, "2"}, {hyper, "D"}},
 
     ["Open screenshots"] = {{{"cmd", "shift"}, "M"}, {hyper, "M"}},
-    ["Switch audio"] = {nil, {hyper, "Z"}},
+    ["Switch audio"] = {nil, {hyper, "6"}},
 
     ["Fullscreen window"] = {{{"alt", "cmd"}, "F"}, {meh, "I"}},
     ["Center window"] = {{{"alt", "cmd"}, "C"}, {meh, "K"}},
@@ -56,8 +56,8 @@ Keys = {
     ["Todoist"] = {{{"ctrl"}, "5"}, {hyper, "J"}},
     ["Visual Studio Code"] = {nil, {hyper, "T"}},
     ["Keynote"] = {{{"ctrl"}, "8"}, {hyper, "U"}},
-    ["Mail"] = {{{"ctrl"}, "7"}, {hyper, "H"}},
-    ["Fork"] = {nil, {hyper, "Z"}},
+    ["Mail"] = {{{"ctrl"}, "7"}, {hyper, "Z"}},
+    ["Fork"] = {nil, {hyper, "H"}},
     ["Libreoffice"] = {nil, {hyper, "O"}},
   },
 }
