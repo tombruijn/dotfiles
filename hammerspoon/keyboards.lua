@@ -24,7 +24,7 @@ end
 
 function Keyboards.toggleKeyboard()
   if Keyboards.keyboardType() == "normal" then
-    Keyboards.enableErgodoxKeyboard()
+    Keyboards.enableVoyagerKeyboard()
   else
     Keyboards.enableDefaultKeyboard()
   end
