@@ -14,6 +14,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/mongodb-community@3.6/bin:/opt/homebrew/opt/mongodb-community@3.6/bin:$PATH"
 ## PostgreSQL path
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+## rust-analyzer (LSP) path
+export PATH="/opt/homebrew/opt/rust-analyzer/bin:$PATH"
 
 ###############################################################################
 # Configuration

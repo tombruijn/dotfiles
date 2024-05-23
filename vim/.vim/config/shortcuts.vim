@@ -31,10 +31,6 @@ vnoremap <leader>\ :TComment<cr>
 " Toggle spellcheck with F6
 noremap <F6> :set spell! spell?<CR>
 
-" Navigate to the next-previous ALE error
-nmap <silent> [w <Plug>(ale_previous_wrap)
-nmap <silent> ]w <Plug>(ale_next_wrap)
-
 " Easier start/end of line navigation
 nnoremap H ^
 nnoremap L g_
