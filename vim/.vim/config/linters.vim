@@ -14,7 +14,7 @@ let g:ale_linters={
 \  'typescript': ['eslint', 'prettier', 'tsserver'],
 \  'ruby': ['ruby', 'rubocop'],
 \  'erb': ['erb'],
-\  'rust': ['rustc', 'cargo', 'rustfmt', 'analyzer'],
+\  'rust': ['cargo', 'rustfmt', 'analyzer'],
 \  'markdown': ['vale'],
 \ }
 let g:ale_fixers={
@@ -26,3 +26,5 @@ let g:ale_fixers={
 let g:ale_fix_on_save=1
 let g:ale_ruby_rubocop_executable='bundle'
 let g:ale_set_balloons=0
+let g:ale_rust_cargo_check_tests=1
+let g:ale_rust_cargo_use_clippy=1
