@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu
+
+if [ ! "$(which solargraph)" ]; then
+  gem install solargraph
+fi
+
+solargraph "$@"

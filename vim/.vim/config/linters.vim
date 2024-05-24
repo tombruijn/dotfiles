@@ -9,7 +9,7 @@ let g:ale_linters={
 \  'sass': ['sass-lint'],
 \  'javascript': ['eslint', 'prettier'],
 \  'typescript': ['eslint', 'prettier', 'tsserver'],
-\  'ruby': ['ruby', 'rubocop'],
+\  'ruby': ['ruby', 'rubocop', 'solargraph'],
 \  'erb': ['erb'],
 \  'rust': ['cargo', 'rustfmt', 'analyzer'],
 \  'markdown': ['vale'],
@@ -24,6 +24,7 @@ let g:ale_fixers={
 \ }
 
 let g:ale_ruby_rubocop_executable='bundle'
+let g:ale_ruby_solargraph_executable='solargraph_wrapper'
 let g:ale_rust_cargo_check_tests=1
 let g:ale_rust_cargo_use_clippy=1
 
