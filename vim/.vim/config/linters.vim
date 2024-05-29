@@ -28,6 +28,8 @@ let g:ale_ruby_rubocop_executable='bundle'
 let g:ale_ruby_solargraph_executable='solargraph_wrapper'
 let g:ale_rust_cargo_check_tests=1
 let g:ale_rust_cargo_use_clippy=1
+let g:ale_rust_cargo_clippy_options='--tests --all-targets --all-features -- -D warnings'
+let g:ale_rust_cargo_target_dir="tmp/clippy_local/"
 
 let g:ale_set_balloons=1
 let g:ale_floating_preview=1
