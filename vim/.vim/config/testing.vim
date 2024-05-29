@@ -24,6 +24,33 @@ let g:test#ruby#rspec#options = {
   \ 'file': '--format documentation'
 \}
 
+function! s:custom_rust_transformation(cmd)
+  " Change the package names for some of the AppSignal crates
+  let l:replacements = {
+        \ 'agent': 'appsignal-agent',
+        \ 'common': 'appsignal-common',
+        \ 'extension': 'appsignal-extension',
+        \ 'protocol': 'appsignal-protocol'
+        \ }
+
+  let l:cmd = a:cmd
+  for [l:old, l:new] in items(l:replacements)
+    let l:pattern = '--package\s\+' . l:old
+    let l:replacement = '--package ' . l:new
+    let l:cmd = substitute(l:cmd, l:pattern, l:replacement, 'g')
+  endfor
+
+  return l:cmd
+endfunction
+
+" Register the custom transformation
+let g:test#custom_transformations = {'rust#cargotest': function('s:custom_rust_transformation')}
+
+augroup rust_test_transformation
+  " Activate the custom transformation only for Rust
+  autocmd FileType rust let g:test#transformation = 'rust#cargotest'
+augroup END
+
 "" Mappings
 map <silent> <Leader>t :TestFile<CR>
 map <silent> <Leader>s :TestNearest<CR>
