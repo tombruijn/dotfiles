@@ -49,3 +49,5 @@ function! Toggle_theme()
 endfunction
 
 nnoremap <leader>W :call Toggle_theme()<CR>
+
+hi! LspInlayHintsType guifg=#a7a7a7 guibg=#1b2b3b gui=NONE

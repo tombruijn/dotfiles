@@ -34,6 +34,7 @@ let g:ale_rust_cargo_target_dir="tmp/clippy_local/"
 let g:ale_set_balloons=1
 let g:ale_floating_preview=1
 let g:ale_lsp_suggestions=1
+let g:ale_disable_lsp=1
 
 let g:ale_completion_enabled=1
 let g:ale_completion_delay=50
@@ -48,10 +49,3 @@ let g:ale_sign_warning="△"
 nnoremap <silent>[w <Plug>(ale_previous_wrap)
 nnoremap <silent>]w <Plug>(ale_next_wrap)
 " Other actions
-nnoremap <silent><leader>o <Plug>(ale_go_to_definition)
-nnoremap <silent><leader>ch <Plug>(ale_hover)
-nnoremap <silent><leader>cd <Plug>(ale_detail)
-nnoremap <silent><leader>cr <Plug>(ale_rename)
-nnoremap <silent><leader>ci <Plug>(ale_go_to_implementation)
-nnoremap <silent><leader>c/ <Plug>(ale_find_references)
-nnoremap <silent><leader>c. <Plug>(ale_code_action)

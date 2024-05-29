@@ -38,7 +38,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign)' }
 Plug 'lifepillar/vim-mucomplete'
-Plug 'sirver/ultisnips', { 'commit': '423f264', 'on': [] }
+Plug 'sirver/ultisnips', { 'commit': '423f264' }
 Plug 'tomtom/tcomment_vim', { 'on': 'TComment' }
 Plug 'dense-analysis/ale'
 
@@ -48,6 +48,8 @@ Plug '/opt/homebrew/opt/fzf' ", { 'on': ['Files2', 'Buffers', 'Tags', 'Commands'
 Plug 'junegunn/fzf.vim' ", { 'on': ['Files2', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 
 Plug 'zerowidth/vim-copy-as-rtf', { 'on': 'CopyRTF' }
+
+Plug 'yegappan/lsp'
 
 call plug#end()
 
