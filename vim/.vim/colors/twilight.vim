@@ -183,3 +183,6 @@ hi NERDTreeLinkTarget ctermfg=8 guifg=#aaaaaa
 
 " Hide ~ symbol in gutter at end of buffer
 hi! link EndOfBuffer Ignore
+
+hi LspInlayHintsType guifg=#a7a7a7 guibg=#222222 gui=NONE
+hi LspInlayHintsParam guifg=#a7a7a7 guibg=#222222 gui=NONE
