@@ -7,6 +7,13 @@ let lspServers = [#{
   \   path: 'rust-analyzer',
   \   args: [],
   \   syncInit: v:true
+  \ },
+  \ #{
+  \   name: 'rubylang',
+  \   filetype: ['ruby'],
+  \   path: 'solargraph_wrapper',
+  \   args: ['stdio'],
+  \   syncInit: v:true
   \ }]
 autocmd User LspSetup call LspAddServer(lspServers)
 autocmd User LspSetup call LspOptionsSet(#{
