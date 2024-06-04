@@ -1,5 +1,4 @@
 tap "lintje/lintje"
-tap "universal-ctags/universal-ctags"
 
 brew "lintje"
 
@@ -11,7 +10,7 @@ brew "tig"
 brew "zsh"
 brew "fzf"
 
-brew "universal-ctags/universal-ctags/universal-ctags", :args => ["HEAD"]
+brew "universal-ctags", :args => ["HEAD"]
 brew "ripgrep"
 brew "cloc"
 brew "tree"
