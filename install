@@ -84,3 +84,7 @@ if [ -n "$GPG_SIGNING_KEY" ]; then
 else
   echo "WARNING: Git GPG configuration skipped. No \$GPG_SIGNING_KEY found."
 fi
+
+if [ "$(which bundle)" ]; then
+  bundle config --global auto_install true
+fi
