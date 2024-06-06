@@ -8,6 +8,8 @@ alias la="eza -la --group-directories-first --octal-permissions --no-permissions
 alias l="less"
 alias lf="less +F"
 
+alias n="nnn -H -d"
+
 alias cop="be rubocop"
 alias cov="open coverage/index.html"
 

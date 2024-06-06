@@ -33,6 +33,7 @@ brew "bat" # cat replacement
 brew "git-delta"
 brew "shellcheck"
 brew "zoxide"
+brew "nnn"
 
 # GPG
 brew "gnupg"
