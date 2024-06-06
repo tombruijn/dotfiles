@@ -5,7 +5,7 @@
 typeset -U path
 
 ## Base paths
-export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 ## Homebrew paths
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 ## Rust paths
@@ -16,6 +16,8 @@ export PATH="/usr/local/opt/mongodb-community@3.6/bin:/opt/homebrew/opt/mongodb-
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 ## rust-analyzer (LSP) path
 export PATH="/opt/homebrew/opt/rust-analyzer/bin:$PATH"
+## My helpers
+export PATH="$HOME/.bin:$PATH"
 
 ###############################################################################
 # Configuration
