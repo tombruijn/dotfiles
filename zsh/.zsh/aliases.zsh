@@ -4,7 +4,7 @@ alias sudo="nocorrect sudo"
 alias vim="nvim"
 
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias la="exa -la --group-directories-first --octal-permissions --no-permissions --git --time-style='long-iso'"
+alias la="eza -la --group-directories-first --octal-permissions --no-permissions --git --time-style='long-iso'"
 alias l="less"
 alias lf="less +F"
 

@@ -28,7 +28,7 @@ brew "redis"
 brew "sqlite"
 brew "memcached"
 
-brew "exa" # ls replacement
+brew "eza" # ls replacement
 brew "bat" # cat replacement
 brew "git-delta"
 brew "shellcheck"
