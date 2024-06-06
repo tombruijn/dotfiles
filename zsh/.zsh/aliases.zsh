@@ -12,7 +12,8 @@ alias cop="be rubocop"
 alias cov="open coverage/index.html"
 
 # Directory shortcuts
-alias c="cd"
+alias c="z"
+alias ci="zi"
 alias desk="cd $HOME/Desktop"
 alias tdb="cd $HOME/tombruijn/"
 alias pro="cd $HOME/projects/"

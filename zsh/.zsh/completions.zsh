@@ -26,3 +26,5 @@ zstyle ':completion::complete:*' cache-path $ZSH_DIR/.cache/
 
 # # Disable named-directories autocompletion
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+
+eval "$(zoxide init zsh)"

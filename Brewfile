@@ -32,6 +32,7 @@ brew "eza" # ls replacement
 brew "bat" # cat replacement
 brew "git-delta"
 brew "shellcheck"
+brew "zoxide"
 
 # GPG
 brew "gnupg"
