@@ -25,8 +25,8 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " Useful tools
-Plug 'tpope/vim-fugitive', { 'on': ['Gblame', 'Gbrowse'] }
-Plug 'tpope/vim-rhubarb', { 'on': ['Gbrowse'] }
+Plug 'tpope/vim-fugitive', { 'on': ['Git', 'GBrowse'] }
+Plug 'tpope/vim-rhubarb', { 'on': ['GBrowse'] }
 Plug 'tpope/vim-repeat', { 'commit': '7a6675f' }
 Plug 'tpope/vim-surround', { 'commit': '2d05440' }
 
