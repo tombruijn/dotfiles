@@ -52,7 +52,8 @@ augroup rust_test_transformation
 augroup END
 
 "" Mappings
-map <silent> <Leader>t :TestFile<CR>
 map <silent> <Leader>s :TestNearest<CR>
-map <silent> <Leader>l :TestLast<CR>
-map <silent> <Leader>a :TestSuite<CR>
+map <silent> <Leader>ss :TestNearest<CR>
+map <silent> <Leader>sf :TestFile<CR>
+map <silent> <Leader>sd :TestLast<CR>
+map <silent> <Leader>sa :TestSuite<CR>

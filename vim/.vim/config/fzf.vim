@@ -18,9 +18,12 @@ let g:fzf_colors = {
 " Shortcuts
 nnoremap <c-p> :Files2<CR>
 nnoremap <c-BS> :Buffers<CR>
-nnoremap <leader>; :Rg<CR>
-nnoremap <leader>' :Commands<CR>
-nnoremap <leader>h :Tags<CR>
+nnoremap <leader>fr :Rg<CR>
+nnoremap <leader>fg :Commands<CR>
+nnoremap <leader>fv :Tags<CR>
+nnoremap <leader>fw :Windows<CR>
+nnoremap <leader>fh :History<CR>
+nnoremap <leader>fs :Snippets<CR>
 
 " Favor results with matches at the end first, then the shortest results first
 command! -bang -nargs=? -complete=dir Files2

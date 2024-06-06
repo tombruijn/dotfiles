@@ -2,7 +2,7 @@
 nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
 
 " Copy filepath of focussed buffer to clipboard
-nnoremap <leader>fc :let @* = expand('%')<cr>
+nnoremap <leader>fc :let @* = expand('%')<CR>
 
 " Cycle through splits with tab
 nmap <Tab> <C-w>w
@@ -18,15 +18,13 @@ nnoremap <leader>- <C-W>_
 " Equalize splits
 nnoremap <leader>= <C-W>=
 
-" Open Ack search on `Command + /`
+" Open Ack search on `Leader or Command + /`
 nnoremap <d-/> :Ack!<Space>
 nnoremap <leader>/ :Ack!<Space>
 
-" Toggle comments on `Command/Leader + \`
-nnoremap <d-\> :TComment<cr>
-nnoremap <leader>\ :TComment<cr>
-vnoremap <d-\> :TComment<cr>
-vnoremap <leader>\ :TComment<cr>
+" Toggle comments on `Leader + l`
+nnoremap <leader>l :TComment<CR>
+vnoremap <leader>l :TComment<CR>
 
 " Toggle spellcheck with F6
 noremap <F6> :set spell! spell?<CR>
@@ -68,10 +66,6 @@ vmap > >gv
 " Open previous edited file
 nnoremap <leader><leader> :e #<CR>
 
-" Quickfix window open and close
-nmap <silent> <leader>fs :cclose<CR>
-nmap <silent> <leader>fd :copen<CR>
-
 " EasyAlign shortcuts
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -106,6 +100,7 @@ nmap <silent> <leader><CR> :A<CR>
 command! FormatJSON %!python3 -m json.tool
 
 " Quicklist
+nnoremap <leader>q :cclose<CR>
 nnoremap cq :cclose<CR>
 nnoremap [q :cprev<CR>
 nnoremap ]q :cnext<CR>
