@@ -7,7 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'reedes/vim-colors-pencil', { 'on': [] }
 
 " Navigation
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'tpope/vim-projectionist'
