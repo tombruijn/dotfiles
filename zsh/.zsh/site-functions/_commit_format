@@ -1,10 +1,10 @@
-#compdef commit-format
+#compdef commit-format cf
 
 # https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org
 # https://mrigank11.github.io/2018/03/zsh-auto-completion/
 
 # List local branches by last used
-local_branches() {
+commit_format_local_branches() {
   git for-each-ref --sort=-committerdate --format='%(refname:lstrip=2)' refs/heads/
 }
 
@@ -21,10 +21,10 @@ _commit_format() {
 
   case "$state" in
     selector)
-      _values "Branches" $(local_branches)
+      _values "Branches" $(commit_format_local_branches)
       ;;
     base_branch)
-      _values "Branches" $(local_branches)
+      _values "Branches" $(commit_format_local_branches)
       ;;
   esac
 }
