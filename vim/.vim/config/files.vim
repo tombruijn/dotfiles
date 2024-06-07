@@ -11,6 +11,20 @@ let g:projectionist_heuristics = {
   \       "alternate": "{dirname}/{basename}.rb"
   \     }
   \   },
+  \   "pyproject.toml": {
+  \     "src/appsignal/*.py": {
+  \       "type": "source",
+  \       "alternate": "tests/{dirname}/test_{basename}.py"
+  \     },
+  \     "src/*.py": {
+  \       "type": "source",
+  \       "alternate": "tests/{dirname}/test_{basename}.py"
+  \     },
+  \     "tests/test_*.py": {
+  \       "type": "test",
+  \       "alternate": ["src/{dirname}/{basename}.py", "src/appsignal/{dirname}/{basename}.py"]
+  \     }
+  \   },
   \   "mix.exs": {
   \     "lib/*.ex": {
   \       "type": "source",
@@ -18,17 +32,21 @@ let g:projectionist_heuristics = {
   \     },
   \     "test/*_test.exs": {
   \       "type": "test",
-  \       "alternate": "{dirname}/{basename}.ex"
+  \       "alternate": ["lib/{dirname}/{basename}.ex", "{dirname}/{basename}.ex"]
   \     }
   \   },
-  \   "packages/*/tsconfig.json": {
-  \     "packages/**/__tests__/*.test.ts": {
-  \       "type": "test",
-  \       "alternate": "packages/{dirname}/{basename}.ts"
-  \     },
+  \   "tsconfig.json": {
   \     "*.ts": {
   \       "type": "source",
-  \       "alternate": "{dirname}/__tests__/{basename}.test.ts"
+  \       "alternate": ["{dirname}/{basename}.test.ts", "{dirname}/__tests__/{basename}.test.ts"]
+  \     },
+  \     "**/__tests__/*.test.ts": {
+  \       "type": "test",
+  \       "alternate": "{dirname}/{basename}.ts"
+  \     },
+  \     "*.test.ts": {
+  \       "type": "test",
+  \       "alternate": "{dirname}/{basename}.ts"
   \     },
   \   },
   \   "packages/*/package.json": {
@@ -44,11 +62,19 @@ let g:projectionist_heuristics = {
   \   "app/frontend/javascripts/": {
   \     "app/frontend/javascripts/*.js": {
   \       "type": "source",
-  \       "alternate": "spec/javascripts/{dirname}/{basename}.test.js"
+  \       "alternate": "app/frontend/javascripts/{dirname}/{basename}.test.js"
   \     },
-  \     "spec/javascripts/*.test.js": {
+  \     "app/frontend/javascripts/*.test.js": {
   \       "type": "test",
   \       "alternate": "app/frontend/javascripts/{dirname}/{basename}.js"
+  \     },
+  \     "app/frontend/javascripts/*.jsx": {
+  \       "type": "source",
+  \       "alternate": "app/frontend/javascripts/{dirname}/{basename}.test.jsx"
+  \     },
+  \     "app/frontend/javascripts/*.test.jsx": {
+  \       "type": "test",
+  \       "alternate": "app/frontend/javascripts/{dirname}/{basename}.jsx"
   \     }
   \   }
   \ }
