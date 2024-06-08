@@ -1,6 +1,10 @@
 " Tiebreak: Favor results with matches at the end first, then the shortest results first
 let $FZF_DEFAULT_OPTS="--color=dark --layout=reverse --tiebreak=length,end"
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.4 } }
+
+let g:fzf_vim = {}
+let g:fzf_vim.preview_window = ['right,50%', 'ctrl-o']
+
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.5 } }
 let g:fzf_colors = {
   \ 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
