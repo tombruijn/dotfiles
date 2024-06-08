@@ -24,8 +24,14 @@ let g:fzf_colors = {
 nnoremap <c-p> :Files<CR>
 nnoremap <c-BS> :Buffers<CR>
 nnoremap <leader>fr :Rg<CR>
-nnoremap <leader>fg :Commands<CR>
+" Show Git history for the current file
+nnoremap <leader>fg :BCommits<CR>
+" Show Git history for the selected lines
+vnoremap <leader>fg :BCommits<CR>
+nnoremap <leader>fe :Commands<CR>
 nnoremap <leader>fv :Tags<CR>
 nnoremap <leader>fw :Windows<CR>
 nnoremap <leader>fh :History<CR>
 nnoremap <leader>fs :Snippets<CR>
+nnoremap <leader>fm :Maps<CR>
+nnoremap <leader>f/ :History/<CR>
