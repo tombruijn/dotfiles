@@ -30,8 +30,6 @@ Keys = {
     ["Right 50% window"] = {{{"alt", "cmd"}, "]"}, {meh, "L"}},
     ["Left 33% window"] = {nil, {meh, "H"}},
     ["Right 33% window"] = {nil, {meh, ";"}},
-    ["Top left 25% window"] = {{{"ctrl", "alt"}, "["}, {meh, "U"}},
-    ["Top right 25% window"] = {{{"ctrl", "alt"}, "]"}, {meh, "O"}},
     ["Bottom center 25% window"] = {{{"ctrl", "alt"}, "\\"}, {meh, ","}},
     ["Move window display left"] = {{{"ctrl", "cmd"}, "-"}, {meh, "Y"}},
     ["Move window display right"] = {{{"ctrl", "cmd"}, "="}, {meh, "P"}},
