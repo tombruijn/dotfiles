@@ -23,6 +23,7 @@ let g:fzf_colors = {
 " Keymaps
 nnoremap <c-p> :Files<CR>
 nnoremap <c-BS> :Buffers<CR>
+nnoremap <leader>bf :Buffers<CR>
 nnoremap <leader>fr :Rg<CR>
 " Show Git history for the current file
 nnoremap <leader>fg :BCommits<CR>

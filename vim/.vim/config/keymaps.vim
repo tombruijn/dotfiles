@@ -13,11 +13,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Maximize current split
-nnoremap <leader>- <C-W>_
-" Equalize splits
-nnoremap <leader>= <C-W>=
-
 " Open Ack search on `Leader or Command + /`
 nnoremap <d-/> :Ack!<Space>
 nnoremap <leader>/ :Ack!<Space>
@@ -107,8 +102,30 @@ nnoremap ]q :cnext<CR>
 nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
 
-" Open Vista to show functions/methods and such in the file
-nmap <leader>. :Vista<CR>
-
+" Copy RTF formatted text to clipboard
 nmap <leader>rtf :CopyRTF<CR>
 vmap <leader>rtf :CopyRTF<CR>
+
+" Easier mapping for finding tags
+nnoremap <leader>fo <C-]>
+nnoremap <leader>fO g<C-]>
+" Go back to tag reference (opposite of C-])
+nnoremap <leader>fi <C-T>
+
+" Buffers
+" Open new tab
+nnoremap <leader>bt :tabnew<CR>
+" Open new tab with same file as in current buffer
+nnoremap <leader>bT :tab split<CR>
+" Open horizontal split pane
+nnoremap <leader>bs :sp<CR>
+" Open vertical split pane
+nnoremap <leader>bv :vs<CR>
+" Close buffer
+nnoremap <leader>bw :bd<CR>
+" Close buffer without saving
+nnoremap <leader>bW :bd!<CR>
+" Maximize current split
+nnoremap <leader>bu <C-W>_
+" Equalize splits
+nnoremap <leader>by <C-W>=

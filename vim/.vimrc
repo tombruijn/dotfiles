@@ -131,6 +131,9 @@ set synmaxcol=400
 set redrawtime=4000
 set lazyredraw
 
+" Make % work on < and > to switch between them
+set matchpairs+=<:>
+
 " Disable line numbers in TOHtml output (which CopyRTF uses)
 let g:html_number_lines=0
 
