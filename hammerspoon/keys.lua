@@ -1,4 +1,3 @@
-local alert = require "hs.alert"
 local hotkey = require "hs.hotkey"
 
 meh = {"ctrl", "alt", "shift"}
@@ -30,6 +29,8 @@ Keys = {
     ["Right 50% window"] = {{{"alt", "cmd"}, "]"}, {meh, "L"}},
     ["Left 33% window"] = {nil, {meh, "H"}},
     ["Right 33% window"] = {nil, {meh, ";"}},
+    ["Grow width"] = {nil, {meh, "U"}},
+    ["Shrink width"] = {nil, {meh, "O"}},
     ["Bottom center 25% window"] = {{{"ctrl", "alt"}, "\\"}, {meh, ","}},
     ["Move window display left"] = {{{"ctrl", "cmd"}, "-"}, {meh, "Y"}},
     ["Move window display right"] = {{{"ctrl", "cmd"}, "="}, {meh, "P"}},
@@ -70,14 +71,18 @@ function Keys.keyFor(name)
   return keys
 end
 
-function Keys.bindKeyFor(appName, fn)
+function Keys.bindKeyFor(appName, fn, repeatFn)
   keys = Keys.keyFor(appName)
   normalKeys = keys[1]
   ergodoxKeys = keys[2]
   if normalKeys then
     shortcuts["normal"][appName] = hotkey.new(normalKeys[1], normalKeys[2], fn)
   end
-  shortcuts["ergodox"][appName] = hotkey.new(ergodoxKeys[1], ergodoxKeys[2], fn)
+  shortcuts["ergodox"][appName] = hotkey.new(ergodoxKeys[1], ergodoxKeys[2], fn, nil, function()
+    if repeatFn then
+      repeatFn()
+    end
+  end)
 end
 
 function Keys.deactivateKeys()
