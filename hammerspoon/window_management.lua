@@ -18,6 +18,7 @@ local positions = {
   topLeft25  = { x = 0.00, y = 0.00, w = 0.5, h = 0.5 },
   topRight25 = { x = 0.5, y = 0.0, w = 0.5, h = 0.5 },
 
+  center25   = { x = 0.25, y = 0.25, w = 0.5, h = 0.5 },
   bottomCenter50 = { x = 0.25, y = 0.50, w = 0.50, h = 0.50 }
 }
 
@@ -68,6 +69,10 @@ end)
 
 keys.bindKeyFor("Bottom center 25% window", function()
   move(positions.bottomCenter50)
+end)
+
+keys.bindKeyFor("Center 25%", function()
+  move(positions.center25)
 end)
 
 keys.bindKeyFor("Move window display left", function()

@@ -25,6 +25,7 @@ Keys = {
 
     ["Fullscreen window"] = {{{"alt", "cmd"}, "F"}, {meh, "I"}},
     ["Center window"] = {{{"alt", "cmd"}, "C"}, {meh, "K"}},
+    ["Center 25%"] = {nil, {meh, "pad8"}},
     ["Left 50% window"] = {{{"alt", "cmd"}, "["}, {meh, "J"}},
     ["Right 50% window"] = {{{"alt", "cmd"}, "]"}, {meh, "L"}},
     ["Left 33% window"] = {nil, {meh, "H"}},
