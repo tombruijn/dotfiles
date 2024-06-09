@@ -44,8 +44,7 @@ let g:ale_sign_column_always=1
 let g:ale_sign_error="✕"
 let g:ale_sign_warning="△"
 
-" Shortcuts for ALE
+" Keymaps for ALE
 " Navigate to the next-previous ALE error
 nnoremap <silent>[w <Plug>(ale_previous_wrap)
 nnoremap <silent>]w <Plug>(ale_next_wrap)
-" Other actions

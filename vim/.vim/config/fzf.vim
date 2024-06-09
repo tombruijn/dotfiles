@@ -20,7 +20,7 @@ let g:fzf_colors = {
   \ 'header':  ['fg', 'Comment']
   \ }
 
-" Shortcuts
+" Keymaps
 nnoremap <c-p> :Files<CR>
 nnoremap <c-BS> :Buffers<CR>
 nnoremap <leader>fr :Rg<CR>

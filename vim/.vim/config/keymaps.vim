@@ -66,7 +66,7 @@ vmap > >gv
 " Open previous edited file
 nnoremap <leader><leader> :e #<CR>
 
-" EasyAlign shortcuts
+" EasyAlign keymaps
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
