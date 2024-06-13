@@ -44,7 +44,12 @@ Plug 'dense-analysis/ale'
 
 Plug 'liuchengxu/vista.vim'
 Plug 'ludovicchabant/vim-gutentags'
-Plug '/opt/homebrew/opt/fzf' ", { 'on': ['Files2', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
+
+if filereadable('/opt/homebrew/opt/fzf')
+  Plug '/opt/homebrew/opt/fzf'
+else
+  Plug '/usr/local/opt/fzf'
+endif
 Plug 'junegunn/fzf.vim' ", { 'on': ['Files2', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 
 Plug 'zerowidth/vim-copy-as-rtf', { 'on': 'CopyRTF' }
