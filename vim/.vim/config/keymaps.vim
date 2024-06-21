@@ -1,5 +1,5 @@
 " Reload .vimrc
-nnoremap <leader>r :source ~/.vimrc<CR>:nohl<CR>
+nnoremap <leader>R :source ~/.vimrc<CR>:nohl<CR>
 
 " Copy filepath of focussed buffer to clipboard
 nnoremap <leader>fc :let @* = expand('%')<CR>
@@ -88,8 +88,12 @@ nnoremap <expr> } len(getline(line('.')+1)) > 0 ? '}-' : '}+'
 " Remaps built-in CTRL-T to `C-[`.
 nmap <C-[> :po1<CR>
 
-" Open alternative file (usually test file) for Rails projects (vim-rails)
-nmap <silent> <leader><CR> :A<CR>
+" Open alternative file: switch between source and test file
+" Relies on files.vim vim-projectionist config
+nmap <silent> <leader>ra :A<CR>
+nmap <silent> <leader>rx :AS<CR>
+nmap <silent> <leader>rv :AV<CR>
+nmap <silent> <leader>rt :AT<CR>
 
 " Format buffer with JSON
 command! FormatJSON %!python3 -m json.tool
