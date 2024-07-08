@@ -13,6 +13,7 @@ local positions = {
   right50    = { x = 0.50, y = 0.00, w = 0.50, h = 1.00 },
   left50     = { x = 0.00, y = 0.00, w = 0.50, h = 1.00 },
   right33    = { x = (1 / 3) * 2, y = 0.00, x2 = 1.00, h = 1.00 },
+  right66    = { x = (1 / 3) * 1, y = 0.00, x2 = 1.00, h = 1.00 },
   left33     = { x = 0.00, y = 0.00, w = 1 / 3, h = 1.00 },
   center25   = { x = 0.25, y = 0.25, w = 0.5, h = 0.5 },
   bottomCenter50 = { x = 0.25, y = 0.50, w = 0.50, h = 0.50 }
@@ -53,6 +54,26 @@ end)
 
 keys.bindKeyFor("Right 33% window", function()
   move(positions.right33)
+end)
+
+keys.bindKeyFor("Right 66% window", function()
+  move(positions.right66)
+end)
+
+keys.bindKeyFor("Align left", function()
+  local win = window.focusedWindow()
+  local winFrame = win:frame()
+  winFrame.x = 0
+  win:setFrameInScreenBounds(winFrame)
+end)
+
+keys.bindKeyFor("Align right", function()
+  local win = window.focusedWindow()
+  local winFrame = win:frame()
+  local screen = win:screen()
+  local screenFrame = screen:frame()
+  winFrame.x = (screenFrame.w - winFrame.w)
+  win:setFrameInScreenBounds(winFrame)
 end)
 
 local growFn = function()
