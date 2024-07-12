@@ -15,9 +15,13 @@ function! Custom_iterm(cmd) abort
 endfunction
 
 let g:test#enabled_runners = ["ruby#rspec", "rust#cargotest", "elixir#exunit", "javascript#jest"]
-let g:test#custom_strategies = {'custom_iterm': function('Custom_iterm')}
-let g:test#strategy = 'custom_iterm'
-let g:test#javascript#jest#executable = "yarn jest"
+if has('gui_running')
+  let g:test#custom_strategies = {'custom_iterm': function('Custom_iterm')}
+  let g:test#strategy = 'custom_iterm'
+else
+  let test#strategy = 'neovim'
+end
+let g:test#javascript#jest#executable = "npm test"
 
 "" Configuration
 let g:test#ruby#rspec#options = {
