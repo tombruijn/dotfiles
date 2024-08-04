@@ -112,6 +112,8 @@ function Keyboards.connectKeymapp()
   if Keyboards.isAnyKeyboardAttached() then
     print("Connecting to first attached keyboard")
     os.execute(kontrollPath().." connect-any")
+    utils.sleep(1)
+    Keyboards.enableStatusLed()
   else
     print("No keyboard attached")
   end
@@ -134,6 +136,10 @@ function Keyboards.isKeymappConnected()
     end
   end
   return false
+end
+
+function Keyboards.enableStatusLed()
+  os.execute(kontrollPath().." set-status-led --led 1", "r")
 end
 
 function kontrollPath()
