@@ -4,9 +4,6 @@ nnoremap <leader>R :source ~/.vimrc<CR>:nohl<CR>
 " Copy filepath of focussed buffer to clipboard
 nnoremap <leader>fc :let @* = expand('%')<CR>
 
-" Cycle through splits with tab
-nmap <Tab> <C-w>w
-
 " Easier direct split navigation with ctrl + homerow keys
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
