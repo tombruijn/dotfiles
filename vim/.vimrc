@@ -45,7 +45,7 @@ Plug 'dense-analysis/ale'
 Plug 'liuchengxu/vista.vim'
 Plug 'ludovicchabant/vim-gutentags'
 
-if filereadable('/opt/homebrew/opt/fzf')
+if isdirectory('/opt/homebrew/opt/fzf')
   Plug '/opt/homebrew/opt/fzf'
 else
   Plug '/usr/local/opt/fzf'
