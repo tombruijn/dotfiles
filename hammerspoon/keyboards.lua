@@ -112,8 +112,9 @@ function Keyboards.connectKeymapp()
   if Keyboards.isAnyKeyboardAttached() then
     print("Connecting to first attached keyboard")
     os.execute(kontrollPath().." connect-any")
-    utils.sleep(1)
-    Keyboards.enableStatusLed()
+    hs.timer.doAfter(1, function()
+      Keyboards.enableStatusLed()
+    end)
   else
     print("No keyboard attached")
   end

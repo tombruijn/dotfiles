@@ -7,7 +7,6 @@ local keys = require "keys"
 local Keyboards = require "keyboards"
 local wifi_control = require "wifi_control"
 local bluetooth_control = require "bluetooth_control"
-local utils = require "utils"
 
 application.enableSpotlightForNameSearches(true)
 
@@ -38,12 +37,14 @@ end)
 
 -- Lock & sleep
 keys.bindKeyFor("Lock", function()
-  utils.sleep(0.5)
-  hs.caffeinate.lockScreen()
+  hs.timer.doAfter(0.5, function()
+    hs.caffeinate.lockScreen()
+  end)
 end)
 keys.bindKeyFor("Sleep", function()
-  utils.sleep(0.5)
-  hs.caffeinate.systemSleep()
+  hs.timer.doAfter(0.5, function()
+    hs.caffeinate.systemSleep()
+  end)
 end)
 
 -- Show status
