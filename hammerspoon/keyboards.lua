@@ -140,7 +140,10 @@ function Keyboards.isKeymappConnected()
 end
 
 function Keyboards.enableStatusLed()
-  os.execute(kontrollPath().." set-status-led --led 1", "r")
+  hs.timer.doEvery(10, function()
+    -- Flash indicator status LED every 5 seconds
+    os.execute(kontrollPath().." set-status-led --sustain 5000 --led 1")
+  end)
 end
 
 function kontrollPath()
