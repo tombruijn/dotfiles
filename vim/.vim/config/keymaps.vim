@@ -1,9 +1,6 @@
 " Reload .vimrc
 nnoremap <leader>R :source ~/.vimrc<CR>:nohl<CR>
 
-" Copy filepath of focussed buffer to clipboard
-nnoremap <leader>fc :let @* = expand('%')<CR>
-
 " Easier direct split navigation with ctrl + homerow keys
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -73,6 +70,8 @@ nnoremap x v"_d
 " Send selection characters to black hole on deletion
 vnoremap x "_d
 
+" Close current buffer
+nnoremap <leader>q :q<CR>
 " Write buffer on <leader>w
 nnoremap <leader>w :w<CR>
 
@@ -96,7 +95,7 @@ nmap <silent> <leader>rt :AT<CR>
 command! FormatJSON %!python3 -m json.tool
 
 " Quicklist
-nnoremap <leader>q :cclose<CR>
+nnoremap co :copen<CR>
 nnoremap cq :cclose<CR>
 nnoremap [q :cprev<CR>
 nnoremap ]q :cnext<CR>
@@ -107,11 +106,25 @@ nnoremap ]Q :clast<CR>
 nmap <leader>rtf :CopyRTF<CR>
 vmap <leader>rtf :CopyRTF<CR>
 
+" Files
+" Copy filepath of focussed buffer to clipboard
+nnoremap <leader>fc :let @* = expand('%')<CR>
 " Easier mapping for finding tags
 nnoremap <leader>fo <C-]>
 nnoremap <leader>fO g<C-]>
 " Go back to tag reference (opposite of C-])
 nnoremap <leader>fi <C-T>
+" Open/Close the NERDTree using `Ctrl + T` and <leader> + ff to toggle.
+nmap <C-T> :NERDTreeToggle<CR>
+nnoremap <leader>ff :NERDTreeToggle<CR>
+" 'Find in Tree' find currently open buffer file in tree
+if exists('g:vscode')
+  " VSCode extension
+  nnoremap <leader>ft <Cmd>call VSCodeNotify('workbench.files.action.showActiveFileInExplorer')<CR>
+else
+  " Normal (Neo)vim
+  nmap <leader>ft :NERDTreeFind<CR>
+endif
 
 " Buffers
 " Open new tab
@@ -141,3 +154,17 @@ function! CloseAllButLast()
   endif
 endfunction
 nnoremap <leader>bq :call CloseAllButLast()<CR>
+
+" Marks
+" Set a mark with leader + g and A, S, D, F or G
+" Got to mark with leader + g and a, s, d, f or g
+nnoremap <leader>gA mA
+nnoremap <leader>ga 'A
+nnoremap <leader>gS mS
+nnoremap <leader>gs 'S
+nnoremap <leader>gD mD
+nnoremap <leader>gD 'D
+nnoremap <leader>gF mF
+nnoremap <leader>gF 'F
+nnoremap <leader>gG mG
+nnoremap <leader>gG 'G
