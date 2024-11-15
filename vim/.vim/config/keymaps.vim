@@ -130,3 +130,14 @@ nnoremap <leader>bW :bd!<CR>
 nnoremap <leader>bu <C-W>_
 " Equalize splits
 nnoremap <leader>by <C-W>=
+
+" Close all buffers and reopen the current one
+function! CloseAllButLast()
+  " Delete all buffers
+  %bd
+  " Check if there is an alternate/previous file and open it
+  if bufname('#') != ''
+    e#
+  endif
+endfunction
+nnoremap <leader>bq :call CloseAllButLast()<CR>
