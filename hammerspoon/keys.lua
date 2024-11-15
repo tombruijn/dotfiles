@@ -52,7 +52,7 @@ Keys = {
     ["Calendar"] = {{{"ctrl"}, "-"}, {hyper, "X"}},
     ["Obsidian"] = {{{"ctrl"}, "="}, {hyper, "K"}},
     ["Finder"] = {{{"ctrl"}, "TAB"}, {hyper, "R"}},
-    ["1Password 7"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
+    ["1Password"] = {{{"ctrl"}, "§"}, {hyper, "N"}},
     ["Clockify Desktop"] = {{{"alt"}, "§"}, {hyper, "="}},
     ["Dash"] = {{{"cmd", "shift"}, "Q"}, {hyper, "E"}},
     ["zoom.us"] = {{{"ctrl"}, "6"}, {hyper, "Y"}},
