@@ -50,6 +50,8 @@ alias gsl="git stash list"
 alias gsd="git stash drop"
 alias gsp="git stash pop"
 alias gsa="git stash --include-untracked"
+# Better Git blame
+alias gwhy="git blame -w -C -C -C"
 
 # Bundle exec
 alias be="bundle exec"
