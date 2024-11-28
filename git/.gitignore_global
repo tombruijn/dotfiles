@@ -37,3 +37,5 @@ config/initializers/opensslhack.rb
 tags.lock
 tags.temp
 .tool-versions
+/tmp/clippy_local
+/**/tmp/clippy_local
