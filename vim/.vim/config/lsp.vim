@@ -61,11 +61,3 @@ autocmd User LspSetup call LspOptionsSet(#{
         \   completionKinds: {},
         \   filterCompletionDuplicates: v:false,
   \ })
-
-nnoremap <silent><leader>o :LspGotoDefinition<CR>
-nnoremap <silent><leader>ch :LspHover<CR>
-nnoremap <silent><leader>cd :LspDiag here<CR>
-nnoremap <silent><leader>cr :LspRename<CR>
-nnoremap <silent><leader>ci :LspGotoImpl<CR>
-nnoremap <silent><leader>c/ :LspPeekReferences<CR>
-nnoremap <silent><leader>c. :LspCodeAction<CR>

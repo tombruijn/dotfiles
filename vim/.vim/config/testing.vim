@@ -54,10 +54,3 @@ augroup rust_test_transformation
   " Activate the custom transformation only for Rust
   autocmd FileType rust let g:test#transformation = 'rust#cargotest'
 augroup END
-
-"" Mappings
-map <silent> <Leader>s :TestNearest<CR>
-map <silent> <Leader>ss :TestNearest<CR>
-map <silent> <Leader>sf :TestFile<CR>
-map <silent> <Leader>sd :TestLast<CR>
-map <silent> <Leader>sa :TestSuite<CR>
