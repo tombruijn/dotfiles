@@ -1,7 +1,6 @@
 # Lazy me
 alias reload="source $HOME/.zshrc"
 alias sudo="nocorrect sudo"
-alias vim="nvim"
 
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias la="eza -la --group-directories-first --octal-permissions --no-permissions --git --time-style='long-iso'"
