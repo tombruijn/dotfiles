@@ -36,8 +36,8 @@ bind main F none
 bind main Ff :set main-options = -n 1000
 bind main Fg :set main-options = -n 1000 --all
 
-bind status C !git commit --gpg-sign --verbose
-bind status A !git commit --gpg-sign --amend --verbose
+bind status C !git commit --gpg-sign
+bind status A !git commit --gpg-sign --amend
 bind status F !git-fixup
 bind generic L !lintje %(commit)
 bind generic ; !/Users/tombruijn/tombruijn/projects/lintje-project/target/debug/lintje %(commit)
