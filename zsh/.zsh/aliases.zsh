@@ -74,3 +74,6 @@ alias rr="bundle exec rails routes"
 alias rdm="bundle exec rails db:migrate"
 alias rdr="bundle exec rails db:migrate:reset"
 alias rdsd="rdr && SEED_DEMO=1 bundle exec rails db:seed"
+
+# Docker
+alias dprune="docker system prune --volumes"
