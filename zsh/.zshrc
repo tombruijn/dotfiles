@@ -16,6 +16,9 @@ export PATH="/usr/local/opt/mongodb-community@3.6/bin:/opt/homebrew/opt/mongodb-
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 ## rust-analyzer (LSP) path
 export PATH="/opt/homebrew/opt/rust-analyzer/bin:$PATH"
+## asfd version manager
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 ## My helpers
 export PATH="$HOME/.bin:$PATH"
 
@@ -101,11 +104,6 @@ else
   # Remove this when all laptops have the new homebrew file structure
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
-fi
-
-## Load ASDF version manager
-if [ -d $HOME/.asdf ]; then
-  . $HOME/.asdf/asdf.sh
 fi
 
 export DISABLE_LIVE_RELOADING=true
