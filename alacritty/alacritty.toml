@@ -1,0 +1,25 @@
+[font]
+size = 18
+normal = { family = "MesloLGM Nerd Font Mono" }
+
+[window]
+option_as_alt = "Both"
+# decorations = "None"
+
+[scrolling]
+history = 100000
+
+[terminal]
+shell = "/opt/homebrew/bin/zellij"
+
+[keyboard]
+bindings = [
+  { mods = "Command", key = "k", chars = "\u001B\u000B" },
+  { mods = "Command | Shift", key = "[", chars = "\u001B[1;5D" },  # Sends Alt+Ctrl+Left
+  { mods = "Command | Shift", key = "]", chars = "\u001B[1;5C" }   # Sends Alt+Ctrl+Right
+]
+# [[keyboard.bindings]]
+#   key = "K"
+#   mods = ["Command"]
+#   action = "SendString"
+#   chars = "\u000B"

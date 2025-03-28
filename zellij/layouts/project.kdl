@@ -1,0 +1,25 @@
+layout {
+  pane  {
+    pane {
+      size 1
+      plugin location="zellij:tab-bar"
+    }
+    pane {
+      split_direction "vertical"
+      pane {
+        name "Terminal"
+      }
+      pane {
+        name "VIM"
+        command "nvim"
+        focus true
+      }
+    }
+
+
+    pane {
+      size 1
+      plugin location="zellij:status-bar"
+    }
+  }
+}
