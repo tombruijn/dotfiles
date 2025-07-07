@@ -48,6 +48,9 @@ bind status D ?@rm %(file)
 bind refs C ?git checkout %(branch)
 bind refs ! ?git branch -D %(branch)
 
+bind stage a :stage-update-line # Stage single line
+bind stage i :stage-update-line # Stage single line
+
 # Normal commands
 ## Option manipulation
 bind generic o enter
