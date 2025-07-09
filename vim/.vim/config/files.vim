@@ -102,7 +102,7 @@ augroup filetypes
   autocmd!
 
   " Ruby
-  autocmd BufRead,BufNewFile {Rakefile,Gemfile,*.gemfile,config.ru,Vagrantfile,Thorfile,Brewfile,*.jpbuilder}
+  autocmd BufRead,BufNewFile {Rakefile,Gemfile,*.gemfile,config.ru,Vagrantfile,Thorfile,Brewfile,*.jpbuilder,*.rbs}
         \ set ft=ruby
 
   " JavaScript
