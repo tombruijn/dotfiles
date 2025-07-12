@@ -48,3 +48,8 @@ set_keymap("v", "x", '"_d', {remap = false, desc = "Delete selection (black hole
 -- Miscellaneous
 set_keymap("n", "<leader>hh", "<cmd>set spell! spell?<cr>", {desc = "Toggle spell check"})
 set_keymap("n", "<leader>m", "<cmd>noh<cr><cmd>echom 'Cleared search highlights'<cr>", { desc = "Clear search highlights" })
+
+-- Use F for formatting the current paragraph
+-- Source: http://nvie.com/posts/how-i-boosted-my-vim/
+set_keymap("n", "F", "gqap", {desc = "Format current paragraph"})
+set_keymap("v", "F", "gq", {desc = "Format selected paragraph"})
