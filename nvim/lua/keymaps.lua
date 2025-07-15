@@ -51,5 +51,5 @@ set_keymap("n", "<leader>m", "<cmd>noh<cr><cmd>echom 'Cleared search highlights'
 
 -- Use F for formatting the current paragraph
 -- Source: http://nvie.com/posts/how-i-boosted-my-vim/
-set_keymap("n", "F", "gqap", {desc = "Format current paragraph"})
-set_keymap("v", "F", "gq", {desc = "Format selected paragraph"})
+set_keymap("n", "F", "gqap", { desc = "Format the current paragraph" })
+set_keymap("v", "F", "gq", { desc = "Format the selected paragraph" })
