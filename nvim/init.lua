@@ -46,3 +46,11 @@ vim.opt.colorcolumn = { 80, 100 } -- Highlight columns as rulers
 
 vim.o.clipboard = "unnamedplus" -- Enable OS clipboard to properly paste in to VIM buffer
 vim.o.swapfile = false -- Disable .swp file creation
+
+-- Format buffer with JSON
+-- command! FormatJSON %!python3 -m json.tool
+vim.api.nvim_create_user_command(
+  "FormatJSON",
+  "%!python3 -m json.tool",
+  { desc = "Format buffer as JSON" }
+)
