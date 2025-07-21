@@ -67,6 +67,7 @@ set_keymap("n", "<leader>hh", "<cmd>set spell! spell?<cr>", {desc = "Toggle spel
 set_keymap("n", "<leader>m", "<cmd>noh<cr><cmd>echom 'Cleared search highlights'<cr>", { desc = "Clear search highlights" })
 
 set_keymap("v", "<leader>p", '"_dP', { desc = "Paste without overwriting the clipboard with selection" })
+-- set_keymap("n", "K", "<Nop>") -- Disable K command. Don't use the feature.
 
 -- Indenting
 -- Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L58-68
@@ -90,3 +91,7 @@ vim.keymap.set("i", "<C-L>", 'copilot#Accept("\\<CR>")', {
   replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+
+vim.keymap.set("n", "<leader>cee", function()
+  vim.diagnostic.open_float(nil, { focus = false })
+end, { desc = "Show diagnostics under cursor" })
