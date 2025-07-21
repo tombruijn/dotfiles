@@ -1,4 +1,6 @@
 require("config.lazy")
+require("config.files")
+require("config.history")
 require("keymaps")
 
 vim.cmd.colorscheme("tokyonight-night")
@@ -54,3 +56,16 @@ vim.api.nvim_create_user_command(
   "%!python3 -m json.tool",
   { desc = "Format buffer as JSON" }
 )
+
+vim.diagnostic.enable = true
+vim.diagnostic.config({
+  virtual_lines = {
+    source = true,
+    prefix = true,
+  },
+  severity_sort = true,
+  float = {
+    source = "always",  -- show source in float
+    border = "rounded",
+  },
+})

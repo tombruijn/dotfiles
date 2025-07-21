@@ -113,3 +113,5 @@ if command -v pyenv >/dev/null; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
+
+export RA_LOG=rust_analyzer=error
