@@ -6,6 +6,7 @@ Icon
 .netrwhist
 vim/.vim/plugged
 vim/.vim/spell
+nvim/spell
 zsh/.zsh/.cache
 hammerspoon/Spoons/URLDispatcher.spoon/url_patterns.lua
 Brewfile.lock.json
