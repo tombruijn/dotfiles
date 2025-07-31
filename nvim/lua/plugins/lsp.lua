@@ -14,6 +14,7 @@ return {
         opts = {
           ensure_installed = {
             "lua_ls",
+            "herb_ls",
             -- ruby_lsp is part of each project bundle
             -- rust-analyzer is configured through rustaceanvim
           },
@@ -43,12 +44,14 @@ return {
       require("mason-lspconfig").setup()
 
       local lspconfig = require("lspconfig")
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
       lspconfig.ruby_lsp.setup({
         -- This shell/sh command around bundle helps it find the right executable
         -- cmd = { "sh", "-c", "bundle exec ruby-lsp" }
         capabilities = capabilities,
       })
+      lspconfig.herb_ls.setup({})
     end,
   },
 }
