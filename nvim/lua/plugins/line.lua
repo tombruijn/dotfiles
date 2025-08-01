@@ -1,3 +1,23 @@
+-- Check if spell is enabled
+local function spell_status()
+  local is_spell_enabled = vim.o.spell
+  if is_spell_enabled then
+    return "[spell]"
+  else
+    return ""
+  end
+end
+
+-- Check if paste mode is enabled
+local function paste_mode_status()
+  local is_paste_mode = vim.o.paste
+  if is_paste_mode then
+    return "[paste]"
+  else
+    return ""
+  end
+end
+
 return {
   {
     "akinsho/bufferline.nvim",
@@ -21,7 +41,7 @@ return {
     init = function()
       vim.g.lualine_laststatus = vim.o.laststatus
       if vim.fn.argc(-1) > 0 then
-        -- Set an empty statusline untill lualine loads
+        -- Set an empty statusline until lualine loads
         vim.o.statusline = " "
       else
         -- Hide the statusline on the starter page
@@ -44,9 +64,9 @@ return {
         sections = {
           lualine_a = { "mode" },
           lualine_b = { "filename" },
+          lualine_c = { },
 
-          lualine_c = {},
-          lualine_x = { "filetype" },
+          lualine_x = { spell_status, paste_mode_status, "filetype" },
           lualine_y = { "progress" },
           lualine_z = { "selectioncount", "location" },
         },
