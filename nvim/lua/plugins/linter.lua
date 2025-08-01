@@ -6,7 +6,7 @@ return {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       -- Active linters
       linters_by_ft = {
-        ruby = { "rubocop" },
+        ruby = { "rubocop", "ruby" },
       },
     },
     config = function(_, opts)

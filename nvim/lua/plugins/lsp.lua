@@ -48,7 +48,7 @@ return {
 
       lspconfig.ruby_lsp.setup({
         -- This shell/sh command around bundle helps it find the right executable
-        -- cmd = { "sh", "-c", "bundle exec ruby-lsp" }
+        -- cmd = { "sh", "-c", "bundle exec ruby-lsp" },
         capabilities = capabilities,
       })
       lspconfig.herb_ls.setup({})
