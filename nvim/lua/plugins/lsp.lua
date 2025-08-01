@@ -15,6 +15,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
         border = "rounded",
       },
     })
+
+    -- Enable inline hints for every LSP
+    vim.lsp.inlay_hint.enable(true)
   end,
 })
 
