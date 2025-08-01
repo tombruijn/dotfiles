@@ -5,14 +5,12 @@ return {
     -- event = "LazyFile",
     lazy = false,
     dependencies = {
-      {
-        "mason-org/mason.nvim",
-        opts = {},
-      },
+      { "mason-org/mason.nvim", opts = {} },
       {
         "mason-org/mason-lspconfig.nvim",
         opts = {
           ensure_installed = {
+            -- These will be automatically enabled
             "lua_ls",
             "herb_ls",
             -- ruby_lsp is part of each project bundle
@@ -51,7 +49,6 @@ return {
         -- cmd = { "sh", "-c", "bundle exec ruby-lsp" },
         capabilities = capabilities,
       })
-      lspconfig.herb_ls.setup({})
     end,
   },
 }
