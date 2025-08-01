@@ -3,39 +3,41 @@ return {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
     build = ":TSUpdate",
-    config = function(_, opts)
-      require("nvim-treesitter").install({
-        "bash",
-        "c",
-        "diff",
-        "javascript",
-        "json",
-        "jsonc",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "regex",
-        "ruby",
-        "toml",
-        "ts",
-        "typescript",
-        "xml",
-        "yaml",
+    config = function(_, _)
+      require("nvim-treesitter")
+        .install({
+          "bash",
+          "c",
+          "diff",
+          "javascript",
+          "json",
+          "jsonc",
+          "lua",
+          "markdown",
+          "markdown_inline",
+          "python",
+          "regex",
+          "ruby",
+          "toml",
+          "ts",
+          "typescript",
+          "xml",
+          "yaml",
 
-        -- Elixir
-        "elixir",
-        "heex",
-        "eex",
+          -- Elixir
+          "elixir",
+          "heex",
+          "eex",
 
-        -- Python
-        "ninja",
-        "rst",
+          -- Python
+          "ninja",
+          "rst",
 
-        -- Rust
-        "rust",
-        "ron",
-      }):wait(300000) -- wait max. 5 minutes
+          -- Rust
+          "rust",
+          "ron",
+        })
+        :wait(300000) -- wait max. 5 minutes
     end,
   },
 }

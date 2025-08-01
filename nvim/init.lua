@@ -51,8 +51,4 @@ vim.o.swapfile = false -- Disable .swp file creation
 
 -- Format buffer with JSON
 -- command! FormatJSON %!python3 -m json.tool
-vim.api.nvim_create_user_command(
-  "FormatJSON",
-  "%!python3 -m json.tool",
-  { desc = "Format buffer as JSON" }
-)
+vim.api.nvim_create_user_command("FormatJSON", "%!python3 -m json.tool", { desc = "Format buffer as JSON" })

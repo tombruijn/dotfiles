@@ -1,6 +1,6 @@
 -- Only set this when a LSP is attached
 vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args)
+  callback = function()
     -- Show LSP diagnostics
     vim.diagnostic.enable = true
     -- Configure LSP diagnostic appearance

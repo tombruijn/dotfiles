@@ -13,7 +13,7 @@ return {
       { "<leader>gs", "<cmd>Telescope spell_suggest<cr>", { desc = "Search spelling suggestions" } },
       { "<leader>gkm", "<cmd>Telescope keymaps<cr>", { desc = "Search keymaps" } },
     },
-    config = function(_, opts)
+    config = function(_, _)
       require("telescope").setup({
         picker = {
           layout_config = {
@@ -34,7 +34,7 @@ return {
               -- Press ESC to exit immediatly
               -- By default it will exit from insert mode to normal mode, but I
               -- notice I don't want to press ESC twice to exit.
-              ["<esc>"] = require('telescope.actions').close,
+              ["<esc>"] = require("telescope.actions").close,
             },
           },
         },

@@ -47,7 +47,7 @@ return {
       return {
         preselect = cmp.PreselectMode.None, -- Do not select any autocomplete by default
         completion = {
-          completeopt = "menu,menuone,noinsert,noselect"
+          completeopt = "menu,menuone,noinsert,noselect",
         },
         mapping = cmp.mapping.preset.insert({
           -- Navigate entries
@@ -71,42 +71,39 @@ return {
           ["<C-f>"] = cmp.mapping.scroll_docs(-4),
           ["<C-d>"] = cmp.mapping.scroll_docs(4),
         }),
-        sources = cmp.config.sources(
+        sources = cmp.config.sources({
+          { name = "nvim_lsp_signature_help" },
+          { name = "nvim_lsp" },
+          -- { name = 'vsnip' }, -- For vsnip users.
+          -- { name = 'luasnip' }, -- For luasnip users.
+          -- { name = 'ultisnips' }, -- For ultisnips users.
+          -- { name = 'snippy' }, -- For snippy users.
+        }, {
+          { name = "buffer" },
           {
-            { name = "nvim_lsp_signature_help" },
-            { name = "nvim_lsp" },
-            -- { name = 'vsnip' }, -- For vsnip users.
-            -- { name = 'luasnip' }, -- For luasnip users.
-            -- { name = 'ultisnips' }, -- For ultisnips users.
-            -- { name = 'snippy' }, -- For snippy users.
-          },
-          {
-            { name = "buffer" },
-            {
-              name = "path",
-              option = {
-                -- The relative path `./` autocomplete source, starts the
-                -- relative path from the vim starting directory, not the current
-                -- buffer's file location.
-                get_cwd = function(params)
-                  return vim.fn.getcwd()
-                end,
-              }
+            name = "path",
+            option = {
+              -- The relative path `./` autocomplete source, starts the
+              -- relative path from the vim starting directory, not the current
+              -- buffer's file location.
+              get_cwd = function()
+                return vim.fn.getcwd()
+              end,
             },
-          }
-        ),
+          },
+        }),
         view = {
           -- When the autocomplete opens above the cursor line, it starts
           -- selecting from the bottom of the autocomplete popup
           -- Source: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#custom-menu-direction
-          entries = {name = 'custom', selection_order = 'near_cursor' }
+          entries = { name = "custom", selection_order = "near_cursor" },
         },
         formatting = {
           -- Add the entry's source at the end of the auto complete entry
           -- Source: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#basic-customisations
           format = function(entry, vim_item)
             -- Source icons
-            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+            vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
             -- Source list
             vim_item.menu = ({
               buffer = "[Buffer]",
@@ -117,29 +114,29 @@ return {
               latex_symbols = "[LaTeX]",
             })[entry.source.name]
             return vim_item
-          end
+          end,
         },
       }
     end,
     config = function(_, opts)
-      cmp = require("cmp")
+      local cmp = require("cmp")
       cmp.setup(opts)
       -- Use buffer source for `/` and `?`
-      cmp.setup.cmdline({ '/', '?' }, {
+      cmp.setup.cmdline({ "/", "?" }, {
         mapping = cmp.mapping.preset.cmdline(),
         sources = {
-          { name = 'buffer' }
-        }
+          { name = "buffer" },
+        },
       })
       -- Use cmdline & path source for ':'
-      cmp.setup.cmdline(':', {
+      cmp.setup.cmdline(":", {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
-          { name = 'path' }
+          { name = "path" },
         }, {
-          { name = 'cmdline' }
+          { name = "cmdline" },
         }),
-        matching = { disallow_symbol_nonprefix_matching = false }
+        matching = { disallow_symbol_nonprefix_matching = false },
       })
     end,
   },
