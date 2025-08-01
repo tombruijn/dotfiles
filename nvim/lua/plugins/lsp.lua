@@ -1,3 +1,23 @@
+-- Only set this when a LSP is attached
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    -- Show LSP diagnostics
+    vim.diagnostic.enable = true
+    -- Configure LSP diagnostic appearance
+    vim.diagnostic.config({
+      virtual_lines = {
+        source = true,
+        prefix = true,
+      },
+      severity_sort = true,
+      float = {
+        source = "always", -- show source in float
+        border = "rounded",
+      },
+    })
+  end,
+})
+
 return {
   {
     "neovim/nvim-lspconfig",
