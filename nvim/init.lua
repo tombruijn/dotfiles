@@ -17,7 +17,7 @@ vim.o.breakindent = true -- Add indenting after break
 vim.o.showbreak = "↳ " -- Line break indicator
 
 -- Auto complete
-vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
 
 -- Sidebar/gutter configuration
 vim.o.number = true
