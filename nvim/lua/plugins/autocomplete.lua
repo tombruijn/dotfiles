@@ -41,6 +41,7 @@ return {
       "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lsp-document-symbol",
     },
     opts = function()
       local cmp = require("cmp")
@@ -126,6 +127,9 @@ return {
         mapping = cmp.mapping.preset.cmdline(),
         sources = {
           { name = "buffer" },
+          -- Quickly search LSP symbols
+          -- Start search with `@`
+          { name = "nvim_lsp_document_symbol" }
         },
       })
       -- Use cmdline & path source for ':'
