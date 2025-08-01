@@ -115,3 +115,8 @@ vim.keymap.set("i", "<C-L>", 'copilot#Accept("\\<CR>")', {
 })
 vim.g.copilot_no_tab_map = true
 
+-- Quicklist
+set_keymap("n", "co", "<cmd>copen<cr>", { desc = "Open quicklist" })
+set_keymap("n", "cq", "<cmd>cclose<cr>", { desc = "Close quicklist" })
+set_keymap("n", "[q", "<cmd>cprev<cr>", { desc = "Previous quicklist entry" })
+set_keymap("n", "]q", "<cmd>cnext<cr>", { desc = "Next quicklist entry" })
