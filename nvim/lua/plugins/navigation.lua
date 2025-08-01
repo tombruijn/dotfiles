@@ -2,16 +2,16 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-      { "<c-p>", "<cmd>Telescope find_files<cr>", { desc = "Find files" } },
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" } },
-      { "<leader>fv", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" } },
-      { "<leader>fr", "<cmd>Telescope live_grep<cr>", { desc = "Grep in files" } },
-      { "<leader>gc", "<cmd>Telescope commands<cr>", { desc = "Search command" } },
-      { "<leader>gt", "<cmd>Telescope tags<cr>", { desc = "Search tag" } },
-      { "<leader>gh", "<cmd>Telescope help_tags<cr>", { desc = "Search vim help" } },
-      { "<leader>gm", "<cmd>Telescope marks<cr>", { desc = "Search marks" } },
-      { "<leader>gs", "<cmd>Telescope spell_suggest<cr>", { desc = "Search spelling suggestions" } },
-      { "<leader>gkm", "<cmd>Telescope keymaps<cr>", { desc = "Search keymaps" } },
+      { "<c-p>", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+      { "<leader>fv", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
+      { "<leader>fr", "<cmd>Telescope live_grep<cr>", desc = "Grep in files" },
+      { "<leader>gc", "<cmd>Telescope commands<cr>", desc = "Search command" },
+      { "<leader>gt", "<cmd>Telescope tags<cr>", desc = "Search tag" },
+      { "<leader>gh", "<cmd>Telescope help_tags<cr>", desc = "Search vim help" },
+      { "<leader>gm", "<cmd>Telescope marks<cr>", desc = "Search marks" },
+      { "<leader>gs", "<cmd>Telescope spell_suggest<cr>", desc = "Search spelling suggestions" },
+      { "<leader>gkm", "<cmd>Telescope keymaps<cr>", desc = "Search keymaps" },
     },
     config = function(_, _)
       require("telescope").setup({
