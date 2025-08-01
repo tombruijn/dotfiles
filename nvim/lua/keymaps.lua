@@ -70,6 +70,7 @@ set_keymap("v", "<leader>p", '"_dP', { desc = "Paste without overwriting the cli
 -- set_keymap("n", "K", "<Nop>") -- Disable K command. Don't use the feature.
 
 set_keymap("n", "<F2>", "<cmd>set paste!<cr>", { desc = "Toggle paste mode" })
+set_keymap("n", "<F6>", "<cmd>set spell!<cr>", { desc = "Toggle spell check" })
 
 -- Indenting
 -- Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L58-68
