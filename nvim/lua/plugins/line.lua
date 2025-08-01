@@ -18,6 +18,14 @@ local function paste_mode_status()
   end
 end
 
+-- Show current line number and total number of lines in the current file
+local function line_number_and_column()
+  local current_line = vim.fn.line(".")
+  local total_lines = vim.fn.line("$")
+  local current_column = vim.fn.col(".")
+  return current_line .. "/" .. total_lines .. " : " .. current_column
+end
+
 return {
   {
     "akinsho/bufferline.nvim",
@@ -63,12 +71,19 @@ return {
         },
         sections = {
           lualine_a = { "mode" },
-          lualine_b = { "filename" },
-          lualine_c = { },
+          lualine_b = {
+            { "filename", path = 1 },
+          },
+          lualine_c = {
+            "diagnostics",
+            { "lsp_status", icons_enabled = false },
+          },
 
-          lualine_x = { spell_status, paste_mode_status, "filetype" },
-          lualine_y = { "progress" },
-          lualine_z = { "selectioncount", "location" },
+          lualine_x = { spell_status, paste_mode_status },
+          lualine_y = {
+            { "filetype", icons_enabled = false },
+          },
+          lualine_z = { line_number_and_column },
         },
         extensions = { "neo-tree", "lazy" },
       }
