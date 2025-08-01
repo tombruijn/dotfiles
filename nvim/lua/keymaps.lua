@@ -115,6 +115,3 @@ vim.keymap.set("i", "<C-L>", 'copilot#Accept("\\<CR>")', {
 })
 vim.g.copilot_no_tab_map = true
 
-vim.keymap.set("n", "<leader>cee", function()
-  vim.diagnostic.open_float(nil, { focus = false })
-end, { desc = "Show diagnostics under cursor" })
