@@ -18,7 +18,7 @@ return {
       { "<leader>td", function() require("neotest").run.run() end, desc = "Run nearest test" },
       { "<leader>ts", function() require("neotest").run.run_last() end, desc = "Run last run test" },
 
-      { "<leader>ts", function() require("neotest").summary.toggle() end, desc = "Toggle test summary" },
+      { "<leader>tg", function() require("neotest").summary.toggle() end, desc = "Toggle test summary" },
       { "<leader>to", function() require("neotest").output_panel.toggle() end, desc = "Toggle test output panel" },
       { "<leader>tS", function() require("neotest").run.stop() end, desc = "Stop test runner" },
       { "<leader>tw", function() require("neotest").watch.toggle(vim.fn.expand("%")) end, desc = "Toggle test watcher" },
