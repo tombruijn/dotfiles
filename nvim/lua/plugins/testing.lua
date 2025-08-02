@@ -32,6 +32,13 @@ return {
           require("neotest-rspec"),
           require("rustaceanvim.neotest"),
         },
+        output = {
+          enabled = true,
+          open_on_run = false -- Do not auto show popup on test failure
+        },
+        output_panel = {
+          enabled = true,
+        },
       })
     end
   },
