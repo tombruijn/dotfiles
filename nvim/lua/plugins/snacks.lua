@@ -15,7 +15,7 @@ return {
         animate = { enabled = false },
       },
       input = { enabled = true },
-      notifier = { enabled = false },
+      notifier = { enabled = true },
       quickfile = { enabled = true },
       statuscolumn = { enabled = false },
       words = { enabled = true },
