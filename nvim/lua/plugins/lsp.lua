@@ -43,6 +43,7 @@ return {
       },
     },
     keys = {
+      { "<leader>c", "", desc = "Language Server" },
       { "<leader>ch", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover information" },
       { "<leader>cd", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "Jump to definition" },
       { "<leader>cD", "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "Show definition" },

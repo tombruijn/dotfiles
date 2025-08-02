@@ -12,10 +12,6 @@ return {
     opts = {},
   },
   {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-  },
-  {
     "lewis6991/gitsigns.nvim",
     opts = function()
       Snacks.toggle({
@@ -26,7 +22,7 @@ return {
         set = function(state)
           require("gitsigns").toggle_signs(state)
         end,
-      }):map("<leader>uG")
+      }):map("<leader>hg")
     end,
   },
   {

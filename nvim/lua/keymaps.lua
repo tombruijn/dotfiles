@@ -36,6 +36,7 @@ set_keymap("n", "gk", "<cmd>tabnext<cr>", { remap = false, desc = "Next tab" })
 set_keymap("n", "gl", "<cmd>tabnext<cr>", { remap = false, desc = "Next tab" })
 
 -- Panels
+set_keymap("n", "<leader>v", "", { desc = "Panel/Buffer management" })
 set_keymap("n", "<leader>vd", "<C-W>q<CR>", { desc = "Close active pane" })
 set_keymap("n", "<leader>vw", ":bd<CR>", { desc = "Close current buffer" })
 set_keymap("n", "<leader>vq", ":bd!<CR>", { desc = "Close current buffer without saving" })
@@ -48,27 +49,19 @@ set_keymap("n", "<leader>vk", "<C-W>=", { desc = "Equalize splits (reset fullscr
 set_keymap("n", "<leader><leader>", "<cmd>e#<cr>", { desc = "Open previous open file in the active pane" })
 
 -- Files
-set_keymap("n", "<leader>y", "", { desc = "+copy", silent = true })
+set_keymap("n", "<leader>y", "", { desc = "Copy things", silent = true })
 set_keymap(
   "n",
-  "<leader>yn",
+  "<leader>yf",
   "<cmd>let @* = expand('%:t')<cr>:echom 'File path copied'<cr>",
-  { desc = "Copy file name", silent = true }
+  { desc = "Copy relative file path", silent = true }
 )
 set_keymap(
   "n",
   "<leader>ya",
   "<cd>let @* = expand('%:p')<cr>:echom 'File path copied'<cr>",
-  { desc = "Copy absolute path", silent = true }
+  { desc = "Copy absolute file path", silent = true }
 )
-
--- Alternative files
--- Open alternative file: switch between source and test file
--- Relies on files.vim's vim-projectionist config
-set_keymap("n", "<leader>ra", ":A<CR>", { desc = "Open alternate file" })
-set_keymap("n", "<leader>rs", ":AS<CR>", { desc = "Open alternate file in a horizontal split" })
-set_keymap("n", "<leader>rv", ":AV<CR>", { desc = "Open alternate file in a vertical split" })
-set_keymap("n", "<leader>rt", ":AT<CR>", { desc = "Open alternate file in a tab" })
 
 -- Deletions
 set_keymap("n", "<leader>x", '"_dd', { remap = false, desc = "Delete line (black hole)" })
@@ -78,7 +71,6 @@ set_keymap("n", "x", 'v"_d', { remap = false, desc = "Delete single character (b
 set_keymap("v", "x", '"_d', { remap = false, desc = "Delete selection (black hole)" })
 
 -- Miscellaneous
-set_keymap("n", "<leader>hh", "<cmd>set spell! spell?<cr>", { desc = "Toggle spell check" })
 set_keymap(
   "n",
   "<leader>m",
@@ -89,8 +81,12 @@ set_keymap(
 set_keymap("v", "<leader>p", '"_dP', { desc = "Paste without overwriting the clipboard with selection" })
 -- set_keymap("n", "K", "<Nop>") -- Disable K command. Don't use the feature.
 
+set_keymap("n", "<leader>h", "", { desc = "Toggle miscellaneous" })
 set_keymap("n", "<F2>", "<cmd>set paste!<cr>", { desc = "Toggle paste mode" })
+set_keymap("n", "<leader>hp", "<cmd>set paste!<cr>", { desc = "Toggle paste mode" })
+
 set_keymap("n", "<F6>", "<cmd>set spell!<cr>", { desc = "Toggle spell check" })
+set_keymap("n", "<leader>hs", "<cmd>set spell! spell?<cr>", { desc = "Toggle spell check" })
 
 -- Indenting
 -- Source: https://github.com/carlhuda/janus/blob/68a5d818d2ef99a2e224657394adc79d909180df/janus/vim/core/before/plugin/mappings.vim#L58-68

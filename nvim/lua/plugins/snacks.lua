@@ -51,13 +51,6 @@ return {
         desc = "Toggle Zen Mode",
       },
       {
-        "<leader>R",
-        function()
-          Snacks.zen.zoom()
-        end,
-        desc = "Toggle Zen zoom",
-      },
-      {
         "<leader>gb",
         function()
           Snacks.gitbrowse()
