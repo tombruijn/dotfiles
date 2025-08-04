@@ -47,6 +47,11 @@ vim.o.cursorline = true -- Highlight the line of the cursor.
 vim.opt.colorcolumn = { 80, 100 } -- Highlight columns as rulers
 vim.o.linebreak = true -- Word wrap
 
+-- Spelling
+vim.o.spelllang = "en,nl"
+vim.opt.spellfile =
+  { vim.fs.abspath("~/.local/share/nvim/spell/en.utf-8.add"), vim.fs.abspath("~/.local/share/nvim/spell/nl.utf-8.add") }
+
 vim.o.clipboard = "unnamedplus" -- Enable OS clipboard to properly paste in to VIM buffer
 vim.o.swapfile = false -- Disable .swp file creation
 
