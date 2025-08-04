@@ -45,6 +45,7 @@ vim.o.smartcase = true -- But case-sensitive if expression contains a capital le
 vim.o.title = true -- Set the terminal's title
 vim.o.cursorline = true -- Highlight the line of the cursor.
 vim.opt.colorcolumn = { 80, 100 } -- Highlight columns as rulers
+vim.o.linebreak = true -- Word wrap
 
 vim.o.clipboard = "unnamedplus" -- Enable OS clipboard to properly paste in to VIM buffer
 vim.o.swapfile = false -- Disable .swp file creation
