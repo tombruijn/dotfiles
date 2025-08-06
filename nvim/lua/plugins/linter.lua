@@ -6,7 +6,14 @@ return {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       -- Active linters
       linters_by_ft = {
-        ruby = { "rubocop", "ruby" },
+        bash = { "bash", "shellcheck" },
+        elixir = { "credo" },
+        json = { "json5" },
+        php = { "php" },
+        python = { "flake8", "mypy", "ruff" },
+        ruby = { "ruby", "rubocop" },
+        sh = { "bash", "shellcheck" },
+        zsh = { "zsh" },
       },
     },
     config = function(_, opts)
