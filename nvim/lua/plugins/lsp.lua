@@ -36,9 +36,15 @@ return {
             -- These will be automatically enabled
             "lua_ls",
             "herb_ls",
+            "harper_ls",
             -- ruby_lsp is part of each project bundle
             -- rust-analyzer is configured through rustaceanvim
           },
+          automatic_enable = {
+            exclude = {
+              "harper_ls",
+            }
+          }
         },
       },
     },
@@ -68,6 +74,14 @@ return {
       local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      lspconfig.harper_ls.setup({
+        capabilities = capabilities,
+        settings = {
+          ["harper-ls"] = {
+            userDictPath = vim.fn.expand("$HOME/.config/harper-ls/dictionary.txt"),
+          },
+        },
+      })
       lspconfig.ruby_lsp.setup({
         -- This shell/sh command around bundle helps it find the right executable
         -- cmd = { "sh", "-c", "bundle exec ruby-lsp" },
