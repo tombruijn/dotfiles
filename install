@@ -43,6 +43,7 @@ mkdir -p "$XDG_CONFIG_HOME/bat"
 ln -nfs "$(pwd)/bat/config" "$XDG_CONFIG_HOME/bat/config"
 ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/vim/vim/spell" "$HOME/.vim/spell"
 ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/vim/neovim/spell" "$HOME/.local/share/nvim/spell"
+ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/vim/harper-ls/dictionary.txt" "$XDG_CONFIG_HOME/harper-ls/dictionary.txt"
 mkdir -p "$HOME/.VIM_UNDO_FILES"
 
 mkdir -p "$HOME/.gnupg"
