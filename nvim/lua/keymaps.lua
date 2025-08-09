@@ -35,13 +35,17 @@ set_keymap("n", "gj", "<cmd>tabprevious<cr>", { remap = false, desc = "Previous 
 set_keymap("n", "gk", "<cmd>tabnext<cr>", { remap = false, desc = "Next tab" })
 set_keymap("n", "gl", "<cmd>tabnext<cr>", { remap = false, desc = "Next tab" })
 
+-- Tab navigation with Command key (macOS) for VimR
+set_keymap("n", "<D-S-{>", "<cmd>tabprevious<cr>", { desc = "Previous tab" })
+set_keymap("n", "<D-S-}>", "<cmd>tabnext<cr>", { desc = "Next tab" })
+
 -- Panels
 set_keymap("n", "<leader>v", "", { desc = "Panel/Buffer management" })
 set_keymap("n", "<leader>vd", "<C-W>q<CR>", { desc = "Close active pane" })
 set_keymap("n", "<leader>vw", ":bd<CR>", { desc = "Close current buffer" })
 set_keymap("n", "<leader>vq", ":bd!<CR>", { desc = "Close current buffer without saving" })
 
---- Fullscreen-like behavior
+--- Full screen-like behavior
 set_keymap("n", "<leader>vj", "<C-W>\\|<C-W>_", { desc = "Maximize current split horizontally and vertically" })
 set_keymap("n", "<leader>vk", "<C-W>=", { desc = "Equalize splits (reset fullscreen)" })
 
