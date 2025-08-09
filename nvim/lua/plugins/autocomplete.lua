@@ -64,7 +64,10 @@ return {
 
           -- Accept or exit
           ["<CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Insert }),
-          ["<ESC>"] = cmp.mapping.abort(),
+          ["<ESC>"] = function()
+            cmp.mapping.abort()
+            vim.cmd("stopinsert")
+          end,
           ["<C-e>"] = cmp.mapping.abort(),
 
           -- SCroll docs
