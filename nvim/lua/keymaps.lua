@@ -54,18 +54,12 @@ set_keymap("n", "<leader><leader>", "<cmd>e#<cr>", { desc = "Open previous open 
 
 -- Files
 set_keymap("n", "<leader>y", "", { desc = "Copy things", silent = true })
-set_keymap(
-  "n",
-  "<leader>yf",
-  "<cmd>let @* = expand('%:t')<cr>:echom 'File path copied'<cr>",
-  { desc = "Copy relative file path", silent = true }
-)
-set_keymap(
-  "n",
-  "<leader>ya",
-  "<cd>let @* = expand('%:p')<cr>:echom 'File path copied'<cr>",
-  { desc = "Copy absolute file path", silent = true }
-)
+function CopyRelativePath()
+  -- Copy the relative path of the current file to the clipboard
+  vim.fn.setreg("*", vim.fn.expand("%"))
+  vim.notify("File path copied")
+end
+set_keymap("n", "<leader>yf", "<cmd>lua CopyRelativePath()<cr>", { desc = "Copy project file path", silent = true })
 
 -- Deletions
 set_keymap("n", "<leader>x", '"_dd', { remap = false, desc = "Delete line (black hole)" })
