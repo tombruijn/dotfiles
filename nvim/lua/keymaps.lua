@@ -102,13 +102,6 @@ set_keymap("v", ">", ">gv", { desc = "Indent selection further right" })
 set_keymap("n", "F", "gqap", { desc = "Format the current paragraph" })
 set_keymap("v", "F", "gq", { desc = "Format the selected paragraph" })
 
--- Map GitHub Copilot autocomplete accept to another key so TAB doesn't conflict with the autocomplete
-vim.keymap.set("i", "<C-L>", 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false,
-})
-vim.g.copilot_no_tab_map = true
-
 -- Quicklist
 set_keymap("n", "co", "<cmd>copen<cr>", { desc = "Open quicklist" })
 set_keymap("n", "cq", "<cmd>cclose<cr>", { desc = "Close quicklist" })
