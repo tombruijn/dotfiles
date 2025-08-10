@@ -1,0 +1,6 @@
+{
+  "test": {
+    "prefix": "test",
+    "body": ["This is a test"]
+  }
+}

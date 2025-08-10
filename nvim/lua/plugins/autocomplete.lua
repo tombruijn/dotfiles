@@ -42,13 +42,14 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp-document-symbol",
+      "L3MON4D3/LuaSnip",
     },
     opts = function()
       local cmp = require("cmp")
       return {
-        preselect = cmp.PreselectMode.None, -- Do not select any autocomplete by default
+        preselect = cmp.PreselectMode.Item, -- Select first autocomplete by default
         completion = {
-          completeopt = "menu,menuone,noinsert,noselect",
+          completeopt = "menu,menuone,noinsert",
         },
         mapping = cmp.mapping.preset.insert({
           -- Navigate entries
@@ -75,13 +76,15 @@ return {
           ["<C-f>"] = cmp.mapping.scroll_docs(-4),
           ["<C-d>"] = cmp.mapping.scroll_docs(4),
         }),
+        snippet = {
+          expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+          end,
+        },
         sources = cmp.config.sources({
           { name = "nvim_lsp_signature_help" },
           { name = "nvim_lsp" },
-          -- { name = 'vsnip' }, -- For vsnip users.
-          -- { name = 'luasnip' }, -- For luasnip users.
-          -- { name = 'ultisnips' }, -- For ultisnips users.
-          -- { name = 'snippy' }, -- For snippy users.
+          { name = "luasnip" },
         }, {
           { name = "buffer" },
           {
@@ -132,7 +135,7 @@ return {
           { name = "buffer" },
           -- Quickly search LSP symbols
           -- Start search with `@`
-          { name = "nvim_lsp_document_symbol" }
+          { name = "nvim_lsp_document_symbol" },
         },
       })
       -- Use cmdline & path source for ':'

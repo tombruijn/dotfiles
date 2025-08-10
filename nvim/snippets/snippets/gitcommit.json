@@ -1,0 +1,18 @@
+{
+  "Co-Authored-By": {
+    "prefix": "co",
+    "body": ["Co-authored-by: ${1:Name} <${2:email@domain.com}>"]
+  },
+  "[skip review]": {
+    "prefix": "review",
+    "body": ["[skip review]"]
+  },
+  "[skip ci]": {
+    "prefix": "ci",
+    "body": ["[skip ci]"]
+  },
+  "[skip changeset]": {
+    "prefix": ["changeset", "change"],
+    "body": ["[skip changeset]"]
+  }
+}

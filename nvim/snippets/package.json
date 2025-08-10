@@ -1,0 +1,31 @@
+{
+  "name": "my-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": ["all"],
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": ["gitcommit"],
+        "path": "./snippets/gitcommit.json"
+      },
+      {
+        "language": ["javascript"],
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": ["lua"],
+        "path": "./snippets/lua.json"
+      },
+      {
+        "language": ["sh", "bash"],
+        "path": "./snippets/sh.json"
+      },
+      {
+        "language": ["ruby"],
+        "path": "./snippets/ruby.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "RubyGems.org source": {
+    "prefix": "source",
+    "body": ["source \"https://rubygems.org\""]
+  },
+  "Script shebang": {
+    "prefix": "shebang",
+    "body": ["#!/usr/bin/env ruby"]
+  },
+  "Wrap in #{code}": {
+    "prefix": "#",
+    "body": ["#{${0:$TM_SELECTED_TEXT}}"]
+  },
+  "Attribute reader, writer, or accessor": {
+    "prefix": "attr",
+    "body": [
+      "attr_${1|reader,writer,accessor|} :${2:attr_names}"
+      ],
+    "description": "Create an attribute reader, writer, or accessor"
+  },
+  "do end block with args": {
+    "prefix": "doo",
+    "body": [
+      "do |${1:args}|",
+      "  $0",
+      "end"
+    ]
+  },
+  "do end block": {
+    "prefix": "do",
+    "body": [
+      "do",
+      "  $0",
+      "end"
+    ]
+  },
+  "each block": {
+    "prefix": "each",
+    "body": [
+      "each do |${1:args}|",
+      "  ",
+      "end"
+    ]
+  },
+  "map block": {
+    "prefix": "map",
+    "body": [
+      "map do |${1:args}|",
+      "  $0",
+      "end"
+    ]
+  },
+  "case statement": {
+    "prefix": "case",
+    "body": [
+      "case ${1:expression}",
+      "when ${2:condition}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "when statement": {
+    "prefix": "when",
+    "body": [
+      "when ${1:condition}",
+      "  ${0:$TM_SELECTED_TEXT}"
+    ]
+  },
+  "Method definition": {
+    "prefix": "def",
+    "body": [
+      "def ${1:method_name}(${2:args})",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "Class definition with initialize": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName}",
+      "  def initialize(${2:args})",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "  end",
+      "end"
+    ]
+  },
+  "Module definition": {
+    "prefix": ["mod", "module"],
+    "body": [
+      "module ${1:ModuleName}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "Initialize method": {
+    "prefix": "defi",
+    "body": [
+      "def initialize(${1:args})",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "If statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "Unless statement": {
+    "prefix": "unless",
+    "body": [
+      "unless ${1:condition}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "Else statement": {
+    "prefix": "else",
+    "body": [
+      "else",
+      "  ${0:$TM_SELECTED_TEXT}"
+    ]
+  },
+  "Elsif statement": {
+    "prefix": "elsif",
+    "body": [
+      "elsif",
+      "  ${0:$TM_SELECTED_TEXT}"
+    ]
+  },
+  "Add debugger": {
+    "prefix": "deb",
+    "body": ["require \"debug\"; debugger # rubocop:disable Style/Semicolon"]
+  },
+  "Add pry": {
+    "prefix": "pry",
+    "body": ["require \"pry\"; binding.pry # rubocop:disable Style/Semicolon"]
+  },
+  "Puts statement": {
+    "prefix": ["pu", "puts"],
+    "body": ["puts \"${0:=}\" * 80"]
+  },
+  "RSpec describe block": {
+    "prefix": ["describe", "des"],
+    "body": [
+      "RSpec.describe \"${1:describe description}\" do",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "RSpec context block": {
+    "prefix": ["context", "con"],
+    "body": [
+      "RSpec.context \"${1:context description}\" do",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "RSpec before block": {
+    "prefix": "before",
+    "body": [
+      "before do",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "RSpec after block": {
+    "prefix": "after",
+    "body": [
+      "after do",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "RSpec let block": {
+    "prefix": "let",
+    "body": [
+      "let(:${1:variable_name}) { ${0:$TM_SELECTED_TEXT} }"
+    ]
+  },
+  "RSpec let! block": {
+    "prefix": "let!",
+    "body": [
+      "let!(:${1:variable_name}) { ${0:$TM_SELECTED_TEXT} }"
+    ]
+  },
+  "RSpec subject block": {
+    "prefix": "subject",
+    "body": [
+      "subject(:${1:subject_name}) { ${0:$TM_SELECTED_TEXT} }"
+    ]
+  },
+  "RSpec around block": {
+    "prefix": "around",
+    "body": [
+      "around do |example|",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "  example.run",
+      "end"
+    ]
+  },
+  "RSpec it block": {
+    "prefix": "it",
+    "body": [
+      "it \"${1:description}\" do",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "end"
+    ]
+  },
+  "RSpec expect block": {
+    "prefix": "expect",
+    "body": ["expect(${1:actual}).to ${2:matcher}"]
+  }
+}

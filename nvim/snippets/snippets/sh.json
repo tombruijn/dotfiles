@@ -1,0 +1,7 @@
+{
+  "tail": {
+    "prefix": "tail",
+    "body": ["tail -f /dev/null"],
+    "description": "tail -f /dev/null"
+  }
+}
