@@ -55,6 +55,11 @@ vim.opt.spellfile =
 vim.o.clipboard = "unnamedplus" -- Enable OS clipboard to properly paste in to VIM buffer
 vim.o.swapfile = false -- Disable .swp file creation
 
+-- Open horizontal splits to below
+vim.o.splitbelow = true
+-- Open vertical splits to the right
+vim.o.splitright = true
+
 -- Format buffer with JSON
 -- command! FormatJSON %!python3 -m json.tool
 vim.api.nvim_create_user_command("FormatJSON", "%!python3 -m json.tool", { desc = "Format buffer as JSON" })
