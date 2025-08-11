@@ -25,9 +25,4 @@ return {
       }):map("<leader>hg")
     end,
   },
-  {
-    "mrcjkb/rustaceanvim",
-    version = '^6',
-    lazy = false, -- Plugin is already lazy
-  },
 }
