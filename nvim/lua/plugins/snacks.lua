@@ -48,7 +48,7 @@ return {
         function()
           Snacks.zen()
         end,
-        desc = "Toggle Zen Mode",
+        desc = "Toggle Zen mode",
       },
       {
         "<leader>gb",
@@ -57,6 +57,14 @@ return {
         end,
         mode = { "n", "v" },
         desc = "Open file in browser",
+      },
+      {
+        "<leader>nh",
+        function()
+          Snacks.notifier.show_history()
+        end,
+        mode = { "n" },
+        desc = "Show notifications history",
       },
     },
   },
