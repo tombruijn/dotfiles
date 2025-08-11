@@ -1,23 +1,25 @@
--- Only set this when a LSP is attached
+-- Only set this when an LSP is attached
+local lsp_attach_ran = false
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function()
-    -- Show LSP diagnostics
-    vim.diagnostic.enable = true
-    -- Configure LSP diagnostic appearance
-    vim.diagnostic.config({
-      virtual_lines = {
-        source = true,
-        prefix = true,
-      },
-      severity_sort = true,
-      float = {
-        source = "always", -- show source in float
-        border = "rounded",
-      },
-    })
+    -- Only set these settings once
+    if not lsp_attach_ran then
+      -- Show LSP diagnostics
+      vim.diagnostic.enable(true)
+      -- Configure LSP diagnostic appearance
+      vim.diagnostic.config({
+        virtual_lines = true,
+        severity_sort = true,
+        float = {
+          source = true, -- show source in float
+          border = "rounded",
+        },
+      })
 
-    -- Enable inline hints for every LSP
-    vim.lsp.inlay_hint.enable(true)
+      -- Enable inline hints for every LSP
+      vim.lsp.inlay_hint.enable(true)
+      lsp_attach_ran = true
+    end
   end,
 })
 
@@ -79,6 +81,9 @@ return {
         settings = {
           ["harper-ls"] = {
             userDictPath = vim.fn.expand("$HOME/.config/harper-ls/dictionary.txt"),
+            linters = {
+              ToDoHyphen = false,
+            }
           },
         },
       })
@@ -87,6 +92,10 @@ return {
         -- cmd = { "sh", "-c", "bundle exec ruby-lsp" },
         capabilities = capabilities,
       })
+      vim.keymap.set("n", "<leader>c,", function()
+        vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+      end, { desc = "Toggle LSP virtual text" })
     end,
   },
 }
