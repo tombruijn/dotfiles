@@ -9,7 +9,6 @@ vim.keymap.set("i", "<C-L>", 'copilot#Accept("\\<CR>")', {
 local function toggle_copilot()
   if vim.fn.exists("g:loaded_copilot") == 1 then
     local status = vim.fn.execute("Copilot status")
-    vim.notify("Status: " .. status)
     if string.find(status, "Ready") then
       vim.cmd("Copilot disable")
       vim.notify("Copilot disabled")
