@@ -1,9 +1,10 @@
--- Only set this when an LSP is attached
-local lsp_attach_ran = false
+-- Configure diagnostics once globally
+local diagnostics_configured = false
+
 vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function()
-    -- Only set these settings once
-    if not lsp_attach_ran then
+  callback = function(event)
+    -- Configure diagnostics globally (one time only)
+    if not diagnostics_configured then
       -- Show LSP diagnostics
       vim.diagnostic.enable(true)
       -- Configure LSP diagnostic appearance
@@ -15,10 +16,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
           border = "rounded",
         },
       })
+      diagnostics_configured = true
+    end
 
-      -- Enable inline hints for every LSP
-      vim.lsp.inlay_hint.enable(true)
-      lsp_attach_ran = true
+    -- Enable inlay hints per buffer if the server supports them
+    local client = vim.lsp.get_client_by_id(event.data.client_id)
+    if client and client.supports_method("textDocument/inlayHint") then
+      vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
     end
   end,
 })
