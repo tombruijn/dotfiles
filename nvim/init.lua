@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.files")
 require("config.history")
+require("filetypes")
 require("keymaps")
 
 vim.cmd.colorscheme("tokyonight-night")
