@@ -39,3 +39,5 @@ tags.temp
 .tool-versions
 /tmp/clippy_local
 /**/tmp/clippy_local
+/**/tmp/rust_analyzer_target
+.claude
