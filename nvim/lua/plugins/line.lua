@@ -69,6 +69,7 @@ return {
           globalstatus = vim.o.laststatus == 3,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
         },
+        -- What to show when the buffer is active
         sections = {
           lualine_a = { "mode" },
           lualine_b = {
@@ -84,6 +85,22 @@ return {
             { "filetype", icons_enabled = false },
           },
           lualine_z = { line_number_and_column },
+        },
+        -- What to show when the buffer is inactive
+        inactive_sections = {
+          lualine_a = {},
+          lualine_b = {
+            { "filename", path = 1 },
+          },
+          lualine_c = {
+            "diagnostics",
+            { "lsp_status", icons_enabled = false },
+          },
+          lualine_x = {},
+          lualine_y = {
+            { "filetype", icons_enabled = false },
+          },
+          lualine_z = {},
         },
         extensions = { "neo-tree", "lazy" },
       }
