@@ -36,10 +36,45 @@ return {
               -- e.g. git_{create, delete, ...}_branch for the git_branches picker
               ["<C-h>"] = "which_key",
 
-              -- Press ESC to exit immediatly
+              -- Press ESC to exit immediately
               -- By default it will exit from insert mode to normal mode, but I
               -- notice I don't want to press ESC twice to exit.
               ["<esc>"] = require("telescope.actions").close,
+
+              -- Open file in current window, or switch to existing tab
+              ["<CR>"] = function(prompt_bufnr)
+                local actions = require("telescope.actions")
+                local action_state = require("telescope.actions.state")
+                local selection = action_state.get_selected_entry()
+
+                if selection then
+                  local filename = selection.path or selection.filename
+                  
+                  -- If this is not a file-based picker, use default behavior
+                  if not filename then
+                    actions.select_default(prompt_bufnr)
+                    return
+                  end
+
+                  local bufnr = vim.fn.bufnr(filename)
+
+                  if bufnr ~= -1 and vim.api.nvim_buf_is_loaded(bufnr) then
+                    -- Buffer exists, find the tab/window and switch to it
+                    for _, tabpage in ipairs(vim.api.nvim_list_tabpages()) do
+                      for _, win in ipairs(vim.api.nvim_tabpage_list_wins(tabpage)) do
+                        if vim.api.nvim_win_get_buf(win) == bufnr then
+                          vim.api.nvim_set_current_tabpage(tabpage)
+                          vim.api.nvim_set_current_win(win)
+                          return
+                        end
+                      end
+                    end
+                  end
+
+                  -- File not open or buffer not found, open in current window
+                  actions.select_default(prompt_bufnr)
+                end
+              end,
             },
           },
         },
