@@ -109,7 +109,7 @@ function gdw {
 
 # Wrapper around the commit_format gem
 function cf {
-  gem exec commit_format "$@" | pbcopy
+  gem exec --silent commit_format "$@" | pbcopy
 }
 
 # Docker shorthands
