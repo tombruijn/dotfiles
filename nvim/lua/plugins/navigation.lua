@@ -68,5 +68,25 @@ return {
     deactivate = function()
       vim.cmd([[Neotree close]])
     end,
+    opts = {
+      window = {
+        mappings = {
+          ["o"] = "open",
+          -- Disable these keymaps
+          ["oc"] = false,
+          ["od"] = false,
+          ["og"] = false,
+          ["om"] = false,
+          ["on"] = false,
+          ["os"] = false,
+          ["ot"] = false,
+          -- Show path in prompt
+          ["c"] = { "copy", config = { show_path = "relative" } },
+          -- Show path in prompt
+          ["m"] = { "move", config = { show_path = "relative" } },
+          ["x"] = "close_node",
+        },
+      },
+    },
   },
 }
