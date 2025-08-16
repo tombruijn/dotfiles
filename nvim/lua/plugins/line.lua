@@ -33,9 +33,44 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
+        themable = true,
+        show_buffer_icons = false,
         show_buffer_close_icons = false,
         show_close_icon = false,
+        show_tab_indicators = false,
+        show_duplicate_prefix = false,
         mode = "tabs",
+        indicator = {
+          style = "none",
+        },
+        numbers = "none",
+      },
+      highlights = {
+        tab_selected = {
+          italic = false,
+          bg = "#00a2ff",
+        },
+        buffer_selected = {
+          italic = false,
+          fg = "#15161e",
+          bg = "#80a3f3",
+        },
+        modified_selected = {
+          italic = false,
+          fg = "#15161e",
+          bg = "#80a3f3",
+        },
+        modified = {
+          italic = true,
+        },
+        duplicate_selected = {
+          italic = false,
+          fg = "#15161e",
+          bg = "#80a3f3",
+        },
+        duplicate = {
+          italic = true,
+        },
       },
     },
     config = function(_, opts)
