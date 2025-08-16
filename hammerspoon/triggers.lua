@@ -69,11 +69,11 @@ keys.bindKeyFor("Bluetooth", function()
 end)
 
 -- MacVim - Start only from terminal
-keys.bindKeyFor("MacVim", function()
-  if applicationRunning("MacVim") then
-    application.find("MacVim"):activate()
+keys.bindKeyFor("VimR", function()
+  if applicationRunning("VimR") then
+    application.find("VimR"):activate()
   else
-    if applicationRunning("Code") then
+    if applicationRunning("Visual Studio Code") then
       application.launchOrFocus("Visual Studio Code")
     else
       alert.show("No editor running")
