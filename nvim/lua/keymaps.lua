@@ -97,6 +97,23 @@ set_keymap("n", "<D-]>", ">>", { desc = "Indent line further right" })
 set_keymap("v", "<", "<gv", { desc = "Indent selection further left" })
 set_keymap("v", ">", ">gv", { desc = "Indent selection further right" })
 
+-- Function to fix indentation
+function FixIndenting()
+    -- Save cursor position
+    local l = vim.fn.line(".")
+    local c = vim.fn.col(".")
+
+    -- Format code
+    vim.cmd("normal! 1G=G")
+
+    -- Restore cursor location
+    vim.fn.cursor(l, c)
+end
+
+-- Map to call the FixIndenting function
+vim.keymap.set("n", "<leader>i", ":lua FixIndenting()<CR>", { noremap = true })
+-- Use '=' in visual mode (this is already handled by default in Vim/Neovim)
+
 -- Use F for formatting the current paragraph
 -- Source: http://nvie.com/posts/how-i-boosted-my-vim/
 set_keymap("n", "F", "gqap", { desc = "Format the current paragraph" })
