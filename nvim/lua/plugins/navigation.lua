@@ -49,7 +49,7 @@ return {
 
                 if selection then
                   local filename = selection.path or selection.filename
-                  
+
                   -- If this is not a file-based picker, use default behavior
                   if not filename then
                     actions.select_default(prompt_bufnr)
@@ -104,6 +104,44 @@ return {
       vim.cmd([[Neotree close]])
     end,
     opts = {
+      filesystem = {
+        filtered_items = {
+          always_show = {
+            ".appsignal_key.env",
+            ".changesets",
+            ".env",
+            ".eslintignore",
+            ".eslintrc.js",
+            ".gemrc",
+            ".git",
+            ".gitattributes_global",
+            ".github",
+            ".gitignore",
+            ".gitignore_global",
+            ".gnupg",
+            ".gvimrc",
+            ".ignore",
+            ".ignore_global",
+            ".irbrc",
+            ".luarc.json",
+            ".macos",
+            ".ripgreprc",
+            ".rspec",
+            ".rubocop.yml",
+            ".ruby-version",
+            ".stylua.toml",
+            ".tigrc",
+            ".tool-versions",
+            ".vim",
+            ".vimrc",
+            ".zprofile",
+            ".zsh",
+            ".zshenv",
+            ".zshrc",
+            "integration",
+          },
+        },
+      },
       window = {
         mappings = {
           ["o"] = "open",
