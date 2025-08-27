@@ -9,6 +9,8 @@ ln -nfs "$(pwd)/ruby/.gemrc"            "$HOME/.gemrc"
 ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
 
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
+ln -nfs "$(pwd)/zsh/.zshenv"            "$HOME/.zshenv"
+ln -nfs "$(pwd)/zsh/.zprofile"          "$HOME/.zprofile"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 mkdir -p "$HOME/.bundle"
@@ -54,15 +56,12 @@ mkdir -p "$HOME/.ctags.d"
 ln -nfs "$(pwd)/config.ctags" "$HOME/.ctags.d/config.ctags"
 
 # Silence login message on Shell start
-touch $HOME/.hushlogin
+touch "$HOME"/.hushlogin
 
 # Copy powerlines
 for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
 done
-
-# https://github.com/postmodern/chruby/issues/196#issuecomment-23826171
-[[ -e /etc/zshenv ]] && sudo mv /etc/zshenv /etc/zprofile
 
 git config --global user.email "tom@tomdebruijn.com"
 git config --global user.name "Tom de Bruijn"
@@ -106,7 +105,7 @@ git config --global remote.origin.pruneTags true
 git config --global fetch.all true
 
 if [ -n "$GPG_SIGNING_KEY" ]; then
-  git config --global user.signingkey $GPG_SIGNING_KEY
+  git config --global user.signingkey "$GPG_SIGNING_KEY"
   git config --global commit.gpgsign true
 else
   echo "WARNING: Git GPG configuration skipped. No \$GPG_SIGNING_KEY found."
