@@ -35,7 +35,7 @@ return {
     cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
-        elixir = { "mix_format" },
+        elixir = { "mix" },
         javascript = { "eslint_d", "prettierd", "prettier", lsp_format = "fallback", stop_after_first = true },
         typescript = { "eslint_d", "prettierd", "prettier", lsp_format = "fallback", stop_after_first = true },
         lua = { "stylua" },
