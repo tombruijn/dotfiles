@@ -18,10 +18,6 @@ export PATH="$HOME/.bin:$PATH"
 # Configure GPG
 export GPG_TTY=$(tty)
 
-# Load FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
 # Set language and encoding
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8

@@ -29,3 +29,7 @@ source "$ZSH_DIR/aliases.zsh"
 # Theme
 source "$ZSH_DIR/theme.zsh"
 source "$ZSH_DIR/termsupport.zsh"
+
+# Load FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
