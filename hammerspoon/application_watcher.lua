@@ -1,9 +1,9 @@
-local hotkey = require "hs.hotkey"
-local alert = require "hs.alert"
-local application = require "hs.application"
+local hotkey = require("hs.hotkey")
+local alert = require("hs.alert")
+local application = require("hs.application")
 
 auto_hide = true
-hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
+hotkey.bind({ "cmd", "alt", "ctrl" }, "H", function()
   auto_hide = not auto_hide
   message = "Auto hide disabled"
   if auto_hide then
@@ -12,7 +12,7 @@ hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
   alert.show(message)
 end)
 
-auto_hide_applications = {"Finder", "Safari", "Telegram", "Tweetbot", "Calendar"}
+auto_hide_applications = { "Finder", "Safari", "Calendar" }
 watcher = application.watcher.new(function(name, event, app)
   if auto_hide then
     if event == application.watcher.deactivated then
