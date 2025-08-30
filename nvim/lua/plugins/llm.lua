@@ -5,6 +5,10 @@ vim.keymap.set("i", "<C-L>", 'copilot#Accept("\\<CR>")', {
   replace_keycodes = false,
 })
 
+-- Do not enable it by default
+-- You'll have to manually enable it
+vim.g.copilot_enabled = false
+
 -- Toggle Copilot on and off
 local function toggle_copilot()
   if vim.fn.exists("g:loaded_copilot") == 1 then
