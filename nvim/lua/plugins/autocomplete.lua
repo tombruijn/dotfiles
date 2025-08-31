@@ -31,11 +31,7 @@ local kind_icons = {
 return {
   {
     "hrsh7th/nvim-cmp",
-    version = false, -- last release is way too old
-    event = {
-      "InsertEnter", -- Activate when switching to insert mode
-      "CmdlineEnter", -- Activate when using the command line, either '/' or ':'
-    },
+    version = false, -- The last release is too old, use the default branch
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -129,6 +125,7 @@ return {
     config = function(_, opts)
       local cmp = require("cmp")
       cmp.setup(opts)
+
       -- Use buffer source for `/` and `?`
       cmp.setup.cmdline({ "/", "?" }, {
         mapping = cmp.mapping.preset.cmdline(),
@@ -139,6 +136,7 @@ return {
           { name = "nvim_lsp_document_symbol" },
         },
       })
+
       -- Use cmdline & path source for ':'
       cmp.setup.cmdline(":", {
         mapping = cmp.mapping.preset.cmdline(),
