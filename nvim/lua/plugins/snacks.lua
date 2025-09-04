@@ -19,37 +19,9 @@ return {
       quickfile = { enabled = true },
       statuscolumn = { enabled = false },
       words = { enabled = true },
-      zen = {
-        toggles = {
-          dim = false,
-          git_signs = false,
-        },
-        show = {
-          statusline = true, -- can only be shown when using the global statusline
-          tabline = false,
-        },
-        win = {
-          backdrop = { blend = 0 },
-          minimal = true,
-        },
-        zoom = {
-          toggles = {},
-          show = { statusline = true, tabline = true },
-          win = {
-            backdrop = false,
-            width = 0.80,
-          },
-        },
-      },
+      zen = { enabled = false },
     },
     keys = {
-      {
-        "<leader>F",
-        function()
-          Snacks.zen()
-        end,
-        desc = "Toggle Zen mode",
-      },
       {
         "<leader>gb",
         function()
