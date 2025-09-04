@@ -29,17 +29,44 @@ return {
           tabline = false,
         },
         win = {
-          backdrop = { blend = 0 },
+          backdrop = 0,
           minimal = true,
+          width = 0.60, -- Add padding by reducing width
+          height = 0.9,
+          wo = {
+            wrap = true, -- Enable word wrap
+          },
         },
         zoom = {
           toggles = {},
           show = { statusline = true, tabline = true },
           win = {
             backdrop = false,
-            width = 0.80,
+            width = 0.60,
           },
         },
+        on_open = function()
+          if _G.tokyonight_theme then
+            _G.tokyonight_theme.set_zen(true)
+          end
+          local current_font = vim.opt.guifont:get()[1] or ""
+          if current_font ~= "" then
+            local font_parts = vim.split(current_font, ":")
+            local font_name = font_parts[1]
+            vim.opt.guifont = font_name .. ":h24"
+          end
+        end,
+        on_close = function()
+          if _G.tokyonight_theme then
+            _G.tokyonight_theme.set_zen(false)
+          end
+          local current_font = vim.opt.guifont:get()[1] or ""
+          if current_font ~= "" then
+            local font_parts = vim.split(current_font, ":")
+            local font_name = font_parts[1]
+            vim.opt.guifont = font_name .. ":h18"
+          end
+        end,
       },
     },
     keys = {
