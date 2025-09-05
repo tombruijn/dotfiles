@@ -9,6 +9,7 @@ return {
         bash = { "sh", "bash" },
         c = { "c", "h" },
         diff = { "diff" },
+        git = { "gitcommit" },
         javascript = { "js", "jsx" },
         json = { "json" },
         jsonc = { "jsonc" },
@@ -43,9 +44,7 @@ return {
         table.insert(parsers, parser_name)
       end
 
-      require("nvim-treesitter")
-        .install(parsers)
-        :wait(300000) -- wait max. 5 minutes
+      require("nvim-treesitter").install(parsers):wait(300000) -- wait max. 5 minutes
 
       -- Extract parser names as filetypes (most parser names match filetype names)
       vim.api.nvim_create_autocmd("FileType", {
