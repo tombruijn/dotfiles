@@ -22,6 +22,7 @@ return {
           else
             colors.bg = "#f1f1f1"
             colors.bg_dark = zen_mode and "#f1f1f1" or "#e3e3e3"
+            colors.comment = "#6c6c6c" -- Darker gray for comments
           end
         end,
         on_highlights = function(hl, c)
