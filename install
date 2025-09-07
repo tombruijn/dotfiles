@@ -63,46 +63,7 @@ for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
 done
 
-git config --global user.email "tom@tomdebruijn.com"
-git config --global user.name "Tom de Bruijn"
-git config --global core.excludesfile "$XDG_CONFIG_HOME/git/.gitignore_global"
-git config --global core.attributesfile "$XDG_CONFIG_HOME/git/.gitattributes_global"
-git config --global core.pager "delta"
-git config --global color.diff always
-git config --global merge.ff only
-git config --global pull.ff only
-# Auto rebase on git pull
-git config --global pull.rebase true
-git config --global push.default current
-# Automatically set up a branch on remote if it doesn't exist on push
-git config --global push.autoSetupRemote true
-git config --global merge.conflictstyle zdiff3
-git config --global diff.noprefix true
-git config --global diff.colorMoved plain
-git config --global diff.mnemonicPrefix true
-git config --global diff.renames true
-git config --global interactive.diffFilter "delta --color-only --features=interactive"
-git config --global delta.max-line-length 0 # Don't truncate lines
-git config --global delta.wrap-max-lines 0
-# Allow use of markdown headers before git commit message scissors, after which
-# the code starts.
-git config --global commit.cleanup scissors
-git config --global init.defaultBranch main
-git config --global checkout.defaultRemote origin
-git config --global rebase.updateRefs false
-# Sort branches by most recently committed/changed
-git config --global branch.sort -committerdate
-# Sensible tag sorting
-git config --global tag.sort version:refname
-# Better Git diff algorithm
-git config --global diff.algorithm histogram
-# Show Git diff in commit window
-git config --global commit.verbose true
-
-# Clean up branches and tags when fetching new data
-git config --global fetch.prune true
-git config --global remote.origin.pruneTags true
-git config --global fetch.all true
+git config --global include.path "$(pwd)/git/extra.gitconfig"
 
 if [ -n "$GPG_SIGNING_KEY" ]; then
   git config --global user.signingkey "$GPG_SIGNING_KEY"

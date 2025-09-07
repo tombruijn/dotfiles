@@ -1,0 +1,79 @@
+[user]
+	email = tom@tomdebruijn.com
+	name = Tom de Bruijn
+
+[core]
+	excludesfile = "~/.config/git/.gitignore_global"
+	attributesfile = "~/.config/git/.gitattributes_global"
+	# Undo this config for one command with `git --no-pager <command>`
+	pager = delta
+
+[color]
+	diff = always
+
+[merge]
+	ff = only
+	conflictstyle = zdiff3
+
+[pull]
+	ff = only
+	# Auto rebase on git pull
+	# rebase = true
+
+[push]
+	# Automatically set up a branch on remote if it doesn't exist on push
+	default = current
+	autoSetupRemote = true
+
+[diff]
+	noprefix = true
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+	# Better Git diff algorithm
+	algorithm = histogram
+
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+
+[commit]
+	# Allow use of markdown headers before git commit message scissors, after which
+	# the code starts.
+	cleanup = scissors
+	# Show Git diff in commit window
+	verbose = true
+
+[init]
+	defaultBranch = main
+
+[checkout]
+	defaultRemote = origin
+
+[rebase]
+	updateRefs = false
+
+[branch]
+	# Sort branches by most recently committed/changed
+	sort = -committerdate
+
+[tag]
+	# Sensible tag sorting
+	sort = version:refname
+
+[fetch]
+	# Clean up branches when fetching new data
+	prune = true
+	# Don't fetch all remotes by default
+	all = false
+
+[remote "origin"]
+	# Clean up branches and tags when fetching new data
+	pruneTags = true
+
+# Delta tool
+# https://github.com/dandavison/delta
+[delta]
+	max-line-length = 0 # Don't truncate lines
+	wrap-max-lines = 0
+	side-by-side = true
+	line-numbers = true
