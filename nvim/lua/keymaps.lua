@@ -52,6 +52,18 @@ set_keymap("n", "<leader>vk", "<C-W>=", { desc = "Equalize splits (reset fullscr
 -- File navigation
 set_keymap("n", "<leader><leader>", "<cmd>e#<cr>", { desc = "Open previous open file in the active pane" })
 
+local function open_in_file_manager()
+  local file_path = vim.fn.expand("%:p:h")
+  if file_path ~= "" then
+    local command = "open " .. vim.fn.shellescape(file_path)
+    vim.fn.system(command)
+    vim.notify("Opened parent directory: " .. file_path)
+  else
+    vim.notify("No file is currently open")
+  end
+end
+set_keymap("n", "<leader>fo", open_in_file_manager, { desc = "Open current file's parent directory in file manager" })
+
 -- Files
 set_keymap("n", "<leader>y", "", { desc = "Copy things", silent = true })
 function CopyRelativePath()
@@ -99,15 +111,15 @@ set_keymap("v", ">", ">gv", { desc = "Indent selection further right" })
 
 -- Function to fix indentation
 function FixIndenting()
-    -- Save cursor position
-    local l = vim.fn.line(".")
-    local c = vim.fn.col(".")
+  -- Save cursor position
+  local l = vim.fn.line(".")
+  local c = vim.fn.col(".")
 
-    -- Format code
-    vim.cmd("normal! 1G=G")
+  -- Format code
+  vim.cmd("normal! 1G=G")
 
-    -- Restore cursor location
-    vim.fn.cursor(l, c)
+  -- Restore cursor location
+  vim.fn.cursor(l, c)
 end
 
 -- Map to call the FixIndenting function
