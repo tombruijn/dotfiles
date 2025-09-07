@@ -16,6 +16,9 @@ brew "cloc"
 brew "tree"
 brew "blueutil"
 
+brew "tree-sitter"
+brew "tree-sitter-cli"
+
 brew "vim"
 brew "neovim"
 

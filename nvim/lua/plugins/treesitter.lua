@@ -6,22 +6,27 @@ return {
     lazy = false,
     opts = {
       parsers = {
-        bash = { "sh", "bash" },
+        -- List values are file types, not extensions
+        bash = { "sh" },
         c = { "c", "h" },
+        css = { "css" },
         diff = { "diff" },
-        git = { "gitcommit" },
-        javascript = { "js", "jsx" },
+        gitcommit = { "gitcommit" },
+        go = { "go" },
+        java = { "java" },
+        javascript = { "javascript" },
         json = { "json" },
-        jsonc = { "jsonc" },
+        json5 = { "json" },
         lua = { "lua" },
-        markdown = { "md", "markdown" },
+        markdown = { "markdown" },
         markdown_inline = {},
-        regex = { "regex" },
-        ruby = { "rb", "ruby" },
+        regex = {},
+        rbs = { "rbs" },
+        ruby = { "ruby" },
         toml = { "toml" },
-        typescript = { "ts", "tsx" },
+        typescript = { "typescript" },
         xml = { "xml" },
-        yaml = { "yaml", "yml" },
+        yaml = { "yaml" },
 
         -- Elixir
         elixir = { "ex", "exs" },
@@ -29,26 +34,30 @@ return {
         eex = { "eex" },
 
         -- Python
-        python = { "py" },
+        python = { "python" },
         ninja = { "ninja" },
         rst = { "rst" },
 
         -- Rust
-        rust = { "rs" },
-        ron = { "ron" },
+        rust = { "rust" },
+        ron = {},
       },
     },
     config = function(_, opts)
       local parsers = {}
-      for parser_name, _extensions in pairs(opts.parsers) do
+      local filetypes = {}
+      for parser_name, parser_filetypes in pairs(opts.parsers) do
         table.insert(parsers, parser_name)
+        if #parser_filetypes > 0 then
+          vim.list_extend(filetypes, parser_filetypes)
+        end
       end
 
-      require("nvim-treesitter").install(parsers):wait(300000) -- wait max. 5 minutes
+      require("nvim-treesitter").install(parsers):wait(300000) -- Wait max. 5 minutes
 
       -- Extract parser names as filetypes (most parser names match filetype names)
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = parsers,
+        pattern = filetypes,
         callback = function()
           vim.treesitter.start()
         end,
