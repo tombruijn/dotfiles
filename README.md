@@ -7,7 +7,7 @@ These dotfiles contain configuration and installation for:
 - iTerm
 - Zsh
 - Dotfiles
-- VIM (Neovim and MacVim)
+- Neovim
 - chruby and ruby-install
 - rustup and Rust
 - Hammerspoon
@@ -117,24 +117,6 @@ brew install neovim
 gem install neovim
 # Python package for Python bindings (Python is used by UltiSnips)
 pip2 install --upgrade neovim
-```
-
-Use [vim-plug](https://github.com/junegunn/vim-plug/) to install vim plugins.
-
-```sh
-vim +:PlugInstall
-```
-
-### Python
-
-For neovim to pick up Python support Python and the neovim package need to be
-installed.
-
-```sh
-pyenv install <latest python version>
-pyenv global <latest python version>
-pip install --upgrade pip # Updating is just good practice
-pip install neovim
 ```
 
 ### chruby and ruby-install
