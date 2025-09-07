@@ -13,3 +13,4 @@ public/assets/*
 *.ttf
 *.woff
 *.woff2
+.obsidian
