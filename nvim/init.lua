@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.files")
 require("config.history")
+require("config.harper_ls")
 require("filetypes")
 require("keymaps")
 

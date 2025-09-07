@@ -27,6 +27,35 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+function _G.harper_dictionary_path()
+  return vim.fn.expand("$XDG_CONFIG_HOME/harper-ls/dictionary.txt")
+end
+
+function _G.start_harper_lsp()
+  local lspconfig = require("lspconfig")
+  local capabilities = require("cmp_nvim_lsp").default_capabilities()
+  local harper_ls_config = {
+    capabilities = capabilities,
+    settings = {
+      ["harper-ls"] = {
+        userDictPath = _G.harper_dictionary_path(),
+        linters = {
+          ToDoHyphen = false,
+        },
+      },
+    },
+  }
+  lspconfig.harper_ls.setup(harper_ls_config)
+end
+
+function _G.stop_harper_lsp()
+  local clients = vim.lsp.get_clients({ name = "harper_ls" })
+  if #clients > 0 then
+    -- Stop harper LSP
+    vim.lsp.stop_client(clients)
+  end
+end
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -80,18 +109,7 @@ return {
       local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local harper_ls_config = {
-        capabilities = capabilities,
-        settings = {
-          ["harper-ls"] = {
-            userDictPath = vim.fn.expand("$HOME/.config/harper-ls/dictionary.txt"),
-            linters = {
-              ToDoHyphen = false,
-            },
-          },
-        },
-      }
-      lspconfig.harper_ls.setup(harper_ls_config)
+      _G.start_harper_lsp()
       lspconfig.ruby_lsp.setup({
         -- This shell/sh command around bundle helps it find the right executable
         -- cmd = { "sh", "-c", "bundle exec ruby-lsp" },
@@ -105,12 +123,10 @@ return {
       vim.keymap.set("n", "<leader>c;", function()
         local clients = vim.lsp.get_clients({ name = "harper_ls" })
         if #clients > 0 then
-          -- Stop harper LSP
-          vim.lsp.stop_client(clients)
+          _G.stop_harper_lsp()
           vim.notify("Turn off harper_ls")
         else
-          -- Start harper LSP
-          lspconfig.harper_ls.setup(harper_ls_config)
+          _G.start_harper_lsp()
           vim.notify("Turn on harper_ls")
         end
       end, { desc = "Toggle harper_ls LSP" })
