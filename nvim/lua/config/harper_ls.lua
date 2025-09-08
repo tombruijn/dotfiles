@@ -23,8 +23,7 @@ local function add_to_dictionary_and_restart()
     return
   end
 
-  _G.stop_harper_lsp()
-  _G.start_harper_lsp()
+  vim.cmd("LspRestart harper_ls")
   vim.notify(string.format("Added '%s' to Harper dictionary", word))
 end
 

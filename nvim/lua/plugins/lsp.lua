@@ -31,31 +31,6 @@ function _G.harper_dictionary_path()
   return vim.fn.expand("$XDG_CONFIG_HOME/harper-ls/dictionary.txt")
 end
 
-function _G.start_harper_lsp()
-  local lspconfig = require("lspconfig")
-  local capabilities = require("cmp_nvim_lsp").default_capabilities()
-  local harper_ls_config = {
-    capabilities = capabilities,
-    settings = {
-      ["harper-ls"] = {
-        userDictPath = _G.harper_dictionary_path(),
-        linters = {
-          ToDoHyphen = false,
-        },
-      },
-    },
-  }
-  lspconfig.harper_ls.setup(harper_ls_config)
-end
-
-function _G.stop_harper_lsp()
-  local clients = vim.lsp.get_clients({ name = "harper_ls" })
-  if #clients > 0 then
-    -- Stop harper LSP
-    vim.lsp.stop_client(clients)
-  end
-end
-
 return {
   {
     "neovim/nvim-lspconfig",
@@ -106,15 +81,9 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup()
 
-      local lspconfig = require("lspconfig")
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      vim.lsp.enable("harper_ls")
+      vim.lsp.enable("ruby_lsp")
 
-      _G.start_harper_lsp()
-      lspconfig.ruby_lsp.setup({
-        -- This shell/sh command around bundle helps it find the right executable
-        -- cmd = { "sh", "-c", "bundle exec ruby-lsp" },
-        capabilities = capabilities,
-      })
       vim.keymap.set("n", "<leader>c,", function()
         vim.diagnostic.enable(not vim.diagnostic.is_enabled())
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -123,10 +92,10 @@ return {
       vim.keymap.set("n", "<leader>c;", function()
         local clients = vim.lsp.get_clients({ name = "harper_ls" })
         if #clients > 0 then
-          _G.stop_harper_lsp()
+          vim.cmd("LspStop harper_ls")
           vim.notify("Turn off harper_ls")
         else
-          _G.start_harper_lsp()
+          vim.cmd("LspStart harper_ls")
           vim.notify("Turn on harper_ls")
         end
       end, { desc = "Toggle harper_ls LSP" })

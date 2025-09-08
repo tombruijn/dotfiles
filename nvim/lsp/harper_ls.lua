@@ -2,9 +2,10 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 return {
   capabilities = capabilities,
   settings = {
-    Lua = {
-      format = {
-        enable = false, -- Rely on stylua
+    ["harper-ls"] = {
+      userDictPath = _G.harper_dictionary_path(),
+      linters = {
+        ToDoHyphen = false,
       },
     },
   },
