@@ -50,7 +50,9 @@ alias gsd="git stash drop"
 alias gsp="git stash pop"
 alias gsa="git stash --include-untracked"
 # Better Git blame
-alias gwhy="git blame -w -C -C -C"
+# Hide moved lines, only show real edits
+# https://ruby.social/@fglc2/111108007633695987
+alias gwhy="gd blame -w -C -C -C"
 
 # Bundle exec
 alias be="bundle exec"

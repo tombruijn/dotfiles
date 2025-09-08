@@ -5,8 +5,6 @@
 [core]
 	excludesfile = "~/.config/git/.gitignore_global"
 	attributesfile = "~/.config/git/.gitattributes_global"
-	# Undo this config for one command with `git --no-pager <command>`
-	pager = delta
 
 [color]
 	diff = always
@@ -27,7 +25,7 @@
 
 [diff]
 	noprefix = true
-	colorMoved = plain
+	colorMoved = default
 	mnemonicPrefix = true
 	renames = true
 	# Better Git diff algorithm
@@ -73,7 +71,8 @@
 # Delta tool
 # https://github.com/dandavison/delta
 [delta]
-	max-line-length = 0 # Don't truncate lines
 	wrap-max-lines = 0
+	max-line-length = 0 # Don't truncate lines
 	side-by-side = true
 	line-numbers = true
+	map-styles = bold purple => syntax magenta, bold cyan => syntax blue

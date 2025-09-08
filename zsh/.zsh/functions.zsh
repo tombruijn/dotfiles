@@ -93,6 +93,11 @@ function headless {
   fi
 }
 
+# Call Git command with delta as the pager (fancy diffs and blames)
+function gd {
+  git -c core.pager=delta $@
+}
+
 # Git diff with defaults
 #
 # $ gdw
@@ -104,7 +109,7 @@ function headless {
 #
 #   If a range argument is given, it will show the changes between the commits.
 function gdw {
-  git diff --ignore-all-space --word-diff=color ${@-HEAD}
+  git -c core.pager=delta diff --ignore-all-space ${@-HEAD}
 }
 
 # Wrapper around the commit_format gem
