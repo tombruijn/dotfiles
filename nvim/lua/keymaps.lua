@@ -1,8 +1,5 @@
 local set_keymap = vim.keymap.set
 
--- lazy.nvim
-set_keymap("n", "yu", "<cmd>Lazy check<cr>", { remap = false, desc = "Check for plugin updates" })
-
 -- Save files
 set_keymap("n", "<leader>s", "<cmd>w<cr>", { desc = "Save file" })
 set_keymap("n", "<leader>S", "<cmd>wa<cr>", { desc = "Save all open file" })

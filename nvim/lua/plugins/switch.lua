@@ -1,4 +1,3 @@
 return {
   "AndrewRadev/switch.vim",
 }
-
