@@ -45,8 +45,34 @@ return {
         rust = { "rustfmt", lsp_format = "fallback" },
         sh = { "shellcheck" },
       },
-      format_after_save = {
+      formatters = {
+        rubocop = {
+          -- Only run RuboCop if a config file is found in the project directory
+          condition = function(_, _)
+            local function find_rubocop_config(path)
+              local config_files = { ".rubocop.yml" }
+              for _, config in ipairs(config_files) do
+                if vim.fn.filereadable(path .. "/" .. config) == 1 then
+                  return true
+                end
+              end
+              return false
+            end
+
+            local current_dir = vim.fn.expand("%:p:h")
+            while current_dir ~= "/" do
+              if find_rubocop_config(current_dir) then
+                return true
+              end
+              current_dir = vim.fn.fnamemodify(current_dir, ":h")
+            end
+            return false
+          end,
+        },
+      },
+      format_on_save = {
         lsp_format = "fallback",
+        timeout_ms = 500,
       },
     },
   },
