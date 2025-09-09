@@ -36,14 +36,14 @@ return {
         function()
           require("mini.splitjoin").join()
         end,
-        desc = "Join operator"
+        desc = "Join operator",
       },
       {
         "<leader>k",
         function()
           require("mini.splitjoin").split()
         end,
-        desc = "Split operator"
+        desc = "Split operator",
       },
     },
   },

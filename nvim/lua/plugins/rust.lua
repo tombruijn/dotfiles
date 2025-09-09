@@ -41,17 +41,17 @@ vim.g.rustaceanvim = {
     },
   },
   tools = {
-    code_actions =  {
+    code_actions = {
       -- use vim.ui for code actions
-      ui_select_fallback = true
-    }
-  }
+      ui_select_fallback = true,
+    },
+  },
 }
 
 return {
   {
     "mrcjkb/rustaceanvim",
-    version = '^6',
-    ft = { "rust" },
+    version = "^6",
+    lazy = false,
   },
 }

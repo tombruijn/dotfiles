@@ -10,6 +10,6 @@ return {
       { "<leader>rs", "<cmd>AS<cr>", desc = "Open alternate file in a horizontal split" },
       { "<leader>rv", "<cmd>AV<cr>", desc = "Open alternate file in a vertical split" },
       { "<leader>rt", "<cmd>AT<cr>", desc = "Open alternate file in a tab" },
-    }
+    },
   },
 }

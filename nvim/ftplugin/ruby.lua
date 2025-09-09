@@ -13,4 +13,3 @@ vim.b.switch_custom_definitions = {
     [":\\(\\k\\+\\)\\s\\+=>"] = '"\\1" =>',
   },
 }
-
