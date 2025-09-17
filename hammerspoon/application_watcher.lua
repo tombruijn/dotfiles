@@ -12,7 +12,7 @@ hotkey.bind({ "cmd", "alt", "ctrl" }, "H", function()
   alert.show(message)
 end)
 
-auto_hide_applications = { "Finder", "Safari", "Calendar" }
+auto_hide_applications = { "Finder", "Safari", "Calendar", "Signal", "WhatsApp" }
 watcher = application.watcher.new(function(name, event, app)
   if auto_hide then
     if event == application.watcher.deactivated then
