@@ -1,11 +1,22 @@
-local usb = require "hs.usb"
-local caffeinate = require "hs.caffeinate"
-local Keys = require "keys"
-local Keyboards = require "keyboards"
+local audiodevice = require("hs.audiodevice")
+local usb = require("hs.usb")
+local caffeinate = require("hs.caffeinate")
+local Keys = require("keys")
+local Keyboards = require("keyboards")
 local watcher = caffeinate.watcher
+local preferredMicrophone = "Elgato Wave:3"
 
-usbWatcher = usb.watcher.new(function(event)
-  print("device watcher event: " .. event.productName)
+local usbWatcher = usb.watcher.new(function(event)
+  if event.eventType == "added" and event.productName == preferredMicrophone then
+    local audioInputDevices = audiodevice.allDevices()
+    for i = 1, #audioInputDevices do
+      local device = audioInputDevices[i]
+      if device:name() == preferredMicrophone then
+        device:setDefaultInputDevice()
+      end
+    end
+  end
+
   if Keyboards.isErgodoxKeyboard(event.productName) then
     if event.eventType == "added" then
       Keyboards.enableErgodoxKeyboard()
@@ -28,7 +39,7 @@ usbWatcher = usb.watcher.new(function(event)
 end)
 usbWatcher:start()
 
-caffeinateWatcher = caffeinate.watcher.new(function(event)
+local caffeinateWatcher = caffeinate.watcher.new(function(event)
   print("caffinate watcher event: " .. event)
   if event == watcher.screensDidWake or event == watcher.screensDidUnlock then
     Keyboards.enableConnectedKeyboard()
