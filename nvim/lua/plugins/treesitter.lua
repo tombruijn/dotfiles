@@ -29,7 +29,7 @@ return {
         yaml = { "yaml" },
 
         -- Elixir
-        elixir = { "ex", "exs" },
+        elixir = { "elixir" },
         heex = { "heex" },
         eex = { "eex" },
 
