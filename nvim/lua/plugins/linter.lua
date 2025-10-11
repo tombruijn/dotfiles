@@ -1,3 +1,26 @@
+-- Auto command to disable the formatter (for a file)
+vim.api.nvim_create_user_command("ConformFormatDisable", function(args)
+  if args.bang then
+    -- ConformFormatDisable! will disable formatting just for this buffer
+    vim.b.disable_autoformat = true
+  else
+    vim.g.disable_autoformat = true
+  end
+  vim.notify("Disable conform")
+end, {
+  desc = "Disable autoformat-on-save",
+  bang = true,
+})
+
+-- Auto command to enable the formatter
+vim.api.nvim_create_user_command("ConformFormatEnable", function()
+  vim.b.disable_autoformat = false
+  vim.g.disable_autoformat = false
+  vim.notify("Enable conform")
+end, {
+  desc = "Re-enable autoformat-on-save",
+})
+
 return {
   {
     "mfussenegger/nvim-lint",
