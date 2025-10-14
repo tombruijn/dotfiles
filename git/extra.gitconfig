@@ -40,6 +40,8 @@
 	cleanup = scissors
 	# Show Git diff in commit window
 	verbose = true
+	# Automatically sign all commits
+	gpgsign = true
 
 [init]
 	defaultBranch = main
