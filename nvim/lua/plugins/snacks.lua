@@ -1,3 +1,6 @@
+local original_colorcolumn = vim.o.colorcolumn
+local original_showbreak = vim.o.showbreak
+
 return {
   {
     "folke/snacks.nvim",
@@ -46,6 +49,8 @@ return {
           },
         },
         on_open = function()
+          vim.opt_local.colorcolumn = "" -- Hide column ruler highlight
+          vim.opt_local.showbreak = "  " -- Hide line break symbol
           if _G.tokyonight_theme then
             _G.tokyonight_theme.set_zen(true)
           end
@@ -57,6 +62,8 @@ return {
           end
         end,
         on_close = function()
+          vim.opt_local.colorcolumn = original_colorcolumn
+          vim.opt_local.showbreak = original_showbreak
           if _G.tokyonight_theme then
             _G.tokyonight_theme.set_zen(false)
           end
